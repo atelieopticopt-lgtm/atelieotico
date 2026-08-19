@@ -1,0 +1,93 @@
+﻿---
+import StoreLayout from '../../layouts/StoreLayout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Icon from '../../components/Icon.astro';
+import { products, getProduct } from '../../data/products';
+
+export function getStaticPaths() {
+  const mainPaths = products.map(product => ({ params: { slug: product.slug } }));
+  const legacyPaths = products.slice(0, 14).map((_, i) => ({ 
+    params: { slug: `atelie-${String(i + 1).padStart(2, '0')}` } 
+  }));
+  return [...mainPaths, ...legacyPaths];
+}
+
+const paramSlug = Astro.params.slug as string;
+const product = getProduct(paramSlug) || products[0];
+const related = products.filter(p => p.slug !== product.slug).slice(0, 4);
+const cart = JSON.stringify({ slug: product.slug, name: product.name, price: product.price, image: product.image });
+---
+
+<StoreLayout title={`${product.name} | Ateliê Ótico`} description={product.description}>
+  <article class="product-page">
+    
+    {/* Product Gallery */}
+    <div class="product-gallery">
+      <img src={product.image} alt={`${product.name}, vista principal`} />
+      <img src={product.hover} alt={`${product.name}, vista alternativa`} />
+    </div>
+
+    {/* Product Info & Specs */}
+    <div class="product-info">
+      <p class="breadcrumbs">
+        <a href="/catalogo">CATÁLOGO</a> / {product.name.toUpperCase()}
+      </p>
+      
+      <h1>{product.name}</h1>
+      <p class="product-type">{product.category} &bull; {product.shape}</p>
+      <p class="product-price">{product.price} &euro;</p>
+
+      {/* Structured Features & Specs with Clear Icons & Spacing */}
+      <div class="attribute-icons">
+        <div>
+          <Icon name="frame" size={20} />
+          <span>FORMA</span>
+          <strong>{product.shape}</strong>
+        </div>
+        <div>
+          <Icon name="layers" size={20} />
+          <span>MATERIAL</span>
+          <strong>{product.material}</strong>
+        </div>
+        <div>
+          <Icon name="color" size={20} />
+          <span>COR</span>
+          <strong>{product.color}</strong>
+        </div>
+        <div>
+          <Icon name="fit" size={20} />
+          <span>AJUSTE</span>
+          <strong>Personalizado</strong>
+        </div>
+      </div>
+
+      <button class="add-cart" data-add-cart={cart}>ADICIONAR AO SACO</button>
+
+      <p class="product-copy">{product.description}</p>
+
+      <div class="details">
+        <details>
+          <summary>DETALHES DO PRODUTO</summary>
+          <p>Armação selecionada pelo Ateliê Ótico no Funchal, Madeira. Estojo e pano de microfibra de alta precisão incluídos.</p>
+        </details>
+        <details>
+          <summary>ENVIO E DEVOLUÇÕES</summary>
+          <p>Portes gratuitos na Região Autónoma da Madeira a partir de 100 €. Devolução simples no prazo de 14 dias.</p>
+        </details>
+        <details>
+          <summary>AJUSTE NO ATELIÊ</summary>
+          <p>Ajuste facial e aconselhamento ótico personalizado disponíveis no nosso espaço na Praça do Carmo, Funchal.</p>
+        </details>
+      </div>
+    </div>
+
+  </article>
+
+  <section class="related">
+    <p>OUTROS MODELOS</p>
+    <h2>Também poderá gostar</h2>
+    <div class="related-grid">
+      {related.map(p => <ProductCard product={p} />)}
+    </div>
+  </section>
+</StoreLayout>

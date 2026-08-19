@@ -1,0 +1,17 @@
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name atelieotico.com www.atelieotico.com;
+    root /var/www/atelieotico.com;
+    index index.html;
+    charset utf-8;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location ~ /\. {
+        deny all;
+    }
+}

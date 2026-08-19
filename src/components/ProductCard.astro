@@ -1,0 +1,47 @@
+﻿---
+import type { Product } from '../data/products';
+import Icon from './Icon.astro';
+const { product } = Astro.props as { product: Product };
+---
+<article
+  class="store-card"
+  data-category={product.category}
+  data-shape={product.shape}
+  data-material={product.material}
+  data-color={product.color}
+  data-price={product.price}
+  data-name={product.name.toLowerCase()}
+>
+  <a href={`/produtos/${product.slug}`}>
+    <div class="store-card__image">
+      <img
+        class="store-card__main"
+        src={product.image}
+        alt={`${product.name}, vista principal`}
+        loading="lazy"
+      />
+      <img
+        class="store-card__hover"
+        src={product.hover}
+        alt={`${product.name}, vista alternativa`}
+        loading="lazy"
+      />
+      <span>VER MODELO</span>
+    </div>
+    <div class="store-card__meta">
+      <div>
+        <h3>{product.name}</h3>
+        <p>{product.category} &bull; {product.shape}</p>
+      </div>
+      <strong>{product.price} &euro;</strong>
+    </div>
+  </a>
+  <button
+    class="favorite"
+    type="button"
+    data-favorite={product.slug}
+    aria-label={`Guardar ${product.name} nos favoritos`}
+  >
+    <Icon name="heart" size={18} />
+  </button>
+</article>

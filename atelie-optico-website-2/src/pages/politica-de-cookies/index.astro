@@ -1,0 +1,11 @@
+---
+import LegalPage from '../../components/LegalPage.astro'
+const sections = [
+  { title:'1. O que são cookies', body:['Cookies são pequenos ficheiros guardados no dispositivo quando visita um website. Podem ser necessários ao funcionamento técnico ou, mediante consentimento, usados para preferências, medição e comunicação.'] },
+  { title:'2. Categorias utilizadas', body:['Cookies estritamente necessários suportam funcionalidades como sessão, segurança, carrinho e preferências de privacidade e não dependem de consentimento quando forem indispensáveis. Cookies analíticos, funcionais não essenciais ou de marketing só devem ser ativados depois da escolha do utilizador.'] },
+  { title:'3. Gestão do consentimento', body:['No primeiro acesso, o website deve permitir aceitar, recusar ou configurar cookies não essenciais com o mesmo grau de facilidade. A escolha pode ser alterada posteriormente através da área de preferências de cookies.'] },
+  { title:'4. Cookies de terceiros', body:['Serviços externos eventualmente integrados — por exemplo mapas, vídeo, análise, pagamentos ou redes sociais — podem definir cookies próprios. A lista definitiva de fornecedores, finalidade e duração deve ser apresentada no gestor de consentimento antes do lançamento.'] },
+  { title:'5. Como controlar cookies', body:['Além do gestor do website, pode apagar ou bloquear cookies nas definições do navegador. O bloqueio de cookies estritamente necessários pode impedir o funcionamento correto de determinadas funcionalidades.'] }
+]
+---
+<LegalPage title="Política de Cookies" intro="Informação sobre cookies, tecnologias semelhantes e controlo das suas preferências." sections={sections} />

@@ -1,0 +1,159 @@
+---
+// LanguageSwitcher.astro - Luxury Real-Time Language Selector (PT / EN)
+---
+
+<div class="lang-switcher-wrap" id="lang-switcher">
+  <button type="button" class="lang-btn active" data-lang="pt" aria-label="Português">PT</button>
+  <span class="lang-divider">/</span>
+  <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+</div>
+
+<style>
+  .lang-switcher-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+
+  .lang-btn {
+    background: none;
+    border: none;
+    padding: 2px 4px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #888888;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    outline: none;
+  }
+
+  .lang-btn:hover {
+    color: #111111;
+  }
+
+  .lang-btn.active {
+    color: #0a0a0a;
+    font-weight: 800;
+  }
+
+  .lang-divider {
+    color: #cccccc;
+    font-size: 11px;
+    user-select: none;
+  }
+</style>
+
+<script>
+  const translations = {
+    pt: {
+      topbar: "PORTES GRATUITOS A PARTIR DE 100 €",
+      nav_oculos: "ÓCULOS",
+      nav_novidades: "NOVIDADES",
+      nav_marcas: "MARCAS",
+      nav_sobre: "O ATELIÊ",
+      nav_contactos: "CONTACTOS",
+      hero_tag: "COLEÇÃO 2026",
+      hero_title: "Design de Autor & Precisão Ótica",
+      hero_subtitle: "Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.",
+      hero_btn: "EXPLORAR CATÁLOGO",
+      cart_title: "O seu saco",
+      cart_empty: "O seu saco está vazio",
+      cart_checkout: "FINALIZAR ENCOMENDA",
+      cart_subtotal: "Subtotal",
+      cart_view: "VER SACO",
+      footer_tagline: "Ótica independente na Madeira — Curadoria de autor e precisão ótica",
+      footer_newsletter_title: "Receba lançamentos limitados e convites para eventos exclusivos",
+      footer_subscribe: "Subscrever",
+      footer_placeholder: "O seu e-mail...",
+      chat_label: "Aconselhamento Ótico",
+      cookie_notice: "Utilizamos cookies para melhorar a sua experiência e garantir a segurança da loja.",
+      btn_accept: "Aceitar",
+      btn_enter: "ENTRAR"
+    },
+    en: {
+      topbar: "FREE SHIPPING ON ORDERS OVER 100 €",
+      nav_oculos: "EYEWEAR",
+      nav_novidades: "NEW ARRIVALS",
+      nav_marcas: "BRANDS",
+      nav_sobre: "THE ATELIÊ",
+      nav_contactos: "CONTACT",
+      hero_tag: "2026 COLLECTION",
+      hero_title: "Signature Eyewear & Optical Precision",
+      hero_subtitle: "Independent eyewear curation crafted for distinct character and daily comfort.",
+      hero_btn: "EXPLORE CATALOG",
+      cart_title: "Your bag",
+      cart_empty: "Your bag is empty",
+      cart_checkout: "CHECKOUT",
+      cart_subtotal: "Subtotal",
+      cart_view: "VIEW BAG",
+      footer_tagline: "Independent optical boutique in Madeira — Signature curation & optical precision",
+      footer_newsletter_title: "Receive limited drops and private event invitations",
+      footer_subscribe: "Subscribe",
+      footer_placeholder: "Your e-mail...",
+      chat_label: "Optical Advice",
+      cookie_notice: "We use cookies to enhance your shopping experience and ensure store security.",
+      btn_accept: "Accept",
+      btn_enter: "SIGN IN"
+    }
+  };
+
+  function applyLanguage(lang) {
+    const currentLang = translations[lang] ? lang : 'pt';
+    const dict = translations[currentLang];
+    document.documentElement.lang = currentLang === 'pt' ? 'pt-PT' : 'en-US';
+
+    // Update switcher buttons active state
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      if (btn.getAttribute('data-lang') === currentLang) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Topbar
+    const topbar = document.querySelector('.topbar');
+    if (topbar) topbar.textContent = dict.topbar;
+
+    // Navigation items
+    const navLinks = document.querySelectorAll('#main-nav > a, #main-nav > .nav-drop > a');
+    navLinks.forEach(link => {
+      const text = link.textContent.trim().toUpperCase();
+      if (text.includes('ÓCULOS') || text.includes('EYEWEAR')) link.textContent = dict.nav_oculos;
+      if (text.includes('NOVIDADES') || text.includes('NEW ARRIVALS')) link.textContent = dict.nav_novidades;
+      if (text.includes('MARCAS') || text.includes('BRANDS')) link.textContent = dict.nav_marcas;
+      if (text.includes('O ATELIÊ') || text.includes('THE ATELIÊ') || text.includes('ABOUT')) link.textContent = dict.nav_sobre;
+      if (text.includes('CONTACTOS') || text.includes('CONTACT')) link.textContent = dict.nav_contactos;
+    });
+
+    // Footer tagline
+    const footerTagline = document.querySelector('.ll-footer-tagline');
+    if (footerTagline) footerTagline.textContent = dict.footer_tagline;
+
+    // Chat label
+    const chatLabel = document.querySelector('.chat-label');
+    if (chatLabel) chatLabel.textContent = dict.chat_label;
+
+    localStorage.setItem('atelie_lang', currentLang);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('atelie_lang') || 'pt';
+    applyLanguage(savedLang);
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const lang = (e.currentTarget as HTMLElement).getAttribute('data-lang');
+        if (lang) applyLanguage(lang);
+      });
+    });
+  });
+</script>

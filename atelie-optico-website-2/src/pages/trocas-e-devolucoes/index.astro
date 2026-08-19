@@ -1,0 +1,11 @@
+---
+import LegalPage from '../../components/LegalPage.astro'
+const sections = [
+  { title:'1. Compras à distância', body:['Quando aplicável o direito de livre resolução, o consumidor dispõe do prazo legal para comunicar a decisão sem necessidade de indicar motivo, contado nos termos da legislação portuguesa. Para iniciar o processo, deverá contactar geral@atelieotico.pt indicando o número do pedido.'] },
+  { title:'2. Estado do artigo', body:['O produto deve ser devolvido completo, com acessórios, estojo, documentação e embalagem, sem sinais de utilização além do necessário para verificar a sua natureza e características. O consumidor pode ser responsável pela depreciação causada por manuseamento excessivo.'] },
+  { title:'3. Exceções', body:['O direito de livre resolução pode não se aplicar a produtos personalizados, produzidos segundo especificações do cliente, selados por razões de higiene depois de abertos, ou a outras situações previstas na lei. Lentes graduadas e artigos adaptados à prescrição devem ser avaliados como produtos personalizados.'] },
+  { title:'4. Reembolso e custos', body:['Após receção e verificação da devolução, o reembolso é efetuado pelo meio de pagamento original dentro do prazo legal, salvo acordo diferente. Os custos diretos de devolução podem caber ao consumidor quando tal tenha sido previamente informado; produtos defeituosos seguem o regime legal de garantia.'] },
+  { title:'5. Produtos com defeito ou incorretos', body:['Se receber um artigo danificado, defeituoso ou diferente do pedido, contacte-nos logo que possível com fotografias e identificação da encomenda. A situação será analisada ao abrigo da garantia legal, sem prejuízo dos demais direitos do consumidor.'] }
+]
+---
+<LegalPage title="Trocas e Devoluções" intro="Regras gerais para devoluções, reembolsos e artigos com falta de conformidade." sections={sections} />

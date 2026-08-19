@@ -1,0 +1,32 @@
+---
+import templateHtml from '~/content/produto__oculos-royal.page?raw'
+import CmsRuntime from '~/components/CmsRuntime.astro'
+import catalogue from '../../../../public/data/amevista-products.json'
+
+type Product = (typeof catalogue)[number]
+
+export function getStaticPaths() {
+  return catalogue.map((product) => ({ params: { slug: product.slug }, props: { product } }))
+}
+
+const { product } = Astro.props as { product: Product }
+const escapeHtml = (value: unknown) => String(value ?? '').replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]!)
+const name = escapeHtml(product.name)
+const sku = escapeHtml(product.sku || '')
+const description = escapeHtml(product.description || 'Peça selecionada pelo Ateliê Ótico. Contacte-nos para confirmar disponibilidade e aconselhamento personalizado.')
+const formattedPrice = product.pvp == null ? 'Preço sob consulta' : new Intl.NumberFormat('pt-PT', { style: 'currency', currency: product.currency || 'EUR' }).format(product.pvp)
+const price = escapeHtml(formattedPrice)
+const image = escapeHtml(product.product_images?.[0]?.image_url || '')
+
+let pageHtml = templateHtml
+  .replace(/<title>[\s\S]*?<\/title>/i, `<title>${name} — Ateliê Ótico</title>`)
+  .replace(/<h1 class="qodef-woo-product-title product_title entry-title">[\s\S]*?<\/h1>/i, `<h1 class="qodef-woo-product-title product_title entry-title">${name}</h1>`)
+  .replace(/<p class="price">[\s\S]*?<\/p>/i, `<p class="price"><span class="woocommerce-Price-amount amount"><bdi>${price}</bdi></span></p>`)
+  .replace(/<div class="woocommerce-product-details__short-description">[\s\S]*?<\/div>/i, `<div class="woocommerce-product-details__short-description"><p>${description}</p></div>`)
+  .replace(/<span class="sku qodef-woo-meta-value">[\s\S]*?<\/span>/i, `<span class="sku qodef-woo-meta-value">${sku}</span>`)
+  .replaceAll('../../img/atelie/products/prod-5-1-r139.jpg', image)
+  .replace(/(<img[^>]+class="wp-post-image"[^>]+src=")[^"]+/i, `$1${image}`)
+  .replace(/(<img[^>]+class="wp-post-image"[^>]+alt=")[^"]*/i, `$1${name}`)
+---
+<Fragment set:html={pageHtml} />
+<CmsRuntime />

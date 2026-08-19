@@ -1,0 +1,119 @@
+﻿---
+import StoreLayout from '../layouts/StoreLayout.astro';
+---
+
+<StoreLayout title="Termos e Condições | Ateliê Ótico — Madeira" description="Termos e condições gerais de venda, encomendas e garantia do Ateliê Ótico na Região Autónoma da Madeira.">
+  <article class="content-page legal-article">
+    <div class="legal-header">
+      <span class="legal-tag">CONTRATO & GARANTIAS</span>
+      <h1>Termos e Condições Gerais</h1>
+      <p class="legal-meta">Última atualização: {new Date().toLocaleDateString('pt-PT', { month: 'long', year: 'numeric' })} • Ateliê Ótico, Região Autónoma da Madeira</p>
+    </div>
+
+    <section class="legal-section">
+      <h2>1. Âmbito e Identificação</h2>
+      <p>
+        O presente documento estabelece os termos e condições contratuais aplicáveis à utilização do website <strong>Ateliê</strong> e à aquisição de armações de autor, óculos de sol, lentes graduadas e acessórios comercializados pelo <strong>Ateliê Ótico</strong>, sediado na Região Autónoma da Madeira, Portugal.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>2. Autenticidade e Qualidade de Autor</h2>
+      <p>
+        Todas as peças presentes no nosso catálogo são 100% originais e provenientes diretamente de manufaturas e designers óticos independentes europeus e internacionais. Cada Armação é acompanhada do seu respetivo estojo original, pano de microfibra de alta densidade e certificado de autenticidade e proveniência.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>3. Encomendas e Preços</h2>
+      <p>
+        Os preços apresentados encontram-se em Euros (€) e incluem o IVA à taxa legal em vigor na Região Autónoma da Madeira. O Ateliê Ótico reserva-se o direito de atualizar os valores a qualquer momento, garantindo que as encomendas confirmadas serão processadas com o valor em vigor no momento da compra.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>4. Envios e Prazos de Entrega</h2>
+      <p>
+        Realizamos envios com acompanhamento para a Região Autónoma da Madeira, Porto Santo, Portugal Continental e espaço comunitário europeu. Oferecemos <strong>portes gratuitos</strong> em encomendas a partir de 100 €. As encomendas são cuidadosamente embaladas e expedidas por transportadora expresso com seguro de transporte incluído.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>5. Direito de Livre Resolução e Devoluções</h2>
+      <p>
+        Nos termos da legislação em vigor, o cliente dispõe de um prazo de <strong>14 dias seguidos</strong> a contar da data de receção para exercer o seu direito de devolução, desde que a peça permaneça no seu estado original, sem qualquer sinal de uso, ajuste ou desgaste, e na embalagem completa. Por motivos de personalização médica, lentes graduadas cortadas à medida do cliente não estão sujeitas a devolução livre.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>6. Garantia e Apoio Pós-Venda</h2>
+      <p>
+        Todas as armações beneficiam de uma <strong>garantia de conformidade de 3 anos</strong> contra defeitos de fabrico. O Ateliê Ótico assegura apoio técnico especializado, ajustes de ponte e hastes, e manutenção contínua das suas armações.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>7. Resolução de Litígios</h2>
+      <p>
+        Em caso de litígio de consumo, o consumidor pode recorrer às entidades de Resolução Alternativa de Litígios de Consumo (RAL) legalmente competentes na Região Autónoma da Madeira e em Portugal.
+      </p>
+    </section>
+  </article>
+</StoreLayout>
+
+<style>
+  .legal-article {
+    max-width: 860px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #111111;
+    line-height: 1.7;
+  }
+
+  .legal-header {
+    margin-bottom: 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 28px;
+  }
+
+  .legal-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #888888;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .legal-header h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .legal-meta {
+    font-size: 13px;
+    color: #777777;
+    margin: 0;
+  }
+
+  .legal-section {
+    margin-bottom: 36px;
+  }
+
+  .legal-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #0a0a0a;
+  }
+
+  .legal-section p {
+    font-size: 15px;
+    color: #444444;
+    margin: 0 0 12px;
+  }
+</style>

@@ -1,0 +1,726 @@
+{
+  "generatedAt": "2026-08-09T19:07:34.349Z",
+  "checked": 120,
+  "matches": [
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK26105T 716",
+      "pvp": 253.9,
+      "sku": "1209648801140",
+      "title": "Calvin Klein CK26105T 716",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895783552.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck26105t-716",
+      "amevistaPrice": 177.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24513 200",
+      "pvp": 155.4,
+      "sku": "1209648801123",
+      "title": "Calvin Klein CK24513 200",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163483.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24513-200",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24533S 001",
+      "pvp": 205.9,
+      "sku": "1209643200494",
+      "title": "Calvin Klein CK24533S 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169775.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24533s-001",
+      "amevistaPrice": 145.5
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK20527 N 270",
+      "pvp": 149.9,
+      "sku": "1209648801071",
+      "title": "Calvin Klein CK20527 N 270",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901188103.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck20527-n-270",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23527N 005",
+      "pvp": 136.9,
+      "sku": "1209648801072",
+      "title": "Calvin Klein CK23527N 005",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176810.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23527n-005",
+      "amevistaPrice": 95.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23527N 030",
+      "pvp": 136.9,
+      "sku": "1209648801073",
+      "title": "Calvin Klein CK23527N 030",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176827.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23527n-030",
+      "amevistaPrice": 95.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23527N 300",
+      "pvp": 136.9,
+      "sku": "1209648801075",
+      "title": "Calvin Klein CK23527N 300",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901181043.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23527n-300",
+      "amevistaPrice": 95.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24545 616",
+      "pvp": 155.9,
+      "sku": "1209648801076",
+      "title": "Calvin Klein CK24545 616",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168020.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24545-616",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25111S 025",
+      "pvp": 180.9,
+      "sku": "1209643200460",
+      "title": "Calvin Klein CK25111S 025",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177053.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25111s-025",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25111S 601",
+      "pvp": 180.9,
+      "sku": "1209643200462",
+      "title": "Calvin Klein CK25111S 601",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177077.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25111s-601",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24507S 338",
+      "pvp": 149.9,
+      "sku": "1209643200469",
+      "title": "Calvin Klein CK24507S 338",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901162714.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24507s-338",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 N 235",
+      "pvp": 200.9,
+      "sku": "1209648801081",
+      "title": "Calvin Klein CK19119 N 235",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182606.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-n-235",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 781",
+      "pvp": 200.9,
+      "sku": "1209648801082",
+      "title": "Calvin Klein CK19119 781",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169218.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-781",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25518 N 209",
+      "pvp": 184.95,
+      "sku": "1209648801048",
+      "title": "Calvin Klein CK25518 N 209",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901183504.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25518-n-209",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25542 001",
+      "pvp": 184.95,
+      "sku": "1209648801051",
+      "title": "Calvin Klein CK25542 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177572.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25542-001",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25542 235",
+      "pvp": 184.95,
+      "sku": "1209648801052",
+      "title": "Calvin Klein CK25542 235",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177589.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25542-235",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK26512 605",
+      "pvp": 193.9,
+      "sku": "1209648801054",
+      "title": "Calvin Klein CK26512 605",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190052.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck26512-605",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK26513 240",
+      "pvp": 193.9,
+      "sku": "1209648801055",
+      "title": "Calvin Klein CK26513 240",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901189995.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck26513-240",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK26516 605",
+      "pvp": 184.95,
+      "sku": "1209648801058",
+      "title": "Calvin Klein CK26516 605",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190335.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck26516-605",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK26519 001",
+      "pvp": 149.9,
+      "sku": "1209648801059",
+      "title": "Calvin Klein CK26519 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901193176.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck26519-001",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25100S 045",
+      "pvp": 189.2,
+      "sku": "1209643200476",
+      "title": "Calvin Klein CK25100S 045",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172225.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25100s-045",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 N 045",
+      "pvp": 200.9,
+      "sku": "1209648801077",
+      "title": "Calvin Klein CK19119 N 045",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182583.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-n-045",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 N 213",
+      "pvp": 200.9,
+      "sku": "1209648801078",
+      "title": "Calvin Klein CK19119 N 213",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182590.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-n-213",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 N 025",
+      "pvp": 200.9,
+      "sku": "1209648801080",
+      "title": "Calvin Klein CK19119 N 025",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182576.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-n-025",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25538S 001",
+      "pvp": 189.9,
+      "sku": "1209643200510",
+      "title": "Calvin Klein CK25538S 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179477.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25538s-001",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25105 605 .",
+      "pvp": 177.9,
+      "sku": "1209648800665",
+      "title": "Calvin Klein CK25105 605",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171952.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25105-605",
+      "amevistaPrice": 120.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25106 400 .",
+      "pvp": 177.9,
+      "sku": "1209648800667",
+      "title": "Calvin Klein CK25106 400",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172010.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25106-400",
+      "amevistaPrice": 120.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25107 002 .",
+      "pvp": 200.9,
+      "sku": "1209648800668",
+      "title": "Calvin Klein CK25107 002",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895682893.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25107-002",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25503S 001 .",
+      "pvp": 189.9,
+      "sku": "1209643200322",
+      "title": "Calvin Klein CK25503S 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172256.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25503s-001",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25503S 235 .",
+      "pvp": 189.9,
+      "sku": "1209643200323",
+      "title": "Calvin Klein CK25503S 235",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172270.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25503s-235",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25503S 435 .",
+      "pvp": 189.9,
+      "sku": "1209643200324",
+      "title": "Calvin Klein CK25503S 435",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172287.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25503s-435",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25512 605 .",
+      "pvp": 155.9,
+      "sku": "1209648800671",
+      "title": "Calvin Klein CK25512 605",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174007.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25512-605",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25516 260 .",
+      "pvp": 191.9,
+      "sku": "1209648800702",
+      "title": "Calvin Klein CK25516 260",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174038.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25516-260",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK5864N 970 .",
+      "pvp": 155.9,
+      "sku": "1209648800703",
+      "title": "Calvin Klein CK5864N 970",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174229.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck5864n-970",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25516 605 .",
+      "pvp": 191.9,
+      "sku": "1209648800704",
+      "title": "Calvin Klein CK25516 605",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174045.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25516-605",
+      "amevistaPrice": 131.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24547 438",
+      "pvp": 155.9,
+      "sku": "1209648800713",
+      "title": "Calvin Klein CK24547 438",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901167948.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24547-438",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 025 .",
+      "pvp": 200.9,
+      "sku": "1209648800619",
+      "title": "Calvin Klein CK19119 025",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169140.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-025",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 235 .",
+      "pvp": 200.9,
+      "sku": "1209648800621",
+      "title": "Calvin Klein CK19119 235",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169171.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-235",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK21524 001 .",
+      "pvp": 155.9,
+      "sku": "1209648800626",
+      "title": "Calvin Klein CK21524 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139051.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck21524-001",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23129 002 .",
+      "pvp": 200.9,
+      "sku": "1209648800629",
+      "title": "Calvin Klein CK23129 002",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901158977.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23129-002",
+      "amevistaPrice": 110.1
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23129 430 .",
+      "pvp": 200.9,
+      "sku": "1209648800630",
+      "title": "Calvin Klein CK23129 430",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159004.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23129-430",
+      "amevistaPrice": 117.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23516 200 .",
+      "pvp": 155.9,
+      "sku": "1209648800631",
+      "title": "Calvin Klein CK23516 200",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901153842.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23516-200",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24103 235 .",
+      "pvp": 200.9,
+      "sku": "1209648800636",
+      "title": "Calvin Klein CK24103 235",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163629.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24103-235",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24103 300 .",
+      "pvp": 200.9,
+      "sku": "1209648800637",
+      "title": "Calvin Klein CK24103 300",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901163636.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24103-300",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24512S 109 .",
+      "pvp": 203.9,
+      "sku": "1209643200318",
+      "title": "Calvin Klein CK24512S 109",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165913.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24512s-109",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24543 240 .",
+      "pvp": 191.9,
+      "sku": "1209648800654",
+      "title": "Calvin Klein CK24543 240",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168464.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24543-240",
+      "amevistaPrice": 107.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24543 278 .",
+      "pvp": 191.9,
+      "sku": "1209648800655",
+      "title": "Calvin Klein CK24543 278",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901175189.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24543-278",
+      "amevistaPrice": 43.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24543 515 .",
+      "pvp": 191.9,
+      "sku": "1209648800656",
+      "title": "Calvin Klein CK24543 515",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901168488.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24543-515",
+      "amevistaPrice": 43.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25103 771 .",
+      "pvp": 200.9,
+      "sku": "1209648800662",
+      "title": "Calvin Klein CK25103 771",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171839.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25103-771",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 001 .",
+      "pvp": 200.9,
+      "sku": "1209648800314",
+      "title": "Calvin Klein CK19119 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169119.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-001",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 410 .",
+      "pvp": 200.9,
+      "sku": "1209648800317",
+      "title": "Calvin Klein CK19119 410",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901116847.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-410",
+      "amevistaPrice": 111.06
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23549 342 .",
+      "pvp": 155.9,
+      "sku": "1209648800347",
+      "title": "Calvin Klein CK23549 342",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159257.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23549-342",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24506S 300 .",
+      "pvp": 149.9,
+      "sku": "1209643200111",
+      "title": "Calvin Klein CK24506S 300",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163131.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24506s-300",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24522 539 .",
+      "pvp": 155.9,
+      "sku": "1209648800370",
+      "title": "Calvin Klein CK24522 539",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163032.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24522-539",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23515 001 .",
+      "pvp": 193.9,
+      "sku": "1209648800379",
+      "title": "Calvin Klein CK23515 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901152210.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23515-001",
+      "amevistaPrice": 111.06
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK22508 001 .",
+      "pvp": 155.9,
+      "sku": "1209648800401",
+      "title": "Calvin Klein CK22508 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142365.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck22508-001",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK22508 431 .",
+      "pvp": 155.9,
+      "sku": "1209648800403",
+      "title": "Calvin Klein CK22508 431",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142396.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck22508-431",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK23500S 601 .",
+      "pvp": 189.9,
+      "sku": "1209643200140",
+      "title": "Calvin Klein CK23500S 601",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901151466.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck23500s-601",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK20527 405 .",
+      "pvp": 149.9,
+      "sku": "1209648800450",
+      "title": "Calvin Klein CK20527 405",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901131512.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck20527-405",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK22533S 220",
+      "pvp": 172.9,
+      "sku": "1209643200170",
+      "title": "Calvin Klein CK22533S 220",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901148152.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck22533s-220",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19569 001 .",
+      "pvp": 191.9,
+      "sku": "1209648800457",
+      "title": "Calvin Klein CK19569 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122657.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19569-001",
+      "amevistaPrice": 103.2
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25104 718",
+      "pvp": 193.5,
+      "sku": "1209648800854",
+      "title": "Calvin Klein CK25104 718",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171891.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25104-718",
+      "amevistaPrice": 117.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 717 .",
+      "pvp": 200.9,
+      "sku": "1209648800240",
+      "title": "Calvin Klein CK19119 717",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169195.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-717",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 780 .",
+      "pvp": 200.9,
+      "sku": "1209648800244",
+      "title": "Calvin Klein CK19119 780",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169201.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-780",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19569 210 .",
+      "pvp": 184.9,
+      "sku": "1209648800246",
+      "title": "Calvin Klein CK19569 210",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122664.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19569-210",
+      "amevistaPrice": 102.3
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25101S 240",
+      "pvp": 180.9,
+      "sku": "1209643200459",
+      "title": "Calvin Klein CK25101S 240",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172621.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25101s-240",
+      "amevistaPrice": 29.9
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK19119 N 717",
+      "pvp": 200.9,
+      "sku": "1209648801079",
+      "title": "Calvin Klein CK19119 N 717",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182613.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck19119-n-717",
+      "amevistaPrice": 134.8
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25105 035 .",
+      "pvp": 177.9,
+      "sku": "1209648800664",
+      "title": "Calvin Klein CK25105 035",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171945.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25105-035",
+      "amevistaPrice": 120.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24513 005 .",
+      "pvp": 155.9,
+      "sku": "1209648800645",
+      "title": "Calvin Klein CK24513 005",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163469.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24513-005",
+      "amevistaPrice": 106.4
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK24513 031 .",
+      "pvp": 155.9,
+      "sku": "1209648800646",
+      "title": "Calvin Klein CK24513 031",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163476.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck24513-031",
+      "amevistaPrice": 60
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK25105 001 .",
+      "pvp": 177.9,
+      "sku": "1209648800663",
+      "title": "Calvin Klein CK25105 001",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171938.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck25105-001",
+      "amevistaPrice": 120.6
+    },
+    {
+      "brand": "Calvin Klein",
+      "name": "Calvin Klein CK21524 438 .",
+      "pvp": 155.9,
+      "sku": "1209648800271",
+      "title": "Calvin Klein CK21524 438",
+      "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139082.jpg",
+      "url": "https://www.amevista.com/pt/calvin-klein-ck21524-438",
+      "amevistaPrice": 60
+    }
+  ]
+}

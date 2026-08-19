@@ -1,0 +1,9 @@
+{
+  "name": "atelieotico-maintenance",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "astro": "^5.13.0"
+  }
+}

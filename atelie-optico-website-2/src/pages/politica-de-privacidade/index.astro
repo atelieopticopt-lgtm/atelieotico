@@ -1,0 +1,12 @@
+---
+import LegalPage from '../../components/LegalPage.astro'
+const sections = [
+  { title:'1. Responsável pelo tratamento', body:['O Ateliê Ótico é responsável pelo tratamento dos dados pessoais recolhidos através deste website. Para questões sobre privacidade, contacte geral@atelieotico.pt ou dirija-se à Rua da Conceição, Praça do Carmo 29B, 9050-026 Funchal.'] },
+  { title:'2. Dados que podemos recolher', body:['Podemos recolher nome, endereço de email, telefone, dados de marcação de consulta, mensagens enviadas, dados de conta e informação necessária para processar pedidos. Também podem ser recolhidos dados técnicos, como endereço IP, dispositivo, navegador e utilização do website.','Não solicitamos dados de saúde através de formulários gerais. Qualquer informação clínica necessária a uma consulta deve ser tratada pelos canais adequados e com as salvaguardas aplicáveis.'] },
+  { title:'3. Finalidades e fundamento', body:['Tratamos os dados para responder a contactos, gerir marcações, contas e pedidos, prestar apoio, prevenir fraude, cumprir obrigações legais e melhorar o website. O tratamento assenta, conforme o caso, na execução de diligências pré-contratuais ou contrato, no cumprimento de obrigações legais, no consentimento ou no interesse legítimo devidamente ponderado.'] },
+  { title:'4. Conservação e destinatários', body:['Os dados são conservados apenas durante o período necessário à finalidade respetiva e aos prazos legais aplicáveis. Podem ser partilhados com fornecedores tecnológicos, alojamento, email, pagamentos, contabilidade ou logística estritamente para prestar o serviço, mediante garantias adequadas. Não vendemos dados pessoais.'] },
+  { title:'5. Direitos do titular', body:['Pode solicitar acesso, retificação, apagamento, limitação, portabilidade ou oposição, bem como retirar consentimento quando aplicável, escrevendo para geral@atelieotico.pt. Pode ainda apresentar reclamação junto da Comissão Nacional de Proteção de Dados.'] },
+  { title:'6. Segurança e transferências', body:['Aplicamos medidas técnicas e organizativas adequadas à proteção dos dados. Quando um prestador tratar dados fora do Espaço Económico Europeu, serão utilizadas as salvaguardas legais exigidas. Nenhum sistema é absolutamente invulnerável, pelo que as medidas são revistas periodicamente.'] }
+]
+---
+<LegalPage title="Política de Privacidade" intro="Como o Ateliê Ótico recolhe, utiliza, conserva e protege os seus dados pessoais." sections={sections} />

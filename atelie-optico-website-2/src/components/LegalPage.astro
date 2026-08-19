@@ -1,0 +1,33 @@
+---
+import CmsRuntime from '~/components/CmsRuntime.astro'
+
+interface Section { title: string; body: string[] }
+interface Props { title: string; intro: string; updated?: string; sections: Section[] }
+const { title, intro, updated = '12 de agosto de 2026', sections } = Astro.props as Props
+---
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={intro} />
+    <title>{title} — Ateliê Ótico</title>
+    <link rel="icon" href="/images/public/favicon-atelie-light.png" />
+    <style>
+      :root{--ink:#17151a;--gold:#b77b32;--paper:#fbfaf8;--line:#e8dfd5}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;line-height:1.7}.legal-header{display:flex;align-items:center;justify-content:space-between;padding:24px clamp(24px,5vw,80px);border-bottom:1px solid var(--line);background:#fff}.legal-header img{width:165px;height:auto}.legal-header a:last-child{color:var(--ink);font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.legal-hero{padding:76px 24px 62px;background:#19171b;color:#fff;text-align:center}.legal-hero span{color:#d2a160;font-size:12px;font-weight:700;letter-spacing:.19em;text-transform:uppercase}.legal-hero h1{max-width:900px;margin:13px auto 18px;font-size:clamp(34px,5vw,64px);line-height:1.05}.legal-hero p{max-width:760px;margin:auto;color:#e8e3dd}.legal-body{max-width:960px;margin:0 auto;padding:65px 28px 90px}.legal-updated{margin:0 0 40px;color:#756b62;font-size:13px}.legal-section{padding:30px 0;border-top:1px solid var(--line)}.legal-section h2{margin:0 0 12px;font-size:25px}.legal-section p{margin:10px 0;color:#433d38}.legal-note{margin-top:40px;padding:22px;border-left:4px solid var(--gold);background:#f4ede4;color:#594630}.legal-footer{padding:28px;text-align:center;background:#19171b;color:#ddd}.legal-footer a{color:#fff}@media(max-width:600px){.legal-header img{width:135px}.legal-header{padding:18px 20px}.legal-hero{padding:56px 22px}}
+    </style>
+  </head>
+  <body>
+    <header class="legal-header"><a href="/"><img src="/images/public/atelie-logo.png" alt="Ateliê Ótico" /></a><a href="/">Voltar ao website</a></header>
+    <main>
+      <section class="legal-hero"><span>Informação legal</span><h1>{title}</h1><p>{intro}</p></section>
+      <article class="legal-body">
+        <p class="legal-updated">Última atualização: {updated}</p>
+        {sections.map(section => <section class="legal-section"><h2>{section.title}</h2>{section.body.map(paragraph => <p>{paragraph}</p>)}</section>)}
+        <div class="legal-note">Estes textos constituem uma base informativa para a operação do website e devem ser revistos por assessoria jurídica antes do lançamento comercial definitivo, especialmente após a ativação de pagamentos, expedição e faturação online.</div>
+      </article>
+    </main>
+    <footer class="legal-footer">Ateliê Ótico · Rua da Conceição, Praça do Carmo 29B, 9050-026 Funchal · <a href="mailto:geral@atelieotico.pt">geral@atelieotico.pt</a></footer>
+    <CmsRuntime />
+  </body>
+</html>

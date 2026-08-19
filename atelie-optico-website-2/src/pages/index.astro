@@ -1,0 +1,101 @@
+---
+import '../styles/design-system.css'
+import '../styles/home.css'
+
+const products = [
+  ['Armação Cat-Eye', '199,00 €', 'armacao-artistica', 'produto-01.jpg', 'stacked-01.jpg'],
+  ['Aviador Clássico', '215,00 €', 'aviador-classico', 'produto-02.jpg', 'stacked-02.jpg'],
+  ['Armação Slim', '165,00 €', 'armacao-slim-preta', 'produto-03.jpg', 'stacked-03.jpg'],
+  ['Aviador Elegante', '177,00 €', 'aviador-elegante', 'produto-04.jpg', 'stacked-04.jpg'],
+  ['Armação Contemporânea', '205,00 €', 'aviador-escuro', 'produto-05.jpg', 'snob-stacked-01.jpg'],
+  ['Óculos de Sol Exclusivos', '235,00 €', 'aviador-paris', 'produto-06.jpg', 'snob-stacked-02.jpg'],
+  ['Armação Dourada', '199,00 €', 'aviadores-dourados', 'produto-02.jpg', 'snob-stacked-03.jpg'],
+  ['Armação Prateada', '211,00 €', 'aviadores-prateados', 'produto-04.jpg', 'snob-stacked-04.jpg'],
+]
+---
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="Ateliê Ótico — peças únicas, optometria e aconselhamento personalizado no Funchal." />
+  <title>Ateliê Ótico — Funchal</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+</head>
+<body class="home-page">
+  <a class="skip-link link-underline" href="#conteudo">Saltar para o conteúdo</a>
+
+  <aside class="announcement" aria-label="Informações em destaque" data-carousel data-autoplay="5000">
+    <button class="carousel-prev" aria-label="Mensagem anterior">‹</button>
+    <div class="announcement__track" aria-live="polite">
+      <p class="carousel-slide is-active">Envio gratuito em encomendas superiores a 150 €</p>
+      <p class="carousel-slide">Nova coleção primavera/verão 2026</p>
+      <p class="carousel-slide">Aconselhamento personalizado no coração do Funchal</p>
+    </div>
+    <button class="carousel-next" aria-label="Mensagem seguinte">›</button>
+  </aside>
+
+  <header class="site-header" data-sticky-header>
+    <a class="brand" href="/" aria-label="Ateliê Ótico — início"><img src="/img/atelie/atelie-logo-dark.png" alt="Ateliê Ótico" /></a>
+    <nav class="primary-nav" aria-label="Navegação principal"><ul>
+      <li class="nav-item"><button class="nav-link" aria-expanded="false" aria-controls="mega-graduados">Óculos graduados</button>
+        <div class="mega-menu" id="mega-graduados" hidden>
+          <div class="mega-menu__links"><section><p class="eyebrow">Por pessoa</p><a href="/categoria/armacoes-em-destaque/mulher/">Mulher</a><a href="/categoria/armacoes-em-destaque/homem/">Homem</a><a href="/categoria/armacoes-em-destaque/crianca/">Criança</a></section><section><p class="eyebrow">Por estilo</p><a href="/categoria/cat-eye/">Cat-eye</a><a href="/categoria/redondo/">Redondo</a><a href="/categoria/classico/">Clássico</a></section><section><p class="eyebrow">Descobrir</p><a href="/categoria/nova-colecao/">Nova coleção</a><a href="/destaques/">Destaques</a><a href="/loja/">Ver todos</a></section></div>
+          <div class="mega-menu__promos scroll-row"><a href="/categoria/nova-colecao/"><img src="/img/atelie/destaque-01.jpg" alt="Nova coleção" /><span>Nova coleção</span></a><a href="/categoria/cat-eye/"><img src="/img/atelie/destaque-02.jpg" alt="Armações cat-eye" /><span>Cat-eye</span></a><a href="/categoria/classico/"><img src="/img/atelie/destaque-03.jpg" alt="Armações clássicas" /><span>Clássicos</span></a></div>
+        </div>
+      </li>
+      <li class="nav-item"><button class="nav-link" aria-expanded="false" aria-controls="mega-sol">Óculos de sol</button>
+        <div class="mega-menu" id="mega-sol" hidden><div class="mega-menu__links"><section><p class="eyebrow">Coleções</p><a href="/categoria/novo/">Novidades</a><a href="/categoria/exclusivo/">Exclusivos</a><a href="/categoria/promocao-de-verao/">Seleção de verão</a></section><section><p class="eyebrow">Formatos</p><a href="/categoria/cat-eye/">Cat-eye</a><a href="/categoria/redondo/">Redondos</a><a href="/categoria/classico/">Aviador</a></section><section><p class="eyebrow">Serviço</p><a href="/marcar-consulta/">Marcar consulta</a><a href="/optometria/">Optometria</a><a href="/contactos/">Contactos</a></section></div><div class="mega-menu__promos scroll-row"><a href="/categoria/exclusivo/"><img src="/img/atelie/galeria-01.jpg" alt="Óculos exclusivos" /><span>Exclusivos</span></a><a href="/categoria/novo/"><img src="/img/atelie/galeria-02.jpg" alt="Novidades" /><span>Novidades</span></a><a href="/categoria/promocao-de-verao/"><img src="/img/atelie/galeria-03.jpg" alt="Seleção de verão" /><span>Verão</span></a></div></div>
+      </li>
+      <li><a class="nav-link" href="/o-atelie/">O Ateliê</a></li><li><a class="nav-link" href="/loja/">Loja</a></li>
+    </ul></nav>
+    <nav class="secondary-nav" aria-label="Ações da conta e loja">
+      <button class="locale-button" aria-expanded="false" aria-controls="locale-popover">PT</button>
+      <div id="locale-popover" class="locale-popover" hidden><label for="locale-search">País ou idioma</label><input id="locale-search" type="search" placeholder="Pesquisar" /><a href="#">Portugal · PT</a></div>
+      <a class="icon-button" href="/minha-conta/" aria-label="Conta">♙</a>
+      <button class="icon-button" data-open-drawer="search-drawer" aria-label="Pesquisar">⌕</button>
+      <button class="icon-button" data-open-drawer="cart-drawer" aria-label="Carrinho">▢<span class="cart-count">0</span></button>
+      <button class="icon-button hamburger" data-open-drawer="menu-drawer" aria-label="Abrir menu">☰</button>
+    </nav>
+  </header>
+
+  <div class="drawer-backdrop" data-close-drawers hidden></div>
+  <aside class="drawer drawer--right" id="cart-drawer" hidden><div class="drawer__header"><h2>Carrinho</h2><button data-close-drawers aria-label="Fechar">×</button></div><div class="drawer__body" data-cart-items><div class="empty-state"><p>O seu carrinho está vazio.</p><a class="button-primary" href="/loja/">Continuar a comprar</a></div></div></aside>
+  <aside class="drawer drawer--top" id="search-drawer" hidden><div class="drawer__header"><h2>Pesquisar</h2><button data-close-drawers aria-label="Fechar">×</button></div><form class="search-form" action="/loja/" role="search"><label for="site-search">O que procura?</label><input id="site-search" name="s" type="search" placeholder="Pesquisar armações, coleções…" /><div class="predictive-results"><p>Pesquise por produto, coleção ou formato.</p></div></form></aside>
+  <aside class="drawer drawer--left mobile-menu" id="menu-drawer" hidden><div class="drawer__header"><img src="/img/atelie/atelie-logo-dark.png" alt="Ateliê Ótico" /><button data-close-drawers aria-label="Fechar">×</button></div><div class="mobile-panel" id="mobile-main"><button data-mobile-panel="mobile-graduados">Óculos graduados <span>›</span></button><button data-mobile-panel="mobile-sol">Óculos de sol <span>›</span></button><a href="/o-atelie/">O Ateliê</a><a href="/loja/">Loja</a></div><div class="mobile-panel" id="mobile-graduados" hidden><button data-mobile-back>‹ Voltar</button><a href="/categoria/armacoes-em-destaque/mulher/">Mulher</a><a href="/categoria/armacoes-em-destaque/homem/">Homem</a><a href="/categoria/nova-colecao/">Nova coleção</a></div><div class="mobile-panel" id="mobile-sol" hidden><button data-mobile-back>‹ Voltar</button><a href="/categoria/novo/">Novidades</a><a href="/categoria/exclusivo/">Exclusivos</a><a href="/categoria/promocao-de-verao/">Verão</a></div></aside>
+
+  <main id="conteudo">
+    <section class="hero" aria-label="Destaques" data-carousel data-autoplay="6000">
+      <article class="hero__slide carousel-slide is-active"><picture><source media="(max-width:767px)" srcset="/img/atelie/banner-01.jpg" /><img src="/img/atelie/imgtexto-01.jpg" alt="Seleção Ateliê Ótico" fetchpriority="high" /></picture><div class="hero__content"><p class="eyebrow">Primavera / Verão 2026</p><h1>A arte de ver</h1><a class="link-underline" href="/categoria/nova-colecao/">Descobrir a coleção</a></div></article>
+      <article class="hero__slide carousel-slide"><picture><source media="(max-width:767px)" srcset="/img/atelie/banner-02.jpg" /><img src="/img/atelie/imgtexto-02.jpg" alt="Aconselhamento personalizado" loading="lazy" /></picture><div class="hero__content"><p class="eyebrow">Peças únicas</p><h2>Um olhar só seu</h2><a class="link-underline" href="/loja/">Ver novidades</a></div></article>
+      <article class="hero__slide carousel-slide"><img src="/img/atelie/imgtexto-03.jpg" alt="Consulta de optometria" loading="lazy" /><div class="hero__content"><p class="eyebrow">Cuidado visual</p><h2>Ver melhor começa aqui</h2><a class="link-underline" href="/marcar-consulta/">Marcar consulta</a></div></article>
+      <button class="carousel-prev" aria-label="Anterior">‹</button><button class="carousel-next" aria-label="Seguinte">›</button><div class="carousel-dots"></div>
+    </section>
+
+    <section class="intro-section section"><div><p class="eyebrow">Ateliê Ótico · Funchal</p><h2>Óculos escolhidos como peças de expressão pessoal.</h2><p>Descobrimos armações singulares e acompanhamos cada escolha com tempo, critério e atenção.</p><p>Uma ótica independente onde estilo, conforto e saúde visual se encontram.</p></div></section>
+
+    <section class="category-grid section" aria-label="Comprar por categoria"><a class="media-card" href="/categoria/armacoes-em-destaque/"><img src="/img/atelie/destaque-01.jpg" alt="Óculos graduados" loading="lazy" /><span class="link-underline">Comprar graduados</span></a><a class="media-card" href="/categoria/promocao-de-verao/"><img src="/img/atelie/destaque-02.jpg" alt="Óculos de sol" loading="lazy" /><span class="link-underline">Comprar óculos de sol</span></a><a class="media-card" href="/categoria/exclusivo/"><img src="/img/atelie/destaque-03.jpg" alt="Armações exclusivas" loading="lazy" /><span class="link-underline">Descobrir exclusivos</span></a></section>
+
+    <section class="split-media" aria-label="Seleções editoriais"><a class="media-card" href="/categoria/classico/"><img src="/img/atelie/galeria-04.jpg" alt="Armações clássicas" loading="lazy" /><span><small>Essenciais</small><strong>O clássico contemporâneo</strong><i class="link-underline">Ver seleção</i></span></a><a class="media-card" href="/categoria/nova-colecao/"><img src="/img/atelie/galeria-05.jpg" alt="Nova coleção" loading="lazy" /><span><small>Nova coleção</small><strong>Formas para um novo olhar</strong><i class="link-underline">Descobrir</i></span></a></section>
+
+    <section class="product-carousel section" aria-label="Tendências" data-scroll-wrapper><button class="floating carousel-prev" data-scroll-prev aria-label="Produtos anteriores">‹</button><div class="product-row scroll-row" data-scroll-row>
+      <article class="product-intro"><p class="eyebrow">Em destaque</p><h2>As armações que marcam a estação</h2><p>Uma seleção curada de modelos distintos, leves e feitos para durar.</p><a class="link-underline" href="/loja/">Ver todos</a></article>
+      {products.map(([name, price, slug, image, alternate]) => <article class="product-card" data-name={name} data-price={price} data-image={`/img/atelie/${image}`}><a class="product-card__media" href={`/produto/${slug}/`}><img src={`/img/atelie/${image}`} alt={name} loading="lazy" /><img class="product-card__secondary" src={`/img/atelie/${alternate}`} alt={`${name}, vista alternativa`} loading="lazy" /></a><button class="quick-buy" data-add-product>Adicionar ao carrinho</button><div class="product-card__info"><a href={`/produto/${slug}/`}>{name}</a><p>{price}</p></div></article>)}
+    </div><button class="floating carousel-next" data-scroll-next aria-label="Produtos seguintes">›</button></section>
+
+    <section class="split-media" aria-label="Histórias de estilo"><a class="media-card" href="/categoria/cat-eye/"><img src="/img/atelie/snob-stacked-03.jpg" alt="Armação cat-eye" loading="lazy" /><span><small>Ícone de estilo</small><strong>A irreverência do cat-eye</strong><i class="link-underline">Explorar formato</i></span></a><a class="media-card" href="/categoria/redondo/"><img src="/img/atelie/snob-stacked-04.jpg" alt="Armação redonda" loading="lazy" /><span><small>Guia de estilo</small><strong>Uma forma para cada rosto</strong><i class="link-underline">Encontrar a sua</i></span></a></section>
+
+    <section class="comparison-section section"><div class="comparison-heading"><p class="eyebrow">Experimente o contraste</p><h2>Uma armação muda o olhar</h2><p>Arraste o controlo para comparar a expressão antes e depois.</p></div><div class="comparison" tabindex="0" role="slider" aria-label="Comparação antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><img src="/img/atelie/stacked-03.jpg" alt="Antes" /><div class="comparison__after"><img src="/img/atelie/snob-stacked-03.jpg" alt="Depois" /></div><div class="comparison__handle">↔</div></div></section>
+    <div class="home-spacer" aria-hidden="true"></div>
+    <section class="recently-viewed section" hidden><h2>Vistos recentemente</h2><div class="product-row scroll-row" data-recent-products></div></section>
+
+    <section class="testimonials section" aria-label="Opiniões" data-carousel data-autoplay="5000"><div class="testimonials__track"><blockquote class="carousel-slide is-active"><div class="stars">★★★★★</div><p>“O atendimento foi próximo e criterioso. Encontrei uma armação que parece ter sido escolhida para mim.”</p><footer>Ana · Consulta e armação · julho 2026</footer></blockquote><blockquote class="carousel-slide"><div class="stars">★★★★★</div><p>“Uma seleção diferente de tudo o que tinha visto e um aconselhamento verdadeiramente personalizado.”</p><footer>Miguel · Óculos graduados · junho 2026</footer></blockquote><blockquote class="carousel-slide"><div class="stars">★★★★★</div><p>“A leveza das armações e a atenção ao detalhe tornaram toda a experiência especial.”</p><footer>Carolina · Óculos de sol · maio 2026</footer></blockquote></div><div class="testimonials__controls"><button class="carousel-prev" aria-label="Anterior">‹</button><button class="carousel-next" aria-label="Seguinte">›</button></div></section>
+
+    <section class="newsletter section"><div><p aria-hidden="true">✉</p><p class="eyebrow">Novidades do Ateliê</p><h2>Receba primeiro as novas coleções</h2><form action="/contactos/" method="get"><label class="sr-only" for="newsletter-email">Email</label><div class="connected-input"><input id="newsletter-email" name="email" type="email" placeholder="O seu email" required /><button aria-label="Subscrever">→</button></div></form><p class="fine-print">Consulte a nossa <a class="link-underline" href="/politica-de-privacidade/">política de privacidade</a>.</p></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-main content-container"><a class="footer-logo" href="/"><img src="/img/atelie/atelie-logo-dark.png" alt="Ateliê Ótico" /></a><details open><summary>O Ateliê</summary><a href="/o-atelie/">A nossa história</a><a href="/a-nossa-equipa/">A nossa equipa</a><a href="/contactos/">Contactos</a></details><details open><summary>Apoio ao cliente</summary><a href="/perguntas-frequentes/">Perguntas frequentes</a><a href="/envios-e-entregas/">Envios e entregas</a><a href="/trocas-e-devolucoes/">Trocas e devoluções</a></details><details open><summary>Legal</summary><a href="/politica-de-privacidade/">Privacidade</a><a href="/politica-de-cookies/">Cookies</a><a href="/termos-e-condicoes/">Termos e condições</a></details></div><div class="footer-bottom content-container"><nav><a href="https://www.instagram.com/atelieotico/">Instagram</a><a href="https://www.facebook.com/atelieotico/">Facebook</a></nav><p>© 2026 Ateliê Ótico · Funchal</p></div></footer>
+  <script src="/js/home-structure.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,130 @@
+﻿---
+import StoreLayout from '../layouts/StoreLayout.astro';
+---
+
+<StoreLayout title="Política de Cookies | Ateliê Ótico — Madeira" description="Informação transparente sobre o uso de cookies e preferências de navegação no Ateliê Ótico na Região Autónoma da Madeira.">
+  <article class="content-page legal-article">
+    <div class="legal-header">
+      <span class="legal-tag">TRANSPARÊNCIA & PRIVACIDADE</span>
+      <h1>Política de Cookies</h1>
+      <p class="legal-meta">Última atualização: {new Date().toLocaleDateString('pt-PT', { month: 'long', year: 'numeric' })} • Ateliê Ótico, Região Autónoma da Madeira</p>
+    </div>
+
+    <section class="legal-section">
+      <h2>1. O que são Cookies?</h2>
+      <p>
+        Os cookies são pequenos ficheiros de texto guardados no seu navegador quando visita o nosso website. Permitem-nos reconhecer o seu dispositivo, lembrar as suas preferências (como idioma e artigos no saco de compras) e assegurar o funcionamento seguro e rápido da plataforma.
+      </p>
+    </section>
+
+    <section class="legal-section">
+      <h2>2. Tipos de Cookies Utilizados</h2>
+      <div class="cookie-types-grid">
+        <div class="cookie-card">
+          <h3>Cookies Estritamente Necessários</h3>
+          <p>Indispensáveis para navegar na loja, manter a sessão do saco de compras ativa e aceder a áreas seguras. Não podem ser desativados.</p>
+        </div>
+        <div class="cookie-card">
+          <h3>Cookies de Preferências & Idioma</h3>
+          <p>Permitem memorizar as suas opções de navegação, como o idioma selecionado (Português ou Inglês) e moeda (€).</p>
+        </div>
+        <div class="cookie-card">
+          <h3>Cookies de Desempenho & Análise</h3>
+          <p>Ajudam-nos a compreender de forma anónima como os visitantes interagem com o website para otimizarmos a velocidade de carregamento e o catálogo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-section">
+      <h2>3. Gestão e Desativação de Cookies</h2>
+      <p>
+        Pode a qualquer momento configurar o seu navegador de internet para recusar ou apagar cookies. Note que a desativação de cookies técnicos essenciais poderá afetar o correto funcionamento de algumas funcionalidades da loja (como o saco de compras e a finalização de encomendas).
+      </p>
+    </section>
+  </article>
+</StoreLayout>
+
+<style>
+  .legal-article {
+    max-width: 860px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #111111;
+    line-height: 1.7;
+  }
+
+  .legal-header {
+    margin-bottom: 48px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 28px;
+  }
+
+  .legal-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #888888;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .legal-header h1 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .legal-meta {
+    font-size: 13px;
+    color: #777777;
+    margin: 0;
+  }
+
+  .legal-section {
+    margin-bottom: 36px;
+  }
+
+  .legal-section h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: #0a0a0a;
+  }
+
+  .legal-section p {
+    font-size: 15px;
+    color: #444444;
+    margin: 0 0 12px;
+  }
+
+  .cookie-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .cookie-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .cookie-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #0a0a0a;
+  }
+
+  .cookie-card p {
+    font-size: 13.5px;
+    color: #555555;
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>

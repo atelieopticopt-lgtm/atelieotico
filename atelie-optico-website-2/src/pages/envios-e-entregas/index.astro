@@ -1,0 +1,10 @@
+---
+import LegalPage from '../../components/LegalPage.astro'
+const sections = [
+  { title:'1. Modalidades disponíveis', body:['As modalidades de envio, levantamento em loja, áreas abrangidas, transportadoras e respetivos custos serão apresentados no checkout antes de o cliente confirmar o pedido.'] },
+  { title:'2. Prazos', body:['O prazo indicado começa após confirmação do pagamento e disponibilidade do produto. Produtos personalizados, nomeadamente com lentes graduadas, podem exigir um prazo adicional que será comunicado ao cliente.'] },
+  { title:'3. Morada e tentativa de entrega', body:['O cliente deve confirmar que a morada e os contactos estão corretos. Custos causados por dados incorretos, ausência reiterada ou devolução não imputável ao vendedor podem ser cobrados nos limites legais e após informação ao cliente.'] },
+  { title:'4. Acompanhamento e receção', body:['Quando exista rastreio, a informação será enviada pelos contactos fornecidos. Danos visíveis ou volumes em falta devem ser assinalados no momento da entrega e comunicados ao Ateliê Ótico logo que possível.'] }
+]
+---
+<LegalPage title="Envios e Entregas" intro="Informação sobre preparação, transporte, levantamento e receção das encomendas." sections={sections} />

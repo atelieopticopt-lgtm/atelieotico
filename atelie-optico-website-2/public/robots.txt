@@ -1,0 +1,47 @@
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-SearchBot
+Allow: /
+
+User-Agent: Claude-User
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Perplexity-User
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+
+User-Agent: Bytespider
+Allow: /
+
+User-Agent: Amazonbot
+Allow: /
+
+User-Agent: *
+Allow: /
+
+Disallow: /admin/
+Sitemap: https://atelieotico.pt/sitemap.xml

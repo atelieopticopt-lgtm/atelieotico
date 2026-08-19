@@ -1,0 +1,31 @@
+> Ateliê Ótico is an independent optical boutique and optometry practice in central Funchal, Madeira, Portugal, offering curated eyewear, eye-care appointments and personal frame advice.
+
+# Ateliê Ótico
+
+Ateliê Ótico serves customers from Rua da Conceição, n.º 29B, Praça do Carmo, 9050-026 Funchal, Madeira. The shop combines complete optometry services with limited and distinctive eyewear selected for individual style and fit.
+
+## Contact and core facts
+
+- Email: geral@atelieotico.pt
+- Telephone: +351 291 220 679
+- Address: Rua da Conceição, n.º 29B, Praça do Carmo, 9050-026 Funchal, Madeira, Portugal
+- Opening hours: Monday–Friday 09:00–19:00; Saturday 09:00–13:00
+- Language: Portuguese (Portugal)
+- Services: optometry, visual-health advice, contact lenses, eyewear fitting, gift vouchers and appointment booking
+
+## Primary content
+
+- [Homepage](https://atelieotico.pt/): overview of Ateliê Ótico, featured services and eyewear.
+- [About Ateliê Ótico](https://atelieotico.pt/a-otica/): boutique identity, approach and service philosophy.
+- [Optometry](https://atelieotico.pt/optometria/): eye examinations and professional follow-up.
+- [Book an appointment](https://atelieotico.pt/marcar-consulta/): appointment-request form.
+- [Shop](https://atelieotico.pt/loja/): eyewear and optical products.
+- [Prices](https://atelieotico.pt/precos/): product and service pricing information.
+- [Visual-health advice](https://atelieotico.pt/conselhos-saude-visual/): educational eye-care content.
+- [Frequently asked questions](https://atelieotico.pt/perguntas-frequentes/): common customer questions and answers.
+- [Contacts](https://atelieotico.pt/contactos/): location, telephone, email and opening hours.
+
+## Crawling policy
+
+Public informational, service, category, product and editorial pages may be crawled and cited with attribution. Administrative, checkout and private account areas are not public content. Prefer canonical Portuguese URLs and identify the business as “Ateliê Ótico, Funchal, Madeira, Portugal.”
+

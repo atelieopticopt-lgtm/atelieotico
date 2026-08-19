@@ -1,0 +1,88 @@
+﻿---
+import StoreLayout from '../layouts/StoreLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { products } from '../data/products';
+
+const groups = {
+  category: [...new Set(products.map(p => p.category))],
+  shape: [...new Set(products.map(p => p.shape))],
+  material: [...new Set(products.map(p => p.material))],
+  color: [...new Set(products.map(p => p.color))]
+};
+---
+
+<StoreLayout title="catálogo de Óculos | Ateliê Ótico" description="catálogo completo de armações óticas e óculos de sol de autor no Ateliê Ótico, Madeira.">
+  <section class="page-hero">
+    <p>Ateliê ÓTICO</p>
+    <h1>O nosso catálogo</h1>
+    <p><span data-result-count>{products.length}</span> MODELOS</p>
+  </section>
+
+  <div class="catalog-layout">
+    <aside class="filters">
+      <div class="filter-group">
+        <h2>TIPO</h2>
+        {groups.category.map(v => (
+          <label>
+            <input type="checkbox" data-filter="category" value={v}/>
+            {v}
+          </label>
+        ))}
+      </div>
+
+      <div class="filter-group">
+        <h2>FORMA</h2>
+        {groups.shape.map(v => (
+          <label>
+            <input type="checkbox" data-filter="shape" value={v}/>
+            {v}
+          </label>
+        ))}
+      </div>
+
+      <div class="filter-group">
+        <h2>MATERIAL</h2>
+        {groups.material.map(v => (
+          <label>
+            <input type="checkbox" data-filter="material" value={v}/>
+            {v}
+          </label>
+        ))}
+      </div>
+
+      <div class="filter-group">
+        <h2>COR</h2>
+        {groups.color.map(v => (
+          <label>
+            <input type="checkbox" data-filter="color" value={v}/>
+            {v}
+          </label>
+        ))}
+      </div>
+    </aside>
+
+    <section class="catalog-main">
+      <div class="catalog-tools">
+        <div class="view-buttons">
+          <button data-view="grid" aria-label="Vista em grelha">▦</button>
+          <button data-view="list" aria-label="Vista em lista">▤</button>
+        </div>
+
+        <select data-sort aria-label="Ordenar">
+          <option value="default">ORDENAR</option>
+          <option value="price-asc">PREÇO: ASCENDENTE</option>
+          <option value="price-desc">PREÇO: DESCENDENTE</option>
+          <option value="name">NOME</option>
+        </select>
+      </div>
+
+      <div class="product-grid" data-product-grid>
+        {products.map(product => <ProductCard product={product} />)}
+      </div>
+
+      <p class="empty-results">Não encontrámos modelos com estes filtros.</p>
+    </section>
+  </div>
+
+  <script is:inline src="/catalog.js"></script>
+</StoreLayout>

@@ -1,0 +1,13 @@
+---
+import LegalPage from '../../components/LegalPage.astro'
+const sections = [
+  { title:'1. Âmbito', body:['Os presentes Termos e Condições regulam a utilização do website do Ateliê Ótico e, quando disponibilizadas, a reserva ou compra de produtos e serviços. A utilização do website implica a aceitação destas condições na versão em vigor.'] },
+  { title:'2. Produtos, imagens e disponibilidade', body:['As descrições, fotografias e cores procuram representar os produtos com rigor, mas podem existir diferenças de visualização entre dispositivos. As armações estão sujeitas a disponibilidade e confirmação de stock. Um artigo colocado no carrinho não fica reservado até confirmação do pedido.'] },
+  { title:'3. Preços e pagamento', body:['Os preços são apresentados em euros e, quando aplicável, incluem IVA à taxa legal. Antes de ativar pagamentos online, as modalidades aceites, custos adicionais e entidade responsável pela faturação serão apresentadas claramente no checkout. Erros manifestos de preço podem justificar a correção ou cancelamento do pedido, com informação ao cliente.'] },
+  { title:'4. Encomendas e confirmação', body:['A submissão de um pedido constitui uma proposta de compra. A venda apenas se considera aceite após confirmação pelo Ateliê Ótico. Se um produto não estiver disponível, o cliente será informado e qualquer montante cobrado será devolvido pelo meio aplicável.'] },
+  { title:'5. Entrega, levantamento e risco', body:['As zonas, prazos, custos de entrega e possibilidade de levantamento em loja serão indicados antes da confirmação da compra. O cliente deve fornecer dados corretos e verificar a encomenda no momento da receção.'] },
+  { title:'6. Garantia, devoluções e reclamações', body:['Aplicam-se as garantias e direitos previstos na legislação portuguesa de defesa do consumidor. As condições específicas de livre resolução, devolução e exceções constam da Política de Trocas e Devoluções. Reclamações podem ser enviadas para geral@atelieotico.pt, sem prejuízo do acesso ao Livro de Reclamações Eletrónico e às entidades legalmente competentes.'] },
+  { title:'7. Propriedade intelectual e responsabilidade', body:['A marca, conteúdos, fotografias próprias, design e código do website estão protegidos. Não é permitida a reprodução ou exploração sem autorização. O Ateliê Ótico procura assegurar a disponibilidade e exatidão do website, mas não garante funcionamento ininterrupto quando ocorram manutenção, falhas externas ou força maior.'] }
+]
+---
+<LegalPage title="Termos e Condições" intro="Condições de utilização do website e enquadramento das futuras compras online." sections={sections} />

@@ -1,0 +1,53 @@
+---
+import StoreLayout from '../layouts/StoreLayout.astro';
+
+const brands = [
+  {
+    name: 'SNOB Milano',
+    logo: '/Ateliê',
+    style: 'height: 64px; width: auto; max-width: 240px; mix-blend-mode: multiply; transform: scale(2.1); transform-origin: left center; object-position: left center; margin-left: -32px;',
+    text: 'Design italiano irreverente e soluções óticas versáteis com clip-on magnético patenteado.'
+  },
+  {
+    name: 'Ørgreen Optics',
+    logo: '/Ateliê',
+    style: 'height: 38px; width: auto; max-width: 200px; filter: brightness(0); object-position: left center;',
+    text: 'Cor, Precisão e construção escandinava em titânio japonês de grau cirúrgico.'
+  },
+  {
+    name: 'Einstoffen',
+    logo: '/Ateliê',
+    style: 'height: 68px; width: auto; max-width: 190px; mix-blend-mode: multiply; transform: scale(1.6); transform-origin: left center; object-position: left center;',
+    text: 'Armações independentes inspiradas por matérias-primas nobres e orgânicas da Suíça.'
+  },
+  {
+    name: 'Rodenstock',
+    logo: '/Ateliê',
+    style: 'height: 70px; width: auto; max-width: 200px; mix-blend-mode: multiply; transform: scale(1.35); transform-origin: left center; object-position: left center;',
+    text: 'Tecnologia biométrica de lentes alemãs e visão de máxima acuidade ótica.'
+  }
+];
+---
+
+<StoreLayout title="Marcas | Ateliê Ótico">
+  <section class="page-hero">
+    <p>CURADORIA &amp; PARCEIROS</p>
+    <h1>As nossas marcas</h1>
+  </section>
+
+  <div class="brand-list" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 80px;">
+    {brands.map((b) => (
+      <article style="display: grid; grid-template-columns: 260px 1fr auto; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; align-items: center; justify-content: flex-start; width: 260px; min-height: 80px;">
+          <img
+            src={b.logo}
+            alt={b.name}
+            style={`object-fit: contain; background: transparent !important; ${b.style}`}
+          />
+        </div>
+        <p style="font-size: 14px; color: #444; margin: 0; line-height: 1.6;">{b.text}</p>
+        <a href="/catálogo" style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px;">VER MODELOS →</a>
+      </article>
+    ))}
+  </div>
+</StoreLayout>

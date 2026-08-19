@@ -1,0 +1,22 @@
+{
+  "name": "melin-astro-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "audit": "node scripts/audit-template.mjs",
+    "deploy": "node scripts/deploy-vps.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@supabase/supabase-js": "^2.112.3",
+    "astro": "^5.13.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "node-ssh": "^13.2.1"
+  }
+}

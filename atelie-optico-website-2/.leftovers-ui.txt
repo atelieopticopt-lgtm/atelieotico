@@ -1,0 +1,291 @@
+149	Helpdesk center
+147	Free shipping 100$
+147	100% safe payment
+134	New
+126	Select options
+126	This product has multiple variants. The options may be chosen on the product page
+99	New collection
+85	Summer Sale
+72	Cancel reply
+72	Required fields are marked
+70	Read More
+58	Search
+55	Add to wishlist
+55	Share product:
+55	Your Rating
+55	Not that bad
+55	Submit
+55	Related products
+45	There are no reviews yet.
+43	Product categories
+41	Default sorting
+41	Sort by popularity
+41	Sort by average rating
+41	Sort by latest
+41	Sort by price: low to high
+41	Sort by price: high to low
+41	Filter by price
+41	Min price
+41	Max price
+41	Filter
+41	Price:
+35	This year frames
+35	Filter by gender
+35	Filter by color
+35	Filter by size
+34	Reply
+29	Category
+28	Read more
+27	Choose an option
+18	View products
+17	Handcrafted with purpose
+17	Why are sunglasses useful?
+17	Leave a Reply
+17	Post Comment
+13	Buy On Amazon
+12	Soft Filter Sunglasses
+11	Our new hot shapes
+10	Shop now
+10	Category:
+10	1 review for
+10	Add a review
+9	Style your own glasses
+9	Frames that suit you
+8	Best shapes for you
+6	Contact Us
+6	Showing all 6 results
+4	send now
+4	Contact us
+4	Showing 1–12 of 36 results
+3	(Page 2)
+3	View more
+3	Surgeries and prescriptions
+3	Sale up to 70% on new items.
+3	Buy now
+3	Showing the single result
+3	Showing all 2 results
+2	About Us
+2	Book your eye exams
+2	Free delivery
+2	100% safe online shoping
+2	Preferred date you would like to book appointment ( required )
+2	Your cart is currently empty.
+2	Return to shop
+2	Find your fit
+2	Relif from eyes discomfort
+2	My account
+2	Prescriptions of contact lenses
+2	Diagnosis and ophthalmology
+2	Showing 1–12 of 23 results
+2	Showing 1–12 of 13 results
+2	Showing 1–12 of 34 results
+2	Showing all 3 results
+2	Showing 13–24 of 36 results
+2	Showing 25–36 of 36 results
+2	Showing all 11 results
+2	Round Glasses quantity
+2	Summer Sunglasses quantity
+2	Transparent Lennons quantity
+2	Pink Glasses quantity
+2	Lether Case quantity
+2	Shop Left Sidebar
+2	Shop No Sidebar
+2	Shop Right Sidebar
+2	Showing 1–12 of 55 results
+1	Book an Appointment
+1	Please select store ( required )
+1	Send Request
+1	Optical shop
+1	Our Clinic Shop
+1	Our Clinic
+1	Check our lastest posts now
+1	New aviator glasses
+1	new
+1	Brand of the year
+1	Our looks are modern
+1	Made for you
+1	Edgy touch to your wardobe
+1	STRENGTH AND FLEXIBILITY
+1	New and unique shapes just for you
+1	KEEP YOUR EYES HEALTHY
+1	The best ophthalmologists around
+1	Get perfect size: find glasses now
+1	is closest to our
+1	Shop this size
+1	Your questions
+1	The most asked questions
+1	Protection for your kid's glasses
+1	How do I find measurments for frame
+1	Payments and checkout
+1	How do I change my order
+1	How can I get free shipping
+1	Delivery and returning policy
+1	Vouchers and gift cards policy
+1	If you cannot find the answer to your question, please contact us
+1	States New York, NY 11372
+1	Made for optometrists & optician stores
+1	Modern visuals, premade layouts & handy features as far as the eye can see
+1	A contemporary WordPress theme for eyecare pros
+1	Five full-scale websites for eye care clinics & eyewear stores
+1	For stores and opticans
+1	Ophthalmology home
+1	For medical centers
+1	Optician home
+1	Shop home
+1	Eyewear home
+1	Easily create a website that looks & feels simply superb
+1	View More
+1	ONLINE SHOP
+1	Everything you need to start selling today
+1	Not only do you get a wide selection of prebuilt shop pages, but Neo Ocular also features full compatibility with the powerful & free WooCommerce plugin
+1	The easy way to launch your stories online
+1	With Neo Ocular you also get Booked - Appointment Booking for WordPress plugin bundled completely free of charge
+1	Practical solutions for a variety of uses
+1	A handy layout for presenting various pricing options your business has on offer
+1	A readymade contact page where you can include individual or multiple contacts
+1	You can also feature a neat newsletter subscription pop-up form on your pages
+1	A template designed for presenting your gift cards, coupons, vouchers & more
+1	Dropdown Cart
+1	Your customers will always have an overview of their cart contents close at hand
+1	Readymade pages for introducing your staff as well as individual staff members
+1	Product Size Calculator
+1	An element that allows your customers to calculate their frame sizes on the spot
+1	Create a comprehensive presentation for your business quickly and with ease
+1	Your visitors can easily book appointments online – powered by Booked plugin
+1	Your new site envisioned
+1	We built Neo Ocular with all eyecare & optician sites in mind
+1	Password
+1	Lost your password?
+1	Reset password
+1	With a team of dedicated professionals
+1	We have the best ophthalmologists around
+1	Here to assist you 24 hours a day, 7 days a week
+1	Premier care center
+1	Eye surgery services
+1	Best contact lenses
+1	Book your appointment
+1	Check out the available dates & make a reservation
+1	Optometry doctors
+1	Relief from eye discomfort
+1	Visit one of our medical centers and get the help you need.
+1	Ophtalmology shop
+1	Adept team care
+1	Book now
+1	Check out our news now
+1	Relif from eyes problems
+1	Professional
+1	Showing 13–23 of 23 results
+1	Showing 13–13 of 13 results
+1	Showing all 5 results
+1	Showing 13–24 of 34 results
+1	Showing 25–34 of 34 results
+1	Animal Print quantity
+1	Be the first to review “Animal Print”
+1	Artistic Frame Glasses quantity
+1	Be the first to review “Artistic Frame Glasses”
+1	Aviator Classic quantity
+1	Be the first to review “Aviator Classic”
+1	Aviator Elegant quantity
+1	Be the first to review “Aviator Elegant”
+1	Aviator Paris quantity
+1	Be the first to review “Aviator Paris”
+1	Cat Eyewear quantity
+1	Be the first to review “Cat Eyewear”
+1	Circular Sunglasses quantity
+1	Be the first to review “Circular Sunglasses”
+1	Be the first to review “Classic Round”
+1	Cottet Barcelona quantity
+1	Be the first to review “Cottet Barcelona”
+1	Cottet Paris quantity
+1	Dark Aviator quantity
+1	Be the first to review “Dark Aviator”
+1	Mens sunglasses quantity
+1	Be the first to review “Mens sunglasses”
+1	Exlusive model quantity
+1	Be the first to review “Exlusive model”
+1	Eyeglasses quantity
+1	Be the first to review “Eyeglasses”
+1	Fashion Glasses quantity
+1	Be the first to review “Fashion Glasses”
+1	Gift Card quantity
+1	Gold glasses quantity
+1	Gold Pilot quantity
+1	Golden Aviators quantity
+1	Be the first to review “Golden Aviators”
+1	Green Lennons quantity
+1	Be the first to review “Green Lennons”
+1	Green Pilot quantity
+1	Be the first to review “Lether Case”
+1	Marshal Glasses quantity
+1	Be the first to review “Marshal Glasses”
+1	Metal Lennons quantity
+1	Be the first to review “Metal Lennons”
+1	Meteor Sunglasses quantity
+1	Be the first to review “Meteor Sunglasses”
+1	Out of stock
+1	Be the first to review “Pink Glasses”
+1	Designed Glasses quantity
+1	Be the first to review “Designed Glasses”
+1	Retro Sunglasses quantity
+1	Be the first to review “Retro Sunglasses”
+1	Be the first to review “Round Glasses”
+1	Royal Glasses quantity
+1	Be the first to review “Royal Glasses”
+1	Shinny Glasses quantity
+1	Be the first to review “Shinny Glasses”
+1	Silver Aviators quantity
+1	Be the first to review “Silver Aviators”
+1	Silver Lennons quantity
+1	Be the first to review “Silver Lennons”
+1	Slim Eyeglasses quantity
+1	Be the first to review “Slim Eyeglasses”
+1	Slim Frame Black quantity
+1	Be the first to review “Slim Frame Black”
+1	Slim Sunglasses quantity
+1	Be the first to review “Slim Sunglasses”
+1	Soft Filter Sunglasses quantity
+1	Be the first to review “Soft Filter Sunglasses”
+1	Art Eyeglasses quantity
+1	Be the first to review “Art Eyeglasses”
+1	Dark Pilot quantity
+1	Be the first to review “Dark Pilot”
+1	Be the first to review “Summer Sunglasses”
+1	Thalia Black quantity
+1	Be the first to review “Thalia Black”
+1	Thalia Round quantity
+1	Be the first to review “Thalia Round”
+1	Transparent Glasses quantity
+1	Be the first to review “Transparent Glasses”
+1	Be the first to review “Transparent Lennons”
+1	Trendy Glasses quantity
+1	Be the first to review “Trendy Glasses”
+1	Vintage Eyeglasses quantity
+1	Be the first to review “Vintage Eyeglasses”
+1	Voucher quantity
+1	Way Glasses quantity
+1	Wild Glasses quantity
+1	Be the first to review “Wild Glasses”
+1	Wild Meteor quantity
+1	Be the first to review “Wild Meteor”
+1	Wild Round Glasses quantity
+1	Be the first to review “Wild Round Glasses”
+1	Womens sunglasses quantity
+1	Be the first to review “Womens sunglasses”
+1	Using the most exclusive, most durable materials
+1	Showing 13–24 of 55 results
+1	(Page 3)
+1	Showing 25–36 of 55 results
+1	(Page 4)
+1	Showing 37–48 of 55 results
+1	(Page 5)
+1	Showing 49–55 of 55 results
+1	FREE GIFT BAG -
+1	With every frame
+1	The best offers for you
+1	NEW'21
+1	Online shop offers
+1	ophtamology shop
+1	Safe transfer
+1	Wishlist
+1	No items added to the wishlist
+1	De ótico a sol num gesto — proteção total sem trocar de óculos.
