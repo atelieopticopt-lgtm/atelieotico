@@ -55,6 +55,7 @@
   const translations = {
     pt: {
       topbar: "PORTES GRATUITOS A PARTIR DE 100 €",
+      nav_campanhas: "CAMPANHAS",
       nav_oculos: "ÓCULOS",
       nav_novidades: "NOVIDADES",
       nav_marcas: "MARCAS",
@@ -80,6 +81,7 @@
     },
     en: {
       topbar: "FREE SHIPPING ON ORDERS OVER 100 €",
+      nav_campanhas: "CAMPAIGNS",
       nav_oculos: "EYEWEAR",
       nav_novidades: "NEW ARRIVALS",
       nav_marcas: "BRANDS",
@@ -127,6 +129,7 @@
     const navLinks = document.querySelectorAll('#main-nav > a, #main-nav > .nav-drop > a');
     navLinks.forEach(link => {
       const text = link.textContent.trim().toUpperCase();
+      if (text.includes('CAMPANHAS') || text.includes('CAMPAIGNS')) link.textContent = dict.nav_campanhas;
       if (text.includes('ÓCULOS') || text.includes('EYEWEAR')) link.textContent = dict.nav_oculos;
       if (text.includes('NOVIDADES') || text.includes('NEW ARRIVALS')) link.textContent = dict.nav_novidades;
       if (text.includes('MARCAS') || text.includes('BRANDS')) link.textContent = dict.nav_marcas;
