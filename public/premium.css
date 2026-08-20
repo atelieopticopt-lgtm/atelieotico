@@ -1864,27 +1864,34 @@ body {
 
 .cart-trigger .cart-badge {
   position: absolute !important;
-  top: -2px !important;
-  right: -4px !important;
+  top: -4px !important;
+  right: -5px !important;
   background: #000000 !important;
   color: #ffffff !important;
-  font-size: 9.5px !important;
-  font-weight: 800 !important;
-  min-width: 17px !important;
-  height: 17px !important;
-  padding: 0 4px !important;
-  border-radius: 10px !important;
+  font-family: var(--font-editorial) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  line-height: 1 !important;
+  text-align: center !important;
+  line-height: 18px !important;
   border: 1.5px solid #ffffff !important;
+  box-sizing: border-box !important;
   pointer-events: none !important;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
 .cart-trigger .cart-badge:empty,
-.cart-trigger .cart-badge[data-cart-count="0"] {
+.cart-trigger .cart-badge[data-cart-count="0"],
+.cart-trigger .cart-badge:is([data-cart-count="0"]),
+.cart-trigger .cart-badge:not([data-cart-count]) {
   display: none !important;
 }
 

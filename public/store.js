@@ -16,9 +16,9 @@ function renderCart() {
     e.textContent = String(count);
     e.setAttribute('data-cart-count', String(count));
     if (count === 0) {
-      e.style.display = 'none';
+      e.style.setProperty('display', 'none', 'important');
     } else {
-      e.style.display = 'flex';
+      e.style.setProperty('display', 'flex', 'important');
     }
   });
 
