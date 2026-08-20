@@ -1,16 +1,19 @@
-// catalog.js — High Performance Sidebar & Search Controller for Ateliê Ótico
+// catalog.js — Clean Sidebar & Dual Range Slider Filtering Controller
 (() => {
   const grid = document.querySelector('[data-product-grid]');
   const cards = Array.from(document.querySelectorAll('.store-card'));
   const countBadge = document.getElementById('catalog-result-count');
   const emptyState = document.getElementById('catalog-empty-state');
   const searchInput = document.getElementById('catalog-search-input');
-  const searchClear = document.getElementById('catalog-search-clear');
   const sortSelect = document.getElementById('catalog-sort-select');
-  const priceMinInput = document.getElementById('price-min');
-  const priceMaxInput = document.getElementById('price-max');
-  const priceTagBtns = document.querySelectorAll('.price-tag-btn');
   const filterCheckboxes = document.querySelectorAll('input[data-filter]');
+
+  // Dual Range Slider Elements
+  const sliderMin = document.getElementById('price-slider-min');
+  const sliderMax = document.getElementById('price-slider-max');
+  const sliderTrack = document.getElementById('range-track-fill');
+  const minValLabel = document.getElementById('price-slider-min-val');
+  const maxValLabel = document.getElementById('price-slider-max-val');
 
   // Mobile Drawer
   const mobileToggleBtn = document.getElementById('btn-toggle-filters-mobile');
@@ -57,14 +60,44 @@
     }
   });
 
+  function updateSliderVisuals(source) {
+    if (!sliderMin || !sliderMax) return;
+    let min = parseInt(sliderMin.value);
+    let max = parseInt(sliderMax.value);
+
+    if (min > max - 15) {
+      if (source === 'min') {
+        sliderMin.value = max - 15;
+        min = max - 15;
+      } else {
+        sliderMax.value = min + 15;
+        max = min + 15;
+      }
+    }
+
+    const minPercent = (min / 600) * 100;
+    const maxPercent = (max / 600) * 100;
+
+    if (sliderTrack) {
+      sliderTrack.style.left = `${minPercent}%`;
+      sliderTrack.style.right = `${100 - maxPercent}%`;
+    }
+
+    if (minValLabel) minValLabel.textContent = `${min} €`;
+    if (maxValLabel) maxValLabel.textContent = `${max} €`;
+  }
+
   function getActiveFilters() {
+    const minP = sliderMin ? parseInt(sliderMin.value) : 0;
+    const maxP = sliderMax ? parseInt(sliderMax.value) : 600;
+
     const filters = {
       brand: [],
       category: [],
       shape: [],
       material: [],
-      minPrice: priceMinInput && priceMinInput.value ? Number(priceMinInput.value) : null,
-      maxPrice: priceMaxInput && priceMaxInput.value ? Number(priceMaxInput.value) : null,
+      minPrice: minP > 0 ? minP : null,
+      maxPrice: maxP < 600 ? maxP : null,
       search: searchInput ? normalize(searchInput.value) : ''
     };
 
@@ -80,11 +113,6 @@
 
   function applyFilters() {
     const filters = getActiveFilters();
-
-    if (searchClear) {
-      searchClear.style.display = filters.search ? 'block' : 'none';
-    }
-
     let visibleCount = 0;
 
     cards.forEach(card => {
@@ -118,8 +146,8 @@
       );
 
       // Check Price match
-      const minMatch = filters.minPrice === null || isNaN(filters.minPrice) || cardPrice >= filters.minPrice;
-      const maxMatch = filters.maxPrice === null || isNaN(filters.maxPrice) || cardPrice <= filters.maxPrice;
+      const minMatch = filters.minPrice === null || cardPrice >= filters.minPrice;
+      const maxMatch = filters.maxPrice === null || cardPrice <= filters.maxPrice;
 
       // Check Search text match
       let searchMatch = true;
@@ -154,50 +182,33 @@
 
   function resetAllFilters() {
     if (searchInput) searchInput.value = '';
-    if (priceMinInput) priceMinInput.value = '';
-    if (priceMaxInput) priceMaxInput.value = '';
+    if (sliderMin) sliderMin.value = 0;
+    if (sliderMax) sliderMax.value = 600;
+    updateSliderVisuals('init');
     filterCheckboxes.forEach(cb => cb.checked = false);
-    priceTagBtns.forEach(b => b.classList.remove('active'));
     applyFilters();
   }
 
-  // Event Listeners
+  // Range Slider Events
+  if (sliderMin) {
+    sliderMin.addEventListener('input', () => {
+      updateSliderVisuals('min');
+      applyFilters();
+    });
+  }
+  if (sliderMax) {
+    sliderMax.addEventListener('input', () => {
+      updateSliderVisuals('max');
+      applyFilters();
+    });
+  }
+
+  // Checkbox & Search Events
   filterCheckboxes.forEach(cb => cb.addEventListener('change', applyFilters));
 
   if (searchInput) {
     searchInput.addEventListener('input', applyFilters);
   }
-
-  if (searchClear) {
-    searchClear.addEventListener('click', () => {
-      if (searchInput) searchInput.value = '';
-      applyFilters();
-      searchInput?.focus();
-    });
-  }
-
-  if (priceMinInput) priceMinInput.addEventListener('input', applyFilters);
-  if (priceMaxInput) priceMaxInput.addEventListener('input', applyFilters);
-
-  priceTagBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const min = btn.dataset.min;
-      const max = btn.dataset.max;
-      const isActive = btn.classList.contains('active');
-
-      priceTagBtns.forEach(b => b.classList.remove('active'));
-
-      if (isActive) {
-        if (priceMinInput) priceMinInput.value = '';
-        if (priceMaxInput) priceMaxInput.value = '';
-      } else {
-        btn.classList.add('active');
-        if (priceMinInput) priceMinInput.value = min !== '0' ? min : '';
-        if (priceMaxInput) priceMaxInput.value = max !== '1000' ? max : '';
-      }
-      applyFilters();
-    });
-  });
 
   if (sortSelect && grid) {
     sortSelect.addEventListener('change', () => {
@@ -222,5 +233,6 @@
   document.getElementById('btn-empty-reset')?.addEventListener('click', resetAllFilters);
 
   // Initial Run
+  updateSliderVisuals('init');
   applyFilters();
 })();
