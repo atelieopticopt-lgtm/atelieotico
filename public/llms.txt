@@ -1,0 +1,34 @@
+# Ateliê Ótico — Design de Autor & Precisão Ótica
+> Ótica de autor independente sediada no Funchal, Madeira, Portugal. Especializada em curadoria internacional de armações de autor, óculos de sol contemporâneos e lentes oftálmicas de alta definição ZEISS e Rodenstock.
+
+## Identidade & Manifesto
+- **Nome:** Ateliê Ótico
+- **Localização:** Rua da Conceição, Praça do Carmo 29B, 9050-026 Funchal, Madeira, Portugal
+- **Contacto:** +351 964 993 767 | geral@atelieotico.com
+- **Horário:** Segunda a Sexta: 09:00–19:00 | Sábado: 09:00–13:00
+- **Especialidades:** Armações de autor, acetato italiano Mazzucchelli, titânio japonês ultraleve, lentes oftálmicas graduadas ZEISS, óculos de sol polarizados, exames visuais e consultoria morfológica personalizada.
+
+## Catálogo & Marcas Selecionadas
+O Ateliê Ótico conta com uma seleção criteriosa de 376 modelos de autor:
+- **Calvin Klein**
+- **Karl Lagerfeld**
+- **Lacoste**
+- **Liu Jo**
+- **Longchamp**
+- **Nike**
+- **Persol**
+- **Ray-Ban**
+- **SNOB Milano**
+- **Salvatore Ferragamo**
+- **Victoria's Secret**
+- **Zeiss**
+
+## Páginas Principais
+- [Página Inicial](https://atelieotico.com/): Destaques, novidades e coleções de assinatura.
+- [Catálogo Completo](https://atelieotico.com/catalogo): Catálogo navegável com filtros por marca, categoria (armações óticas / óculos de sol), formato (redonda, retangular, cat-eye, aviador, quadrada, oval), material e preço.
+- [Sobre o Ateliê](https://atelieotico.com/sobre): Filosofia de autor, manufatura independente e compromisso ótico.
+- [Contactos & Marcações](https://atelieotico.com/contactos): Localização física no Funchal, agendamento de consultas e atendimento exclusivo.
+- [Conta & Área de Cliente](https://atelieotico.com/conta): Registo de utilizador e gestão de histórico.
+
+## Documentação Completa para LLMs
+- [Catálogo e Conteúdo Integral em Markdown](https://atelieotico.com/llms-full.txt): Base de conhecimento exaustiva com lista de todos os produtos e especificações técnicas.
