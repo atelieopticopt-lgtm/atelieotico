@@ -6,7 +6,7 @@
   const emptyState = document.getElementById('catalog-empty-state');
   const searchInput = document.getElementById('catalog-search-input');
   const sortSelect = document.getElementById('catalog-sort-select');
-  const filterCheckboxes = document.querySelectorAll('input[data-filter]');
+  const filterGroupBrands = document.querySelector('.catalog-filter-group .filter-options-list');
 
   // Dual Range Slider Elements
   const sliderMin = document.getElementById('price-slider-min');
@@ -39,26 +39,58 @@
   const urlBrand = urlParams.get('marca') || urlParams.get('brand');
   const urlCategory = urlParams.get('categoria') || urlParams.get('category');
   const urlShape = urlParams.get('forma') || urlParams.get('shape');
+  const urlMaterial = urlParams.get('material');
   const urlSearch = urlParams.get('q');
 
   if (urlSearch && searchInput) {
     searchInput.value = urlSearch;
   }
 
-  filterCheckboxes.forEach(cb => {
+  let brandCheckboxMatched = false;
+
+  // Pre-check checkboxes based on URL
+  document.querySelectorAll('input[data-filter]').forEach(cb => {
     const filterType = cb.dataset.filter;
     const val = normalize(cb.value);
 
-    if (filterType === 'brand' && urlBrand && (normalize(urlBrand) === val || urlParams.getAll('brand').map(normalize).includes(val) || urlParams.getAll('marca').map(normalize).includes(val))) {
-      cb.checked = true;
+    if (filterType === 'brand' && urlBrand) {
+      const targetBrand = normalize(urlBrand);
+      if (val === targetBrand || val.includes(targetBrand) || targetBrand.includes(val)) {
+        cb.checked = true;
+        brandCheckboxMatched = true;
+      }
     }
-    if (filterType === 'category' && urlCategory && (normalize(urlCategory) === val || urlParams.getAll('category').map(normalize).includes(val) || urlParams.getAll('categoria').map(normalize).includes(val))) {
-      cb.checked = true;
+    if (filterType === 'category' && urlCategory) {
+      const targetCat = normalize(urlCategory);
+      if (val === targetCat || val.includes(targetCat) || targetCat.includes(val)) {
+        cb.checked = true;
+      }
     }
-    if (filterType === 'shape' && urlShape && (normalize(urlShape) === val || urlParams.getAll('shape').map(normalize).includes(val))) {
-      cb.checked = true;
+    if (filterType === 'shape' && urlShape) {
+      const targetShape = normalize(urlShape);
+      if (val === targetShape || val.includes(targetShape) || targetShape.includes(val)) {
+        cb.checked = true;
+      }
+    }
+    if (filterType === 'material' && urlMaterial) {
+      const targetMat = normalize(urlMaterial);
+      if (val === targetMat || val.includes(targetMat) || targetMat.includes(val)) {
+        cb.checked = true;
+      }
     }
   });
+
+  // If a brand URL param was supplied but no existing checkbox matched, dynamically inject and check it
+  if (urlBrand && !brandCheckboxMatched && filterGroupBrands) {
+    const brandLabel = document.createElement('label');
+    brandLabel.className = 'filter-checkbox-label';
+    brandLabel.innerHTML = `
+      <input type="checkbox" data-filter="brand" value="${urlBrand}" checked />
+      <span class="filter-label-text">${urlBrand}</span>
+      <span class="filter-count-badge">✓</span>
+    `;
+    filterGroupBrands.prepend(brandLabel);
+  }
 
   function updateSliderVisuals(source) {
     if (!sliderMin || !sliderMax) return;
@@ -101,7 +133,7 @@
       search: searchInput ? normalize(searchInput.value) : ''
     };
 
-    filterCheckboxes.forEach(cb => {
+    document.querySelectorAll('input[data-filter]').forEach(cb => {
       if (cb.checked) {
         const type = cb.dataset.filter;
         if (filters[type]) filters[type].push(normalize(cb.value));
@@ -127,7 +159,7 @@
 
       // Check Brand match
       const brandMatch = filters.brand.length === 0 || filters.brand.some(b => 
-        cardBrand === b || cardBrand.includes(b) || cardName.includes(b)
+        cardBrand === b || cardBrand.includes(b) || cardName.includes(b) || b.includes(cardBrand)
       );
 
       // Check Category match
@@ -185,7 +217,14 @@
     if (sliderMin) sliderMin.value = 0;
     if (sliderMax) sliderMax.value = 600;
     updateSliderVisuals('init');
-    filterCheckboxes.forEach(cb => cb.checked = false);
+    document.querySelectorAll('input[data-filter]').forEach(cb => cb.checked = false);
+    
+    // Clear URL params without full page reload
+    if (window.history.pushState) {
+      const cleanUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+      window.history.pushState({ path: cleanUrl }, '', cleanUrl);
+    }
+    
     applyFilters();
   }
 
@@ -203,8 +242,12 @@
     });
   }
 
-  // Checkbox & Search Events
-  filterCheckboxes.forEach(cb => cb.addEventListener('change', applyFilters));
+  // Delegate Checkbox & Search Events
+  document.addEventListener('change', (e) => {
+    if ((e.target && e.target.matches('input[data-filter]')) || (e.target && e.target.closest('input[data-filter]'))) {
+      applyFilters();
+    }
+  });
 
   if (searchInput) {
     searchInput.addEventListener('input', applyFilters);

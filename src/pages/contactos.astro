@@ -41,22 +41,57 @@ import StoreLayout from '../layouts/StoreLayout.astro';
     <form class="contact-form" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <label for="nome" style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;" data-i18n-pt="Nome Completo *" data-i18n-en="Full Name *">Nome Completo *</label>
-        <input id="nome" required name="nome" type="text" placeholder="O seu nome" style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" />
+        <input 
+          id="nome" 
+          required 
+          name="nome" 
+          type="text" 
+          placeholder="O seu nome" 
+          data-i18n-placeholder-pt="O seu nome" 
+          data-i18n-placeholder-en="Your name" 
+          style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" 
+        />
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <label for="email" style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;" data-i18n-pt="Endereço de E-mail *" data-i18n-en="Email Address *">Endereço de E-mail *</label>
-        <input id="email" required type="email" name="email" placeholder="email@exemplo.pt" style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" />
+        <input 
+          id="email" 
+          required 
+          type="email" 
+          name="email" 
+          placeholder="email@exemplo.pt" 
+          data-i18n-placeholder-pt="email@exemplo.pt" 
+          data-i18n-placeholder-en="email@example.com" 
+          style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" 
+        />
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <label for="telefone" style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;" data-i18n-pt="Telefone / WhatsApp" data-i18n-en="Phone / WhatsApp">Telefone / WhatsApp</label>
-        <input id="telefone" type="tel" name="telefone" placeholder="+351 9xx xxx xxx" style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" />
+        <input 
+          id="telefone" 
+          type="tel" 
+          name="telefone" 
+          placeholder="+351 9xx xxx xxx" 
+          data-i18n-placeholder-pt="+351 9xx xxx xxx" 
+          data-i18n-placeholder-en="+351 9xx xxx xxx" 
+          style="height: 46px; padding: 0 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; border-radius: 0;" 
+        />
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <label for="mensagem" style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;" data-i18n-pt="Mensagem *" data-i18n-en="Message *">Mensagem *</label>
-        <textarea id="mensagem" required name="mensagem" rows="4" placeholder="Como podemos ajudar?" style="padding: 12px 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; resize: vertical; border-radius: 0;"></textarea>
+        <textarea 
+          id="mensagem" 
+          required 
+          name="mensagem" 
+          rows="4" 
+          placeholder="Como podemos ajudar?" 
+          data-i18n-placeholder-pt="Como podemos ajudar?" 
+          data-i18n-placeholder-en="How can we help you?" 
+          style="padding: 12px 14px; border: 1.5px solid #000; background: #fff; font-size: 14px; font-family: inherit; outline: none; resize: vertical; border-radius: 0;"
+        ></textarea>
       </div>
 
       <button class="rect black" type="submit" style="height: 48px; width: 100%; justify-content: center; margin-top: 8px;" data-i18n-pt="ENVIAR MENSAGEM" data-i18n-en="SEND MESSAGE">ENVIAR MENSAGEM</button>

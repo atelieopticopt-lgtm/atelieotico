@@ -70,8 +70,7 @@ const brands = [
             style={`object-fit: contain; background: transparent !important; ${b.style}`}
           />
         </div>
-        <p data-i18n-pt={b.text} data-i18n-en={b.textEn} style="font-size: 14px; color: #444; margin: 0; line-height: 1.6;">{b.text}</p>
-        <a href="/catalogo" data-i18n-pt="VER MODELOS →" data-i18n-en="VIEW STYLES →" style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px;">VER MODELOS →</a>
+        <a href={`/catalogo?marca=${encodeURIComponent(b.name)}`} data-i18n-pt="VER MODELOS →" data-i18n-en="VIEW STYLES →" style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px;">VER MODELOS →</a>
       </article>
     ))}
   </div>
