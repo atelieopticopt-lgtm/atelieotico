@@ -1,29 +1,79 @@
-﻿---
+---
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
-<StoreLayout title="Contactos | Ateliê Ótico — Madeira">
-  <div class="content-page contact-grid">
-    <div>
-      <p>CONTACTOS</p>
-      <h1>Vamos conversar.</h1>
-      <p>Marque uma visita para experimentar a coleção e receber aconselhamento ótico personalizado.</p>
-      <h2>Atendimento</h2>
-      <p>Região Autónoma da Madeira<br/>De segunda a sábado<br/>Por marcação personalizada</p>
+
+<StoreLayout 
+  title="Contactos & Marcações | Ateliê Ótico — Funchal, Madeira"
+  description="Contacte o Ateliê Ótico no Funchal ou marque a sua consulta e experimentação de armações de autor."
+>
+  <article class="editorial-page">
+    <header class="editorial-page-header">
+      <span class="ll-section-tag" data-i18n-pt="ATENDIMENTO PERSONALIZADO" data-i18n-en="PERSONAL CONSULTATION">ATENDIMENTO PERSONALIZADO</span>
+      <h1 class="editorial-page-title" data-i18n-pt="Vamos conversar." data-i18n-en="Let's talk.">Vamos conversar.</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="Visite o nosso espaço no Funchal ou envie-nos uma mensagem para aconselhamento ótico à sua medida." data-i18n-en="Visit our boutique in Funchal or send us a message for tailored optical advice.">
+        Visite o nosso espaço no Funchal ou envie-nos uma mensagem para aconselhamento ótico à sua medida.
+      </p>
+    </header>
+
+    <div class="editorial-contact-grid">
+      <div class="editorial-contact-info">
+        <h2 data-i18n-pt="Espaço & Localização" data-i18n-en="Boutique & Location">Espaço &amp; Localização</h2>
+        <p>
+          <strong>Ateliê Ótico</strong><br/>
+          Rua da Conceição, Praça do Carmo 29B<br/>
+          9050-026 Funchal, Madeira
+        </p>
+        <p>
+          <a href="https://maps.google.com/?q=Rua+da+Concei%C3%A7%C3%A3o+Pra%C3%A7a+do+Carmo+29B+Funchal" target="_blank" rel="noopener noreferrer" style="color: #000; font-weight: 700; text-decoration: underline;">
+            Abrir no Google Maps &rarr;
+          </a>
+        </p>
+
+        <h2 style="margin-top: 32px;" data-i18n-pt="Contacto Direto" data-i18n-en="Direct Contact">Contacto Direto</h2>
+        <p>Telefone / WhatsApp: <strong>964 993 767</strong></p>
+        <p>E-mail: <strong>apoio@atelieotico.com</strong></p>
+
+        <h2 style="margin-top: 32px;" data-i18n-pt="Horário" data-i18n-en="Opening Hours">Horário</h2>
+        <div class="ll-hours-list" style="max-width: 320px;">
+          <div class="ll-hours-row"><span>Segunda a Sexta</span><strong>09:00 – 19:00</strong></div>
+          <div class="ll-hours-row"><span>Sábado</span><strong>09:00 – 13:00</strong></div>
+          <div class="ll-hours-row"><span>Domingo</span><strong>Encerrado</strong></div>
+        </div>
+      </div>
+
+      <div class="editorial-contact-form-wrap">
+        <form class="editorial-form contact-form">
+          <div class="form-group">
+            <label for="nome" data-i18n-pt="Nome Completo" data-i18n-en="Full Name">Nome Completo</label>
+            <input id="nome" required name="nome" type="text" placeholder="O seu nome" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n-pt="Endereço de E-mail" data-i18n-en="Email Address">Endereço de E-mail</label>
+            <input id="email" required type="email" name="email" placeholder="email@exemplo.pt" />
+          </div>
+          <div class="form-group">
+            <label for="telefone" data-i18n-pt="Telefone / WhatsApp" data-i18n-en="Phone / WhatsApp">Telefone / WhatsApp</label>
+            <input id="telefone" type="tel" name="telefone" placeholder="+351 9xx xxx xxx" />
+          </div>
+          <div class="form-group">
+            <label for="mensagem" data-i18n-pt="Mensagem ou Pedido de Marcação" data-i18n-en="Message or Appointment Request">Mensagem ou Pedido de Marcação</label>
+            <textarea id="mensagem" required name="mensagem" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button class="ll-melin-btn" type="submit" style="width: 100%; justify-content: center;" data-i18n-pt="ENVIAR MENSAGEM" data-i18n-en="SEND MESSAGE">ENVIAR MENSAGEM</button>
+          <p data-form-status style="font-size: 13px; font-weight: 700; color: #15803d; margin-top: 14px;"></p>
+        </form>
+      </div>
     </div>
-    <form class="contact-form">
-      <label>Nome<input required name="nome"/></label>
-      <label>E-mail<input required type="email" name="email"/></label>
-      <label>Telefone<input type="tel" name="telefone"/></label>
-      <label>Mensagem<textarea required name="mensagem"></textarea></label>
-      <button class="rect black" type="submit">ENVIAR PEDIDO</button>
-      <p data-form-status></p>
-    </form>
-  </div>
+  </article>
+
   <script is:inline>
-    document.querySelector('.contact-form')?.addEventListener('submit', e => {
+    document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
       e.preventDefault();
       e.currentTarget.reset();
-      document.querySelector('[data-form-status]').textContent = 'Obrigado. Recebemos o seu pedido e entraremos em contacto brevemente.';
+      const statusEl = document.querySelector('[data-form-status]');
+      if (statusEl) {
+        statusEl.textContent = 'Obrigado. Recebemos a sua mensagem e entraremos em contacto com a maior brevidade.';
+      }
     });
   </script>
 </StoreLayout>

@@ -1,14 +1,38 @@
-﻿---
+---
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
-<StoreLayout title="O Ateliê | Ateliê Ótico — Madeira">
-  <article class="content-page">
-    <p data-i18n-pt="Ateliê ÓTICO — MADEIRA" data-i18n-en="ATELIÊ OPTICAL — MADEIRA">Ateliê ÓTICO — MADEIRA</p>
-    <h1 data-i18n-pt="Uma ótica com outro olhar." data-i18n-en="An optical boutique with a different point of view.">Uma ótica com outro olhar.</h1>
-    <p data-i18n-pt="O Ateliê Ótico nasceu da vontade de tornar a escolha de óculos numa experiência pessoal, tranquila e exigente na Região Autónoma da Madeira. Reunimos design independente de autor, precisão técnica e acompanhamento próximo." data-i18n-en="Ateliê Ótico was created to make choosing eyewear a personal, calm and discerning experience in Madeira. We bring together independent design, technical precision and attentive guidance.">O Ateliê Ótico nasceu da vontade de tornar a escolha de óculos numa experiência pessoal, tranquila e exigente na Região Autónoma da Madeira. Reunimos design independente de autor, precisão técnica e acompanhamento próximo.</p>
-    <h2 data-i18n-pt="A nossa curadoria" data-i18n-en="Our curation">A nossa curadoria</h2>
-    <p data-i18n-pt="Escolhemos cada coleção pela qualidade dos materiais, pelo equilíbrio das formas e pela sua capacidade de expressar personalidade sem perder conforto." data-i18n-en="We select every collection for the quality of its materials, the balance of its forms and its ability to express personality without compromising comfort.">Escolhemos cada coleção pela qualidade dos materiais, pelo equilíbrio das formas e pela sua capacidade de expressar personalidade sem perder conforto.</p>
-    <h2 data-i18n-pt="O nosso serviço" data-i18n-en="Our service">O nosso serviço</h2>
-    <p data-i18n-pt="Da primeira conversa ao ajuste final, acompanhamos cada decisão no nosso espaço na Madeira. A medição, o aconselhamento de lentes e as afinações posteriores fazem parte do mesmo compromisso." data-i18n-en="From the first conversation to the final fitting, we guide every decision at our space in Madeira. Measurements, lens advice and subsequent adjustments are all part of the same commitment.">Da primeira conversa ao ajuste final, acompanhamos cada decisão no nosso espaço na Madeira. A medição, o aconselhamento de lentes e as afinações posteriores fazem parte do mesmo compromisso.</p>
+
+<StoreLayout 
+  title="O Ateliê | Ateliê Ótico — Design de Autor & Precisão Ótica na Madeira"
+  description="Conheça o Ateliê Ótico na Madeira. Curadoria independente de marcas de autor europeias, consultas especializadas e precisão ótica."
+>
+  <article class="editorial-page">
+    <header class="editorial-page-header">
+      <span class="ll-section-tag" data-i18n-pt="MANIFESTO & HISTÓRIA" data-i18n-en="MANIFESTO & STORY">MANIFESTO &amp; HISTÓRIA</span>
+      <h1 class="editorial-page-title" data-i18n-pt="Uma ótica com outro olhar." data-i18n-en="An optical boutique with a different point of view.">Uma ótica com outro olhar.</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="Nascemos da vontade de transformar a escolha de óculos numa experiência pessoal, tranquila e de pura excelência." data-i18n-en="Born from the desire to turn eyewear selection into a personal, calm and truly exceptional experience.">
+        Nascemos da vontade de transformar a escolha de óculos numa experiência pessoal, tranquila e de pura excelência.
+      </p>
+    </header>
+
+    <div class="editorial-page-content">
+      <section class="editorial-section">
+        <h2 data-i18n-pt="A Nossa Curadoria Independente" data-i18n-en="Our Independent Curation">A Nossa Curadoria Independente</h2>
+        <p data-i18n-pt="Reunimos no Funchal marcas europeias de prestígio que partilham a nossa obsessão pelos materiais nobres: titânio cirúrgico japonês, acetato de algodão italiano de Mazzucchelli e madeira sustentável suíça. Cada armação é escolhida uma a uma pelo seu equilíbrio anatómico e identidade única." data-i18n-en="We bring together Europe's finest independent eyewear brands sharing our obsession with premium materials: Japanese surgical titanium, Italian Mazzucchelli cotton acetate, and Swiss sustainable woods. Each frame is hand-selected for anatomical balance and distinct identity.">
+          Reunimos no Funchal marcas europeias de prestígio que partilham a nossa obsessão pelos materiais nobres: titânio cirúrgico japonês, acetato de algodão italiano de Mazzucchelli e madeira sustentável suíça. Cada armação é escolhida uma a uma pelo seu equilíbrio anatómico e identidade única.
+        </p>
+      </section>
+
+      <section class="editorial-section">
+        <h2 data-i18n-pt="Precisão e Aconselhamento Visual" data-i18n-en="Precision & Visual Consultation">Precisão e Aconselhamento Visual</h2>
+        <p data-i18n-pt="Da medição e centração milimétrica à montagem final das suas lentes oftálmicas de alta definição, cada etapa é acompanhada com rigor e sem pressa no nosso espaço físico na Praça do Carmo." data-i18n-en="From millimetric centering measurements to the final fitting of high-definition ophthalmic lenses, every step is handled with dedication and care at our boutique in Praça do Carmo.">
+          Da medição e centração milimétrica à montagem final das suas lentes oftálmicas de alta definição, cada etapa é acompanhada com rigor e sem pressa no nosso espaço físico na Praça do Carmo.
+        </p>
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="/catalogo" class="ll-melin-btn" data-i18n-pt="EXPLORAR CATÁLOGO" data-i18n-en="EXPLORE CATALOG">EXPLORAR CATÁLOGO</a>
+          <a href="/contactos" class="mega-melin-btn" data-i18n-pt="MARCAR VISITA" data-i18n-en="BOOK APPOINTMENT">MARCAR VISITA</a>
+        </div>
+      </section>
+    </div>
   </article>
 </StoreLayout>

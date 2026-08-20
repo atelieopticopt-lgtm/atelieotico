@@ -1,19 +1,85 @@
 ---
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
-<StoreLayout title="Conta | Ateliê Ótico">
-  <section class="account-page">
-    <header><p>CONTA DE CLIENTE</p><h1>Entrar ou criar conta</h1></header>
-    <div class="account-grid">
-      <form data-login><h2>Entrar</h2><input type="email" name="email" placeholder="Email" required/><input type="password" name="password" placeholder="Palavra-passe" required/><button>ENTRAR</button><p data-login-status></p></form>
-      <form data-register><h2>Criar conta</h2><input type="text" name="name" placeholder="Nome" required/><input type="email" name="email" placeholder="Email" required/><input type="password" name="password" placeholder="Palavra-passe (mín. 6 caracteres)" minlength="6" required/><button>CRIAR CONTA</button><p data-register-status></p></form>
+
+<StoreLayout 
+  title="Conta de Cliente | Ateliê Ótico — Madeira"
+  description="Aceda à sua conta pessoal do Ateliê Ótico para consultar encomendas e prescrições óticas."
+>
+  <article class="editorial-page">
+    <header class="editorial-page-header">
+      <span class="ll-section-tag" data-i18n-pt="ÁREA PESSOAL" data-i18n-en="PERSONAL AREA">ÁREA PESSOAL</span>
+      <h1 class="editorial-page-title" data-i18n-pt="Conta de Cliente" data-i18n-en="Customer Account">Conta de Cliente</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="Inicie sessão ou crie uma conta para acompanhar encomendas e histórico de atendimento." data-i18n-en="Sign in or create an account to track orders and service history.">
+        Inicie sessão ou crie uma conta para acompanhar encomendas e histórico de atendimento.
+      </p>
+    </header>
+
+    <div class="editorial-page-content">
+      <div class="editorial-account-grid">
+        <div class="editorial-auth-box">
+          <h2 data-i18n-pt="Entrar na Conta" data-i18n-en="Sign In">Entrar na Conta</h2>
+          <form data-login class="editorial-form">
+            <div class="form-group">
+              <label for="login-email" data-i18n-pt="E-mail" data-i18n-en="Email">E-mail</label>
+              <input id="login-email" type="email" name="email" placeholder="email@exemplo.pt" required/>
+            </div>
+            <div class="form-group">
+              <label for="login-password" data-i18n-pt="Palavra-passe" data-i18n-en="Password">Palavra-passe</label>
+              <input id="login-password" type="password" name="password" placeholder="••••••••" required/>
+            </div>
+            <button class="ll-melin-btn" type="submit" style="width: 100%; justify-content: center;" data-i18n-pt="ENTRAR" data-i18n-en="SIGN IN">ENTRAR</button>
+            <p data-login-status style="font-size: 13px; font-weight: 700; margin-top: 10px;"></p>
+          </form>
+        </div>
+
+        <div class="editorial-auth-box">
+          <h2 data-i18n-pt="Criar Nova Conta" data-i18n-en="Create New Account">Criar Nova Conta</h2>
+          <form data-register class="editorial-form">
+            <div class="form-group">
+              <label for="reg-name" data-i18n-pt="Nome Completo" data-i18n-en="Full Name">Nome Completo</label>
+              <input id="reg-name" type="text" name="name" placeholder="O seu nome" required/>
+            </div>
+            <div class="form-group">
+              <label for="reg-email" data-i18n-pt="E-mail" data-i18n-en="Email">E-mail</label>
+              <input id="reg-email" type="email" name="email" placeholder="email@exemplo.pt" required/>
+            </div>
+            <div class="form-group">
+              <label for="reg-password" data-i18n-pt="Palavra-passe (mín. 6 caracteres)" data-i18n-en="Password (min. 6 characters)">Palavra-passe (mín. 6 caracteres)</label>
+              <input id="reg-password" type="password" name="password" placeholder="••••••••" minlength="6" required/>
+            </div>
+            <button class="ll-melin-btn" type="submit" style="width: 100%; justify-content: center;" data-i18n-pt="CRIAR CONTA" data-i18n-en="CREATE ACCOUNT">CRIAR CONTA</button>
+            <p data-register-status style="font-size: 13px; font-weight: 700; margin-top: 10px;"></p>
+          </form>
+        </div>
+      </div>
     </div>
-  </section>
+  </article>
+
   <script>
     import { supabase } from '../lib/supabase';
-    const login=document.querySelector('[data-login]');const register=document.querySelector('[data-register]');
-    login?.addEventListener('submit',async(e)=>{e.preventDefault();const f=new FormData(login);const s=document.querySelector('[data-login-status]');const {error}=await supabase.auth.signInWithPassword({email:String(f.get('email')),password:String(f.get('password'))});s.textContent=error?error.message:'Sessão iniciada com sucesso.'});
-    register?.addEventListener('submit',async(e)=>{e.preventDefault();const f=new FormData(register);const s=document.querySelector('[data-register-status]');const {error}=await supabase.auth.signUp({email:String(f.get('email')),password:String(f.get('password')),options:{data:{name:String(f.get('name'))}}});s.textContent=error?error.message:'Conta criada. Verifique o seu email para confirmar.'});
+    const login = document.querySelector('[data-login]');
+    const register = document.querySelector('[data-register]');
+    login?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = new FormData(login as HTMLFormElement);
+      const s = document.querySelector('[data-login-status]');
+      const { error } = await supabase.auth.signInWithPassword({
+        email: String(f.get('email')),
+        password: String(f.get('password'))
+      });
+      if (s) s.textContent = error ? error.message : 'Sessão iniciada com sucesso.';
+    });
+    register?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const f = new FormData(register as HTMLFormElement);
+      const s = document.querySelector('[data-register-status]');
+      const { error } = await supabase.auth.signUp({
+        email: String(f.get('email')),
+        password: String(f.get('password')),
+        options: { data: { name: String(f.get('name')) } }
+      });
+      if (s) s.textContent = error ? error.message : 'Conta criada. Verifique o seu email para confirmar.';
+    });
   </script>
 </StoreLayout>
-<style>.account-page{max-width:1280px;margin:auto;padding:80px 5vw 120px}.account-page header{text-align:center;margin-bottom:60px}.account-page h1{font-size:clamp(38px,5vw,64px);margin:8px 0}.account-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw}.account-grid form{display:grid;gap:18px}.account-grid input{height:52px;border:0;border-bottom:1px solid #999;padding:0 4px}.account-grid button{height:50px;background:#000;color:#fff;border:0;font-weight:700}@media(max-width:700px){.account-grid{grid-template-columns:1fr}}</style>

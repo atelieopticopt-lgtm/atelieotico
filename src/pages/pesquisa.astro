@@ -1,4 +1,47 @@
 ---
-import StoreLayout from '../layouts/StoreLayout.astro';import ProductCard from '../components/ProductCard.astro';import {products} from '../data/products';
+import StoreLayout from '../layouts/StoreLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { products } from '../data/products';
 ---
-<StoreLayout title="Pesquisa | Ateliê Ótico"><div class="content-page"><p>PESQUISA</p><h1>O que procura?</h1><div class="search-box"><input type="search" data-search placeholder="Pesquisar modelos, formas ou materiais" autofocus/><button>PESQUISAR</button></div><div class="product-grid" data-search-results>{products.map(p=><ProductCard product={p}/>)}</div><p class="empty-results">Sem resultados para esta pesquisa.</p></div><script is:inline>const input=document.querySelector('[data-search]'),cards=[...document.querySelectorAll('[data-search-results] .store-card')];input?.addEventListener('input',()=>{const q=input.value.toLowerCase().trim();let n=0;cards.forEach(c=>{const show=!q||c.textContent.toLowerCase().includes(q);c.hidden=!show;if(show)n++});document.querySelector('.empty-results').style.display=n?'none':'block'})</script></StoreLayout>
+
+<StoreLayout 
+  title="Pesquisa de Catálogo | Ateliê Ótico — Madeira"
+  description="Pesquise por marcas, modelos, formas ou materiais no catálogo de autor do Ateliê Ótico."
+>
+  <article class="editorial-page" style="max-width: 1440px;">
+    <header class="editorial-page-header" style="text-align: center; margin: 0 auto 40px; max-width: 780px;">
+      <span class="ll-section-tag" data-i18n-pt="CATÁLOGO & CURADORIA" data-i18n-en="CATALOG & CURATION">CATÁLOGO &amp; CURADORIA</span>
+      <h1 class="editorial-page-title" data-i18n-pt="O que procura?" data-i18n-en="What are you looking for?">O que procura?</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="Pesquise por marca (Ørgreen, SNOB Milano, Einstoffen), formato ou material." data-i18n-en="Search by brand (Ørgreen, SNOB Milano, Einstoffen), frame shape or material.">
+        Pesquise por marca (Ørgreen, SNOB Milano, Einstoffen), formato ou material.
+      </p>
+      <div class="editorial-search-bar" style="margin-top: 28px;">
+        <input type="search" data-search placeholder="Escreva a marca, modelo ou estilo..." autofocus />
+      </div>
+    </header>
+
+    <div class="product-grid" data-search-results>
+      {products.map(p => <ProductCard product={p} />)}
+    </div>
+    
+    <p class="empty-results" style="text-align: center; font-size: 16px; font-weight: 600; color: #666; padding: 60px 0;">
+      Nenhum modelo encontrado para esta pesquisa.
+    </p>
+  </article>
+
+  <script is:inline>
+    const input = document.querySelector('[data-search]');
+    const cards = [...document.querySelectorAll('[data-search-results] .ll-product-card, [data-search-results] .store-card')];
+    input?.addEventListener('input', () => {
+      const q = input.value.toLowerCase().trim();
+      let n = 0;
+      cards.forEach(c => {
+        const show = !q || c.textContent.toLowerCase().includes(q);
+        c.style.display = show ? '' : 'none';
+        if (show) n++;
+      });
+      const emptyEl = document.querySelector('.empty-results');
+      if (emptyEl) emptyEl.style.display = n ? 'none' : 'block';
+    });
+  </script>
+</StoreLayout>

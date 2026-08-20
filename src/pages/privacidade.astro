@@ -1,127 +1,48 @@
-﻿---
+---
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
 
-<StoreLayout title="Política de Privacidade | Ateliê Ótico — Madeira" description="Política de privacidade e proteção de dados do Ateliê Ótico em conformidade com o RGPD na Região Autónoma da Madeira.">
-  <article class="content-page legal-article">
-    <div class="legal-header">
-      <span class="legal-tag">RGPD & PROTEÇÃO DE DADOS</span>
-      <h1>Política de Privacidade</h1>
-      <p class="legal-meta">Última atualização: {new Date().toLocaleDateString('pt-PT', { month: 'long', year: 'numeric' })} • Ateliê Ótico, Região Autónoma da Madeira</p>
+<StoreLayout 
+  title="Política de Privacidade & RGPD | Ateliê Ótico — Funchal, Madeira"
+  description="Política de privacidade e proteção de dados do Ateliê Ótico em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD)."
+>
+  <article class="editorial-page">
+    <header class="editorial-page-header">
+      <span class="ll-section-tag" data-i18n-pt="RGPD & PROTEÇÃO DE DADOS" data-i18n-en="GDPR & DATA PRIVACY">RGPD &amp; PROTEÇÃO DE DADOS</span>
+      <h1 class="editorial-page-title" data-i18n-pt="Política de Privacidade" data-i18n-en="Privacy Policy">Política de Privacidade</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="O nosso compromisso rigoroso com a proteção, confidencialidade e segurança dos seus dados pessoais." data-i18n-en="Our strict commitment to protecting, securing, and respecting your personal data.">
+        O nosso compromisso rigoroso com a proteção, confidencialidade e segurança dos seus dados pessoais.
+      </p>
+    </header>
+
+    <div class="editorial-page-content">
+      <section class="editorial-section">
+        <h2 data-i18n-pt="1. Compromisso com a Privacidade" data-i18n-en="1. Privacy Commitment">1. Compromisso com a Privacidade</h2>
+        <p data-i18n-pt="O Ateliê Ótico assume um compromisso inequívoco com a privacidade e proteção dos dados dos seus clientes e visitantes, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD - Regulamento UE 2016/679) e a legislação portuguesa." data-i18n-en="Ateliê Ótico maintains an unyielding commitment to data privacy and client confidentiality under the General Data Protection Regulation (GDPR - EU Regulation 2016/679) and Portuguese statutory law.">
+          O Ateliê Ótico assume um compromisso inequívoco com a privacidade e proteção dos dados dos seus clientes e visitantes, em conformidade com o Regulamento Geral sobre a Proteção de Dados (RGPD - Regulamento UE 2016/679) e a legislação portuguesa.
+        </p>
+      </section>
+
+      <section class="editorial-section">
+        <h2 data-i18n-pt="2. Responsável pelo Tratamento" data-i18n-en="2. Data Controller">2. Responsável pelo Tratamento</h2>
+        <p data-i18n-pt="A entidade responsável pelo tratamento de dados é o Ateliê Ótico, com sede na Rua da Conceição, Praça do Carmo 29B, Funchal, Madeira. Para qualquer pedido ou esclarecimento, contacte-nos através do formulário de apoio ou diretamente no nosso espaço." data-i18n-en="The data controller is Ateliê Ótico, located at Rua da Conceição, Praça do Carmo 29B, Funchal, Madeira. For inquiries, reach out through our contact page or at our boutique.">
+          A entidade responsável pelo tratamento de dados é o Ateliê Ótico, com sede na Rua da Conceição, Praça do Carmo 29B, Funchal, Madeira. Para qualquer pedido ou esclarecimento, contacte-nos através do formulário de apoio ou diretamente no nosso espaço.
+        </p>
+      </section>
+
+      <section class="editorial-section">
+        <h2 data-i18n-pt="3. Finalidades da Recolha" data-i18n-en="3. Purposes of Processing">3. Finalidades da Recolha</h2>
+        <p data-i18n-pt="Os dados recolhidos destinam-se exclusivamente ao processamento de encomendas e faturas, aconselhamento ótico personalizado, gestão de garantias e resposta a solicitações de contacto. Não vendemos nem partilhamos dados com terceiros para fins comerciais." data-i18n-en="Collected data is strictly used for processing orders and invoices, tailored optical consultations, warranty management, and replying to customer inquiries. We never sell or share data with third parties for commercial advertising.">
+          Os dados recolhidos destinam-se exclusivamente ao processamento de encomendas e faturas, aconselhamento ótico personalizado, gestão de garantias e resposta a solicitações de contacto. Não vendemos nem partilhamos dados com terceiros para fins comerciais.
+        </p>
+      </section>
+
+      <section class="editorial-section">
+        <h2 data-i18n-pt="4. Direitos dos Titulares dos Dados" data-i18n-en="4. Data Subject Rights">4. Direitos dos Titulares dos Dados</h2>
+        <p data-i18n-pt="Tem o direito de aceder, retificar, solicitar a eliminação ou portabilidade dos seus dados a qualquer momento. Para exercer estes direitos, contacte a nossa equipa através de e-mail ou WhatsApp." data-i18n-en="You have the right to access, rectify, request the erasure, or export your personal data at any time. To exercise these rights, please contact our team via email or WhatsApp.">
+          Tem o direito de aceder, retificar, solicitar a eliminação ou portabilidade dos seus dados a qualquer momento. Para exercer estes direitos, contacte a nossa equipa através de e-mail ou WhatsApp.
+        </p>
+      </section>
     </div>
-
-    <section class="legal-section">
-      <h2>1. Compromisso com a Privacidade</h2>
-      <p>
-        O <strong>Ateliê Ótico</strong> assume um compromisso inequívoco com a privacidade, confidencialidade e segurança dos dados pessoais dos seus clientes e visitantes, em estrito cumprimento do Regulamento Geral sobre a Proteção de Dados (RGPD — Regulamento UE 2016/679) e da legislação portuguesa.
-      </p>
-    </section>
-
-    <section class="legal-section">
-      <h2>2. Responsável pelo Tratamento</h2>
-      <p>
-        O responsável pelo tratamento dos dados pessoais recolhidos através do website Ateliê é o Ateliê Ótico, com sede na Região Autónoma da Madeira. Para qualquer questão relacionada com a privacidade dos seus dados, poderá contactar-nos através do endereço de e-mail de apoio ao cliente ou por correio postal.
-      </p>
-    </section>
-
-    <section class="legal-section">
-      <h2>3. Dados Recolhidos e Finalidades</h2>
-      <p>Tratamos os dados estritamente necessários para as seguintes finalidades:</p>
-      <ul>
-        <li><strong>Processamento de Encomendas:</strong> Nome, morada de entrega, e-mail, número de telefone e NIF (se solicitado para emissão de fatura).</li>
-        <li><strong>Aconselhamento Ótico e Prescrição:</strong> Parâmetros de graduação e dioptrias fornecidos voluntariamente pelo cliente para personalização de lentes.</li>
-        <li><strong>Comunicação e Apoio ao Cliente:</strong> Gestão de dúvidas, pós-venda, garantias e pedidos de contacto.</li>
-        <li><strong>Comunicações Exclusivas:</strong> Envio de newsletters sobre novos lançamentos limitados, mediante consentimento prévio e revogável a qualquer momento.</li>
-      </ul>
-    </section>
-
-    <section class="legal-section">
-      <h2>4. Conservação e Partilha de Dados</h2>
-      <p>
-        Os dados pessoais são conservados apenas durante o período necessário para a execução das finalidades para as quais foram recolhidos ou para cumprimento de obrigações legais fiscais. Não comercializamos nem cedemos os seus dados a terceiros, exceto aos parceiros estritamente necessários à operação (empresas de transporte para expedição de encomendas e plataformas de faturação certificadas).
-      </p>
-    </section>
-
-    <section class="legal-section">
-      <h2>5. Direitos do Titular dos Dados</h2>
-      <p>
-        O utilizador tem o direito de aceder, retificar, limitar, solicitar a portabilidade ou o apagamento dos seus dados pessoais a qualquer momento, bem como de retirar o seu consentimento. Para exercer qualquer um destes direitos, basta entrar em contacto connosco através da página de <a href="/contactos" style="color: #0a0a0a; text-decoration: underline;">Contactos</a>.
-      </p>
-    </section>
-
-    <section class="legal-section">
-      <h2>6. Segurança da Informação</h2>
-      <p>
-        Adotamos medidas técnicas e organizativas rigorosas, incluindo protocolos de comunicação encriptada SSL/TLS e servidores seguros com monitorização permanente, garantindo a proteção contra acesso não autorizado ou perda de dados.
-      </p>
-    </section>
   </article>
 </StoreLayout>
-
-<style>
-  .legal-article {
-    max-width: 860px;
-    margin: 40px auto 80px;
-    padding: 0 24px;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: #111111;
-    line-height: 1.7;
-  }
-
-  .legal-header {
-    margin-bottom: 48px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    padding-bottom: 28px;
-  }
-
-  .legal-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: #888888;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .legal-header h1 {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
-    margin: 0 0 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .legal-meta {
-    font-size: 13px;
-    color: #777777;
-    margin: 0;
-  }
-
-  .legal-section {
-    margin-bottom: 36px;
-  }
-
-  .legal-section h2 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 12px;
-    color: #0a0a0a;
-  }
-
-  .legal-section p {
-    font-size: 15px;
-    color: #444444;
-    margin: 0 0 12px;
-  }
-
-  .legal-section ul {
-    padding-left: 20px;
-    margin: 0 0 16px;
-  }
-
-  .legal-section li {
-    font-size: 14.5px;
-    color: #444444;
-    margin-bottom: 8px;
-  }
-</style>

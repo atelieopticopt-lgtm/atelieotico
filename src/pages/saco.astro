@@ -1,4 +1,32 @@
 ---
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
-<StoreLayout title="O seu saco | Ateliê Ótico"><div class="content-page"><p>COMPRAS</p><h1>O seu saco</h1><div data-full-cart></div><div class="full-cart-total"><span>Total</span><strong data-cart-total>0 €</strong></div><button class="rect black" data-checkout>FINALIZAR ENCOMENDA</button><p data-checkout-status></p></div><script is:inline src="/cart-page.js"></script></StoreLayout>
+
+<StoreLayout 
+  title="O seu Saco de Compras | Ateliê Ótico — Madeira"
+  description="Reveja os artigos selecionados no seu saco de compras do Ateliê Ótico."
+>
+  <article class="editorial-page">
+    <header class="editorial-page-header">
+      <span class="ll-section-tag" data-i18n-pt="SACO DE COMPRAS" data-i18n-en="SHOPPING BAG">SACO DE COMPRAS</span>
+      <h1 class="editorial-page-title" data-i18n-pt="Os seus artigos selecionados" data-i18n-en="Your selected items">Os seus artigos selecionados</h1>
+      <p class="editorial-page-subtitle" data-i18n-pt="Portes de envio gratuitos a partir de 100 €. Embalagem de luxo e seguro de transporte incluídos." data-i18n-en="Free shipping on orders over €100. Luxury packaging and transit insurance included.">
+        Portes de envio gratuitos a partir de 100 €. Embalagem de luxo e seguro de transporte incluídos.
+      </p>
+    </header>
+
+    <div class="editorial-page-content">
+      <div data-full-cart></div>
+      <div class="full-cart-total" style="display: flex; justify-content: space-between; align-items: center; padding: 24px 0; border-top: 1px solid rgba(0,0,0,0.12); margin-top: 28px;">
+        <span style="font-size: 16px; font-weight: 700;">TOTAL ESTIMADO</span>
+        <strong data-cart-total style="font-size: 22px; font-weight: 800; color: #0a0a0a;">0,00 €</strong>
+      </div>
+      <div style="margin-top: 24px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <button class="ll-melin-btn" data-checkout data-i18n-pt="FINALIZAR ENCOMENDA" data-i18n-en="CHECKOUT">FINALIZAR ENCOMENDA</button>
+        <a href="/catalogo" class="mega-melin-btn" data-i18n-pt="CONTINUAR A COMPRAR" data-i18n-en="CONTINUE SHOPPING">CONTINUAR A COMPRAR</a>
+      </div>
+      <p data-checkout-status style="margin-top: 14px; font-weight: 700; color: #15803d;"></p>
+    </div>
+  </article>
+  <script is:inline src="/cart-page.js"></script>
+</StoreLayout>
