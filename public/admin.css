@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ATELIÊ ÓTICO — ADMIN CMS (LUXURY, CLEAN & VISUAL PRODUCT GRID)
+   ATELIÊ ÓTICO — ADMIN CMS (SECURE AUTH, PHOTO REORDER & BRAND MANAGER)
    ========================================================================== */
 
 :root {
@@ -31,6 +31,108 @@ body.admin-body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
+}
+
+/* ==========================================================================
+   0. AUTH GATE OVERLAY
+   ========================================================================== */
+.auth-gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+  padding: 24px;
+}
+
+.auth-gate-card {
+  background: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 44px 36px 40px;
+  width: min(440px, 100%);
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-gate-logo {
+  height: 40px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  margin-bottom: 16px;
+}
+
+.auth-gate-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.auth-gate-card p {
+  font-size: 13px;
+  color: #888888;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.auth-gate-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-input-wrap input {
+  width: 100%;
+  height: 46px;
+  background: #242424;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  text-align: center;
+  letter-spacing: 0.08em;
+  transition: border-color 0.2s ease;
+}
+
+.auth-input-wrap input:focus {
+  border-color: #ffffff;
+}
+
+.auth-submit-btn {
+  height: 46px;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.auth-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.auth-error-text {
+  font-size: 12.5px;
+  color: #f87171;
+  margin-top: 6px;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -148,37 +250,14 @@ body.admin-body {
   border-radius: 10px;
 }
 
-/* Sidebar Footer (Auto-save status & Store Link) */
+/* Sidebar Footer */
 .sidebar-bottom-actions {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-autosave-box {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11.5px;
-  color: #a3e635;
-  padding: 4px 8px;
-}
-
-.autosave-dot {
-  width: 8px;
-  height: 8px;
-  background: #a3e635;
-  border-radius: 50%;
-  box-shadow: 0 0 8px rgba(163, 230, 53, 0.6);
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-@keyframes pulseDot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 .sidebar-btn-outline {
@@ -198,6 +277,27 @@ body.admin-body {
 
 .sidebar-btn-outline:hover {
   background: rgba(255, 255, 255, 0.16);
+}
+
+.sidebar-btn-logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 36px;
+  background: transparent;
+  color: #888888;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.sidebar-btn-logout:hover {
+  color: #f87171;
+  background: rgba(239, 68, 68, 0.1);
 }
 
 /* ==========================================================================
@@ -259,6 +359,13 @@ body.admin-body {
   position: relative;
   flex: 1;
   min-width: 260px;
+}
+
+.search-icon-svg {
+  position: absolute;
+  left: 12px;
+  top: 13px;
+  color: #888888;
 }
 
 .search-input-wrap input {
@@ -469,7 +576,7 @@ body.admin-body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   height: 34px;
   background: #f0eee6;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -491,7 +598,7 @@ body.admin-body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   height: 34px;
   background: #fff;
   border: 1px solid rgba(220, 38, 38, 0.2);
@@ -509,7 +616,175 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   5. BANNERS & TEXT EDITORS
+   5. BRANDS & MULTI-PHOTO CREATION TAB
+   ========================================================================== */
+.form-grid-brand {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.brands-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.brand-chip {
+  background: #f0eee6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.upload-dropzone {
+  border: 2px dashed #d5d3cb;
+  background: #faf9f6;
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #444444;
+}
+
+.upload-dropzone:hover {
+  border-color: #000000;
+  background: #f4f2ea;
+}
+
+.upload-sub {
+  font-size: 12px;
+  color: #888888;
+}
+
+.photos-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.btn-add-photo-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #111111;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-photos-gallery,
+.photos-reorder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.photo-item-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e0ded6;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.photo-item-card.is-main {
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.photo-badge-label {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.photo-badge-label.main {
+  background: #000000;
+  color: #ffffff;
+}
+
+.photo-badge-label.hover {
+  background: #444444;
+  color: #ffffff;
+}
+
+.photo-badge-label.alt {
+  background: #eeeeee;
+  color: #666666;
+}
+
+.photo-item-img {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin-bottom: 8px;
+}
+
+.photo-item-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 4px;
+}
+
+.btn-photo-move {
+  background: #f0eee6;
+  border: 1px solid #ddd;
+  padding: 3px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #222;
+}
+
+.btn-photo-move:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.btn-photo-delete {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #dc2626;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   6. BANNERS & TEXT EDITORS
    ========================================================================== */
 .admin-card-section {
   background: #ffffff;
@@ -580,7 +855,7 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   6. MODAL DIALOGS
+   7. MODAL DIALOGS
    ========================================================================== */
 .admin-modal-overlay {
   position: fixed;
@@ -597,7 +872,7 @@ body.admin-body {
 .admin-modal-card {
   background: #ffffff;
   border-radius: 12px;
-  width: min(680px, 100%);
+  width: min(720px, 100%);
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
