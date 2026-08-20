@@ -318,11 +318,11 @@ body {
   --PT: 0px;
   --PB: 0px;
   --CONTENT-WIDTH: 2000px;
-  --full-screen: clamp(420px, 52vh, 520px);
+  --full-screen: 540px;
   position: relative;
   width: 100%;
   height: var(--full-screen);
-  min-height: 420px;
+  min-height: calc(305px + var(--menu-height));
   padding-top: var(--PT);
   padding-bottom: var(--PB);
   background-color: #faf9f6;
@@ -385,7 +385,7 @@ body {
   width: 100%;
   max-width: 1480px;
   margin: 0 auto;
-  padding: clamp(28px, 4vw, 48px) clamp(16px, 3.5vw, 48px);
+  padding: clamp(36px, 5vw, 64px) clamp(16px, 3.5vw, 48px);
   color: var(--ll-white);
   box-sizing: border-box;
 }
@@ -396,34 +396,34 @@ body {
   letter-spacing: 0.16em;
   color: rgba(255, 255, 255, 0.75);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 .ll-melin-hero-title {
-  font-size: clamp(28px, 3.8vw, 54px);
+  font-size: clamp(32px, 4.5vw, 60px);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: #ffffff;
   max-width: 780px;
 }
 
 .ll-melin-hero-desc {
-  font-size: clamp(13.5px, 1.1vw, 16px);
-  line-height: 1.55;
+  font-size: clamp(14px, 1.15vw, 17px);
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 520px;
-  margin: 0 0 22px;
+  max-width: 540px;
+  margin: 0 0 28px;
 }
 
 .ll-melin-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 0 28px;
+  min-height: 48px;
+  padding: 0 32px;
   background: #000000;
   color: #ffffff;
   font-size: 11px;
@@ -447,7 +447,7 @@ body {
 /* Hero Pagination Dots (Matching Client Reference) */
 .ll-hero-dots {
   position: absolute;
-  bottom: 18px;
+  bottom: 22px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -457,8 +457,8 @@ body {
 }
 
 .ll-hero-dot {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
   border: 1.5px solid rgba(255, 255, 255, 0.85);
@@ -519,12 +519,12 @@ body {
 }
 
 /* ==========================================================================
-   2. BRANDS BAR DIRECTLY UNDER HERO (REPOSITIONED HIGHER UP ABOVE THE FOLD)
+   2. BRANDS BAR UNDER HERO
    ========================================================================== */
 .ll-brands-strip-section {
   background: #ffffff;
   border-bottom: 1px solid var(--ll-border);
-  padding: clamp(24px, 3vw, 36px) 0 clamp(20px, 2.5vw, 30px);
+  padding: clamp(56px, 5vw, 76px) 0 clamp(40px, 4vw, 56px);
 }
 
 .ll-brands-strip-header {
@@ -533,7 +533,7 @@ body {
   justify-content: center;
   width: 100%;
   text-align: center;
-  margin: 0 auto clamp(16px, 1.8vw, 24px);
+  margin: 0 auto clamp(36px, 4vw, 54px);
 }
 
 .ll-brands-title {
@@ -549,10 +549,10 @@ body {
 .ll-partners-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: clamp(14px, 2vw, 28px);
+  gap: clamp(18px, 2.5vw, 36px);
   align-items: center;
   justify-items: center;
-  padding: 4px 0 0;
+  padding: 12px 0 6px;
 }
 
 .ll-partner-item {
