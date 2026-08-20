@@ -414,23 +414,26 @@ const sortedMaterials = Object.keys(materialCounts).sort((a, b) => materialCount
     .dual-range-container {
       position: relative;
       width: 100%;
-      height: 24px;
+      height: 28px;
       display: flex;
       align-items: center;
     }
 
+    /* Thin line where no thumbs are active (linea finita) */
     .range-track-bg {
       position: absolute;
-      width: 100%;
-      height: 4px;
-      background: #e2e0d8;
-      border-radius: 2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #dedcd4;
+      border-radius: 1px;
       z-index: 1;
     }
 
+    /* Solid black bar between min and max thumbs */
     .range-track-fill {
       position: absolute;
-      height: 4px;
+      height: 3.5px;
       background: #000000;
       border-radius: 2px;
       z-index: 2;
@@ -440,13 +443,15 @@ const sortedMaterials = Object.keys(materialCounts).sort((a, b) => materialCount
 
     .dual-range-container input[type="range"] {
       position: absolute;
+      left: 0;
+      top: 0;
       width: 100%;
-      height: 4px;
-      background: none;
+      height: 100%;
+      background: transparent;
       pointer-events: none;
       -webkit-appearance: none;
       appearance: none;
-      z-index: 3;
+      z-index: 5;
       margin: 0;
       outline: none;
     }
@@ -458,11 +463,13 @@ const sortedMaterials = Object.keys(materialCounts).sort((a, b) => materialCount
       height: 18px;
       border-radius: 50%;
       background: #000000;
-      border: 2px solid #ffffff;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-      cursor: pointer;
-      pointer-events: auto;
-      transition: transform 0.15s ease;
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+      cursor: grab;
+      pointer-events: auto !important;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      z-index: 10;
     }
 
     .dual-range-container input[type="range"]::-moz-range-thumb {
@@ -470,19 +477,24 @@ const sortedMaterials = Object.keys(materialCounts).sort((a, b) => materialCount
       height: 18px;
       border-radius: 50%;
       background: #000000;
-      border: 2px solid #ffffff;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-      cursor: pointer;
-      pointer-events: auto;
-      transition: transform 0.15s ease;
+      border: 2.5px solid #ffffff;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+      cursor: grab;
+      pointer-events: auto !important;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      z-index: 10;
     }
 
-    .dual-range-container input[type="range"]::-webkit-slider-thumb:hover {
-      transform: scale(1.25);
-    }
-
+    .dual-range-container input[type="range"]::-webkit-slider-thumb:hover,
     .dual-range-container input[type="range"]::-moz-range-thumb:hover {
-      transform: scale(1.25);
+      transform: scale(1.2);
+    }
+
+    .dual-range-container input[type="range"]::-webkit-slider-thumb:active,
+    .dual-range-container input[type="range"]::-moz-range-thumb:active {
+      cursor: grabbing;
+      transform: scale(1.3);
     }
 
     .sidebar-reset-box {
