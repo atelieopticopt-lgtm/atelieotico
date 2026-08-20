@@ -1,5 +1,5 @@
 ---
-// ChatButton.astro - Floating Widget with WhatsApp Help Bubble, Scroll-to-Top and Hours
+// ChatButton.astro - Floating Widget with Clean Circular Buttons (WhatsApp, Scroll-to-Top and Hours)
 ---
 
 <div id="atelie-floating-stack" class="atelie-floating-stack">
@@ -30,67 +30,50 @@
     </div>
   </div>
 
-  {/* Row 1: WhatsApp with Help Bubble */}
-  <div class="floating-row whatsapp-row">
-    <a
-      href="https://wa.me/351964993767?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20e%20aconselhamento%20sobre%20as%20arma%C3%A7%C3%B5es%20do%20Ateli%C3%AA%20%C3%93tico."
-      target="_blank"
-      rel="noopener noreferrer"
-      class="whatsapp-bubble"
-      aria-label="Fale connosco no WhatsApp"
-    >
-      <span class="bubble-title" data-i18n-pt="Precisa de ajuda?" data-i18n-en="Need help?">Precisa de ajuda?</span>
-      <span class="bubble-sub" data-i18n-pt="Fale connosco" data-i18n-en="Chat with us">Fale connosco</span>
-    </a>
-
-    <a
-      href="https://wa.me/351964993767?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20e%20aconselhamento%20sobre%20as%20arma%C3%A7%C3%B5es%20do%20Ateli%C3%AA%20%C3%93tico."
-      target="_blank"
-      rel="noopener noreferrer"
-      class="floating-circle-btn whatsapp-pure-btn"
-      aria-label="WhatsApp Ateliê Ótico"
-      title="Fale connosco no WhatsApp"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="54" height="54" style="enable-background:new 0 0 360 360;" xml:space="preserve">
-        <g>
-          <circle cx="180" cy="180" r="144" fill="#1BD741"/>
-          <path fill="#FFFFFF" d="M180,95.54c46.57,0,84.46,37.89,84.46,84.46c0,46.57-37.89,84.46-84.46,84.46c-16.85,0-33.1-4.94-47-14.28 l-6.89-4.63l-7.88,4.3l-17.31,8.56l8.64-17.45l4.29-7.8l-4.51-6.87c-9.03-13.75-13.8-29.76-13.8-46.3 C95.54,133.43,133.43,95.54,180,95.54 M180,78.58c-56.01,0-101.42,45.41-101.42,101.42c0,20.53,6.1,39.64,16.59,55.61l-14.23,42.72 l42.61-14.06c16.14,10.84,35.56,17.16,56.46,17.16c56.01,0,101.42-45.41,101.42-101.42C281.42,123.99,236.01,78.58,180,78.58 L180,78.58z"/>
-          <path fill="#FFFFFF" d="M152.22,132.09l-5.14-0.38c-4.01-0.29-7.91,1.38-10.46,4.48l-1.22,1.63c-8.98,12.58-8.57,22.56-2.17,36.77l0,0 c0.61,1.36,1.3,2.68,2.09,3.94c10.83,17.35,24.37,32,42.74,41.05l15.08,6.38c7.8,3.3,16.39,3.05,23.74-0.23 c6.56-2.92,11.38-8.73,13.44-15.61l0.93-3.11c0.68-2.28-0.4-4.72-2.56-5.74l-20.11-9.8c-2.46-1.2-5.42-0.5-7.08,1.68l-6.97,9.79 c-1.09,1.53-3.12,2.07-4.83,1.28l-3.39-1.58c-13.06-6.08-23.92-16.05-31.1-28.54l-0.06-0.11c-0.76-1.32-0.59-2.98,0.43-4.11 l6.97-7.3c1.82-1.91,2.32-4.72,1.26-7.13l-9.21-21.1C154.16,133.29,153.29,132.48,152.22,132.09L152.22,132.09z"/>
-        </g>
-      </svg>
-    </a>
-  </div>
+  {/* Row 1: WhatsApp Button */}
+  <a
+    href="https://wa.me/351964993767?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20e%20aconselhamento%20sobre%20as%20arma%C3%A7%C3%B5es%20do%20Ateli%C3%AA%20%C3%93tico."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="floating-circle-btn whatsapp-pure-btn"
+    aria-label="WhatsApp Ateliê Ótico"
+    title="Fale connosco no WhatsApp"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" width="54" height="54" style="enable-background:new 0 0 360 360;" xml:space="preserve">
+      <g>
+        <circle cx="180" cy="180" r="144" fill="#1BD741"/>
+        <path fill="#FFFFFF" d="M180,95.54c46.57,0,84.46,37.89,84.46,84.46c0,46.57-37.89,84.46-84.46,84.46c-16.85,0-33.1-4.94-47-14.28 l-6.89-4.63l-7.88,4.3l-17.31,8.56l8.64-17.45l4.29-7.8l-4.51-6.87c-9.03-13.75-13.8-29.76-13.8-46.3 C95.54,133.43,133.43,95.54,180,95.54 M180,78.58c-56.01,0-101.42,45.41-101.42,101.42c0,20.53,6.1,39.64,16.59,55.61l-14.23,42.72 l42.61-14.06c16.14,10.84,35.56,17.16,56.46,17.16c56.01,0,101.42-45.41,101.42-101.42C281.42,123.99,236.01,78.58,180,78.58 L180,78.58z"/>
+        <path fill="#FFFFFF" d="M152.22,132.09l-5.14-0.38c-4.01-0.29-7.91,1.38-10.46,4.48l-1.22,1.63c-8.98,12.58-8.57,22.56-2.17,36.77l0,0 c0.61,1.36,1.3,2.68,2.09,3.94c10.83,17.35,24.37,32,42.74,41.05l15.08,6.38c7.8,3.3,16.39,3.05,23.74-0.23 c6.56-2.92,11.38-8.73,13.44-15.61l0.93-3.11c0.68-2.28-0.4-4.72-2.56-5.74l-20.11-9.8c-2.46-1.2-5.42-0.5-7.08,1.68l-6.97,9.79 c-1.09,1.53-3.12,2.07-4.83,1.28l-3.39-1.58c-13.06-6.08-23.92-16.05-31.1-28.54l-0.06-0.11c-0.76-1.32-0.59-2.98,0.43-4.11 l6.97-7.3c1.82-1.91,2.32-4.72,1.26-7.13l-9.21-21.1C154.16,133.29,153.29,132.48,152.22,132.09L152.22,132.09z"/>
+      </g>
+    </svg>
+  </a>
 
   {/* Row 2: Scroll to top */}
-  <div class="floating-row">
-    <button
-      type="button"
-      id="btn-scroll-top"
-      class="floating-circle-btn action-circle-btn"
-      aria-label="Voltar ao topo"
-      title="Voltar ao topo"
-    >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="18 15 12 9 6 15"></polyline>
-      </svg>
-    </button>
-  </div>
+  <button
+    type="button"
+    id="btn-scroll-top"
+    class="floating-circle-btn action-circle-btn"
+    aria-label="Voltar ao topo"
+    title="Voltar ao topo"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 
   {/* Row 3: Opening Hours Clock */}
-  <div class="floating-row">
-    <button
-      type="button"
-      id="btn-toggle-hours"
-      class="floating-circle-btn action-circle-btn"
-      aria-label="Horário de funcionamento"
-      title="Ver horários do Ateliê"
-    >
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"></circle>
-        <polyline points="12 6 12 12 16 14"></polyline>
-      </svg>
-    </button>
-  </div>
+  <button
+    type="button"
+    id="btn-toggle-hours"
+    class="floating-circle-btn action-circle-btn"
+    aria-label="Horário de funcionamento"
+    title="Ver horários do Ateliê"
+  >
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <polyline points="12 6 12 12 16 14"></polyline>
+    </svg>
+  </button>
 
 </div>
 
@@ -103,48 +86,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 12px;
-  }
-
-  .floating-row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-  }
-
-  /* WhatsApp Help Speech Bubble */
-  .whatsapp-bubble {
-    background: #ffffff;
-    padding: 8px 14px;
-    border-radius: 8px;
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    white-space: nowrap;
-  }
-
-  .whatsapp-bubble:hover {
-    transform: translateX(-3px);
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
-  }
-
-  .bubble-title {
-    font-size: 11px;
-    font-weight: 700;
-    color: #111111;
-    line-height: 1.3;
-  }
-
-  .bubble-sub {
-    font-size: 11px;
-    font-weight: 500;
-    color: #555555;
-    line-height: 1.3;
+    gap: 10px;
   }
 
   /* Circular Buttons */
@@ -163,7 +105,7 @@
 
   .whatsapp-pure-btn {
     background: transparent !important;
-    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.18));
   }
 
   .whatsapp-pure-btn:hover {
@@ -182,7 +124,7 @@
     background: #ffffff;
     color: #111111;
     border: 1px solid rgba(0, 0, 0, 0.12) !important;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   }
 
   .action-circle-btn:hover {
@@ -190,18 +132,19 @@
     color: #ffffff;
     border-color: #000000 !important;
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
   }
 
   /* Hours Popover */
   .hours-popover {
     position: absolute;
     bottom: 0;
-    right: 64px;
+    right: 60px;
     width: 270px;
     background: #ffffff;
-    border: 1.5px solid #000000;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
     padding: 16px 18px;
     display: none;
     box-sizing: border-box;
@@ -294,9 +237,6 @@
     .action-circle-btn {
       width: 40px;
       height: 40px;
-    }
-    .whatsapp-bubble {
-      display: none;
     }
   }
 </style>
