@@ -604,6 +604,14 @@ body {
   cursor: pointer;
 }
 
+/* Hidden cards MUST be completely removed from display */
+.ll-product-card.is-hidden,
+.store-card.is-hidden,
+.ll-product-card[hidden],
+.store-card[hidden] {
+  display: none !important;
+}
+
 /* 4-Item Desktop Grid for Carousel Track (Fits exactly with all side borders visible) */
 .ll-carousel-track .ll-product-card {
   flex: 0 0 calc((100% - (3 * 16px)) / 4) !important;
