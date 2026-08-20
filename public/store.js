@@ -101,8 +101,27 @@ function initZoom() {
   });
 }
 
+// Navbar Scroll Effect
+function initNavbarScroll() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+  const checkScroll = () => {
+    if (window.scrollY > 8) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+}
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initZoom);
+  document.addEventListener('DOMContentLoaded', () => {
+    initZoom();
+    initNavbarScroll();
+  });
 } else {
   initZoom();
+  initNavbarScroll();
 }
