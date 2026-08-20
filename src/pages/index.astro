@@ -2,8 +2,37 @@
 import StoreLayout from '../layouts/StoreLayout.astro';
 import { products } from '../data/products';
 
-const novidades = products.slice(0, 8);
-const selecaoPermanente = products.slice(0, 4);
+// Diverse brand curation for homepage
+const novidadesSlugs = [
+  'snob-milano-chicca-snv126-c013z',
+  'stock-1201043200178', // Persol
+  'stock-1209643200516', // Salvatore Ferragamo
+  'stock-1209643200525', // Longchamp
+  'stock-1209643200514', // Karl Lagerfeld
+  'stock-1209648801126', // Lacoste
+  'stock-1201043200103', // Ray-Ban
+  'stock-1209648801022'  // Zeiss
+];
+
+const selecaoSlugs = [
+  'snob-milano-chicca-snv126-c008z', // SNOB Milano
+  'stock-1201043200179', // Persol
+  'stock-1209648800893', // Liu Jo
+  'stock-1209648801140'  // Calvin Klein
+];
+
+const mosaicoSlugs = [
+  'stock-1209648801147', // Salvatore Ferragamo
+  'stock-1209643200526', // Longchamp
+  'stock-1201043200108', // Ray-Ban
+  'stock-1209643200515', // Karl Lagerfeld
+  'stock-1209648801128', // Lacoste
+  'snob-milano-chicca-snv126-c010z'  // SNOB Milano
+];
+
+const novidades = novidadesSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
+const selecaoPermanente = selecaoSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
+const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
 ---
 
 <StoreLayout
@@ -12,7 +41,7 @@ const selecaoPermanente = products.slice(0, 4);
 >
 
   {/* =========================================================================
-      1. HERO SECTION (EXACT USER DIMENSIONS: 660px, min-height: calc(305px + var(--menu-height)))
+      1. HERO SECTION
       ========================================================================= */}
   <section class="ll-melin-hero">
     <img
@@ -41,7 +70,7 @@ const selecaoPermanente = products.slice(0, 4);
 
 
   {/* =========================================================================
-      2. BRANDS BAR DIRECTLY UNDER HERO (BABOCUSH STYLE "AS SEEN ON")
+      2. BRANDS BAR DIRECTLY UNDER HERO
       ========================================================================= */}
   <section class="ll-brands-strip-section">
     <div class="ll-container">
@@ -52,16 +81,16 @@ const selecaoPermanente = products.slice(0, 4);
       </div>
 
       <div class="ll-partners-grid">
-        <a href="/marcas" class="ll-partner-item" title="SNOB Milano">
+        <a href="/catalogo?marca=SNOB+Milano" class="ll-partner-item" title="SNOB Milano">
           <img class="ll-partner-logo snob" src="/partner-snob.jpeg" alt="SNOB Milano" />
         </a>
-        <a href="/marcas" class="ll-partner-item" title="Ørgreen Optics">
+        <a href="/catalogo?marca=%C3%98rgreen+Optics" class="ll-partner-item" title="Ørgreen Optics">
           <img class="ll-partner-logo orgreen" src="/partner-orgreen.svg" alt="Ørgreen Optics" />
         </a>
-        <a href="/marcas" class="ll-partner-item" title="Einstoffen">
+        <a href="/catalogo?marca=Einstoffen" class="ll-partner-item" title="Einstoffen">
           <img class="ll-partner-logo einstoffen" src="/partner-einstoffen.png" alt="Einstoffen" />
         </a>
-        <a href="/marcas" class="ll-partner-item" title="Rodenstock">
+        <a href="/catalogo?marca=Rodenstock" class="ll-partner-item" title="Rodenstock">
           <img class="ll-partner-logo rodenstock" src="/partner-rodenstock.png" alt="Rodenstock" />
         </a>
       </div>
@@ -70,7 +99,7 @@ const selecaoPermanente = products.slice(0, 4);
 
 
   {/* =========================================================================
-      3. SECTION 3: NOVIDADES CAROUSEL (ARROWS & HEARTS)
+      3. SECTION 3: NOVIDADES CAROUSEL (DIVERSE BRANDS)
       ========================================================================= */}
   <section class="ll-section">
     <div class="ll-container">
@@ -106,14 +135,14 @@ const selecaoPermanente = products.slice(0, 4);
               <button class="ll-card-fav" aria-label="Favorito">♡</button>
               <a href={`/produtos/${p.slug}`} class="ll-card-image-box">
                 <img class="ll-card-img-main" src={p.image} alt={p.name} loading="lazy" />
-                <img class="ll-card-img-hover" src={p.hover} alt={`${p.name} alternativa`} loading="lazy" />
+                <img class="ll-card-img-hover" src={p.hover || p.image} alt={`${p.name} alternativa`} loading="lazy" />
               </a>
               <div class="ll-card-meta">
                 <div class="ll-card-title-row">
                   <h3 class="ll-card-title"><a href={`/produtos/${p.slug}`}>{p.name}</a></h3>
                   <strong class="ll-card-price">{p.price} &euro;</strong>
                 </div>
-                <p class="ll-card-sub">{p.category} &bull; {p.shape}</p>
+                <p class="ll-card-sub">{p.brand} &bull; {p.shape}</p>
               </div>
             </article>
           ))}
@@ -167,7 +196,6 @@ const selecaoPermanente = products.slice(0, 4);
       </div>
 
       <div class="ll-craft-split-grid">
-        {/* Left Side: 2 Images */}
         <div class="ll-craft-images-box">
           <div class="ll-craft-img-tile">
             <img
@@ -185,7 +213,6 @@ const selecaoPermanente = products.slice(0, 4);
           </div>
         </div>
 
-        {/* Right Side: 4 Technical Specs */}
         <div class="ll-craft-specs-list">
           <div class="ll-spec-item">
             <span class="ll-spec-num">ÓTICA</span>
@@ -226,7 +253,7 @@ const selecaoPermanente = products.slice(0, 4);
 
 
   {/* =========================================================================
-      6. SECTION 6: CATÁLOGO / SELEÇÃO PERMANENTE
+      6. SECTION 6: CATÁLOGO / SELEÇÃO PERMANENTE (DIVERSE BRANDS)
       ========================================================================= */}
   <section class="ll-section">
     <div class="ll-container">
@@ -249,14 +276,14 @@ const selecaoPermanente = products.slice(0, 4);
           <article class="ll-product-card" key={`perm-${p.id}`}>
             <a href={`/produtos/${p.slug}`} class="ll-card-image-box">
               <img class="ll-card-img-main" src={p.image} alt={p.name} loading="lazy" />
-              <img class="ll-card-img-hover" src={p.hover} alt={`${p.name} alternativa`} loading="lazy" />
+              <img class="ll-card-img-hover" src={p.hover || p.image} alt={`${p.name} alternativa`} loading="lazy" />
             </a>
             <div class="ll-card-meta">
               <div class="ll-card-title-row">
                 <h3 class="ll-card-title"><a href={`/produtos/${p.slug}`}>{p.name}</a></h3>
                 <strong class="ll-card-price">{p.price} &euro;</strong>
               </div>
-              <p class="ll-card-sub">{p.category} &bull; {p.shape}</p>
+              <p class="ll-card-sub">{p.brand} &bull; {p.shape}</p>
             </div>
           </article>
         ))}
@@ -267,7 +294,7 @@ const selecaoPermanente = products.slice(0, 4);
 
 
   {/* =========================================================================
-      7. SECTION 7: CURATED MOSAIC WITH QUOTE CARDS
+      7. SECTION 7: CURATED MOSAIC WITH QUOTE CARDS (DIVERSE BRANDS)
       ========================================================================= */}
   <section class="ll-section" style="padding-top: 0;">
     <div class="ll-container">
@@ -276,16 +303,16 @@ const selecaoPermanente = products.slice(0, 4);
         
         {/* Row 1 */}
         <article class="ll-product-card">
-          <a href={`/produtos/${products[4].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[4].image} alt={products[4].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[4].hover} alt={products[4].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[0].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[0].image} alt={mosaico[0].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[0].hover || mosaico[0].image} alt={mosaico[0].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[4].slug}`}>{products[4].name}</a></h3>
-              <strong class="ll-card-price">{products[4].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[0].slug}`}>{mosaico[0].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[0].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[4].category} &bull; {products[4].shape}</p>
+            <p class="ll-card-sub">{mosaico[0].brand} &bull; {mosaico[0].shape}</p>
           </div>
         </article>
 
@@ -296,73 +323,73 @@ const selecaoPermanente = products.slice(0, 4);
         </div>
 
         <article class="ll-product-card">
-          <a href={`/produtos/${products[5].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[5].image} alt={products[5].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[5].hover} alt={products[5].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[1].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[1].image} alt={mosaico[1].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[1].hover || mosaico[1].image} alt={mosaico[1].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[5].slug}`}>{products[5].name}</a></h3>
-              <strong class="ll-card-price">{products[5].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[1].slug}`}>{mosaico[1].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[1].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[5].category} &bull; {products[5].shape}</p>
+            <p class="ll-card-sub">{mosaico[1].brand} &bull; {mosaico[1].shape}</p>
           </div>
         </article>
 
         <article class="ll-product-card">
-          <a href={`/produtos/${products[9].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[9].image} alt={products[9].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[9].hover} alt={products[9].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[2].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[2].image} alt={mosaico[2].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[2].hover || mosaico[2].image} alt={mosaico[2].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[9].slug}`}>{products[9].name}</a></h3>
-              <strong class="ll-card-price">{products[9].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[2].slug}`}>{mosaico[2].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[2].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[9].category} &bull; {products[9].shape}</p>
+            <p class="ll-card-sub">{mosaico[2].brand} &bull; {mosaico[2].shape}</p>
           </div>
         </article>
 
         {/* Row 2 */}
         <article class="ll-product-card">
-          <a href={`/produtos/${products[6].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[6].image} alt={products[6].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[6].hover} alt={products[6].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[3].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[3].image} alt={mosaico[3].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[3].hover || mosaico[3].image} alt={mosaico[3].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[6].slug}`}>{products[6].name}</a></h3>
-              <strong class="ll-card-price">{products[6].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[3].slug}`}>{mosaico[3].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[3].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[6].category} &bull; {products[6].shape}</p>
+            <p class="ll-card-sub">{mosaico[3].brand} &bull; {mosaico[3].shape}</p>
           </div>
         </article>
 
         <article class="ll-product-card">
-          <a href={`/produtos/${products[7].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[7].image} alt={products[7].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[7].hover} alt={products[7].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[4].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[4].image} alt={mosaico[4].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[4].hover || mosaico[4].image} alt={mosaico[4].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[7].slug}`}>{products[7].name}</a></h3>
-              <strong class="ll-card-price">{products[7].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[4].slug}`}>{mosaico[4].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[4].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[7].category} &bull; {products[7].shape}</p>
+            <p class="ll-card-sub">{mosaico[4].brand} &bull; {mosaico[4].shape}</p>
           </div>
         </article>
 
         <article class="ll-product-card">
-          <a href={`/produtos/${products[8].slug}`} class="ll-card-image-box">
-            <img class="ll-card-img-main" src={products[8].image} alt={products[8].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={products[8].hover} alt={products[8].name} loading="lazy" />
+          <a href={`/produtos/${mosaico[5].slug}`} class="ll-card-image-box">
+            <img class="ll-card-img-main" src={mosaico[5].image} alt={mosaico[5].name} loading="lazy" />
+            <img class="ll-card-img-hover" src={mosaico[5].hover || mosaico[5].image} alt={mosaico[5].name} loading="lazy" />
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
-              <h3 class="ll-card-title"><a href={`/produtos/${products[8].slug}`}>{products[8].name}</a></h3>
-              <strong class="ll-card-price">{products[8].price} &euro;</strong>
+              <h3 class="ll-card-title"><a href={`/produtos/${mosaico[5].slug}`}>{mosaico[5].name}</a></h3>
+              <strong class="ll-card-price">{mosaico[5].price} &euro;</strong>
             </div>
-            <p class="ll-card-sub">{products[8].category} &bull; {products[8].shape}</p>
+            <p class="ll-card-sub">{mosaico[5].brand} &bull; {mosaico[5].shape}</p>
           </div>
         </article>
 
@@ -372,6 +399,19 @@ const selecaoPermanente = products.slice(0, 4);
           </p>
         </div>
 
+      </div>
+
+      {/* Button: VER CATÁLOGO COMPLETO */}
+      <div style="text-align: center; margin-top: 48px; margin-bottom: 24px;">
+        <a
+          href="/catalogo"
+          class="rect black"
+          style="min-width: 260px; height: 50px; display: inline-flex; justify-content: center; align-items: center; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;"
+          data-i18n-pt="VER CATÁLOGO COMPLETO"
+          data-i18n-en="VIEW FULL CATALOG"
+        >
+          VER CATÁLOGO COMPLETO
+        </a>
       </div>
 
     </div>
@@ -390,7 +430,6 @@ const selecaoPermanente = products.slice(0, 4);
 
       <div class="ll-stories-mosaic">
         
-        {/* Left Column: SNOB Hero Model */}
         <div class="ll-story-col-left">
           <img
             src="/story-butterfly.jpeg"
@@ -399,7 +438,6 @@ const selecaoPermanente = products.slice(0, 4);
           />
         </div>
 
-        {/* Middle Column: 3 Horizontal Feature Cards */}
         <div class="ll-story-col-mid">
           <a href="/sobre" class="ll-story-tile-compact">
             <img
@@ -438,7 +476,6 @@ const selecaoPermanente = products.slice(0, 4);
           </a>
         </div>
 
-        {/* Right Column: SNOB Model 2 */}
         <div class="ll-story-col-right">
           <img
             src="/story-anteo.jpeg"
