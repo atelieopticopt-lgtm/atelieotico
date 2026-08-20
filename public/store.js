@@ -1,3 +1,4 @@
+// store.js — Client-side cart & wishlist store with reactive badge and drawer state
 const KEY = 'atelie-cart-v1', FAV = 'atelie-favs-v1';
 const read = (key) => { try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch { return []; } };
 const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
@@ -10,7 +11,17 @@ function renderCart() {
   const emptyTextEn = 'Your shopping cart is empty.';
   const emptyText = isEn ? emptyTextEn : emptyTextPt;
 
-  document.querySelectorAll('[data-cart-count]').forEach(e => e.textContent = String(cart.reduce((n, i) => n + i.qty, 0)));
+  const count = cart.reduce((n, i) => n + i.qty, 0);
+  document.querySelectorAll('[data-cart-count]').forEach(e => {
+    e.textContent = String(count);
+    e.setAttribute('data-cart-count', String(count));
+    if (count === 0) {
+      e.style.display = 'none';
+    } else {
+      e.style.display = 'flex';
+    }
+  });
+
   const box = document.querySelector('[data-cart-items]');
   if (box) {
     box.innerHTML = cart.length
@@ -29,6 +40,16 @@ function renderCart() {
   const total = cart.reduce((n, i) => n + i.price * i.qty, 0);
   document.querySelectorAll('[data-cart-total]').forEach(e => e.textContent = money(total));
   write(KEY, cart);
+}
+
+function initFavs() {
+  const list = read(FAV);
+  document.querySelectorAll('[data-favorite]').forEach(btn => {
+    const slug = btn.dataset.favorite;
+    const isFav = list.includes(slug);
+    btn.classList.toggle('is-active', isFav);
+    btn.classList.toggle('active', isFav);
+  });
 }
 
 document.addEventListener('click', (e) => {
@@ -51,6 +72,7 @@ document.addEventListener('click', (e) => {
     const list = read(FAV), slug = fav.dataset.favorite, i = list.indexOf(slug);
     i >= 0 ? list.splice(i, 1) : list.push(slug);
     write(FAV, list);
+    fav.classList.toggle('is-active', i < 0);
     fav.classList.toggle('active', i < 0);
   }
 });
@@ -62,44 +84,18 @@ function openCart() {
   drawer?.classList.add('open');
   overlay?.classList.add('open');
   drawer?.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('cart-open');
 }
 
 function closeCart() {
   drawer?.classList.remove('open');
   overlay?.classList.remove('open');
   drawer?.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('cart-open');
 }
 
-document.querySelector('.cart-trigger')?.addEventListener('click', openCart);
-document.querySelector('.cart-close')?.addEventListener('click', closeCart);
-overlay?.addEventListener('click', closeCart);
+document.querySelectorAll('.cart-trigger').forEach(b => b.addEventListener('click', openCart));
+document.querySelectorAll('.cart-close, .drawer-overlay').forEach(b => b.addEventListener('click', closeCart));
 
-document.querySelector('.mobile-menu')?.addEventListener('click', (e) => {
-  const open = e.currentTarget.getAttribute('aria-expanded') === 'true';
-  e.currentTarget.setAttribute('aria-expanded', String(!open));
-  document.querySelector('#main-nav')?.classList.toggle('open', !open);
-});
-
-document.querySelectorAll('[data-favorite]').forEach(b => b.classList.toggle('active', read(FAV).includes(b.dataset.favorite)));
 renderCart();
-
-// Navbar Scroll Effect
-function initNavbarScroll() {
-  const header = document.querySelector('.site-header');
-  if (!header) return;
-  const checkScroll = () => {
-    if (window.scrollY > 8) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', checkScroll, { passive: true });
-  checkScroll();
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initNavbarScroll);
-} else {
-  initNavbarScroll();
-}
+initFavs();

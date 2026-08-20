@@ -1763,3 +1763,221 @@ body {
   text-align: center !important;
   text-decoration: none !important;
 }
+
+/* ==========================================================================
+   SUPREME LUXURY BUTTON INTERACTION & ANIMATION SYSTEM (FOR ALL BUTTONS)
+   ========================================================================== */
+.rect.black,
+.add-cart,
+.btn-primary,
+.btn-add-cart,
+.btn-add-to-cart,
+.store-btn,
+.sidebar-btn-save,
+.btn-save-modal,
+.btn-success-admin,
+.mega-melin-btn,
+.add-to-cart-btn,
+.product-add-to-cart-btn,
+.details details summary {
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.25s ease, 
+              box-shadow 0.25s ease,
+              letter-spacing 0.25s ease !important;
+}
+
+/* Hover lift & luminous shadow */
+.rect.black:hover,
+.add-cart:hover,
+.btn-primary:hover,
+.btn-add-cart:hover,
+.btn-add-to-cart:hover,
+.store-btn:hover,
+.sidebar-btn-save:hover,
+.btn-save-modal:hover,
+.btn-success-admin:hover,
+.mega-melin-btn:hover,
+.add-to-cart-btn:hover,
+.product-add-to-cart-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25) !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* Active click bounce */
+.rect.black:active,
+.add-cart:active,
+.btn-primary:active,
+.btn-add-cart:active,
+.btn-add-to-cart:active,
+.store-btn:active,
+.sidebar-btn-save:active,
+.btn-save-modal:active,
+.btn-success-admin:active,
+.mega-melin-btn:active,
+.add-to-cart-btn:active,
+.product-add-to-cart-btn:active {
+  transform: translateY(0px) scale(0.97) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Shimmer shine sweep animation on hover */
+.rect.black::after,
+.add-cart::after,
+.btn-primary::after,
+.btn-add-cart::after,
+.btn-add-to-cart::after,
+.product-add-to-cart-btn::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -120% !important;
+  width: 80% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent) !important;
+  transform: skewX(-25deg) !important;
+  transition: left 0.75s ease !important;
+  pointer-events: none !important;
+}
+
+.rect.black:hover::after,
+.add-cart:hover::after,
+.btn-primary:hover::after,
+.btn-add-cart:hover::after,
+.btn-add-to-cart:hover::after,
+.product-add-to-cart-btn:hover::after {
+  left: 140% !important;
+}
+
+/* ==========================================================================
+   HEADER CART BAG ICON & CHIC OVERLAY BADGE
+   ========================================================================== */
+.cart-trigger.icon-action {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 6px !important;
+  margin-left: 2px !important;
+}
+
+.cart-trigger .cart-badge {
+  position: absolute !important;
+  top: -2px !important;
+  right: -4px !important;
+  background: #000000 !important;
+  color: #ffffff !important;
+  font-size: 9.5px !important;
+  font-weight: 800 !important;
+  min-width: 17px !important;
+  height: 17px !important;
+  padding: 0 4px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+  border: 1.5px solid #ffffff !important;
+  pointer-events: none !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.cart-trigger .cart-badge:empty,
+.cart-trigger .cart-badge[data-cart-count="0"] {
+  display: none !important;
+}
+
+/* ==========================================================================
+   STAR WISHLIST ICON (ON ALL PRODUCT CARDS)
+   ========================================================================== */
+.ll-card-fav,
+.favorite {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  z-index: 5 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #222222 !important;
+  padding: 0 !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease !important;
+}
+
+.ll-card-fav:hover,
+.favorite:hover {
+  transform: scale(1.18) !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+.ll-card-fav svg,
+.favorite svg {
+  width: 17px !important;
+  height: 17px !important;
+  transition: fill 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.ll-card-fav.is-active svg,
+.ll-card-fav.active svg,
+.favorite.is-active svg,
+.favorite.active svg,
+button[data-favorite].is-active svg,
+button[data-favorite].active svg {
+  fill: #000000 !important;
+  stroke: #000000 !important;
+  animation: starBounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes starBounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.35); }
+  100% { transform: scale(1.1); }
+}
+
+/* ==========================================================================
+   HIDE FLOATING BUTTONS (WHATSAPP, SCROLL-TOP, ETC.) BEHIND CART DRAWER
+   ========================================================================== */
+.cart-drawer {
+  z-index: 9999999 !important;
+}
+
+.drawer-overlay {
+  z-index: 9999998 !important;
+}
+
+body.cart-open .quick-contact-wrapper,
+body.cart-open .chat-button-container,
+body.cart-open #quick-contact-container,
+body.cart-open .scroll-top-btn,
+body.cart-open .floating-action-btn,
+body.cart-open #whatsapp-btn,
+body.drawer-open .quick-contact-wrapper,
+body.drawer-open .chat-button-container,
+body.drawer-open #quick-contact-container,
+body.drawer-open .scroll-top-btn,
+body.drawer-open .floating-action-btn,
+body.drawer-open #whatsapp-btn {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  transform: translateY(20px) scale(0.9) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s !important;
+}
+
