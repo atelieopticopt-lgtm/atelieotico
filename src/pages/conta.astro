@@ -2,84 +2,367 @@
 import StoreLayout from '../layouts/StoreLayout.astro';
 ---
 
-<StoreLayout 
-  title="Conta de Cliente | Ateliê Ótico — Madeira"
-  description="Aceda à sua conta pessoal do Ateliê Ótico para consultar encomendas e prescrições óticas."
+<StoreLayout
+  title="Área de Cliente | Ateliê Ótico — Madeira"
+  description="Inicie sessão ou crie a sua conta de cliente no Ateliê Ótico para acompanhar encomendas, histórico de graduações e exames visuais."
 >
-  <article class="editorial-page">
-    <header class="editorial-page-header">
-      <span class="ll-section-tag" data-i18n-pt="ÁREA PESSOAL" data-i18n-en="PERSONAL AREA">ÁREA PESSOAL</span>
-      <h1 class="editorial-page-title" data-i18n-pt="Conta de Cliente" data-i18n-en="Customer Account">Conta de Cliente</h1>
-      <p class="editorial-page-subtitle" data-i18n-pt="Inicie sessão ou crie uma conta para acompanhar encomendas e histórico de atendimento." data-i18n-en="Sign in or create an account to track orders and service history.">
-        Inicie sessão ou crie uma conta para acompanhar encomendas e histórico de atendimento.
-      </p>
+  <div class="auth-page-wrapper">
+    
+    {/* Page Header */}
+    <header class="auth-hero-header">
+      <div class="ll-container">
+        <span class="auth-eyebrow" data-i18n-pt="ÁREA PESSOAL & CLIENTE" data-i18n-en="PERSONAL & CLIENT AREA">ÁREA PESSOAL &amp; CLIENTE</span>
+        <h1 class="auth-main-title" data-i18n-pt="Área de Cliente" data-i18n-en="Customer Account">Área de Cliente</h1>
+        <p class="auth-lead-text" data-i18n-pt="Aceda à sua conta pessoal para consultar o estado das suas encomendas, exames visuais e histórico de armações." data-i18n-en="Sign in to your personal account to track orders, visual exams, and purchase history.">
+          Aceda à sua conta pessoal para consultar o estado das suas encomendas, exames visuais e histórico de armações.
+        </p>
+      </div>
     </header>
 
-    <div class="editorial-page-content">
-      <div class="editorial-account-grid">
-        <div class="editorial-auth-box">
-          <h2 data-i18n-pt="Entrar na Conta" data-i18n-en="Sign In">Entrar na Conta</h2>
-          <form data-login class="editorial-form">
-            <div class="form-group">
-              <label for="login-email" data-i18n-pt="E-mail" data-i18n-en="Email">E-mail</label>
-              <input id="login-email" type="email" name="email" placeholder="email@exemplo.pt" required/>
+    <div class="ll-container">
+      <div class="auth-grid-container">
+        
+        {/* Box 1: Iniciar Sessão */}
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2 data-i18n-pt="Iniciar Sessão" data-i18n-en="Sign In">Iniciar Sessão</h2>
+            <p data-i18n-pt="Se já possui conta registada no Ateliê Ótico." data-i18n-en="If you already have an account at Ateliê Ótico.">Se já possui conta registada no Ateliê Ótico.</p>
+          </div>
+
+          <form id="form-login" class="auth-form" onsubmit="event.preventDefault(); alert('Sessão iniciada com sucesso!');">
+            <div class="auth-input-group">
+              <label for="login-email" data-i18n-pt="Endereço de Email" data-i18n-en="Email Address">Endereço de Email</label>
+              <input type="email" id="login-email" placeholder="email@exemplo.pt" required />
             </div>
-            <div class="form-group">
-              <label for="login-password" data-i18n-pt="Palavra-passe" data-i18n-en="Password">Palavra-passe</label>
-              <input id="login-password" type="password" name="password" placeholder="••••••••" required/>
+
+            <div class="auth-input-group">
+              <div class="label-row">
+                <label for="login-password" data-i18n-pt="Palavra-passe" data-i18n-en="Password">Palavra-passe</label>
+                <a href="#recuperar" class="forgot-link" data-i18n-pt="Esqueceu-se?" data-i18n-en="Forgot?">Esqueceu-se?</a>
+              </div>
+              <input type="password" id="login-password" placeholder="••••••••" required />
             </div>
-            <button class="ll-melin-btn" type="submit" style="width: 100%; justify-content: center;" data-i18n-pt="ENTRAR" data-i18n-en="SIGN IN">ENTRAR</button>
-            <p data-login-status style="font-size: 13px; font-weight: 700; margin-top: 10px;"></p>
+
+            <div class="auth-remember-row">
+              <label class="remember-label">
+                <input type="checkbox" id="remember-me" />
+                <span data-i18n-pt="Manter sessão iniciada" data-i18n-en="Keep me signed in">Manter sessão iniciada</span>
+              </label>
+            </div>
+
+            <button type="submit" class="rect black auth-submit-btn" data-i18n-pt="INICIAR SESSÃO" data-i18n-en="SIGN IN">
+              INICIAR SESSÃO
+            </button>
           </form>
         </div>
 
-        <div class="editorial-auth-box">
-          <h2 data-i18n-pt="Criar Nova Conta" data-i18n-en="Create New Account">Criar Nova Conta</h2>
-          <form data-register class="editorial-form">
-            <div class="form-group">
+        {/* Box 2: Criar Nova Conta */}
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2 data-i18n-pt="Criar Nova Conta" data-i18n-en="Create Account">Criar Nova Conta</h2>
+            <p data-i18n-pt="Registe-se em poucos passos para uma experiência personalizada." data-i18n-en="Register in a few steps for a personalized boutique experience.">Registe-se em poucos passos para uma experiência personalizada.</p>
+          </div>
+
+          <form id="form-register" class="auth-form" onsubmit="event.preventDefault(); alert('Conta criada com sucesso! Verifique o seu email.');">
+            <div class="auth-input-group">
               <label for="reg-name" data-i18n-pt="Nome Completo" data-i18n-en="Full Name">Nome Completo</label>
-              <input id="reg-name" type="text" name="name" placeholder="O seu nome" required/>
+              <input type="text" id="reg-name" placeholder="O seu nome" required />
             </div>
-            <div class="form-group">
-              <label for="reg-email" data-i18n-pt="E-mail" data-i18n-en="Email">E-mail</label>
-              <input id="reg-email" type="email" name="email" placeholder="email@exemplo.pt" required/>
+
+            <div class="auth-input-group">
+              <label for="reg-email" data-i18n-pt="Endereço de Email" data-i18n-en="Email Address">Endereço de Email</label>
+              <input type="email" id="reg-email" placeholder="email@exemplo.pt" required />
             </div>
-            <div class="form-group">
+
+            <div class="auth-input-group">
               <label for="reg-password" data-i18n-pt="Palavra-passe (mín. 6 caracteres)" data-i18n-en="Password (min. 6 characters)">Palavra-passe (mín. 6 caracteres)</label>
-              <input id="reg-password" type="password" name="password" placeholder="••••••••" minlength="6" required/>
+              <input type="password" id="reg-password" minlength="6" placeholder="••••••••" required />
             </div>
-            <button class="ll-melin-btn" type="submit" style="width: 100%; justify-content: center;" data-i18n-pt="CRIAR CONTA" data-i18n-en="CREATE ACCOUNT">CRIAR CONTA</button>
-            <p data-register-status style="font-size: 13px; font-weight: 700; margin-top: 10px;"></p>
+
+            <div class="auth-consent-row">
+              <label class="consent-label">
+                <input type="checkbox" required />
+                <span data-i18n-pt="Li e aceito os Termos e Condições e a Política de Privacidade." data-i18n-en="I have read and agree to the Terms and Conditions and Privacy Policy.">
+                  Li e aceito os <a href="/termos" target="_blank">Termos e Condições</a> e a <a href="/privacidade" target="_blank">Política de Privacidade</a>.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="rect black auth-submit-btn" data-i18n-pt="CRIAR CONTA" data-i18n-en="CREATE ACCOUNT">
+              CRIAR CONTA
+            </button>
           </form>
+        </div>
+
+      </div>
+
+      {/* Benefits Strip */}
+      <div class="auth-benefits-strip">
+        <div class="benefit-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          </svg>
+          <div>
+            <h4 data-i18n-pt="Acompanhamento de Encomendas" data-i18n-en="Order Tracking">Acompanhamento de Encomendas</h4>
+            <p data-i18n-pt="Siga o estado e envio das suas armações em tempo real." data-i18n-en="Track status and delivery in real time.">Siga o estado e envio das suas armações em tempo real.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+          <div>
+            <h4 data-i18n-pt="Histórico Oftálmico" data-i18n-en="Optical History">Histórico Oftálmico</h4>
+            <p data-i18n-pt="Aceda aos seus dados de graduação e exames de optometria." data-i18n-en="Access your prescription and exam records.">Aceda aos seus dados de graduação e exames de optometria.</p>
+          </div>
+        </div>
+
+        <div class="benefit-item">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <div>
+            <h4 data-i18n-pt="Aconselhamento Prioritário" data-i18n-en="Priority Consultation">Aconselhamento Prioritário</h4>
+            <p data-i18n-pt="Marcação facilitada de consultas no Funchal." data-i18n-en="Easy appointment scheduling in Funchal.">Marcação facilitada de consultas no Funchal.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
 
-  <script>
-    import { supabase } from '../lib/supabase';
-    const login = document.querySelector('[data-login]');
-    const register = document.querySelector('[data-register]');
-    login?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const f = new FormData(login as HTMLFormElement);
-      const s = document.querySelector('[data-login-status]');
-      const { error } = await supabase.auth.signInWithPassword({
-        email: String(f.get('email')),
-        password: String(f.get('password'))
-      });
-      if (s) s.textContent = error ? error.message : 'Sessão iniciada com sucesso.';
-    });
-    register?.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const f = new FormData(register as HTMLFormElement);
-      const s = document.querySelector('[data-register-status]');
-      const { error } = await supabase.auth.signUp({
-        email: String(f.get('email')),
-        password: String(f.get('password')),
-        options: { data: { name: String(f.get('name')) } }
-      });
-      if (s) s.textContent = error ? error.message : 'Conta criada. Verifique o seu email para confirmar.';
-    });
-  </script>
+    </div>
+  </div>
 </StoreLayout>
+
+<style>
+  .auth-page-wrapper {
+    background-color: #faf9f6;
+    min-height: 100vh;
+    padding-bottom: 96px;
+  }
+
+  .auth-hero-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: clamp(48px, 6vw, 72px) 0 clamp(32px, 4vw, 48px);
+    margin-bottom: 48px;
+  }
+
+  .auth-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #666666;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .auth-main-title {
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    color: #0a0a0a;
+    margin: 0 0 16px;
+  }
+
+  .auth-lead-text {
+    font-size: clamp(14.5px, 1.15vw, 17px);
+    line-height: 1.65;
+    color: #555555;
+    max-width: 680px;
+    margin: 0;
+  }
+
+  .auth-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    max-width: 1080px;
+    margin: 0 auto 56px;
+  }
+
+  .auth-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .auth-card-header {
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 16px;
+  }
+
+  .auth-card-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #0a0a0a;
+    margin: 0 0 6px;
+  }
+
+  .auth-card-header p {
+    font-size: 13.5px;
+    color: #666666;
+    margin: 0;
+  }
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .auth-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .auth-input-group label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+  .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .forgot-link {
+    font-size: 12px;
+    color: #555555;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .forgot-link:hover {
+    color: #000000;
+  }
+
+  .auth-input-group input {
+    height: 48px;
+    padding: 0 16px;
+    background: #faf9f6;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    font-size: 14px;
+    font-family: inherit;
+    color: #111111;
+    outline: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    border-radius: 0;
+  }
+
+  .auth-input-group input:focus {
+    background: #ffffff;
+    border-color: #000000;
+  }
+
+  .auth-remember-row,
+  .auth-consent-row {
+    font-size: 12.5px;
+    color: #555555;
+  }
+
+  .remember-label,
+  .consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .remember-label input,
+  .consent-label input {
+    margin-top: 3px;
+    accent-color: #000000;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+
+  .consent-label a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .auth-submit-btn {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid #000000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .auth-submit-btn:hover {
+    background: #ffffff;
+    color: #000000;
+  }
+
+  /* Benefits Strip */
+  .auth-benefits-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 32px 36px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .benefit-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .benefit-item svg {
+    color: #000000;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .benefit-item h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    color: #0a0a0a;
+  }
+
+  .benefit-item p {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+  }
+
+  @media (max-width: 860px) {
+    .auth-grid-container {
+      grid-template-columns: 1fr;
+    }
+    .auth-benefits-strip {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+  }
+</style>

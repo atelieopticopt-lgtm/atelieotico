@@ -479,28 +479,16 @@ body {
   filter: grayscale(1);
 }
 
-.orgreen-wordmark {
+.orgreen-wordmark,
+.ll-partner-logo.orgreen {
   display: block !important;
   opacity: 1 !important;
-  filter: brightness(0) contrast(1.25) !important;
-  min-width: 140px;
-  height: 38px !important;
-  object-fit: contain;
-}
-
-.ll-partner-logo.snob {
-  height: 52px;
-  width: auto;
-  max-width: 190px;
-  mix-blend-mode: multiply;
-  transform: scale(1.8);
-}
-
-.ll-partner-logo.orgreen {
-  height: 32px;
-  width: auto;
-  max-width: 160px;
-  filter: brightness(0);
+  width: 140px !important;
+  max-width: 140px !important;
+  height: 32px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
 .ll-partner-logo.einstoffen {
