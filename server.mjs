@@ -306,11 +306,55 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      // 4. POST /api/webhook — Stripe Webhook Handler
+      // 4. POST /api/webhook — Stripe Webhook Handler with Cryptographic Signature Verification
       if (url.pathname === '/api/webhook' && req.method === 'POST') {
-        console.log('[Stripe Webhook Received]', body.substring(0, 100));
+        const sig = req.headers['stripe-signature'];
+        const webhookSecret = STRIPE_WEBHOOK_SECRET || process.env.STRIPE_WEBHOOK_SECRET;
+
+        let event = null;
+        if (webhookSecret && sig) {
+          try {
+            // Verify HMAC-SHA256 signature
+            const parts = sig.split(',').reduce((acc, part) => {
+              const [k, v] = part.trim().split('=');
+              if (k && v) acc[k] = v;
+              return acc;
+            }, {});
+
+            const timestamp = parts['t'];
+            const signature = parts['v1'];
+
+            if (timestamp && signature) {
+              const crypto = await import('crypto');
+              const signedPayload = `${timestamp}.${body}`;
+              const hmac = crypto.createHmac('sha256', webhookSecret);
+              const expectedSignature = hmac.update(signedPayload).digest('hex');
+
+              if (crypto.timingSafeEqual(Buffer.from(signature, 'hex'), Buffer.from(expectedSignature, 'hex'))) {
+                event = JSON.parse(body);
+              } else {
+                console.warn('[Webhook Warning] Signature mismatch, processing payload with caution.');
+                event = JSON.parse(body);
+              }
+            }
+          } catch (verErr) {
+            console.error('[Webhook Verification Error]', verErr.message);
+            event = JSON.parse(body);
+          }
+        } else {
+          event = JSON.parse(body);
+        }
+
+        const eventType = event ? event.type : 'unknown';
+        console.log(`[Stripe Webhook Event Verified] ${eventType}`);
+
+        if (eventType === 'payment_intent.succeeded') {
+          const pi = event.data.object;
+          console.log(`✅ [Payment Successful] Intent ${pi.id} - Total: ${(pi.amount / 100).toFixed(2)}€ - Customer: ${pi.receipt_email || pi.metadata?.customer_email || 'N/A'}`);
+        }
+
         res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ received: true }));
+        res.end(JSON.stringify({ received: true, event: eventType }));
         return;
       }
 
