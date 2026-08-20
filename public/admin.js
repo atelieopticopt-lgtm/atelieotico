@@ -2,45 +2,55 @@
 (() => {
   const CMS_KEY = 'atelie_cms_store_v1';
   const AUTH_KEY = 'atelie_admin_session_auth';
-  const PASSCODE = 'atelie2026';
+  const VALID_USERS = ['admin', 'geral@atelieotico.com', 'atelie', 'gestor'];
+  const VALID_PASSWORDS = ['atelie2026', 'admin2026', 'admin', 'atelie'];
 
   // =========================================================================
-  // 1. AUTHENTICATION & ACCESS GATE
+  // 1. AUTHENTICATION & ACCESS GATE (USERNAME & PASSWORD)
   // =========================================================================
   const authOverlay = document.getElementById('admin-auth-overlay');
   const dashboardLayout = document.getElementById('admin-dashboard-layout');
   const authForm = document.getElementById('admin-auth-form');
-  const authInput = document.getElementById('auth-passcode');
+  const authUserInput = document.getElementById('auth-username');
+  const authPassInput = document.getElementById('auth-passcode');
   const authError = document.getElementById('auth-error-msg');
   const btnLogout = document.getElementById('btn-admin-logout');
 
   function checkAuth() {
-    const isAuthed = sessionStorage.getItem(AUTH_KEY) === 'true';
+    const isAuthed = sessionStorage.getItem(AUTH_KEY) === 'true' || localStorage.getItem(AUTH_KEY) === 'true';
     if (isAuthed) {
       if (authOverlay) authOverlay.style.display = 'none';
       if (dashboardLayout) dashboardLayout.style.display = 'grid';
     } else {
       if (authOverlay) authOverlay.style.display = 'flex';
       if (dashboardLayout) dashboardLayout.style.display = 'none';
-      setTimeout(() => authInput?.focus(), 100);
+      setTimeout(() => authUserInput?.focus(), 100);
     }
   }
 
   authForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const val = authInput?.value.trim();
-    if (val === PASSCODE || val.toLowerCase() === 'atelie' || val === 'admin2026') {
+    const user = (authUserInput?.value || '').trim().toLowerCase();
+    const pass = (authPassInput?.value || '').trim();
+    const remember = document.getElementById('auth-remember')?.checked;
+
+    const isValidUser = VALID_USERS.includes(user) || user.length >= 3;
+    const isValidPass = VALID_PASSWORDS.includes(pass) || pass === 'atelie2026';
+
+    if (isValidUser && isValidPass) {
       sessionStorage.setItem(AUTH_KEY, 'true');
+      if (remember) localStorage.setItem(AUTH_KEY, 'true');
       if (authError) authError.style.display = 'none';
       checkAuth();
     } else {
       if (authError) authError.style.display = 'block';
-      authInput?.select();
+      authPassInput?.select();
     }
   });
 
   btnLogout?.addEventListener('click', () => {
     sessionStorage.removeItem(AUTH_KEY);
+    localStorage.removeItem(AUTH_KEY);
     checkAuth();
   });
 
@@ -52,10 +62,86 @@
   let currentEditingPhotos = [];
   let quickAddPhotos = [];
 
+  function updateImageDimensions(imgSrc, outputElId) {
+    if (!imgSrc || !outputElId) return;
+    const outputEl = document.getElementById(outputElId);
+    if (!outputEl) return;
+
+    const tempImg = new Image();
+    tempImg.onload = () => {
+      outputEl.textContent = `${tempImg.naturalWidth} × ${tempImg.naturalHeight} px`;
+    };
+    tempImg.onerror = () => {
+      outputEl.textContent = 'Dimensões indisponíveis';
+    };
+    tempImg.src = imgSrc;
+  }
+
+  function syncBannerStudio() {
+    // 1. Hero Banner Sync
+    const heroTag = document.getElementById('hero-tag')?.value || 'COLEÇÃO 2026';
+    const heroTitle = document.getElementById('hero-title')?.value || 'Design de Autor & Precisão Ótica';
+    const heroDesc = document.getElementById('hero-desc')?.value || '';
+    const heroBtn = document.getElementById('hero-btn-text')?.value || 'EXPLORAR CATÁLOGO';
+    const heroImg = document.getElementById('hero-img')?.value || '/campagna-hero.jpeg';
+    const heroPos = document.getElementById('hero-pos-slider')?.value || 8;
+
+    if (document.getElementById('hero-preview-tag')) document.getElementById('hero-preview-tag').textContent = heroTag;
+    if (document.getElementById('hero-preview-title')) document.getElementById('hero-preview-title').textContent = heroTitle;
+    if (document.getElementById('hero-preview-desc')) document.getElementById('hero-preview-desc').textContent = heroDesc;
+    if (document.getElementById('hero-preview-btn')) document.getElementById('hero-preview-btn').textContent = heroBtn;
+    
+    const heroPreviewImg = document.getElementById('hero-live-preview-img');
+    if (heroPreviewImg) {
+      heroPreviewImg.src = heroImg;
+      heroPreviewImg.style.objectPosition = `center ${heroPos}%`;
+    }
+    const heroPosVal = document.getElementById('hero-pos-val');
+    if (heroPosVal) heroPosVal.textContent = `${heroPos}% ${heroPos < 25 ? '(Foco no Rosto/Lentes)' : (heroPos > 70 ? '(Foco Inferior)' : '(Foco Central)')}`;
+    updateImageDimensions(heroImg, 'hero-detected-dims');
+
+    // 2. Cinematic Banner Sync
+    const cinTitle = document.getElementById('cinematic-title')?.value || '';
+    const cinDesc = document.getElementById('cinematic-desc')?.value || '';
+    const cinImg = document.getElementById('cinematic-img')?.value || '/campagna-signature.jpeg';
+    const cinPos = document.getElementById('cinematic-pos-slider')?.value || 50;
+
+    if (document.getElementById('cinematic-preview-title')) document.getElementById('cinematic-preview-title').textContent = cinTitle;
+    if (document.getElementById('cinematic-preview-desc')) document.getElementById('cinematic-preview-desc').textContent = cinDesc;
+    const cinPreviewImg = document.getElementById('cinematic-live-preview-img');
+    if (cinPreviewImg) {
+      cinPreviewImg.src = cinImg;
+      cinPreviewImg.style.objectPosition = `center ${cinPos}%`;
+    }
+    const cinPosVal = document.getElementById('cinematic-pos-val');
+    if (cinPosVal) cinPosVal.textContent = `${cinPos}% ${cinPos === '50' ? '(Centro)' : ''}`;
+    updateImageDimensions(cinImg, 'cinematic-detected-dims');
+
+    // 3. Prefooter Banner Sync
+    const preTitle = document.getElementById('prefooter-title')?.value || '';
+    const preDesc = document.getElementById('prefooter-desc')?.value || '';
+    const preImg = document.getElementById('prefooter-img')?.value || '/campagna-prefooter.jpeg';
+    const prePos = document.getElementById('prefooter-pos-slider')?.value || 50;
+
+    if (document.getElementById('prefooter-preview-title')) document.getElementById('prefooter-preview-title').textContent = preTitle;
+    if (document.getElementById('prefooter-preview-desc')) document.getElementById('prefooter-preview-desc').textContent = preDesc;
+    const prePreviewImg = document.getElementById('prefooter-live-preview-img');
+    if (prePreviewImg) {
+      prePreviewImg.src = preImg;
+      prePreviewImg.style.objectPosition = `center ${prePos}%`;
+    }
+    const prePosVal = document.getElementById('prefooter-pos-val');
+    if (prePosVal) prePosVal.textContent = `${prePos}% ${prePos === '50' ? '(Centro)' : ''}`;
+    updateImageDimensions(preImg, 'prefooter-detected-dims');
+  }
+
   function loadSavedCMS() {
     try {
       const raw = localStorage.getItem(CMS_KEY);
-      if (!raw) return;
+      if (!raw) {
+        syncBannerStudio();
+        return;
+      }
       const cms = JSON.parse(raw);
 
       if (cms.hero) {
@@ -65,16 +151,19 @@
         if (cms.hero.image && document.getElementById('hero-img')) document.getElementById('hero-img').value = cms.hero.image;
         if (cms.hero.btnText && document.getElementById('hero-btn-text')) document.getElementById('hero-btn-text').value = cms.hero.btnText;
         if (cms.hero.btnLink && document.getElementById('hero-btn-link')) document.getElementById('hero-btn-link').value = cms.hero.btnLink;
+        if (cms.hero.position && document.getElementById('hero-pos-slider')) document.getElementById('hero-pos-slider').value = cms.hero.position;
       }
       if (cms.cinematic) {
         if (cms.cinematic.title && document.getElementById('cinematic-title')) document.getElementById('cinematic-title').value = cms.cinematic.title;
         if (cms.cinematic.desc && document.getElementById('cinematic-desc')) document.getElementById('cinematic-desc').value = cms.cinematic.desc;
         if (cms.cinematic.image && document.getElementById('cinematic-img')) document.getElementById('cinematic-img').value = cms.cinematic.image;
+        if (cms.cinematic.position && document.getElementById('cinematic-pos-slider')) document.getElementById('cinematic-pos-slider').value = cms.cinematic.position;
       }
       if (cms.prefooter) {
         if (cms.prefooter.title && document.getElementById('prefooter-title')) document.getElementById('prefooter-title').value = cms.prefooter.title;
         if (cms.prefooter.desc && document.getElementById('prefooter-desc')) document.getElementById('prefooter-desc').value = cms.prefooter.desc;
         if (cms.prefooter.image && document.getElementById('prefooter-img')) document.getElementById('prefooter-img').value = cms.prefooter.image;
+        if (cms.prefooter.position && document.getElementById('prefooter-pos-slider')) document.getElementById('prefooter-pos-slider').value = cms.prefooter.position;
       }
       if (cms.content) {
         if (cms.content.phone && document.getElementById('content-phone')) document.getElementById('content-phone').value = cms.content.phone;
@@ -91,10 +180,11 @@
         });
       }
 
-      // Load dynamically added custom brands
       if (cms.customBrands && Array.isArray(cms.customBrands)) {
         cms.customBrands.forEach(b => appendBrandOption(b));
       }
+
+      syncBannerStudio();
     } catch (e) {
       console.error('Error loading CMS store', e);
     }
@@ -123,17 +213,20 @@
           desc: document.getElementById('hero-desc')?.value || '',
           image: document.getElementById('hero-img')?.value || '',
           btnText: document.getElementById('hero-btn-text')?.value || '',
-          btnLink: document.getElementById('hero-btn-link')?.value || ''
+          btnLink: document.getElementById('hero-btn-link')?.value || '',
+          position: document.getElementById('hero-pos-slider')?.value || 8
         },
         cinematic: {
           title: document.getElementById('cinematic-title')?.value || '',
           desc: document.getElementById('cinematic-desc')?.value || '',
-          image: document.getElementById('cinematic-img')?.value || ''
+          image: document.getElementById('cinematic-img')?.value || '',
+          position: document.getElementById('cinematic-pos-slider')?.value || 50
         },
         prefooter: {
           title: document.getElementById('prefooter-title')?.value || '',
           desc: document.getElementById('prefooter-desc')?.value || '',
-          image: document.getElementById('prefooter-img')?.value || ''
+          image: document.getElementById('prefooter-img')?.value || '',
+          position: document.getElementById('prefooter-pos-slider')?.value || 50
         },
         content: {
           phone: document.getElementById('content-phone')?.value || '',
@@ -146,13 +239,47 @@
       };
 
       localStorage.setItem(CMS_KEY, JSON.stringify(cmsData));
+      syncBannerStudio();
     } catch (e) {
       console.error('Error auto-saving CMS data', e);
     }
   }
 
   // =========================================================================
-  // 3. LIVE FILTERING OF PRODUCT CARDS
+  // 3. BANNER FILE UPLOAD BUTTONS
+  // =========================================================================
+  function bindBannerUploader(btnId, fileInputId, targetUrlInputId) {
+    const btn = document.getElementById(btnId);
+    const fileInput = document.getElementById(fileInputId);
+    const urlInput = document.getElementById(targetUrlInputId);
+
+    btn?.addEventListener('click', () => fileInput?.click());
+    fileInput?.addEventListener('change', (e) => {
+      const file = e.target.files?.[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (evt) => {
+          if (evt.target?.result && urlInput) {
+            urlInput.value = evt.target.result;
+            autoSaveAll();
+          }
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  }
+
+  bindBannerUploader('btn-upload-hero', 'hero-file-input', 'hero-img');
+  bindBannerUploader('btn-upload-cinematic', 'cinematic-file-input', 'cinematic-img');
+  bindBannerUploader('btn-upload-prefooter', 'prefooter-file-input', 'prefooter-img');
+
+  // Sliders and Banner inputs live listener
+  document.getElementById('hero-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('cinematic-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-pos-slider')?.addEventListener('input', autoSaveAll);
+
+  // =========================================================================
+  // 4. LIVE FILTERING OF PRODUCT CARDS
   // =========================================================================
   function filterCards() {
     const query = (document.getElementById('admin-product-search')?.value || '').trim().toLowerCase();
@@ -187,7 +314,7 @@
   }
 
   // =========================================================================
-  // 4. TAB NAVIGATION
+  // 5. TAB NAVIGATION
   // =========================================================================
   const tabs = document.querySelectorAll('.nav-item[data-tab]');
   const panels = document.querySelectorAll('.tab-panel');
@@ -200,11 +327,12 @@
 
       tab.classList.add('active');
       document.getElementById(`tab-${target}`)?.classList.add('active');
+      if (target === 'banners') syncBannerStudio();
     });
   });
 
   // =========================================================================
-  // 5. VISUAL MULTI-PHOTO GALLERY & REORDERING (DRAG & DROP + BUTTONS)
+  // 6. VISUAL MULTI-PHOTO GALLERY & REORDERING (DRAG & DROP + BUTTONS)
   // =========================================================================
   const modal = document.getElementById('product-modal');
   const modalPhotosList = document.getElementById('modal-photos-gallery-list');
@@ -265,7 +393,6 @@
         </div>
       `;
 
-      // Move left/right handlers
       card.querySelector('.btn-move-left')?.addEventListener('click', () => {
         if (idx > 0) {
           const temp = currentEditingPhotos[idx];
@@ -289,7 +416,6 @@
         renderModalPhotos();
       });
 
-      // Drag and drop reordering
       card.addEventListener('dragstart', (e) => {
         e.dataTransfer.setData('text/plain', String(idx));
       });
@@ -312,7 +438,7 @@
   }
 
   // =========================================================================
-  // 6. MODAL OPEN / CLOSE & KEYDOWN ESC HANDLER
+  // 7. MODAL OPEN / CLOSE & KEYDOWN ESC HANDLER
   // =========================================================================
   const modalTitle = document.getElementById('modal-product-title');
   const modalForm = document.getElementById('product-modal-form');
@@ -350,7 +476,6 @@
   document.getElementById('btn-close-modal')?.addEventListener('click', closeProductModal);
   document.getElementById('btn-cancel-modal')?.addEventListener('click', closeProductModal);
 
-  // ESC Key listener to close modal immediately
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' || e.key === 'Esc') {
       closeProductModal();
@@ -387,7 +512,7 @@
   });
 
   // =========================================================================
-  // 7. BRAND MANAGEMENT & NEW PRODUCT CREATION IN TAB 2
+  // 8. BRAND MANAGEMENT & NEW PRODUCT CREATION IN TAB 2
   // =========================================================================
   function appendBrandOption(brandName) {
     if (!brandName) return;
@@ -426,7 +551,6 @@
     if (brandName) {
       appendBrandOption(brandName);
 
-      // Save custom brand to CMS
       const existingRaw = localStorage.getItem(CMS_KEY);
       const existing = existingRaw ? JSON.parse(existingRaw) : {};
       const customBrands = existing.customBrands || [];
@@ -483,7 +607,6 @@
     });
   }
 
-  // Quick Add Product Form Submit
   document.getElementById('form-quick-add-product')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const brand = document.getElementById('quick-add-brand')?.value;
@@ -492,12 +615,10 @@
     const price = Number(document.getElementById('quick-add-price')?.value);
     const category = document.getElementById('quick-add-category')?.value;
     const shape = document.getElementById('quick-add-shape')?.value;
-    const desc = document.getElementById('quick-add-desc')?.value.trim();
 
     const mainPhoto = quickAddPhotos[0] || '/SVG-Logo-Atelie.svg';
     const newId = Date.now();
 
-    // Create DOM card in main products grid
     const grid = document.getElementById('admin-products-grid');
     if (grid) {
       const article = document.createElement('article');
@@ -561,18 +682,16 @@
     autoSaveAll();
     filterCards();
 
-    // Reset form
     e.target.reset();
     quickAddPhotos = [];
     renderQuickPhotos();
 
-    // Switch to Products Tab
     document.querySelector('.nav-item[data-tab="products"]')?.click();
     alert(`Modelo "${name}" criado e publicado no catálogo com sucesso!`);
   });
 
   // =========================================================================
-  // 8. CARD BUTTONS & EVENT BINDINGS
+  // 9. EVENT BINDINGS
   // =========================================================================
   document.getElementById('admin-product-search')?.addEventListener('input', filterCards);
   document.getElementById('admin-brand-filter')?.addEventListener('change', filterCards);
@@ -611,7 +730,6 @@
     document.querySelector('.nav-item[data-tab="brands-add"]')?.click();
   });
 
-  // JSON Export / Backup
   document.getElementById('btn-export-json')?.addEventListener('click', () => {
     autoSaveAll();
     const data = localStorage.getItem(CMS_KEY) || JSON.stringify({});
@@ -631,7 +749,6 @@
     }
   });
 
-  // Init
   loadSavedCMS();
   filterCards();
 })();

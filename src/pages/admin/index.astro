@@ -20,22 +20,35 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
 <body class="admin-body">
 
   {/* =========================================================================
-      ADMIN AUTH GATE (SECURE CLIENT SESSION PASSCODE)
+      ADMIN AUTH GATE (ORIGINAL USERNAME & PASSWORD LOGIN SCREEN)
       ========================================================================= */}
   <div id="admin-auth-overlay" class="auth-gate-overlay">
     <div class="auth-gate-card">
       <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" class="auth-gate-logo" />
-      <span class="admin-badge" style="margin-bottom: 20px;">ACESSO RESTRITO &bull; ADMIN CMS</span>
+      <span class="admin-badge" style="margin-bottom: 16px;">PAINEL DE CONTROLO &bull; ADMIN CMS</span>
       
-      <h2>Autenticação de Administrador</h2>
-      <p>Introduza a palavra-passe de segurança para aceder à gestão do catálogo.</p>
+      <h2>Iniciar Sessão</h2>
+      <p>Introduza as suas credenciais de administrador para aceder ao sistema.</p>
       
       <form id="admin-auth-form" class="auth-gate-form">
         <div class="auth-input-wrap">
-          <input type="password" id="auth-passcode" placeholder="Palavra-passe de acesso" required autofocus autocomplete="current-password" />
+          <label for="auth-username">Utilizador ou E-mail</label>
+          <input type="text" id="auth-username" placeholder="admin ou geral@atelieotico.com" required autofocus autocomplete="username" />
         </div>
-        <button type="submit" class="auth-submit-btn">Entrar no Painel</button>
-        <p id="auth-error-msg" class="auth-error-text" style="display: none;">Palavra-passe incorreta. Tente novamente.</p>
+        <div class="auth-input-wrap">
+          <label for="auth-passcode">Palavra-passe</label>
+          <input type="password" id="auth-passcode" placeholder="••••••••" required autocomplete="current-password" />
+        </div>
+        
+        <div class="auth-remember-row">
+          <label class="remember-label">
+            <input type="checkbox" id="auth-remember" checked />
+            <span>Manter sessão iniciada</span>
+          </label>
+        </div>
+
+        <button type="submit" class="auth-submit-btn">INICIAR SESSÃO</button>
+        <p id="auth-error-msg" class="auth-error-text" style="display: none;">Credenciais incorretas. Tente novamente.</p>
       </form>
     </div>
   </div>
@@ -85,7 +98,7 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
       <button type="button" class="nav-item" data-tab="texts">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 9.5-9.5z"></path>
         </svg>
         <span>Textos &amp; Conteúdos</span>
       </button>
@@ -360,20 +373,75 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
 
       </section>
 
-      {/* TAB 3: BANNERS & HIGHLIGHTS */}
+      {/* TAB 3: BANNERS & HIGHLIGHTS (INTERACTIVE VISUAL STUDIO) */}
       <section id="tab-banners" class="tab-panel">
         
         <div class="panel-header-row">
           <div>
-            <h1>Banners &amp; Campanhas</h1>
-            <p>Altere os títulos, subtítulos, imagens e links dos banners da homepage em tempo real.</p>
+            <h1>Banners &amp; Estúdio Visual</h1>
+            <p>Faça a gestão visual de cada banner da loja, veja a sua localização exata, dimensões reais e ajuste o enquadramento em tempo real.</p>
           </div>
         </div>
 
-        <div class="admin-card-section">
-          <h3>Hero Banner Principal (Homepage)</h3>
-          <p class="section-sub">Personalize o banner principal de boas-vindas visível no topo da página inicial.</p>
-          
+        {/* 1. HERO BANNER */}
+        <div class="admin-card-section banner-studio-card">
+          <div class="banner-location-badge">
+            <span class="badge-dot"></span>
+            <strong>LOCALIZAÇÃO: Topo da Homepage (Primeira dobra / Hero Principal)</strong>
+          </div>
+
+          <div class="banner-dim-info">
+            <span>📐 Proporção Recomendada: <strong>1920 &times; 1080 px (16:9)</strong></span>
+            <span class="sep">&bull;</span>
+            <span>Dimensões detetadas: <strong id="hero-detected-dims">1920 &times; 1080 px</strong></span>
+          </div>
+
+          {/* Interactive Live Banner Preview */}
+          <div class="banner-live-preview-box hero-preview-box">
+            <img id="hero-live-preview-img" src="/campagna-hero.jpeg" alt="Hero Preview" class="banner-preview-img" style="object-position: center 8%;" />
+            <div class="banner-preview-overlay"></div>
+            <div class="banner-preview-text-content">
+              <span class="preview-tag" id="hero-preview-tag">COLEÇÃO 2026</span>
+              <h2 class="preview-title" id="hero-preview-title">Design de Autor &amp; Precisão Ótica</h2>
+              <p class="preview-desc" id="hero-preview-desc">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</p>
+              <button type="button" class="preview-btn" id="hero-preview-btn">EXPLORAR CATÁLOGO</button>
+            </div>
+          </div>
+
+          {/* Image Controls: Position Slider & Upload */}
+          <div class="banner-position-control-box">
+            <div class="pos-slider-header">
+              <label for="hero-pos-slider">Ajustar Enquadramento / Posição Vertical na Foto:</label>
+              <strong id="hero-pos-val">8% (Foco no Rosto/Lentes)</strong>
+            </div>
+            <input type="range" id="hero-pos-slider" min="0" max="100" value="8" class="banner-slider-control" />
+            <div class="slider-ticks">
+              <span>0% (Topo)</span>
+              <span>50% (Centro)</span>
+              <span>100% (Fundo)</span>
+            </div>
+          </div>
+
+          <div class="banner-inputs-grid">
+            <div class="admin-form-group">
+              <label>Carregar Nova Imagem do PC</label>
+              <button type="button" class="btn-upload-banner" id="btn-upload-hero">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Escolher Ficheiro de Imagem</span>
+              </button>
+              <input type="file" id="hero-file-input" accept="image/*" style="display: none;" />
+            </div>
+
+            <div class="admin-form-group">
+              <label>Ou Caminho / URL da Imagem</label>
+              <input type="text" id="hero-img" value="/campagna-hero.jpeg" class="auto-save-input" />
+            </div>
+          </div>
+
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Tag Superior</label>
@@ -390,11 +458,6 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             <textarea id="hero-desc" rows="2" class="auto-save-input">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</textarea>
           </div>
 
-          <div class="admin-form-group">
-            <label>URL da Imagem de Fundo</label>
-            <input type="text" id="hero-img" value="/campagna-hero.jpeg" class="auto-save-input" />
-          </div>
-
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Texto do Botão</label>
@@ -407,39 +470,139 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
           </div>
         </div>
 
-        <div class="admin-card-section">
-          <h3>Banner Editorial Signature 2026</h3>
-          <p class="section-sub">Destaque editorial a meio da página inicial sobre manufatura e materiais.</p>
-          
+        {/* 2. CINEMATIC EDITORIAL BANNER */}
+        <div class="admin-card-section banner-studio-card">
+          <div class="banner-location-badge">
+            <span class="badge-dot"></span>
+            <strong>LOCALIZAÇÃO: Meio da Homepage (Entre Novidades e Seleção Permanente)</strong>
+          </div>
+
+          <div class="banner-dim-info">
+            <span>📐 Proporção Recomendada: <strong>1920 &times; 900 px (21:9 Widescreen)</strong></span>
+            <span class="sep">&bull;</span>
+            <span>Dimensões detetadas: <strong id="cinematic-detected-dims">1920 &times; 850 px</strong></span>
+          </div>
+
+          {/* Interactive Live Preview */}
+          <div class="banner-live-preview-box cinematic-preview-box">
+            <img id="cinematic-live-preview-img" src="/campagna-signature.jpeg" alt="Cinematic Preview" class="banner-preview-img" style="object-position: center 50%;" />
+            <div class="banner-preview-overlay"></div>
+            <div class="banner-preview-text-content">
+              <h2 class="preview-title" id="cinematic-preview-title">Linhas Arquiteturais e Conforto Absoluto</h2>
+              <p class="preview-desc" id="cinematic-preview-desc">Cada peça resulta de um desenho rigoroso e de uma seleção criteriosa de acetatos italianos de celulose e titânio ultraleve.</p>
+            </div>
+          </div>
+
+          {/* Position Slider */}
+          <div class="banner-position-control-box">
+            <div class="pos-slider-header">
+              <label for="cinematic-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
+              <strong id="cinematic-pos-val">50% (Centro)</strong>
+            </div>
+            <input type="range" id="cinematic-pos-slider" min="0" max="100" value="50" class="banner-slider-control" />
+            <div class="slider-ticks">
+              <span>0% (Topo)</span>
+              <span>50% (Centro)</span>
+              <span>100% (Fundo)</span>
+            </div>
+          </div>
+
+          <div class="banner-inputs-grid">
+            <div class="admin-form-group">
+              <label>Carregar Nova Imagem do PC</label>
+              <button type="button" class="btn-upload-banner" id="btn-upload-cinematic">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Escolher Ficheiro de Imagem</span>
+              </button>
+              <input type="file" id="cinematic-file-input" accept="image/*" style="display: none;" />
+            </div>
+
+            <div class="admin-form-group">
+              <label>Ou Caminho / URL da Imagem</label>
+              <input type="text" id="cinematic-img" value="/campagna-signature.jpeg" class="auto-save-input" />
+            </div>
+          </div>
+
           <div class="admin-form-group">
             <label>Título Editorial</label>
             <input type="text" id="cinematic-title" value="Linhas Arquiteturais e Conforto Absoluto" class="auto-save-input" />
           </div>
+
           <div class="admin-form-group">
             <label>Descrição</label>
             <textarea id="cinematic-desc" rows="2" class="auto-save-input">Cada peça resulta de um desenho rigoroso e de uma seleção criteriosa de acetatos italianos de celulose e titânio ultraleve.</textarea>
           </div>
-          <div class="admin-form-group">
-            <label>URL Imagem Editorial</label>
-            <input type="text" id="cinematic-img" value="/campagna-signature.jpeg" class="auto-save-input" />
-          </div>
         </div>
 
-        <div class="admin-card-section">
-          <h3>Banner Pré-Rodapé (Agendamento)</h3>
-          <p class="section-sub">Secção de apelo ao agendamento de consultas na Praça do Carmo, Funchal.</p>
-          
+        {/* 3. PRE-FOOTER APPOINTMENT BANNER */}
+        <div class="admin-card-section banner-studio-card">
+          <div class="banner-location-badge">
+            <span class="badge-dot"></span>
+            <strong>LOCALIZAÇÃO: Fundo da Homepage (Secção de Agendamento na Praça do Carmo)</strong>
+          </div>
+
+          <div class="banner-dim-info">
+            <span>📐 Proporção Recomendada: <strong>1400 &times; 700 px (2:1)</strong></span>
+            <span class="sep">&bull;</span>
+            <span>Dimensões detetadas: <strong id="prefooter-detected-dims">1400 &times; 700 px</strong></span>
+          </div>
+
+          {/* Interactive Live Preview */}
+          <div class="banner-live-preview-box prefooter-preview-box">
+            <img id="prefooter-live-preview-img" src="/campagna-prefooter.jpeg" alt="Prefooter Preview" class="banner-preview-img" style="object-position: center 50%;" />
+            <div class="banner-preview-overlay"></div>
+            <div class="banner-preview-text-content">
+              <h2 class="preview-title" id="prefooter-preview-title">Marque a sua Consulta</h2>
+              <p class="preview-desc" id="prefooter-preview-desc">Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira.</p>
+            </div>
+          </div>
+
+          {/* Position Slider */}
+          <div class="banner-position-control-box">
+            <div class="pos-slider-header">
+              <label for="prefooter-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
+              <strong id="prefooter-pos-val">50% (Centro)</strong>
+            </div>
+            <input type="range" id="prefooter-pos-slider" min="0" max="100" value="50" class="banner-slider-control" />
+            <div class="slider-ticks">
+              <span>0% (Topo)</span>
+              <span>50% (Centro)</span>
+              <span>100% (Fundo)</span>
+            </div>
+          </div>
+
+          <div class="banner-inputs-grid">
+            <div class="admin-form-group">
+              <label>Carregar Nova Imagem do PC</label>
+              <button type="button" class="btn-upload-banner" id="btn-upload-prefooter">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <span>Escolher Ficheiro de Imagem</span>
+              </button>
+              <input type="file" id="prefooter-file-input" accept="image/*" style="display: none;" />
+            </div>
+
+            <div class="admin-form-group">
+              <label>Ou Caminho / URL da Imagem</label>
+              <input type="text" id="prefooter-img" value="/campagna-prefooter.jpeg" class="auto-save-input" />
+            </div>
+          </div>
+
           <div class="admin-form-group">
             <label>Título</label>
             <input type="text" id="prefooter-title" value="Marque a sua Consulta" class="auto-save-input" />
           </div>
+
           <div class="admin-form-group">
             <label>Descrição</label>
             <textarea id="prefooter-desc" rows="2" class="auto-save-input">Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira.</textarea>
-          </div>
-          <div class="admin-form-group">
-            <label>URL Imagem Pré-Rodapé</label>
-            <input type="text" id="prefooter-img" value="/campagna-prefooter.jpeg" class="auto-save-input" />
           </div>
         </div>
 
