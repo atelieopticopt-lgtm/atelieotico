@@ -560,6 +560,8 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
+  padding: 2px 0 16px;
+  box-sizing: border-box;
 }
 
 .ll-carousel-track {
@@ -569,25 +571,27 @@ body {
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  padding: 6px 4px 24px;
+  padding: 2px;
   scrollbar-width: none;
   user-select: none;
-  cursor: grab;
-}
-
-.ll-carousel-track:active {
-  cursor: grabbing;
+  box-sizing: border-box;
 }
 
 .ll-carousel-track::-webkit-scrollbar {
   display: none;
 }
 
-/* Base Card Style and Smooth Hover Animation */
+/* ==========================================================================
+   PRODUCT CARDS SYSTEM & CLEAN HOVER SCALE (NO MOVING ANIMATION)
+   - Rules:
+     1. Card container is COMPLETELY STATIC (no translateY, no position shifting)
+     2. All 4 borders (top, right, bottom, left) are crisp and fully visible
+     3. Carousel calculates exact 4-column fit on desktop (100% width, no side clipping)
+     4. Inner image scales smoothly centered (scale 1.06, origin center)
+     5. Main image fades out to opacity 0 on hover when an alternative image exists
+   ========================================================================== */
 .ll-product-card,
 .store-card {
-  flex: 0 0 clamp(260px, 22vw, 340px);
-  scroll-snap-align: start;
   background: #ffffff !important;
   border: 1px solid var(--ll-border-card) !important;
   border-radius: 0 !important;
@@ -595,8 +599,34 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease !important;
+  transform: none !important; /* STRICTLY NO MOVING ANIMATION */
+  transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
   cursor: pointer;
+}
+
+/* 4-Item Desktop Grid for Carousel Track (Fits exactly with all side borders visible) */
+.ll-carousel-track .ll-product-card {
+  flex: 0 0 calc((100% - (3 * 16px)) / 4) !important;
+  min-width: 240px;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1100px) {
+  .ll-carousel-track .ll-product-card {
+    flex: 0 0 calc((100% - (2 * 16px)) / 3) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ll-carousel-track .ll-product-card {
+    flex: 0 0 calc((100% - 16px) / 2) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ll-carousel-track .ll-product-card {
+    flex: 0 0 85% !important;
+  }
 }
 
 .product-grid .ll-product-card,
@@ -606,12 +636,12 @@ body {
   flex: none;
 }
 
-/* Card Hover Elevation */
+/* Card Hover Elevation: Sharp border & subtle shadow ONLY (NO translateY movement) */
 .ll-product-card:hover,
 .store-card:hover {
   border-color: #0a0a0a !important;
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+  transform: none !important; /* NO translateY, NO movement */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
 .ll-card-fav,

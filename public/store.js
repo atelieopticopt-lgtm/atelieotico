@@ -78,29 +78,6 @@ document.querySelector('.mobile-menu')?.addEventListener('click', (e) => {
 document.querySelectorAll('[data-favorite]').forEach(b => b.classList.toggle('active', read(FAV).includes(b.dataset.favorite)));
 renderCart();
 
-// Dynamic Pointer-Tracking Zoom on Single Product Page ONLY
-function initZoom() {
-  document.querySelectorAll('[data-product-zoom]').forEach((box) => {
-    const img = box.querySelector('img');
-    if (!img) return;
-
-    const onMove = (e) => {
-      const rect = box.getBoundingClientRect();
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-      const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
-      const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
-      img.style.transformOrigin = `${x}% ${y}%`;
-    };
-
-    box.addEventListener('mousemove', onMove);
-    box.addEventListener('touchmove', onMove, { passive: true });
-    box.addEventListener('mouseleave', () => {
-      img.style.transformOrigin = 'center center';
-    });
-  });
-}
-
 // Navbar Scroll Effect
 function initNavbarScroll() {
   const header = document.querySelector('.site-header');
@@ -117,11 +94,7 @@ function initNavbarScroll() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    initZoom();
-    initNavbarScroll();
-  });
+  document.addEventListener('DOMContentLoaded', initNavbarScroll);
 } else {
-  initZoom();
   initNavbarScroll();
 }

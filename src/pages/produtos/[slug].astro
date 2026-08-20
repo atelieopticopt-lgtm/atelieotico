@@ -35,9 +35,9 @@ const cleanDescription = `Óculos de autor ${product.name} com design contempor�
 <StoreLayout title={`${product.name} | Ateliê Ótico`} description={product.description}>
   <article class="product-page">
     
-    {/* Product Gallery with Dynamic Pointer-Tracking Zoom */}
+    {/* Product Gallery */}
     <div class="product-gallery">
-      <div class="product-zoom" data-product-zoom>
+      <div class="product-zoom">
         <img src={product.image} alt={`${product.name}, vista principal`} />
       </div>
     </div>
@@ -116,36 +116,5 @@ const cleanDescription = `Óculos de autor ${product.name} com design contempor�
         });
       });
     });
-
-    // Dynamic Pointer-Tracking Zoom
-    function setupZoom() {
-      const zoomBoxes = document.querySelectorAll('[data-product-zoom]');
-      zoomBoxes.forEach((box) => {
-        const img = box.querySelector('img');
-        if (!img) return;
-
-        const onMove = (e) => {
-          const rect = box.getBoundingClientRect();
-          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-          const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-          const xPercent = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
-          const yPercent = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
-          img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
-        };
-
-        box.addEventListener('mousemove', onMove);
-        box.addEventListener('touchmove', onMove, { passive: true });
-
-        box.addEventListener('mouseleave', () => {
-          img.style.transformOrigin = 'center center';
-        });
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', setupZoom);
-    } else {
-      setupZoom();
-    }
   </script>
 </StoreLayout>
