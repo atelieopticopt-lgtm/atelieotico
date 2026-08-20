@@ -409,9 +409,24 @@ body {
    2. BRANDS BAR UNDER HERO (BABOCUSH STYLE AS SEEN ON)
    ========================================================================== */
 .ll-brands-strip-section {
-  background: #faf9f6;
+  background: #ffffff;
   border-bottom: 1px solid var(--ll-border);
-  padding: 28px 0 24px;
+  padding: clamp(36px, 4.5vw, 54px) 0 clamp(32px, 4vw, 48px);
+}
+
+.ll-brands-strip-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.ll-brands-strip-header .ll-section-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--ll-gray-500);
+  display: inline-block;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 
 .ll-partners-grid {
