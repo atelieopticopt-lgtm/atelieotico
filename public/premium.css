@@ -56,13 +56,13 @@ body {
 }
 
 /* ==========================================================================
-   NAVIGATION & MELIN-STYLE MEGA DROPDOWNS
+   NAVIGATION & MELIN-STYLE MEGA DROPDOWNS (ZERO BOX/BACKGROUND ON IMAGES)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #ffffff;
+  background: #ffffff !important;
   height: 76px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -118,22 +118,22 @@ body {
   transform: scaleX(1);
 }
 
-/* Mega Dropdown Menu */
+/* Mega Dropdown Menu - Pure White Seamless Background */
 .mega-melin {
   position: absolute;
   top: 76px;
   left: 0;
   right: 0;
   width: 100%;
-  background: #faf9f6;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 36px clamp(16px, 3.5vw, 48px) 32px;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-8px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   z-index: 95;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
 }
 
@@ -146,6 +146,7 @@ body {
 .mega-melin-inner {
   max-width: 1400px;
   margin: 0 auto;
+  background: transparent !important;
 }
 
 .mega-melin-grid {
@@ -154,6 +155,7 @@ body {
   gap: clamp(14px, 2.2vw, 32px);
   margin-bottom: 28px;
   align-items: start;
+  background: transparent !important;
 }
 
 .mega-melin-grid.brands-grid {
@@ -170,12 +172,16 @@ body {
   text-decoration: none;
   color: #0a0a0a;
   text-align: center;
+  background: transparent !important;
+  background-color: transparent !important;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .mega-melin-item:hover {
   transform: translateY(-4px);
   opacity: 0.85;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .mega-melin-img-wrap {
@@ -185,7 +191,9 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent !important;
+  background-color: transparent !important;
   border: none !important;
+  box-shadow: none !important;
   padding: 0 !important;
   margin-bottom: 14px;
 }
@@ -193,9 +201,13 @@ body {
 .mega-melin-img-wrap img {
   max-width: 100%;
   max-height: 84px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
   background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: contrast(106%) brightness(102%) !important;
 }
 
 .mega-melin-label {
@@ -211,6 +223,7 @@ body {
   justify-content: center;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding-top: 24px;
+  background: transparent !important;
 }
 
 .mega-melin-btn {
@@ -530,7 +543,7 @@ body {
 .ll-product-card {
   flex: 0 0 clamp(260px, 22vw, 340px);
   scroll-snap-align: start;
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid var(--ll-border-card) !important;
   border-radius: 0 !important;
   position: relative;
@@ -565,7 +578,7 @@ body {
 .ll-card-image-box {
   position: relative;
   aspect-ratio: 1/1;
-  background: #fbfaf6;
+  background: #ffffff !important;
   overflow: hidden;
   padding: 24px;
   border-radius: 0 !important;
@@ -579,7 +592,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain !important;
-  mix-blend-mode: multiply;
+  mix-blend-mode: multiply !important;
+  background: transparent !important;
+  filter: contrast(106%) brightness(102%) !important;
   transition: opacity 0.3s ease;
 }
 
@@ -604,7 +619,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 .ll-card-title-row {
@@ -928,7 +943,7 @@ body {
   display: flex;
   gap: 16px;
   align-items: center;
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid var(--ll-border-card);
   border-radius: 0 !important;
   padding: 16px 18px;
@@ -946,9 +961,11 @@ body {
 .ll-story-tile-compact img {
   width: 96px;
   height: 84px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
   background: transparent !important;
+  background-color: transparent !important;
+  filter: contrast(106%) brightness(102%) !important;
   padding: 0 !important;
   border-radius: 0 !important;
   flex-shrink: 0;
@@ -1221,7 +1238,7 @@ body {
 }
 
 /* ==========================================================================
-   GLOBAL PRODUCT IMAGE MULTIPLY BLEND
+   GLOBAL PRODUCT IMAGE MULTIPLY BLEND & ZERO BACKGROUND BOXES
    ========================================================================== */
 .store-card__image,
 .ll-card-image-box,
@@ -1231,6 +1248,7 @@ body {
 .store-card,
 .product-grid {
   background: #ffffff !important;
+  background-color: #ffffff !important;
 }
 
 .store-card__main,
@@ -1239,10 +1257,12 @@ body {
 .ll-card-img-hover,
 .store-card img,
 .product-gallery img,
-.product-page img {
+.product-page img,
+.mega-melin-img-wrap img {
   mix-blend-mode: multiply !important;
   background: transparent !important;
-  filter: contrast(105%) brightness(102%) !important;
+  background-color: transparent !important;
+  filter: contrast(106%) brightness(102%) !important;
 }
 
 /* ==========================================================================
