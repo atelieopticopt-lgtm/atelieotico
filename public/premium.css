@@ -2070,26 +2070,31 @@ body.drawer-open #whatsapp-btn {
 }
 
 .ll-hours-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background: #faf9f6;
-  padding: 16px 18px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .ll-hours-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 13.5px;
-  color: #444444;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-size: 13px !important;
+  color: #555555 !important;
+  background: transparent !important;
+  padding: 2px 0 !important;
+  border: none !important;
 }
 
 .ll-hours-row strong {
-  font-weight: 700;
-  color: #111111;
+  font-weight: 700 !important;
+  color: #111111 !important;
 }
 
 .contact-boutique-img-wrap {
