@@ -1,32 +1,32 @@
 ---
 import { products } from '../../data/products';
+
+const brands = [...new Set(products.map(p => p.brand).filter(Boolean))].sort();
+const categories = [...new Set(products.map(p => p.category).filter(Boolean))].sort();
 ---
 <!doctype html>
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Painel de Administração &bull; Ateliê Ótico CMS</title>
+  <title>Admin CMS &bull; Ateliê Ótico</title>
   <link rel="icon" type="image/svg+xml" href="/SVG-Logo-Atelie.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/admin.css" />
-  <script is:inline define:vars={{ initialProducts: products }}>
-    window.INITIAL_PRODUCTS = initialProducts;
-  </script>
 </head>
 <body class="admin-body">
 
   <div class="admin-layout">
     
-    {/* Left Sidebar with Logo & Navigation */}
+    {/* Left Sidebar with Centered Pure White Logo */}
     <aside class="admin-nav-sidebar">
       
-      {/* Brand Logo & CMS Badge at Top of Sidebar */}
+      {/* Brand Logo in Pure White Centered in Sidebar */}
       <div class="admin-sidebar-header">
         <a href="/admin" class="admin-brand-link" title="Painel de Administração">
-          <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" class="admin-logo-img" />
+          <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" class="admin-logo-img-white" />
         </a>
         <span class="admin-badge">ADMIN CMS</span>
       </div>
@@ -69,8 +69,13 @@ import { products } from '../../data/products';
         <span>Backup &amp; Sincronização</span>
       </button>
 
-      {/* Sidebar Quick Actions */}
+      {/* Sidebar Footer: Auto-Save Status & Live Store Link */}
       <div class="sidebar-bottom-actions">
+        <div class="sidebar-autosave-box">
+          <span class="autosave-dot"></span>
+          <span>Gravação automática ativa</span>
+        </div>
+
         <a href="/catalogo" target="_blank" class="sidebar-btn-outline">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -79,15 +84,6 @@ import { products } from '../../data/products';
           </svg>
           <span>Ver Loja em Direto</span>
         </a>
-
-        <button type="button" id="btn-save-all-cms" class="sidebar-btn-save">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
-            <polyline points="17 21 17 13 7 13 7 21"></polyline>
-            <polyline points="7 3 7 8 15 8"></polyline>
-          </svg>
-          <span>Guardar Alterações</span>
-        </button>
       </div>
 
     </aside>
@@ -95,13 +91,13 @@ import { products } from '../../data/products';
     {/* Main Content Area */}
     <main class="admin-main">
       
-      {/* TAB 1: PRODUCTS & PRICES */}
+      {/* TAB 1: PRODUCTS & PRICES (VISUAL GRID & REAL-TIME EDITING) */}
       <section id="tab-products" class="tab-panel active">
         
         <div class="panel-header-row">
           <div>
             <h1>Gestão de Produtos &amp; Catálogo</h1>
-            <p>Edite preços, adicione novos modelos de autor, altere fotografias e faça a gestão em tempo real.</p>
+            <p>Edite preços em tempo real, altere fotografias, adicione novos modelos e faça a gestão visual do catálogo.</p>
           </div>
           <button type="button" id="btn-add-product" class="btn-success-admin">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -115,52 +111,77 @@ import { products } from '../../data/products';
         {/* Filter Toolbar */}
         <div class="admin-filter-bar">
           <div class="search-input-wrap">
-            <input type="text" id="admin-product-search" placeholder="Pesquisar por nome, SKU, marca..." />
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 12px; top: 12px; color: #888;">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="admin-product-search" placeholder="Pesquisar por nome, SKU, marca..." style="padding-left: 36px;" />
           </div>
 
           <div class="select-wrap">
             <select id="admin-brand-filter">
-              <option value="">Todas as Marcas</option>
+              <option value="">Todas as Marcas ({brands.length})</option>
+              {brands.map(b => <option value={b}>{b}</option>)}
             </select>
           </div>
 
           <div class="select-wrap">
             <select id="admin-category-filter">
               <option value="">Todas as Categorias</option>
-              <option value="Armações óticas">Armações óticas</option>
-              <option value="Óculos de sol">Óculos de sol</option>
+              {categories.map(c => <option value={c}>{c}</option>)}
             </select>
+          </div>
+
+          <div class="admin-count-indicator">
+            A mostrar <strong id="admin-visible-count">{products.length}</strong> de {products.length} modelos
           </div>
         </div>
 
-        {/* Products Table Card */}
-        <div class="admin-table-card">
-          <table class="admin-table" id="admin-products-table">
-            <thead>
-              <tr>
-                <th style="width: 70px;">Foto</th>
-                <th>Nome do Produto &amp; SKU</th>
-                <th>Marca</th>
-                <th>Categoria</th>
-                <th>Forma / Material</th>
-                <th style="width: 120px;">Preço (€)</th>
-                <th style="width: 150px; text-align: right;">Ações</th>
-              </tr>
-            </thead>
-            <tbody id="admin-products-tbody">
-              {/* Rendered via Javascript */}
-            </tbody>
-          </table>
+        {/* Visual Product Grid */}
+        <div class="admin-products-grid" id="admin-products-grid">
+          {products.map(p => (
+            <article
+              class="admin-product-card"
+              data-id={p.id}
+              data-name={p.name.toLowerCase()}
+              data-brand={(p.brand || '').toLowerCase()}
+              data-category={(p.category || '').toLowerCase()}
+              data-sku={(p.sku || p.slug).toLowerCase()}
+            >
+              <div class="admin-card-thumb-wrap">
+                <img src={p.image} alt={p.name} class="admin-card-thumb" loading="lazy" />
+                <span class="admin-card-brand-tag">{p.brand || 'Ateliê Ótico'}</span>
+              </div>
+              <div class="admin-card-body">
+                <h3 class="admin-card-title">{p.name}</h3>
+                <div class="admin-card-sku">SKU: {p.sku || p.slug}</div>
+                <div class="admin-card-meta">{p.category} &bull; {p.shape}</div>
 
-          {/* Pagination Controls */}
-          <div class="admin-pagination">
-            <span id="admin-page-info">A carregar catálogo...</span>
-            <div class="pagination-controls">
-              <button type="button" id="btn-prev-page" class="btn-page">&laquo; Anterior</button>
-              <span id="current-page-num" class="page-current-badge">1</span>
-              <button type="button" id="btn-next-page" class="btn-page">Seguinte &raquo;</button>
-            </div>
-          </div>
+                <div class="admin-card-price-box">
+                  <label>Preço:</label>
+                  <div class="price-input-wrapper">
+                    <input
+                      type="number"
+                      class="admin-inline-price-input"
+                      value={p.price}
+                      data-id={p.id}
+                      min="0"
+                    />
+                    <span>€</span>
+                  </div>
+                </div>
+
+                <div class="admin-card-actions">
+                  <button type="button" class="btn-card-edit" data-edit-id={p.id}>
+                    ✏️ Editar Tudo
+                  </button>
+                  <button type="button" class="btn-card-delete" data-del-id={p.id}>
+                    🗑️ Eliminar
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
 
       </section>
@@ -171,7 +192,7 @@ import { products } from '../../data/products';
         <div class="panel-header-row">
           <div>
             <h1>Banners &amp; Campanhas</h1>
-            <p>Altere os títulos, subtítulos, imagens e links dos banners da homepage em tempo real.</p>
+            <p>Altere os títulos, subtítulos, imagens e links dos banners da homepage em tempo real (gravação automática).</p>
           </div>
         </div>
 
@@ -182,32 +203,32 @@ import { products } from '../../data/products';
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Tag Superior</label>
-              <input type="text" id="hero-tag" value="COLEÇÃO 2026" />
+              <input type="text" id="hero-tag" value="COLEÇÃO 2026" class="auto-save-input" />
             </div>
             <div class="admin-form-group">
               <label>Título Principal do Hero</label>
-              <input type="text" id="hero-title" value="Design de Autor &amp; Precisão Ótica" />
+              <input type="text" id="hero-title" value="Design de Autor &amp; Precisão Ótica" class="auto-save-input" />
             </div>
           </div>
 
           <div class="admin-form-group">
             <label>Subtítulo / Descrição</label>
-            <textarea id="hero-desc" rows="2">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</textarea>
+            <textarea id="hero-desc" rows="2" class="auto-save-input">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</textarea>
           </div>
 
           <div class="admin-form-group">
             <label>URL da Imagem de Fundo</label>
-            <input type="text" id="hero-img" value="/campagna-hero.jpeg" />
+            <input type="text" id="hero-img" value="/campagna-hero.jpeg" class="auto-save-input" />
           </div>
 
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Texto do Botão</label>
-              <input type="text" id="hero-btn-text" value="EXPLORAR CATÁLOGO" />
+              <input type="text" id="hero-btn-text" value="EXPLORAR CATÁLOGO" class="auto-save-input" />
             </div>
             <div class="admin-form-group">
               <label>Link do Botão</label>
-              <input type="text" id="hero-btn-link" value="/catalogo" />
+              <input type="text" id="hero-btn-link" value="/catalogo" class="auto-save-input" />
             </div>
           </div>
         </div>
@@ -218,15 +239,15 @@ import { products } from '../../data/products';
           
           <div class="admin-form-group">
             <label>Título Editorial</label>
-            <input type="text" id="cinematic-title" value="Linhas Arquiteturais e Conforto Absoluto" />
+            <input type="text" id="cinematic-title" value="Linhas Arquiteturais e Conforto Absoluto" class="auto-save-input" />
           </div>
           <div class="admin-form-group">
             <label>Descrição</label>
-            <textarea id="cinematic-desc" rows="2">Cada peça resulta de um desenho rigoroso e de uma seleção criteriosa de acetatos italianos de celulose e titânio ultraleve.</textarea>
+            <textarea id="cinematic-desc" rows="2" class="auto-save-input">Cada peça resulta de um desenho rigoroso e de uma seleção criteriosa de acetatos italianos de celulose e titânio ultraleve.</textarea>
           </div>
           <div class="admin-form-group">
             <label>URL Imagem Editorial</label>
-            <input type="text" id="cinematic-img" value="/campagna-signature.jpeg" />
+            <input type="text" id="cinematic-img" value="/campagna-signature.jpeg" class="auto-save-input" />
           </div>
         </div>
 
@@ -236,15 +257,15 @@ import { products } from '../../data/products';
           
           <div class="admin-form-group">
             <label>Título</label>
-            <input type="text" id="prefooter-title" value="Marque a sua Consulta" />
+            <input type="text" id="prefooter-title" value="Marque a sua Consulta" class="auto-save-input" />
           </div>
           <div class="admin-form-group">
             <label>Descrição</label>
-            <textarea id="prefooter-desc" rows="2">Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira.</textarea>
+            <textarea id="prefooter-desc" rows="2" class="auto-save-input">Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira.</textarea>
           </div>
           <div class="admin-form-group">
             <label>URL Imagem Pré-Rodapé</label>
-            <input type="text" id="prefooter-img" value="/campagna-prefooter.jpeg" />
+            <input type="text" id="prefooter-img" value="/campagna-prefooter.jpeg" class="auto-save-input" />
           </div>
         </div>
 
@@ -256,7 +277,7 @@ import { products } from '../../data/products';
         <div class="panel-header-row">
           <div>
             <h1>Textos &amp; Contactos da Empresa</h1>
-            <p>Gerencie telefones, moradas, horários de funcionamento e informações institucionais.</p>
+            <p>Gerencie telefones, moradas, horários de funcionamento e informações institucionais (gravação automática).</p>
           </div>
         </div>
 
@@ -267,27 +288,27 @@ import { products } from '../../data/products';
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Telefone / WhatsApp</label>
-              <input type="text" id="content-phone" value="+351 291 220 894" />
+              <input type="text" id="content-phone" value="+351 291 220 894" class="auto-save-input" />
             </div>
             <div class="admin-form-group">
               <label>Email de Atendimento</label>
-              <input type="email" id="content-email" value="geral@atelieotico.com" />
+              <input type="email" id="content-email" value="geral@atelieotico.com" class="auto-save-input" />
             </div>
           </div>
 
           <div class="admin-form-group">
             <label>Endereço Físico</label>
-            <input type="text" id="content-address" value="Rua da Conceição, Praça do Carmo 29B, 9050-026 Funchal, Madeira" />
+            <input type="text" id="content-address" value="Rua da Conceição, Praça do Carmo 29B, 9050-026 Funchal, Madeira" class="auto-save-input" />
           </div>
 
           <div class="form-grid-2">
             <div class="admin-form-group">
               <label>Horário (Segunda a Sexta)</label>
-              <input type="text" id="hours-mf" value="09:30 – 19:00" />
+              <input type="text" id="hours-mf" value="09:30 – 19:00" class="auto-save-input" />
             </div>
             <div class="admin-form-group">
               <label>Horário (Sábado)</label>
-              <input type="text" id="hours-sat" value="10:00 – 13:30" />
+              <input type="text" id="hours-sat" value="10:00 – 13:30" class="auto-save-input" />
             </div>
           </div>
         </div>
@@ -411,7 +432,7 @@ import { products } from '../../data/products';
 
         <div class="admin-modal-foot">
           <button type="button" id="btn-cancel-modal" class="btn-action-edit">Cancelar</button>
-          <button type="submit" class="btn-save-all">Guardar Produto</button>
+          <button type="submit" class="btn-save-modal">Guardar Produto</button>
         </div>
       </form>
     </div>

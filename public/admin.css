@@ -1,12 +1,12 @@
 /* ==========================================================================
-   ATELIÊ ÓTICO — ADMIN CMS (NO TOPBAR, LOGO IN SIDEBAR, 270PX FIXED SIDEBAR)
+   ATELIÊ ÓTICO — ADMIN CMS (LUXURY, CLEAN & VISUAL PRODUCT GRID)
    ========================================================================== */
 
 :root {
-  --admin-bg: #f8f7f2;
+  --admin-bg: #f7f6f0;
   --admin-sidebar-bg: #111111;
-  --admin-sidebar-hover: #1e1e1e;
-  --admin-sidebar-active: #2a2a2a;
+  --admin-sidebar-hover: #1c1c1c;
+  --admin-sidebar-active: #262626;
   --admin-card-bg: #ffffff;
   --admin-border: rgba(0, 0, 0, 0.08);
   --admin-text-main: #111111;
@@ -34,18 +34,18 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   1. MAIN LAYOUT & SIDEBAR
+   1. DASHBOARD LAYOUT & SIDEBAR
    ========================================================================== */
 .admin-layout {
   display: grid;
-  grid-template-columns: 270px 1fr;
+  grid-template-columns: 280px 1fr;
   min-height: 100vh;
 }
 
 .admin-nav-sidebar {
   background: var(--admin-sidebar-bg);
   color: #ffffff;
-  padding: 28px 18px 24px;
+  padding: 32px 20px 24px;
   border-right: 1px solid #222222;
   display: flex;
   flex-direction: column;
@@ -56,35 +56,43 @@ body.admin-body {
   box-sizing: border-box;
 }
 
+/* Centered Pure White Logo in Sidebar */
 .admin-sidebar-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   padding-bottom: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 12px;
 }
 
 .admin-brand-link {
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
-.admin-logo-img {
-  height: 30px;
+.admin-logo-img-white {
+  height: 38px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) !important;
+  display: block;
+  margin: 0 auto;
 }
 
 .admin-badge {
-  font-size: 10px;
+  font-size: 10.5px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .nav-section-title {
@@ -140,13 +148,37 @@ body.admin-body {
   border-radius: 10px;
 }
 
+/* Sidebar Footer (Auto-save status & Store Link) */
 .sidebar-bottom-actions {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-autosave-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11.5px;
+  color: #a3e635;
+  padding: 4px 8px;
+}
+
+.autosave-dot {
+  width: 8px;
+  height: 8px;
+  background: #a3e635;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(163, 230, 53, 0.6);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 .sidebar-btn-outline {
@@ -154,10 +186,10 @@ body.admin-body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  height: 38px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 6px;
@@ -165,35 +197,14 @@ body.admin-body {
 }
 
 .sidebar-btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.sidebar-btn-save {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  height: 40px;
-  background: #ffffff;
-  color: #000000;
-  font-size: 12.5px;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-}
-
-.sidebar-btn-save:hover {
-  opacity: 0.9;
+  background: rgba(255, 255, 255, 0.16);
 }
 
 /* ==========================================================================
    2. CONTENT AREA & TABS
    ========================================================================== */
 .admin-main {
-  padding: 36px 44px 70px;
+  padding: 40px 48px 80px;
   min-width: 0;
   background: var(--admin-bg);
 }
@@ -203,10 +214,12 @@ body.admin-body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .panel-header-row h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #111111;
@@ -227,214 +240,284 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   3. PRODUCTS FILTER BAR & TABLE
+   3. PRODUCTS FILTER BAR
    ========================================================================== */
 .admin-filter-bar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 14px;
+  margin-bottom: 28px;
   flex-wrap: wrap;
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--admin-border);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .search-input-wrap {
+  position: relative;
   flex: 1;
-  min-width: 240px;
+  min-width: 260px;
 }
 
 .search-input-wrap input {
   width: 100%;
-  height: 40px;
+  height: 42px;
   padding: 0 14px;
-  background: #ffffff;
+  background: #fdfdfc;
   border: 1px solid var(--admin-border);
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 13.5px;
   font-family: inherit;
   outline: none;
+  transition: border-color 0.15s ease;
 }
 
 .search-input-wrap input:focus {
   border-color: #000000;
+  background: #ffffff;
 }
 
 .select-wrap select {
-  height: 40px;
+  height: 42px;
   padding: 0 14px;
-  background: #ffffff;
+  background: #fdfdfc;
   border: 1px solid var(--admin-border);
   border-radius: 6px;
   font-size: 13px;
   font-family: inherit;
   outline: none;
   cursor: pointer;
+}
+
+.admin-count-indicator {
+  font-size: 12.5px;
+  color: #666666;
+  margin-left: auto;
+  white-space: nowrap;
 }
 
 .btn-success-admin {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  height: 40px;
-  padding: 0 18px;
-  background: var(--admin-success);
+  gap: 8px;
+  height: 42px;
+  padding: 0 20px;
+  background: #111111;
   color: #ffffff;
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: opacity 0.15s ease;
+  transition: background 0.15s ease;
   white-space: nowrap;
 }
 
 .btn-success-admin:hover {
-  opacity: 0.9;
+  background: #333333;
 }
 
-.admin-table-card {
+/* ==========================================================================
+   4. VISUAL PRODUCT CARDS GRID
+   ========================================================================== */
+.admin-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.admin-product-card {
   background: #ffffff;
   border: 1px solid var(--admin-border);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.admin-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
+.admin-product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-.admin-table th {
-  background: #fcfbf8;
-  padding: 14px 18px;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #666666;
-  border-bottom: 1px solid var(--admin-border);
+.admin-product-card.is-hidden {
+  display: none !important;
 }
 
-.admin-table td {
-  padding: 14px 18px;
-  font-size: 13px;
-  color: #222222;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  vertical-align: middle;
+.admin-card-thumb-wrap {
+  position: relative;
+  height: 180px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.admin-table tr:hover td {
-  background: #faf9f5;
-}
-
-.table-thumb {
-  width: 48px;
-  height: 48px;
+.admin-card-thumb {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   mix-blend-mode: multiply;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 4px;
 }
 
-.price-inline-input {
-  width: 76px;
-  height: 32px;
-  padding: 0 8px;
-  border: 1px solid var(--admin-border);
-  border-radius: 4px;
-  font-family: inherit;
-  font-size: 13px;
+.admin-card-brand-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 10px;
   font-weight: 700;
-  text-align: right;
-  background: #ffffff;
-}
-
-.price-inline-input:focus {
-  border-color: #000000;
-  outline: none;
-}
-
-.table-action-btn {
-  background: none;
-  border: none;
-  font-weight: 700;
-  font-size: 12px;
-  cursor: pointer;
-  padding: 4px 8px;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
   border-radius: 4px;
-  transition: background 0.15s ease;
-  margin-left: 4px;
+  text-transform: uppercase;
 }
 
-.table-action-btn.edit {
+.admin-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.admin-card-title {
+  font-size: 14.5px;
+  font-weight: 700;
   color: #111111;
+  line-height: 1.35;
+  margin-bottom: 4px;
+  min-height: 38px;
 }
 
-.table-action-btn.edit:hover {
-  background: #eeeeee;
+.admin-card-sku {
+  font-size: 11.5px;
+  color: #777777;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
-.table-action-btn.delete {
-  color: var(--admin-danger);
+.admin-card-meta {
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 14px;
 }
 
-.table-action-btn.delete:hover {
-  background: #fee2e2;
-}
-
-.admin-pagination {
+.admin-card-price-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-  background: #fcfbf8;
-  border-top: 1px solid var(--admin-border);
-  font-size: 12.5px;
-  color: #666666;
+  background: #faf9f6;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 14px;
 }
 
-.pagination-controls {
+.admin-card-price-box label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #444444;
+}
+
+.price-input-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
 
-.btn-page {
-  background: #ffffff;
-  border: 1px solid var(--admin-border);
-  padding: 6px 12px;
+.admin-inline-price-input {
+  width: 76px;
+  height: 30px;
+  padding: 0 8px;
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-align: right;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  background: #ffffff;
+  color: #000000;
+  outline: none;
+}
+
+.admin-inline-price-input:focus {
+  border-color: #000000;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.price-input-wrapper span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.admin-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn-card-edit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 34px;
+  background: #f0eee6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
+  color: #111111;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
-.btn-page:hover {
+.btn-card-edit:hover {
   background: #000000;
   color: #ffffff;
   border-color: #000000;
 }
 
-.page-current-badge {
+.btn-card-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 34px;
+  background: #fff;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+  border-radius: 5px;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 13px;
-  padding: 0 4px;
-  color: #111111;
+  color: var(--admin-danger);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-card-delete:hover {
+  background: #fee2e2;
+  border-color: var(--admin-danger);
 }
 
 /* ==========================================================================
-   4. BANNERS & TEXT EDITORS
-   ========================================================================= */
+   5. BANNERS & TEXT EDITORS
+   ========================================================================== */
 .admin-card-section {
   background: #ffffff;
   border: 1px solid var(--admin-border);
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 28px;
   margin-bottom: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
 }
 
 .admin-card-section h3 {
@@ -479,9 +562,10 @@ body.admin-body {
   border: 1px solid var(--admin-border);
   border-radius: 6px;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 13.5px;
   outline: none;
   background: #ffffff;
+  transition: border-color 0.15s ease;
 }
 
 .admin-form-group textarea {
@@ -496,7 +580,7 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   5. MODAL DIALOGS
+   6. MODAL DIALOGS
    ========================================================================== */
 .admin-modal-overlay {
   position: fixed;
@@ -563,11 +647,11 @@ body.admin-body {
   cursor: pointer;
 }
 
-.btn-save-all {
+.btn-save-modal {
   background: #000000;
   color: #ffffff;
   border: none;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 6px;
   font-weight: 700;
   font-size: 13px;
