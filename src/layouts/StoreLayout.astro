@@ -1,13 +1,12 @@
 ---
-import Icon from '../components/Icon.astro';
 import AuthGate from '../components/AuthGate.astro';
-import ChatButton from '../components/ChatButton.astro';
+import Icon from '../components/Icon.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import ChatButton from '../components/ChatButton.astro';
 
 const {
   title = 'Ateliê Ótico — Design de Autor & Precisão Ótica na Madeira',
-  description = 'Ótica de autor independente no Funchal, Madeira. Curadoria internacional de armações de autor, lentes oftálmicas de alta precisão e atendimento personalizado.',
-  hideFooter = false,
+  description = 'Curadoria independente de armações óticas e óculos de sol no Funchal, Madeira.',
   hideHeader = false,
   hideTopbar = false
 } = Astro.props;
@@ -16,81 +15,74 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content={description}/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>{title}</title>
-  
-  <!-- SEO & Multi-language alternates -->
-  <link rel="alternate" hreflang="pt-PT" href="https://atelieotico.com/" />
-  <link rel="alternate" hreflang="en-US" href="https://atelieotico.com/?lang=en" />
-  <link rel="alternate" hreflang="x-default" href="https://atelieotico.com/" />
-
-  <!-- SSR Image Preloads for Instant Render -->
-  <link rel="preload" as="image" href="/campagna-hero.jpeg" fetchpriority="high" />
-  <link rel="preload" as="image" href="/SVG-Logo-Atelie.svg" />
-
+  <meta name="description" content={description}/>
+  <link rel="icon" type="image/svg+xml" href="/SVG-Logo-Atelie.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="/store.css"/>
   <link rel="stylesheet" href="/pages.css"/>
-  <link rel="stylesheet" href="/premium.css?v=20260820-1645"/>
+  <link rel="stylesheet" href="/premium.css?v=20260820-1700"/>
 </head>
 <body>
 {!isCustomerAccountPage && <AuthGate />}
 <a class="skip" href="#main">Saltar para o conteúdo</a>
 
 {!hideTopbar && (
-  <div class="topbar">PORTES GRATUITOS A PARTIR DE 100 &euro;</div>
+  <aside class="topbar">
+    <div class="marquee-track">
+      <span class="topbar-text">PORTES GRATUITOS A PARTIR DE 100 €</span>
+      <span class="topbar-text">CONSULTAS &amp; EXAMES DE OPTOMETRIA NO ATELIÊ</span>
+      <span class="topbar-text">PORTES GRATUITOS A PARTIR DE 100 €</span>
+      <span class="topbar-text">CONSULTAS &amp; EXAMES DE OPTOMETRIA NO ATELIÊ</span>
+    </div>
+  </aside>
 )}
 
 {!hideHeader && (
   <header class="site-header">
-    <button class="mobile-menu" aria-expanded="false" aria-controls="main-nav">MENU</button>
-    <a class="brand" href="/" style="display: flex; align-items: center; text-decoration: none;">
-      <img
-        src="/SVG-Logo-Atelie.svg"
-        alt="Ateliê Ótico"
-        style="height: 48px; max-height: 52px; width: auto; object-fit: contain; display: block;"
-      />
+    <a class="brand" href="/" aria-label="Ateliê Ótico Início">
+      <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" style="height: 40px; width: auto; object-fit: contain;" />
     </a>
-    
-    <nav id="main-nav">
+    <button class="mobile-menu" aria-label="Abrir navegação" aria-expanded="false"><Icon name="menu"/></button>
+    <nav id="main-nav" aria-label="Navegação Principal">
       
-      {/* 1. CAMPANHAS (MELIN-STYLE DROPDOWN) */}
+      {/* 1. CAMPANHAS MEGA MENU */}
       <div class="nav-drop">
-        <a href="/catalogo">CAMPANHAS</a>
+        <a href="/catalogo" class="nav-campanhas-link">CAMPANHAS</a>
         <div class="mega-melin">
           <div class="mega-melin-inner">
             <div class="mega-melin-grid">
               <a href="/catalogo" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/campagna-hero.jpeg" alt="Campanha Hero 2026" style="border-radius: 4px; object-fit: cover;" />
+                  <img src="/campagna-hero.jpeg" alt="Campanha Hero 2026" />
                 </div>
                 <span class="mega-melin-label">CAMPANHA HERO 2026</span>
               </a>
               <a href="/catalogo" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/campagna-signature.jpeg" alt="Linhas Arquiteturais" style="border-radius: 4px; object-fit: cover;" />
+                  <img src="/campagna-signature.jpeg" alt="Coleção Signature" />
                 </div>
                 <span class="mega-melin-label">COLEÇÃO SIGNATURE</span>
               </a>
-              <a href="/marcas#snob" class="mega-melin-item">
+              <a href="/marcas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/story-butterfly.jpeg" alt="SNOB Milano Editorial" style="border-radius: 4px; object-fit: cover;" />
+                  <img src="/story-butterfly.jpeg" alt="SNOB Milano" />
                 </div>
                 <span class="mega-melin-label">SNOB MILANO</span>
               </a>
               <a href="/catalogo" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/story-anteo.jpeg" alt="Linhas de Autor" style="border-radius: 4px; object-fit: cover;" />
+                  <img src="/story-anteo.jpeg" alt="Linhas de Autor" />
                 </div>
                 <span class="mega-melin-label">LINHAS DE AUTOR</span>
               </a>
               <a href="/contactos" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/campagna-prefooter.jpeg" alt="Consultoria Exclusiva" style="border-radius: 4px; object-fit: cover;" />
+                  <img src="/campagna-prefooter.jpeg" alt="Consulta Individual" />
                 </div>
                 <span class="mega-melin-label">CONSULTA INDIVIDUAL</span>
               </a>
@@ -102,19 +94,19 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
         </div>
       </div>
 
-      {/* 2. ÓCULOS (MELIN-STYLE DROPDOWN) */}
+      {/* 2. ÓCULOS MEGA MENU */}
       <div class="nav-drop">
         <a href="/catalogo">ÓCULOS</a>
         <div class="mega-melin">
           <div class="mega-melin-inner">
             <div class="mega-melin-grid">
-              <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es%20%C3%B3ticas" class="mega-melin-item">
+              <a href="/catalogo?cat=armacoes" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/1-1.jpeg" alt="Armações Óticas" />
                 </div>
                 <span class="mega-melin-label">ARMAÇÕES ÓTICAS</span>
               </a>
-              <a href="/catalogo?categoria=%C3%93culos%20de%20sol" class="mega-melin-item">
+              <a href="/catalogo?cat=sol" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/3-1.jpeg" alt="Óculos de Sol" />
                 </div>
@@ -134,7 +126,7 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
               </a>
               <a href="/sobre" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/story-case.jpeg" alt="Estojos e Acessórios" />
+                  <img src="/story-case.jpeg" alt="Estojos & Acessórios" />
                 </div>
                 <span class="mega-melin-label">ESTOJOS &amp; ACESSÓRIOS</span>
               </a>
@@ -146,7 +138,7 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
         </div>
       </div>
 
-      {/* 3. NOVIDADES (MELIN-STYLE DROPDOWN) */}
+      {/* 3. NOVIDADES MEGA MENU */}
       <div class="nav-drop">
         <a href="/catalogo">NOVIDADES</a>
         <div class="mega-melin">
@@ -172,25 +164,25 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
               </a>
               <a href="/catalogo" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/8-1.jpeg" alt="Edições Especiais" />
+                  <img src="/8-1.jpeg" alt="Design Minimalista" />
+                </div>
+                <span class="mega-melin-label">DESIGN MINIMALISTA</span>
+              </a>
+              <a href="/catalogo" class="mega-melin-item">
+                <div class="mega-melin-img-wrap">
+                  <img src="/specs-packaging.jpeg" alt="Edições Especiais" />
                 </div>
                 <span class="mega-melin-label">EDIÇÕES ESPECIAIS</span>
               </a>
-              <a href="/sobre" class="mega-melin-item">
-                <div class="mega-melin-img-wrap">
-                  <img src="/story-packaging.jpeg" alt="Embalagens de Colecionador" />
-                </div>
-                <span class="mega-melin-label">CERTIFICADOS &amp; ESTOJOS</span>
-              </a>
             </div>
             <div class="mega-melin-footer">
-              <a href="/catalogo" class="mega-melin-btn">EXPLORAR TODAS AS NOVIDADES</a>
+              <a href="/catalogo" class="mega-melin-btn">EXPLORAR NOVIDADES</a>
             </div>
           </div>
         </div>
       </div>
 
-      {/* 4. MARCAS (MELIN-STYLE DROPDOWN) */}
+      {/* 4. MARCAS MEGA MENU */}
       <div class="nav-drop">
         <a href="/marcas">MARCAS</a>
         <div class="mega-melin">
@@ -198,7 +190,7 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
             <div class="mega-melin-grid brands-grid">
               <a href="/marcas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/partner-snob.jpeg" alt="SNOB Milano" style="transform: scale(1.6);" />
+                  <img src="/partner-snob.jpeg" alt="SNOB Milano" style="mix-blend-mode: multiply; transform: scale(1.6);" />
                 </div>
                 <span class="mega-melin-label">SNOB MILANO</span>
               </a>
@@ -210,15 +202,33 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
               </a>
               <a href="/marcas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/partner-einstoffen.png" alt="Einstoffen" style="transform: scale(1.3);" />
+                  <img src="/partner-einstoffen.png" alt="Einstoffen" style="mix-blend-mode: multiply; transform: scale(1.35);" />
                 </div>
                 <span class="mega-melin-label">EINSTOFFEN</span>
               </a>
               <a href="/marcas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/partner-rodenstock.png" alt="Rodenstock" style="transform: scale(1.2);" />
+                  <img src="/partner-rodenstock.png" alt="Rodenstock" style="mix-blend-mode: multiply; transform: scale(1.2);" />
                 </div>
                 <span class="mega-melin-label">RODENSTOCK</span>
+              </a>
+              <a href="/marcas" class="mega-melin-item">
+                <div class="mega-melin-img-wrap">
+                  <img src="/partners/eyepetizer.png" alt="Eyepetizer" style="filter: grayscale(1);" />
+                </div>
+                <span class="mega-melin-label">EYEPETIZER</span>
+              </a>
+              <a href="/marcas" class="mega-melin-item">
+                <div class="mega-melin-img-wrap">
+                  <img src="/partners/longchamp.svg" alt="Longchamp" style="filter: grayscale(1);" />
+                </div>
+                <span class="mega-melin-label">LONGCHAMP</span>
+              </a>
+              <a href="/marcas" class="mega-melin-item">
+                <div class="mega-melin-img-wrap">
+                  <img src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" style="filter: grayscale(1);" />
+                </div>
+                <span class="mega-melin-label">MAISON BENSIMON</span>
               </a>
             </div>
             <div class="mega-melin-footer">
@@ -231,7 +241,6 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
       <a href="/sobre">O ATELIÊ</a>
       <a href="/contactos">CONTACTOS</a>
     </nav>
-
     <div class="header-actions" style="display: flex; align-items: center; gap: 12px;">
       <LanguageSwitcher />
       <a class="icon-action" href="/pesquisa" aria-label="Pesquisar"><Icon name="search"/></a>
@@ -242,143 +251,135 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
       </button>
     </div>
   </header>
+  <div class="nav-backdrop-overlay" aria-hidden="true"></div>
 )}
-
-{/* Luxury Dark Backdrop for Hovering Dropdowns */}
-<div class="nav-backdrop-overlay" id="nav-backdrop-overlay"></div>
 
 <main id="main">
-  <slot/>
+  <slot />
 </main>
-
-{!hideFooter && (
-  <footer class="ll-monolith-footer">
-    <div class="ll-container">
-      
-      {/* Brand Logo */}
-      <div class="ll-footer-top-brand">
-        <img
-          src="/SVG-Logo-Atelie.svg"
-          alt="Ateliê Ótico"
-          style="height: 52px; max-height: 56px; width: auto; object-fit: contain; margin: 0 auto 12px; display: block;"
-        />
-        <p class="ll-footer-tagline">
-          Ótica independente na Madeira — Curadoria de autor e precisão ótica
-        </p>
-      </div>
-
-      {/* Navigation Links */}
-      <nav class="ll-footer-nav-bar" aria-label="Navegação do rodapé">
-        <a href="/catalogo" class="ll-footer-link">Coleções</a>
-        <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es%20%C3%B3ticas" class="ll-footer-link">Armações Óticas</a>
-        <a href="/catalogo?categoria=%C3%93culos%20de%20sol" class="ll-footer-link">Óculos de Sol</a>
-        <a href="/marcas" class="ll-footer-link">Manufaturas</a>
-        <a href="/sobre" class="ll-footer-link">O Ateliê</a>
-        <a href="/contactos" class="ll-footer-link">Contactos</a>
-      </nav>
-
-      {/* Google My Business Structured Info */}
-      <div class="ll-footer-gmb-section">
-        <div class="ll-footer-gmb-grid">
-          
-          <div class="ll-footer-gmb-col">
-            <h4>Espaço &amp; Localização</h4>
-            <p><strong>Ateliê Ótico</strong></p>
-            <p>Rua da Conceição, Praça do Carmo 29B<br/>9050-026 Funchal, Madeira</p>
-            <p style="margin-top: 8px;">
-              <a
-                href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xc606182e736d2af:0xb3c8b9f9e8a35640"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Abrir no Google Maps &rarr;
-              </a>
-            </p>
-          </div>
-
-          <div class="ll-footer-gmb-col">
-            <h4>Contacto Direto</h4>
-            <p>Atendimento e marcações personalizadas:</p>
-            <p style="font-size: 16px; font-weight: 700; color: #000000;">
-              <a href="tel:+351964993767" style="text-decoration: none; color: inherit;">
-                964 993 767
-              </a>
-            </p>
-            <p style="margin-top: 8px;">
-              <a href="https://wa.me/351964993767?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Ateli%C3%AA%20%C3%93tico." target="_blank" rel="noopener noreferrer">
-                Conversar no WhatsApp &rarr;
-              </a>
-            </p>
-          </div>
-
-          <div class="ll-footer-gmb-col">
-            <h4>Horário de Funcionamento</h4>
-            <div class="ll-hours-list">
-              <div class="ll-hours-row">
-                <span>Segunda a Sexta</span>
-                <strong>09:00 – 19:00</strong>
-              </div>
-              <div class="ll-hours-row">
-                <span>Sábado</span>
-                <strong>09:00 – 13:00</strong>
-              </div>
-              <div class="ll-hours-row">
-                <span>Domingo</span>
-                <strong style="color: #999999;">Encerrado</strong>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Centered Legal Links and Copyright Row */}
-      <div class="ll-footer-centered-legal">
-        <div class="ll-payment-logos" aria-label="Métodos de pagamento">
-          <span>MB</span><span>MB WAY</span><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Klarna</span>
-        </div>
-        <nav class="ll-legal-links-row" aria-label="Informações legais">
-          <a href="/carreiras" data-i18n-pt="Carreiras" data-i18n-en="Careers">Carreiras</a>
-          <span class="legal-dot">•</span>
-          <a href="/condicoes-gerais-venda" data-i18n-pt="Condições Gerais de Venda" data-i18n-en="General Conditions of Sale">Condições Gerais de Venda</a>
-          <span class="legal-dot">•</span>
-          <a href="/termos">Termos e Condições</a>
-          <span class="legal-dot">•</span>
-          <a href="/privacidade">Privacidade</a>
-          <span class="legal-dot">•</span>
-          <a href="/cookies">Cookies</a>
-          <span class="legal-dot">•</span>
-          <a href="/envios">Envios</a>
-          <span class="legal-dot">•</span>
-          <a href="/contactos">Apoio ao Cliente</a>
-        </nav>
-
-        <p class="ll-copyright-centered">
-          &copy; {new Date().getFullYear()} Ateliê Ótico — Todos os direitos reservados &bull; Madeira
-        </p>
-      </div>
-
-    </div>
-  </footer>
-)}
 
 <aside class="cart-drawer" aria-hidden="true">
   <div class="drawer-head">
-    <h2>O seu saco</h2>
-    <button class="cart-close" aria-label="Fechar saco">✕</button>
+    <h2>O SEU SACO</h2>
+    <button class="cart-close" aria-label="Fechar saco">&times;</button>
   </div>
   <div data-cart-items></div>
   <div class="drawer-foot">
-    <div>
-      <span>Subtotal</span>
-      <strong data-cart-total>0 &euro;</strong>
-    </div>
-    <a href="/saco" class="rect black">VER SACO</a>
+    <div><span>TOTAL ESTIMADO</span><strong data-cart-total>0,00 €</strong></div>
+    <a class="rect black" href="/checkout">FINALIZAR COMPRA</a>
   </div>
 </aside>
 <div class="drawer-overlay"></div>
 
-<!-- Luxury Floating WhatsApp Button with Exact SVG -->
+{/* =========================================================================
+    MONOLITHIC LUXURY EDITORIAL FOOTER
+    ========================================================================= */}
+<footer class="ll-monolith-footer">
+  <div class="ll-container">
+    
+    {/* Brand Central Identity */}
+    <div class="ll-footer-top-brand">
+      <img
+        class="ll-footer-brand-logo"
+        src="/SVG-Logo-Atelie.svg"
+        alt="Ateliê Ótico — Funchal, Madeira"
+      />
+      <p class="ll-footer-tagline">
+        Ótica independente na Madeira — Curadoria de autor e precisão ótica
+      </p>
+    </div>
+
+    {/* Primary Navigation Row */}
+    <nav class="ll-footer-nav-bar" aria-label="Navegação do Rodapé">
+      <a href="/catalogo" class="ll-footer-link">Coleções</a>
+      <a href="/catalogo?cat=armacoes" class="ll-footer-link">Armações Óticas</a>
+      <a href="/catalogo?cat=sol" class="ll-footer-link">Óculos de Sol</a>
+      <a href="/marcas" class="ll-footer-link">Manufaturas</a>
+      <a href="/sobre" class="ll-footer-link">O Ateliê</a>
+      <a href="/contactos" class="ll-footer-link">Contactos</a>
+    </nav>
+
+    {/* Google My Business, Address & Schedule Information */}
+    <div class="ll-footer-gmb-section">
+      <div class="ll-footer-gmb-grid">
+        
+        {/* Physical Address */}
+        <div class="ll-footer-gmb-col">
+          <h4>ESPAÇO &amp; LOCALIZAÇÃO</h4>
+          <p><strong>Ateliê Ótico</strong></p>
+          <p>Rua da Conceição, Praça do Carmo 29B<br/>9050-026 Funchal, Madeira</p>
+          <a
+            href="https://maps.google.com/?q=Rua+da+Concei%C3%A7%C3%A3o+Pra%C3%A7a+do+Carmo+29B+Funchal"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir no Google Maps &rarr;
+          </a>
+        </div>
+
+        {/* Direct Contact */}
+        <div class="ll-footer-gmb-col">
+          <h4>CONTACTO DIRETO</h4>
+          <p>Atendimento e marcações personalizadas:</p>
+          <p style="font-size: 15px; font-weight: 700; color: #0a0a0a;">964 993 767</p>
+          <a href="https://wa.me/351964993767" target="_blank" rel="noopener noreferrer">
+            Conversar no WhatsApp &rarr;
+          </a>
+        </div>
+
+        {/* Operating Hours */}
+        <div class="ll-footer-gmb-col">
+          <h4>HORÁRIO DE FUNCIONAMENTO</h4>
+          <div class="ll-hours-list">
+            <div class="ll-hours-row">
+              <span>Segunda a Sexta</span>
+              <strong>09:00 – 19:00</strong>
+            </div>
+            <div class="ll-hours-row">
+              <span>Sábado</span>
+              <strong>09:00 – 13:00</strong>
+            </div>
+            <div class="ll-hours-row">
+              <span>Domingo</span>
+              <strong>Encerrado</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {/* Centered Legal Links, Payment Methods and Copyright Row */}
+    <div class="ll-footer-centered-legal">
+      <div class="ll-payment-logos" aria-label="Métodos de pagamento seguros">
+        <div class="payment-badge" title="MB WAY"><img src="/payment-methods/MBWay.svg" alt="MB WAY" /></div>
+        <div class="payment-badge" title="Visa"><img src="/payment-methods/Visa.svg" alt="Visa" /></div>
+        <div class="payment-badge" title="Mastercard"><img src="/payment-methods/MasterCard.svg" alt="Mastercard" /></div>
+        <div class="payment-badge" title="PayPal"><img src="/payment-methods/PayPal.svg" alt="PayPal" /></div>
+        <div class="payment-badge" title="Revolut"><img src="/payment-methods/Revolut.svg" alt="Revolut" /></div>
+        <div class="payment-badge" title="Klarna"><img src="/payment-methods/klarna.svg" alt="Klarna" /></div>
+      </div>
+
+      <nav class="ll-legal-links-row" aria-label="Informações legais">
+        <a href="/carreiras" data-i18n-pt="Carreiras" data-i18n-en="Careers">Carreiras</a>
+        <span class="legal-dot">•</span>
+        <a href="/condicoes-gerais-venda" data-i18n-pt="Condições Gerais de Venda" data-i18n-en="General Conditions of Sale">Condições Gerais de Venda</a>
+        <span class="legal-dot">•</span>
+        <a href="/termos">Termos e Condições</a>
+        <span class="legal-dot">•</span>
+        <a href="/privacidade">Privacidade</a>
+        <span class="legal-dot">•</span>
+        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+      </nav>
+      
+      <p class="ll-copyright-centered">
+        &copy; 2026 Ateliê Ótico — Todos os direitos reservados &bull; Madeira
+      </p>
+    </div>
+
+  </div>
+</footer>
+
 <ChatButton />
 
 <script is:inline src="/store.js"></script>

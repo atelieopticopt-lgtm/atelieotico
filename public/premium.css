@@ -802,22 +802,46 @@ body {
   box-shadow: none;
 }
 
+/* ==========================================================================
+   PAYMENT METHODS BADGES (SVG LOGOS)
+   ========================================================================== */
 .ll-payment-logos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12px 20px;
-  padding: 18px 0 8px;
+  gap: 10px 14px;
+  padding: 20px 0 16px;
 }
 
-.ll-payment-logos span {
-  min-width: 72px;
-  padding: 9px 12px;
+.payment-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 66px;
+  padding: 6px 14px;
+  background: #ffffff;
   border: 1px solid #000000;
-  font-size: 11px;
-  font-weight: 800;
-  text-align: center;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-badge:hover {
+  border-color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.payment-badge img {
+  height: 22px;
+  width: auto;
+  max-width: 62px;
+  object-fit: contain;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
 }
 
 /* ==========================================================================
@@ -965,7 +989,7 @@ body {
   object-fit: cover;
   border: none !important;
   border-radius: 0 !important;
-  filter: contrast(1.04);
+  filter: contrast(104);
 }
 
 .ll-craft-specs-list {
