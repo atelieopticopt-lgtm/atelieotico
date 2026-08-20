@@ -1,4 +1,4 @@
-﻿---
+---
 import StoreLayout from '../../layouts/StoreLayout.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import Icon from '../../components/Icon.astro';
@@ -16,15 +16,30 @@ const paramSlug = Astro.params.slug as string;
 const product = getProduct(paramSlug) || products[0];
 const related = products.filter(p => p.slug !== product.slug).slice(0, 4);
 const cart = JSON.stringify({ slug: product.slug, name: product.name, price: product.price, image: product.image });
+const cleanText = (value: string) => (value || '')
+  .replaceAll('Tit?nio', 'Titânio')
+  .replaceAll('Arma??es ?ticas', 'Armações óticas')
+  .replaceAll('?culos', 'Óculos')
+  .replaceAll('contempor?neo', 'contemporâneo')
+  .replaceAll('excel?ncia', 'excelência')
+  .replaceAll('Ateli? ?tico', 'Ateliê Ótico')
+  .replaceAll('Regi?o Aut?noma', 'Região Autónoma');
+
+const cleanCategory = cleanText(product.category);
+const cleanShape = cleanText(product.shape);
+const cleanMaterial = cleanText(product.material);
+const cleanColor = cleanText(product.color);
+const cleanDescription = `Óculos de autor ${product.name} com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.`;
 ---
 
 <StoreLayout title={`${product.name} | Ateliê Ótico`} description={product.description}>
   <article class="product-page">
     
-    {/* Product Gallery */}
+    {/* Product Gallery with Dynamic Pointer-Tracking Zoom */}
     <div class="product-gallery">
-      <img src={product.image} alt={`${product.name}, vista principal`} />
-      <img src={product.hover} alt={`${product.name}, vista alternativa`} />
+      <div class="product-zoom" data-product-zoom>
+        <img src={product.image} alt={`${product.name}, vista principal`} />
+      </div>
     </div>
 
     {/* Product Info & Specs */}
@@ -34,7 +49,7 @@ const cart = JSON.stringify({ slug: product.slug, name: product.name, price: pro
       </p>
       
       <h1>{product.name}</h1>
-      <p class="product-type">{product.category} &bull; {product.shape}</p>
+      <p class="product-type">{cleanCategory} &bull; {cleanShape}</p>
       <p class="product-price">{product.price} &euro;</p>
 
       {/* Structured Features & Specs with Clear Icons & Spacing */}
@@ -42,17 +57,17 @@ const cart = JSON.stringify({ slug: product.slug, name: product.name, price: pro
         <div>
           <Icon name="frame" size={20} />
           <span>FORMA</span>
-          <strong>{product.shape}</strong>
+          <strong>{cleanShape}</strong>
         </div>
         <div>
           <Icon name="layers" size={20} />
           <span>MATERIAL</span>
-          <strong>{product.material}</strong>
+          <strong>{cleanMaterial}</strong>
         </div>
         <div>
           <Icon name="color" size={20} />
           <span>COR</span>
-          <strong>{product.color}</strong>
+          <strong>{cleanColor}</strong>
         </div>
         <div>
           <Icon name="fit" size={20} />
@@ -61,18 +76,18 @@ const cart = JSON.stringify({ slug: product.slug, name: product.name, price: pro
         </div>
       </div>
 
-      <button class="add-cart" data-add-cart={cart}>ADICIONAR AO SACO</button>
+      <button class="add-cart" data-add-cart={cart} data-i18n-pt="ADICIONAR AO CARRINHO" data-i18n-en="ADD TO CART">ADICIONAR AO CARRINHO</button>
 
-      <p class="product-copy">{product.description}</p>
+      <p class="product-copy">{cleanDescription}</p>
 
-      <div class="details">
+      <div class="details product-details-popovers">
         <details>
           <summary>DETALHES DO PRODUTO</summary>
           <p>Armação selecionada pelo Ateliê Ótico no Funchal, Madeira. Estojo e pano de microfibra de alta precisão incluídos.</p>
         </details>
         <details>
           <summary>ENVIO E DEVOLUÇÕES</summary>
-          <p>Portes gratuitos na Região Autónoma da Madeira a partir de 100 €. Devolução simples no prazo de 14 dias.</p>
+          <p>Portes gratuitos a partir de 100 €. Devolução simples no prazo de 14 dias.</p>
         </details>
         <details>
           <summary>AJUSTE NO ATELIÊ</summary>
@@ -84,10 +99,53 @@ const cart = JSON.stringify({ slug: product.slug, name: product.name, price: pro
   </article>
 
   <section class="related">
-    <p>OUTROS MODELOS</p>
+    <p><a href="/marcas" class="brands-catalog-link" data-i18n-pt="Marcas no nosso catálogo" data-i18n-en="Brands in our catalogue">Marcas no nosso catálogo</a></p>
     <h2>Também poderá gostar</h2>
     <div class="related-grid">
       {related.map(p => <ProductCard product={p} />)}
     </div>
   </section>
+
+  <script is:inline>
+    // Accordion exclusivity
+    document.querySelectorAll('.product-details-popovers details').forEach((detail) => {
+      detail.addEventListener('toggle', () => {
+        if (!detail.open) return;
+        document.querySelectorAll('.product-details-popovers details[open]').forEach((other) => {
+          if (other !== detail) other.removeAttribute('open');
+        });
+      });
+    });
+
+    // Dynamic Pointer-Tracking Zoom
+    function setupZoom() {
+      const zoomBoxes = document.querySelectorAll('[data-product-zoom]');
+      zoomBoxes.forEach((box) => {
+        const img = box.querySelector('img');
+        if (!img) return;
+
+        const onMove = (e) => {
+          const rect = box.getBoundingClientRect();
+          const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+          const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+          const xPercent = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+          const yPercent = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+          img.style.transformOrigin = `${xPercent}% ${yPercent}%`;
+        };
+
+        box.addEventListener('mousemove', onMove);
+        box.addEventListener('touchmove', onMove, { passive: true });
+
+        box.addEventListener('mouseleave', () => {
+          img.style.transformOrigin = 'center center';
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupZoom);
+    } else {
+      setupZoom();
+    }
+  </script>
 </StoreLayout>

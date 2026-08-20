@@ -1,10 +1,22 @@
-﻿---
+---
 import type { Product } from '../data/products';
 import Icon from './Icon.astro';
 const { product } = Astro.props as { product: Product };
+
+const cleanText = (value: string) => (value || '')
+  .replaceAll('Tit?nio', 'Titânio')
+  .replaceAll('Arma??es ?ticas', 'Armações óticas')
+  .replaceAll('?culos', 'Óculos')
+  .replaceAll('contempor?neo', 'contemporâneo')
+  .replaceAll('excel?ncia', 'excelência')
+  .replaceAll('Ateli? ?tico', 'Ateliê Ótico')
+  .replaceAll('Regi?o Aut?noma', 'Região Autónoma');
+
+const cleanCategory = cleanText(product.category);
+const cleanShape = cleanText(product.shape);
 ---
 <article
-  class="store-card"
+  class="store-card ll-product-card"
   data-category={product.category}
   data-shape={product.shape}
   data-material={product.material}
@@ -12,36 +24,35 @@ const { product } = Astro.props as { product: Product };
   data-price={product.price}
   data-name={product.name.toLowerCase()}
 >
-  <a href={`/produtos/${product.slug}`}>
-    <div class="store-card__image">
-      <img
-        class="store-card__main"
-        src={product.image}
-        alt={`${product.name}, vista principal`}
-        loading="lazy"
-      />
-      <img
-        class="store-card__hover"
-        src={product.hover}
-        alt={`${product.name}, vista alternativa`}
-        loading="lazy"
-      />
-      <span>VER MODELO</span>
-    </div>
-    <div class="store-card__meta">
-      <div>
-        <h3>{product.name}</h3>
-        <p>{product.category} &bull; {product.shape}</p>
-      </div>
-      <strong>{product.price} &euro;</strong>
-    </div>
-  </a>
   <button
-    class="favorite"
+    class="favorite ll-card-fav"
     type="button"
     data-favorite={product.slug}
     aria-label={`Guardar ${product.name} nos favoritos`}
   >
     <Icon name="heart" size={18} />
   </button>
+  
+  <a href={`/produtos/${product.slug}`} class="ll-card-image-box">
+    <img
+      class="ll-card-img-main"
+      src={product.image}
+      alt={`${product.name}, vista principal`}
+      loading="lazy"
+    />
+    <img
+      class="ll-card-img-hover"
+      src={product.hover || product.image}
+      alt={`${product.name}, vista alternativa`}
+      loading="lazy"
+    />
+  </a>
+
+  <div class="ll-card-meta">
+    <div class="ll-card-title-row">
+      <h3 class="ll-card-title"><a href={`/produtos/${product.slug}`}>{product.name}</a></h3>
+      <strong class="ll-card-price">{product.price} &euro;</strong>
+    </div>
+    <p class="ll-card-sub">{cleanCategory} &bull; {cleanShape}</p>
+  </div>
 </article>

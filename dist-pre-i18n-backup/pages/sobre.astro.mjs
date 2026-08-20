@@ -1,0 +1,22 @@
+import { c as createComponent, f as renderComponent, d as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_1IIrW8fW.mjs';
+import 'piccolore';
+import { $ as $$StoreLayout } from '../chunks/StoreLayout_CjQWi9Fh.mjs';
+export { renderers } from '../renderers.mjs';
+
+const $$Sobre = createComponent(($$result, $$props, $$slots) => {
+  return renderTemplate`${renderComponent($$result, "StoreLayout", $$StoreLayout, { "title": "O Ateli\xEA | Ateli\xEA \xD3tico \u2014 Madeira" }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<article class="content-page"> <p data-i18n-pt="Ateliê ÓTICO — MADEIRA" data-i18n-en="ATELIÊ OPTICAL — MADEIRA">Ateliê ÓTICO — MADEIRA</p> <h1 data-i18n-pt="Uma ótica com outro olhar." data-i18n-en="An optical boutique with a different point of view.">Uma ótica com outro olhar.</h1> <p data-i18n-pt="O Ateliê Ótico nasceu da vontade de tornar a escolha de óculos numa experiência pessoal, tranquila e exigente na Região Autónoma da Madeira. Reunimos design independente de autor, precisão técnica e acompanhamento próximo." data-i18n-en="Ateliê Ótico was created to make choosing eyewear a personal, calm and discerning experience in Madeira. We bring together independent design, technical precision and attentive guidance.">O Ateliê Ótico nasceu da vontade de tornar a escolha de óculos numa experiência pessoal, tranquila e exigente na Região Autónoma da Madeira. Reunimos design independente de autor, precisão técnica e acompanhamento próximo.</p> <h2 data-i18n-pt="A nossa curadoria" data-i18n-en="Our curation">A nossa curadoria</h2> <p data-i18n-pt="Escolhemos cada coleção pela qualidade dos materiais, pelo equilíbrio das formas e pela sua capacidade de expressar personalidade sem perder conforto." data-i18n-en="We select every collection for the quality of its materials, the balance of its forms and its ability to express personality without compromising comfort.">Escolhemos cada coleção pela qualidade dos materiais, pelo equilíbrio das formas e pela sua capacidade de expressar personalidade sem perder conforto.</p> <h2 data-i18n-pt="O nosso serviço" data-i18n-en="Our service">O nosso serviço</h2> <p data-i18n-pt="Da primeira conversa ao ajuste final, acompanhamos cada decisão no nosso espaço na Madeira. A medição, o aconselhamento de lentes e as afinações posteriores fazem parte do mesmo compromisso." data-i18n-en="From the first conversation to the final fitting, we guide every decision at our space in Madeira. Measurements, lens advice and subsequent adjustments are all part of the same commitment.">Da primeira conversa ao ajuste final, acompanhamos cada decisão no nosso espaço na Madeira. A medição, o aconselhamento de lentes e as afinações posteriores fazem parte do mesmo compromisso.</p> </article> ` })}`;
+}, "C:/Users/enman/Desktop/Ateli\xEA_Otico/src/pages/sobre.astro", void 0);
+
+const $$file = "C:/Users/enman/Desktop/Ateliê_Otico/src/pages/sobre.astro";
+const $$url = "/sobre";
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  default: $$Sobre,
+  file: $$file,
+  url: $$url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const page = () => _page;
+
+export { page };

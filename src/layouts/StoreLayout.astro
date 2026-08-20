@@ -11,6 +11,7 @@ const {
   hideHeader = false,
   hideTopbar = false
 } = Astro.props;
+const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 ---
 <!doctype html>
 <html lang="pt-PT">
@@ -34,10 +35,10 @@ const {
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="/store.css"/>
   <link rel="stylesheet" href="/pages.css"/>
-  <link rel="stylesheet" href="/premium.css"/>
+  <link rel="stylesheet" href="/premium.css?v=20260820-1645"/>
 </head>
 <body>
-<AuthGate />
+{!isCustomerAccountPage && <AuthGate />}
 <a class="skip" href="#main">Saltar para o conteúdo</a>
 
 {!hideTopbar && (
@@ -203,7 +204,7 @@ const {
               </a>
               <a href="/marcas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
-                  <img src="/partner-orgreen.png" alt="Ørgreen Optics" style="filter: brightness(0);" />
+                  <img src="/partner-orgreen.png?v=20260820-logos" alt="Ørgreen Optics" class="orgreen-wordmark" />
                 </div>
                 <span class="mega-melin-label">ØRGREEN OPTICS</span>
               </a>
@@ -221,7 +222,7 @@ const {
               </a>
             </div>
             <div class="mega-melin-footer">
-              <a href="/marcas" class="mega-melin-btn">CONHECER TODAS AS MANUFATURAS</a>
+              <a href="/marcas" class="mega-melin-btn" data-i18n-pt="CONHECER TODAS AS MARCAS" data-i18n-en="DISCOVER ALL BRANDS">CONHECER TODAS AS MARCAS</a>
             </div>
           </div>
         </div>
@@ -234,7 +235,7 @@ const {
     <div class="header-actions" style="display: flex; align-items: center; gap: 12px;">
       <LanguageSwitcher />
       <a class="icon-action" href="/pesquisa" aria-label="Pesquisar"><Icon name="search"/></a>
-      <a class="icon-action" href="/sobre" aria-label="Conta"><Icon name="user"/></a>
+      <a class="icon-action" href="/conta" aria-label="Conta"><Icon name="user"/></a>
       <button class="cart-trigger icon-action" aria-label="Abrir saco">
         <Icon name="bag"/>
         <span class="cart-badge" data-cart-count>0</span>
@@ -333,7 +334,14 @@ const {
 
       {/* Centered Legal Links and Copyright Row */}
       <div class="ll-footer-centered-legal">
+        <div class="ll-payment-logos" aria-label="Métodos de pagamento">
+          <span>MB</span><span>MB WAY</span><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Klarna</span>
+        </div>
         <nav class="ll-legal-links-row" aria-label="Informações legais">
+          <a href="/carreiras" data-i18n-pt="Carreiras" data-i18n-en="Careers">Carreiras</a>
+          <span class="legal-dot">•</span>
+          <a href="/condicoes-gerais-venda" data-i18n-pt="Condições Gerais de Venda" data-i18n-en="General Conditions of Sale">Condições Gerais de Venda</a>
+          <span class="legal-dot">•</span>
           <a href="/termos">Termos e Condições</a>
           <span class="legal-dot">•</span>
           <a href="/privacidade">Privacidade</a>
