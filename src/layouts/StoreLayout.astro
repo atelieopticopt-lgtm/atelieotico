@@ -100,13 +100,13 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
         <div class="mega-melin">
           <div class="mega-melin-inner">
             <div class="mega-melin-grid">
-              <a href="/catalogo?cat=armacoes" class="mega-melin-item">
+              <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es+%C3%B3ticas" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/1-1.jpeg" alt="Armações Óticas" />
                 </div>
                 <span class="mega-melin-label">ARMAÇÕES ÓTICAS</span>
               </a>
-              <a href="/catalogo?cat=sol" class="mega-melin-item">
+              <a href="/catalogo?categoria=%C3%93culos+de+sol" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/3-1.jpeg" alt="Óculos de Sol" />
                 </div>
@@ -118,7 +118,7 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
                 </div>
                 <span class="mega-melin-label">MAIS POPULARES</span>
               </a>
-              <a href="/catalogo" class="mega-melin-item">
+              <a href="/catalogo?material=Acetato" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/7-1.jpeg" alt="Acetato Italiano" />
                 </div>
@@ -156,7 +156,7 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
                 </div>
                 <span class="mega-melin-label">SÉRIE LIMITADA</span>
               </a>
-              <a href="/catalogo" class="mega-melin-item">
+              <a href="/catalogo?material=Tit%C3%A2nio" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/6-1.jpeg" alt="Titânio Cirúrgico" />
                 </div>
@@ -188,43 +188,43 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
         <div class="mega-melin">
           <div class="mega-melin-inner">
             <div class="mega-melin-grid brands-grid">
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=SNOB+Milano" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partner-snob.jpeg" alt="SNOB Milano" style="mix-blend-mode: multiply; transform: scale(1.6);" />
                 </div>
                 <span class="mega-melin-label">SNOB MILANO</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=%C3%98rgreen+Optics" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partner-orgreen.png?v=20260820-logos" alt="Ørgreen Optics" class="orgreen-wordmark" />
                 </div>
                 <span class="mega-melin-label">ØRGREEN OPTICS</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=Einstoffen" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partner-einstoffen.png" alt="Einstoffen" style="mix-blend-mode: multiply; transform: scale(1.35);" />
                 </div>
                 <span class="mega-melin-label">EINSTOFFEN</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=Rodenstock" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partner-rodenstock.png" alt="Rodenstock" style="mix-blend-mode: multiply; transform: scale(1.2);" />
                 </div>
                 <span class="mega-melin-label">RODENSTOCK</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=Eyepetizer" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partners/eyepetizer.png" alt="Eyepetizer" style="filter: grayscale(1);" />
                 </div>
                 <span class="mega-melin-label">EYEPETIZER</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=Longchamp" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partners/longchamp.svg" alt="Longchamp" style="filter: grayscale(1);" />
                 </div>
                 <span class="mega-melin-label">LONGCHAMP</span>
               </a>
-              <a href="/marcas" class="mega-melin-item">
+              <a href="/catalogo?marca=Maison+Bensimon" class="mega-melin-item">
                 <div class="mega-melin-img-wrap">
                   <img src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" style="filter: grayscale(1);" />
                 </div>
@@ -292,8 +292,8 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
     {/* Primary Navigation Row */}
     <nav class="ll-footer-nav-bar" aria-label="Navegação do Rodapé">
       <a href="/catalogo" class="ll-footer-link">Coleções</a>
-      <a href="/catalogo?cat=armacoes" class="ll-footer-link">Armações Óticas</a>
-      <a href="/catalogo?cat=sol" class="ll-footer-link">Óculos de Sol</a>
+      <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es+%C3%B3ticas" class="ll-footer-link">Armações Óticas</a>
+      <a href="/catalogo?categoria=%C3%93culos+de+sol" class="ll-footer-link">Óculos de Sol</a>
       <a href="/marcas" class="ll-footer-link">Manufaturas</a>
       <a href="/sobre" class="ll-footer-link">O Ateliê</a>
       <a href="/contactos" class="ll-footer-link">Contactos</a>
@@ -383,5 +383,6 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 <ChatButton />
 
 <script is:inline src="/store.js"></script>
+<script is:inline src="/atelie-cms.js"></script>
 </body>
 </html>

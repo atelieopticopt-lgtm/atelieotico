@@ -3,26 +3,20 @@ import type { Product } from '../data/products';
 import Icon from './Icon.astro';
 const { product } = Astro.props as { product: Product };
 
-const cleanText = (value: string) => (value || '')
-  .replaceAll('Tit?nio', 'Titânio')
-  .replaceAll('Arma??es ?ticas', 'Armações óticas')
-  .replaceAll('?culos', 'Óculos')
-  .replaceAll('contempor?neo', 'contemporâneo')
-  .replaceAll('excel?ncia', 'excelência')
-  .replaceAll('Ateli? ?tico', 'Ateliê Ótico')
-  .replaceAll('Regi?o Aut?noma', 'Região Autónoma');
-
-const cleanCategory = cleanText(product.category);
-const cleanShape = cleanText(product.shape);
+const cleanCategory = product.category;
+const cleanShape = product.shape;
+const brandName = product.brand || 'Ateliê Ótico';
 ---
 <article
   class="store-card ll-product-card"
   data-category={product.category}
+  data-brand={brandName}
   data-shape={product.shape}
   data-material={product.material}
   data-color={product.color}
   data-price={product.price}
   data-name={product.name.toLowerCase()}
+  data-sku={product.sku || ''}
 >
   <button
     class="favorite ll-card-fav"
