@@ -70,10 +70,17 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
 
 
   {/* =========================================================================
-      2. BRANDS BAR DIRECTLY UNDER HERO (CLEAN ROW WITHOUT EXTRA HEADER)
+      2. BRANDS BAR DIRECTLY UNDER HERO (FULL 7 AUTHOR BRANDS + HEADER TAG)
       ========================================================================= */}
   <section class="ll-brands-strip-section">
     <div class="ll-container">
+      
+      <div class="ll-brands-strip-header">
+        <span class="ll-section-tag" data-i18n-pt="MARCAS &amp; PARCEIROS DE AUTOR" data-i18n-en="CURATION &amp; PARTNERS">
+          MARCAS &amp; PARCEIROS DE AUTOR
+        </span>
+      </div>
+
       <div class="ll-partners-grid">
         <a href="/catalogo?marca=SNOB+Milano" class="ll-partner-item" title="SNOB Milano">
           <img class="ll-partner-logo snob" src="/partner-snob.jpeg" alt="SNOB Milano" />
@@ -87,7 +94,17 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <a href="/catalogo?marca=Rodenstock" class="ll-partner-item" title="Rodenstock">
           <img class="ll-partner-logo rodenstock" src="/partner-rodenstock.png" alt="Rodenstock" />
         </a>
+        <a href="/catalogo?marca=Eyepetizer" class="ll-partner-item" title="Eyepetizer">
+          <img class="ll-partner-logo partner-folder-logo" src="/partners/eyepetizer.png" alt="Eyepetizer" />
+        </a>
+        <a href="/catalogo?marca=Longchamp" class="ll-partner-item" title="Longchamp">
+          <img class="ll-partner-logo partner-folder-logo" src="/partners/longchamp.svg" alt="Longchamp" />
+        </a>
+        <a href="/catalogo?marca=Maison+Bensimon" class="ll-partner-item" title="Maison Bensimon">
+          <img class="ll-partner-logo partner-folder-logo" src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" />
+        </a>
       </div>
+
     </div>
   </section>
 
@@ -129,7 +146,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
               <button class="ll-card-fav" aria-label="Favorito">♡</button>
               <a href={`/produtos/${p.slug}`} class="ll-card-image-box">
                 <img class="ll-card-img-main" src={p.image} alt={p.name} loading="lazy" />
-                <img class="ll-card-img-hover" src={p.hover || p.image} alt={`${p.name} alternativa`} loading="lazy" />
+                {p.hover && p.hover !== p.image && (
+                  <img class="ll-card-img-hover" src={p.hover} alt={`${p.name} alternativa`} loading="lazy" />
+                )}
               </a>
               <div class="ll-card-meta">
                 <div class="ll-card-title-row">
@@ -270,7 +289,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
           <article class="ll-product-card" key={`perm-${p.id}`}>
             <a href={`/produtos/${p.slug}`} class="ll-card-image-box">
               <img class="ll-card-img-main" src={p.image} alt={p.name} loading="lazy" />
-              <img class="ll-card-img-hover" src={p.hover || p.image} alt={`${p.name} alternativa`} loading="lazy" />
+              {p.hover && p.hover !== p.image && (
+                <img class="ll-card-img-hover" src={p.hover} alt={`${p.name} alternativa`} loading="lazy" />
+              )}
             </a>
             <div class="ll-card-meta">
               <div class="ll-card-title-row">
@@ -299,7 +320,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[0].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[0].image} alt={mosaico[0].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[0].hover || mosaico[0].image} alt={mosaico[0].name} loading="lazy" />
+            {mosaico[0].hover && mosaico[0].hover !== mosaico[0].image && (
+              <img class="ll-card-img-hover" src={mosaico[0].hover} alt={mosaico[0].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
@@ -319,7 +342,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[1].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[1].image} alt={mosaico[1].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[1].hover || mosaico[1].image} alt={mosaico[1].name} loading="lazy" />
+            {mosaico[1].hover && mosaico[1].hover !== mosaico[1].image && (
+              <img class="ll-card-img-hover" src={mosaico[1].hover} alt={mosaico[1].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
@@ -333,7 +358,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[2].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[2].image} alt={mosaico[2].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[2].hover || mosaico[2].image} alt={mosaico[2].name} loading="lazy" />
+            {mosaico[2].hover && mosaico[2].hover !== mosaico[2].image && (
+              <img class="ll-card-img-hover" src={mosaico[2].hover} alt={mosaico[2].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
@@ -348,7 +375,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[3].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[3].image} alt={mosaico[3].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[3].hover || mosaico[3].image} alt={mosaico[3].name} loading="lazy" />
+            {mosaico[3].hover && mosaico[3].hover !== mosaico[3].image && (
+              <img class="ll-card-img-hover" src={mosaico[3].hover} alt={mosaico[3].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
@@ -362,7 +391,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[4].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[4].image} alt={mosaico[4].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[4].hover || mosaico[4].image} alt={mosaico[4].name} loading="lazy" />
+            {mosaico[4].hover && mosaico[4].hover !== mosaico[4].image && (
+              <img class="ll-card-img-hover" src={mosaico[4].hover} alt={mosaico[4].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
@@ -376,7 +407,9 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
         <article class="ll-product-card">
           <a href={`/produtos/${mosaico[5].slug}`} class="ll-card-image-box">
             <img class="ll-card-img-main" src={mosaico[5].image} alt={mosaico[5].name} loading="lazy" />
-            <img class="ll-card-img-hover" src={mosaico[5].hover || mosaico[5].image} alt={mosaico[5].name} loading="lazy" />
+            {mosaico[5].hover && mosaico[5].hover !== mosaico[5].image && (
+              <img class="ll-card-img-hover" src={mosaico[5].hover} alt={mosaico[5].name} loading="lazy" />
+            )}
           </a>
           <div class="ll-card-meta">
             <div class="ll-card-title-row">
