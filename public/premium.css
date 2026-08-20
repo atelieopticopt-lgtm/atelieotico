@@ -1981,3 +1981,260 @@ body.drawer-open #whatsapp-btn {
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s !important;
 }
 
+/* ==========================================================================
+   EDITORIAL & CONTACT PAGES STYLING SYSTEM (VOGUE / MELIN LUXURY)
+   ========================================================================== */
+.contact-page-wrapper,
+.editorial-page-wrapper {
+  background: #faf9f5;
+  min-height: 80vh;
+  padding: clamp(32px, 4vw, 56px) 0 clamp(60px, 8vw, 100px);
+}
+
+.editorial-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.editorial-page-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(36px, 5vw, 56px);
+}
+
+.editorial-page-title {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  color: #111111;
+  margin: 12px 0 16px;
+}
+
+.editorial-page-subtitle {
+  font-size: clamp(15px, 1.5vw, 17px);
+  color: #555555;
+  line-height: 1.6;
+}
+
+.editorial-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 4vw, 56px);
+  align-items: start;
+}
+
+.editorial-contact-info {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-info-block h2 {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.contact-address {
+  font-size: 14.5px;
+  color: #333333;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+.contact-map-link {
+  display: inline-block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+  transition: opacity 0.15s ease;
+}
+
+.contact-map-link:hover {
+  opacity: 0.7;
+}
+
+.contact-direct-link {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: color 0.15s ease;
+}
+
+.contact-direct-link:hover {
+  text-decoration: underline;
+}
+
+.ll-hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #faf9f6;
+  padding: 16px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ll-hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  color: #444444;
+}
+
+.ll-hours-row strong {
+  font-weight: 700;
+  color: #111111;
+}
+
+.contact-boutique-img-wrap {
+  margin-top: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 160px;
+}
+
+.contact-boutique-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.editorial-contact-form-wrap {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: clamp(28px, 4vw, 44px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.form-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111111;
+  margin-bottom: 6px;
+}
+
+.form-card-sub {
+  font-size: 13.5px;
+  color: #666666;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.editorial-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.editorial-form label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.editorial-form input,
+.editorial-form textarea,
+.editorial-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  background: #fdfdfc;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  box-sizing: border-box;
+}
+
+.editorial-form input:focus,
+.editorial-form textarea:focus,
+.editorial-form select:focus {
+  border-color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.editorial-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.editorial-form .ll-melin-btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 8px;
+}
+
+.form-status-msg {
+  padding: 12px 16px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+  font-size: 13.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-top: 16px;
+}
+
+/* Story Page & Legal Editorial Content Box */
+.editorial-page-content {
+  max-width: 840px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: clamp(32px, 5vw, 56px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.editorial-section {
+  margin-bottom: 36px;
+}
+
+.editorial-section:last-child {
+  margin-bottom: 0;
+}
+
+.editorial-section h2 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin-bottom: 14px;
+}
+
+.editorial-section p {
+  font-size: 15.5px;
+  color: #444444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 860px) {
+  .editorial-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
