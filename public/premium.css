@@ -650,38 +650,61 @@ body {
 }
 
 .ll-card-img-main,
-.ll-card-img-hover,
-.store-card__main,
-.store-card__hover {
+.store-card__main {
   width: 100%;
   height: 100%;
   object-fit: contain !important;
   mix-blend-mode: multiply !important;
   background: transparent !important;
   filter: contrast(106%) brightness(102%) !important;
-  transition: opacity 0.32s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 1 !important;
+  transform: scale(1);
+  transform-origin: center center !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease !important;
+  position: relative;
+  z-index: 1;
 }
 
 .ll-card-img-hover,
 .store-card__hover {
-  position: absolute;
-  inset: 0;
-  padding: 24px;
-  opacity: 0;
+  position: absolute !important;
+  inset: 0 !important;
+  padding: 24px !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+  background: transparent !important;
+  filter: contrast(106%) brightness(102%) !important;
+  opacity: 0 !important;
+  transform: scale(1);
+  transform-origin: center center !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease !important;
+  z-index: 2;
+  pointer-events: none;
 }
 
-/* Smooth zoom on hover for all cards */
+/* Card Hover: Scale effect only (NO moving animation) */
 .ll-product-card:hover .ll-card-img-main,
 .store-card:hover .ll-card-img-main,
 .store-card:hover .store-card__main {
-  transform: scale(1.05);
+  transform: scale(1.06) !important;
+}
+
+/* Zero Overlap: If card has a hover image, MAIN FADES OUT completely */
+.ll-product-card:hover .ll-card-img-main:has(~ .ll-card-img-hover),
+.store-card:hover .ll-card-img-main:has(~ .ll-card-img-hover),
+.store-card:hover .store-card__main:has(~ .store-card__hover),
+.ll-card-image-box:hover .ll-card-img-main:has(~ .ll-card-img-hover) {
+  opacity: 0 !important;
 }
 
 .ll-product-card:hover .ll-card-img-hover,
 .store-card:hover .ll-card-img-hover,
-.store-card:hover .store-card__hover {
-  opacity: 1;
-  transform: scale(1.05);
+.store-card:hover .store-card__hover,
+.ll-card-image-box:hover .ll-card-img-hover {
+  opacity: 1 !important;
+  transform: scale(1.06) !important;
 }
 
 .ll-card-meta {

@@ -6,6 +6,7 @@ const { product } = Astro.props as { product: Product };
 const cleanCategory = product.category;
 const cleanShape = product.shape;
 const brandName = product.brand || 'Ateliê Ótico';
+const hasHover = Boolean(product.hover && product.hover !== product.image);
 ---
 <article
   class="store-card ll-product-card"
@@ -34,12 +35,14 @@ const brandName = product.brand || 'Ateliê Ótico';
       alt={`${product.name}, vista principal`}
       loading="lazy"
     />
-    <img
-      class="ll-card-img-hover"
-      src={product.hover || product.image}
-      alt={`${product.name}, vista alternativa`}
-      loading="lazy"
-    />
+    {hasHover && (
+      <img
+        class="ll-card-img-hover"
+        src={product.hover}
+        alt={`${product.name}, vista alternativa`}
+        loading="lazy"
+      />
+    )}
   </a>
 
   <div class="ll-card-meta">

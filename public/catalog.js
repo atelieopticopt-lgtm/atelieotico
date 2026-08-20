@@ -32,7 +32,6 @@
   // Load URL params on initial load
   const urlParams = new URLSearchParams(window.location.search);
 
-  // Set initial filters from URL if available
   const urlBrand = urlParams.get('marca') || urlParams.get('brand');
   const urlCategory = urlParams.get('categoria') || urlParams.get('category');
   const urlShape = urlParams.get('forma') || urlParams.get('shape');
@@ -252,5 +251,4 @@
 
   // Initial Run
   applyFilters();
-  if (window.initCardHoverZoom) window.initCardHoverZoom();
 })();
