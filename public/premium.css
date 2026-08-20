@@ -1765,7 +1765,7 @@ body {
 }
 
 /* ==========================================================================
-   SUPREME LUXURY BUTTON INTERACTION & ANIMATION SYSTEM (FOR ALL BUTTONS)
+   SIGNATURE BRAND BUTTON SYSTEM (BLACK TO WHITE HOVER INVERSION & CRISP BORDERS)
    ========================================================================== */
 .rect.black,
 .add-cart,
@@ -1779,17 +1779,31 @@ body {
 .mega-melin-btn,
 .add-to-cart-btn,
 .product-add-to-cart-btn,
-.details details summary {
-  position: relative !important;
-  overflow: hidden !important;
+.ll-melin-btn,
+.auth-submit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #000000 !important;
+  border-radius: 0 !important;
+  font-family: inherit !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  text-decoration: none !important;
   cursor: pointer !important;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
-              background-color 0.25s ease, 
+  box-sizing: border-box !important;
+  transition: background-color 0.25s ease, 
+              color 0.25s ease, 
+              border-color 0.25s ease, 
               box-shadow 0.25s ease,
-              letter-spacing 0.25s ease !important;
+              transform 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Hover lift & luminous shadow */
+/* Hover inversion: Black background -> Pure White, White text -> Black, Solid 1.5px black border */
 .rect.black:hover,
 .add-cart:hover,
 .btn-primary:hover,
@@ -1801,13 +1815,17 @@ body {
 .btn-success-admin:hover,
 .mega-melin-btn:hover,
 .add-to-cart-btn:hover,
-.product-add-to-cart-btn:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25) !important;
-  letter-spacing: 0.12em !important;
+.product-add-to-cart-btn:hover,
+.ll-melin-btn:hover,
+.auth-submit-btn:hover {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-1px) !important;
 }
 
-/* Active click bounce */
+/* Active click feedback */
 .rect.black:active,
 .add-cart:active,
 .btn-primary:active,
@@ -1819,37 +1837,11 @@ body {
 .btn-success-admin:active,
 .mega-melin-btn:active,
 .add-to-cart-btn:active,
-.product-add-to-cart-btn:active {
-  transform: translateY(0px) scale(0.97) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Shimmer shine sweep animation on hover */
-.rect.black::after,
-.add-cart::after,
-.btn-primary::after,
-.btn-add-cart::after,
-.btn-add-to-cart::after,
-.product-add-to-cart-btn::after {
-  content: '' !important;
-  position: absolute !important;
-  top: 0 !important;
-  left: -120% !important;
-  width: 80% !important;
-  height: 100% !important;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent) !important;
-  transform: skewX(-25deg) !important;
-  transition: left 0.75s ease !important;
-  pointer-events: none !important;
-}
-
-.rect.black:hover::after,
-.add-cart:hover::after,
-.btn-primary:hover::after,
-.btn-add-cart:hover::after,
-.btn-add-to-cart:hover::after,
-.product-add-to-cart-btn:hover::after {
-  left: 140% !important;
+.product-add-to-cart-btn:active,
+.ll-melin-btn:active,
+.auth-submit-btn:active {
+  transform: translateY(0px) scale(0.98) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
 }
 
 /* ==========================================================================
