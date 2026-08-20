@@ -117,7 +117,7 @@ export const products: Product[] = [
     "price": 254,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895783552.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895783552.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26105T 716 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26105T 716 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -132,7 +132,7 @@ export const products: Product[] = [
     "price": 155,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163483.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163483.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24513 200 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24513 200 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -147,7 +147,7 @@ export const products: Product[] = [
     "price": 206,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169775.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169775.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24533S 001 . 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24533S 001 . 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -162,7 +162,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901188103.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901188103.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK20527 N 270 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK20527 N 270 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -177,7 +177,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176810.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176810.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23527N 005 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23527N 005 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -192,7 +192,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176827.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176827.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23527N 030 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23527N 030 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -207,7 +207,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901181043.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901181043.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23527N 300 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23527N 300 50-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -222,7 +222,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168020.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168020.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24545 616 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24545 616 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -237,7 +237,7 @@ export const products: Product[] = [
     "price": 181,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177053.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177053.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25111S 025 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25111S 025 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -252,7 +252,7 @@ export const products: Product[] = [
     "price": 181,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177077.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177077.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25111S 601 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25111S 601 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -267,7 +267,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901162714.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901162714.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24507S 338 . 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24507S 338 . 57-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -282,7 +282,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182606.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182606.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 N 235 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 N 235 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -297,7 +297,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169218.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169218.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 781 51 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 781 51 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -312,7 +312,7 @@ export const products: Product[] = [
     "price": 181,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168297.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168297.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24538S N 001 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24538S N 001 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -327,7 +327,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174144.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174144.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25518 N 235 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25518 N 235 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -342,7 +342,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901183504.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901183504.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25518 N 209 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25518 N 209 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -357,7 +357,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177572.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177572.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25542 001 52 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25542 001 52 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -372,7 +372,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177589.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901177589.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25542 235 52 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25542 235 52 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -387,7 +387,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190052.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190052.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26512 605 52 18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26512 605 52 18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -402,7 +402,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901189995.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901189995.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26513 240 52-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26513 240 52-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -417,7 +417,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190014.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190014.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26513 618 52-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26513 618 52-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -432,7 +432,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190335.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901190335.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26516 605 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26516 605 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -447,7 +447,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901193176.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901193176.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK26519 001 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK26519 001 51-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -462,7 +462,7 @@ export const products: Product[] = [
     "price": 189,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172225.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172225.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25100S 045 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25100S 045 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -477,7 +477,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182583.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182583.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 N 045 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 N 045 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -492,7 +492,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182590.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182590.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 N 213 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 N 213 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -507,7 +507,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182576.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182576.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 N 025 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 N 025 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -522,7 +522,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179477.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179477.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25538S 001 50-22 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25538S 001 50-22 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -537,7 +537,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169218.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169218.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 781 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 781 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -552,7 +552,7 @@ export const products: Product[] = [
     "price": 264,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176322.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901176322.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24550MAG 242 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24550MAG 242 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -567,7 +567,7 @@ export const products: Product[] = [
     "price": 178,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171952.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171952.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25105 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25105 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -582,7 +582,7 @@ export const products: Product[] = [
     "price": 178,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172010.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172010.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25106 400 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25106 400 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -597,7 +597,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895682893.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895682893.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25107 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25107 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -612,7 +612,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172256.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172256.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25503S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25503S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -627,7 +627,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172270.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172270.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25503S 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25503S 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -642,7 +642,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172287.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172287.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25503S 435 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25503S 435 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -657,7 +657,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174007.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174007.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25512 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25512 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -672,7 +672,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174038.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174038.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25516 260 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25516 260 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -687,7 +687,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174229.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174229.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK5864N 970 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK5864N 970 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -702,7 +702,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174045.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174045.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25516 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25516 605 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -717,7 +717,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901167948.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901167948.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24547 438 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24547 438 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -732,7 +732,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169140.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169140.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 025 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 025 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -747,7 +747,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169171.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169171.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -762,7 +762,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139051.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139051.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK21524 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK21524 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -777,7 +777,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901158977.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901158977.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23129 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23129 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -792,7 +792,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159004.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159004.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23129 430 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23129 430 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -807,7 +807,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901153842.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901153842.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23516 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23516 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -822,7 +822,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163629.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163629.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24103 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24103 235 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -837,7 +837,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901163636.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901163636.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24103 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24103 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -852,7 +852,7 @@ export const products: Product[] = [
     "price": 204,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165913.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165913.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24512S 109 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24512S 109 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -867,7 +867,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168464.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168464.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24543 240 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24543 240 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -882,7 +882,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901175189.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901175189.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24543 278 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24543 278 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -897,7 +897,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901168488.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883901168488.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24543 515 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24543 515 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -912,7 +912,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171839.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171839.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25103 771 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25103 771 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -927,7 +927,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169119.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169119.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -942,7 +942,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901116847.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901116847.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 410 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 410 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -957,7 +957,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159257.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901159257.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23549 342 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23549 342 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -972,7 +972,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163131.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163131.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24506S 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24506S 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -987,7 +987,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163032.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163032.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24522 539 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24522 539 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1002,7 +1002,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901152210.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901152210.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23515 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23515 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1017,7 +1017,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142365.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142365.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK22508 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK22508 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1032,7 +1032,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142396.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901142396.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK22508 431 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK22508 431 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1047,7 +1047,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901151466.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901151466.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK23500S 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK23500S 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1062,7 +1062,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901131512.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901131512.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK20527 405 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK20527 405 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1077,7 +1077,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901148152.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901148152.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK22533S 220 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK22533S 220 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1092,7 +1092,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122657.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122657.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19569 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19569 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1107,7 +1107,7 @@ export const products: Product[] = [
     "price": 264,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168723.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168723.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24551MAG 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24551MAG 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1122,7 +1122,7 @@ export const products: Product[] = [
     "price": 264,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168747.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901168747.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24551MAG 206 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24551MAG 206 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1137,7 +1137,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171891.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171891.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25104 718 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25104 718 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1152,7 +1152,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169195.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169195.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 717 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 717 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1167,7 +1167,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169201.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901169201.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 780 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 780 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1182,7 +1182,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122664.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901122664.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19569 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19569 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1197,7 +1197,7 @@ export const products: Product[] = [
     "price": 181,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172621.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172621.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25101S 240 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25101S 240 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1212,7 +1212,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182613.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901182613.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK19119 N 717 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK19119 N 717 49-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1227,7 +1227,7 @@ export const products: Product[] = [
     "price": 178,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171945.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171945.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25105 035 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25105 035 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1242,7 +1242,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163469.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163469.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24513 005 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24513 005 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1257,7 +1257,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163476.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901163476.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK24513 031 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK24513 031 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1272,7 +1272,7 @@ export const products: Product[] = [
     "price": 178,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171938.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901171938.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK25105 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK25105 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1287,7 +1287,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139082.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901139082.jpg",
-    "description": "ÓÓculos de autor Calvin Klein CK21524 438 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein CK21524 438 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1302,7 +1302,7 @@ export const products: Product[] = [
     "price": 158,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172812.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172812.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25200S 002 57-15/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25200S 002 57-15/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1317,7 +1317,7 @@ export const products: Product[] = [
     "price": 158,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901128017.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901128017.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ20705S 001 49-22/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ20705S 001 49-22/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1332,7 +1332,7 @@ export const products: Product[] = [
     "price": 158,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901185485.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901185485.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ20705S 702 49-22/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ20705S 702 49-22/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1347,7 +1347,7 @@ export const products: Product[] = [
     "price": 132,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179422.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179422.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25628 605 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25628 605 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1362,7 +1362,7 @@ export const products: Product[] = [
     "price": 132,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179415.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901179415.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25628 272 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25628 272 53-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1377,7 +1377,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172799.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901172799.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25202S 014 56-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25202S 014 56-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1392,7 +1392,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124095.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124095.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ20101 272 50 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ20101 272 50 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1407,7 +1407,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124712.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124712.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ20101 645 50 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ20101 645 50 19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1422,7 +1422,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901188936.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901188936.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ26205 309 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ26205 309 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1437,7 +1437,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901180664.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901180664.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25210 002 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25210 002 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1452,7 +1452,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901180688.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901180688.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25210 027 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25210 027 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1467,7 +1467,7 @@ export const products: Product[] = [
     "price": 116,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901186505.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901186505.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ23202S 770 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ23202S 770 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1482,7 +1482,7 @@ export const products: Product[] = [
     "price": 155,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174434.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901174434.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ25603S 002 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ25603S 002 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1497,7 +1497,7 @@ export const products: Product[] = [
     "price": 96,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165197.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165197.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ24304 500 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ24304 500 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1512,7 +1512,7 @@ export const products: Product[] = [
     "price": 96,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165326.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901165326.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ24305 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ24305 300 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1527,7 +1527,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901149050.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901149050.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ22646 432 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ22646 432 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1542,7 +1542,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901148909.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901148909.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ22644 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ22644 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1557,7 +1557,7 @@ export const products: Product[] = [
     "price": 146,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901170061.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901170061.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ24636MAG-SET 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ24636MAG-SET 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1572,7 +1572,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124101.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901124101.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ20101 431 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ20101 431 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1587,7 +1587,7 @@ export const products: Product[] = [
     "price": 116,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901152296.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883901152296.jpg",
-    "description": "ÓÓculos de autor Calvin Klein Jeans CKJ23202S 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Calvin Klein Jeans CKJ23202S 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Calvin Klein"
   },
   {
@@ -1602,7 +1602,7 @@ export const products: Product[] = [
     "price": 375,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895676281.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895676281.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2066S 232 52-21/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2066S 232 52-21/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1617,7 +1617,7 @@ export const products: Product[] = [
     "price": 204,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895632676.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895632676.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2983 320 53-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2983 320 53-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1632,7 +1632,7 @@ export const products: Product[] = [
     "price": 264,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678544.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678544.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3023 613 51-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3023 613 51-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1647,7 +1647,7 @@ export const products: Product[] = [
     "price": 264,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678537.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678537.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3023 454 51-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3023 454 51-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1662,7 +1662,7 @@ export const products: Product[] = [
     "price": 272,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895680455.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895680455.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2058SE 320 54-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2058SE 320 54-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1677,7 +1677,7 @@ export const products: Product[] = [
     "price": 272,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895680479.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895680479.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2058SE 612 54-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2058SE 612 54-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1692,7 +1692,7 @@ export const products: Product[] = [
     "price": 325,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895610261.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895610261.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF1102S 261 58-16/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF1102S 261 58-16/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1707,7 +1707,7 @@ export const products: Product[] = [
     "price": 325,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895705745.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895705745.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF1102S 619 58-16/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF1102S 619 58-16/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1722,7 +1722,7 @@ export const products: Product[] = [
     "price": 346,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895708487.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895708487.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3045 219 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3045 219 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1737,7 +1737,7 @@ export const products: Product[] = [
     "price": 396,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895727631.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895727631.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2109S 655 58 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2109S 655 58 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1752,7 +1752,7 @@ export const products: Product[] = [
     "price": 396,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895727662.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895727662.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2110S 320 57 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2110S 320 57 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1767,7 +1767,7 @@ export const products: Product[] = [
     "price": 308,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895707947.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895707947.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3046 245 54 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3046 245 54 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1782,7 +1782,7 @@ export const products: Product[] = [
     "price": 370,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728041.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728041.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2605 002 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2605 002 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1797,7 +1797,7 @@ export const products: Product[] = [
     "price": 370,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728058.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728058.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2605 071 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2605 071 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1812,7 +1812,7 @@ export const products: Product[] = [
     "price": 328,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728478.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895728478.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3059 025 56 14 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3059 025 56 14 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1827,7 +1827,7 @@ export const products: Product[] = [
     "price": 237,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895735001.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895735001.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3062 612 54 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3062 612 54 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1842,7 +1842,7 @@ export const products: Product[] = [
     "price": 396,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895792660.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895792660.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2111S 001 56 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2111S 001 56 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1857,7 +1857,7 @@ export const products: Product[] = [
     "price": 328,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895660761.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895660761.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3013 317 53 15 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3013 317 53 15 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1872,7 +1872,7 @@ export const products: Product[] = [
     "price": 360,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678193.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678193.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2596 021 51 21 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2596 021 51 21 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1887,7 +1887,7 @@ export const products: Product[] = [
     "price": 308,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895707961.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895707961.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3046 618 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3046 618 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1902,7 +1902,7 @@ export const products: Product[] = [
     "price": 343,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895657198.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895657198.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2036S 001 56 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2036S 001 56 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1917,7 +1917,7 @@ export const products: Product[] = [
     "price": 346,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895708494.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895708494.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3045 232 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3045 232 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1932,7 +1932,7 @@ export const products: Product[] = [
     "price": 347,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688635.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688635.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2237 710 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2237 710 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1947,7 +1947,7 @@ export const products: Product[] = [
     "price": 328,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895653138.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895653138.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF3006 020 56-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF3006 020 56-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1962,7 +1962,7 @@ export const products: Product[] = [
     "price": 360,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678186.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895678186.jpg",
-    "description": "ÓÓculos de autor Ferragamo SF2596 018 51 21 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ferragamo SF2596 018 51 21 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Salvatore Ferragamo"
   },
   {
@@ -1977,7 +1977,7 @@ export const products: Product[] = [
     "price": 182,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114110.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114110.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL365S 714 54-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL365S 714 54-18/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -1992,7 +1992,7 @@ export const products: Product[] = [
     "price": 152,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110464.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110464.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6187S 001 58-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6187S 001 58-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2007,7 +2007,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114141.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114141.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6222S 450 57-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6222S 450 57-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2022,7 +2022,7 @@ export const products: Product[] = [
     "price": 139,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115032.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115032.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6233 001 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6233 001 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2037,7 +2037,7 @@ export const products: Product[] = [
     "price": 139,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115063.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115063.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6233 601 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6233 601 53-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2052,7 +2052,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114264.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114264.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL368 605 001 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL368 605 001 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2067,7 +2067,7 @@ export const products: Product[] = [
     "price": 165,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114684.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114684.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6234 501 56 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6234 501 56 16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2082,7 +2082,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114264.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114264.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL368 605 605 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL368 605 605 56-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2097,7 +2097,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114301.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114301.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL369 773 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL369 773 51 21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2112,7 +2112,7 @@ export const products: Product[] = [
     "price": 168,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114356.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114356.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6220S 001 54 17 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6220S 001 54 17 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2127,7 +2127,7 @@ export const products: Product[] = [
     "price": 141,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114998.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114998.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6232 001 55 14 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6232 001 55 14 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2142,7 +2142,7 @@ export const products: Product[] = [
     "price": 141,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115025.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900115025.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6232 600 55 14 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6232 600 55 14 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2157,7 +2157,7 @@ export const products: Product[] = [
     "price": 165,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114707.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114707.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6235 020 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6235 020 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2172,7 +2172,7 @@ export const products: Product[] = [
     "price": 165,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114738.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114738.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6235 601 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6235 601 50 20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2187,7 +2187,7 @@ export const products: Product[] = [
     "price": 152,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114462.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114462.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6226S 422 58-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6226S 422 58-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2202,7 +2202,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114905.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900114905.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6229 013 56-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6229 013 56-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2217,7 +2217,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110204.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110204.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL356 264 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL356 264 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2232,7 +2232,7 @@ export const products: Product[] = [
     "price": 161,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110518.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110518.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6191 016 52 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6191 016 52 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2247,7 +2247,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900109291.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900109291.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL354 601 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL354 601 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2262,7 +2262,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900109284.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900109284.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL354 242 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL354 242 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2277,7 +2277,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110228.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110228.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL356 638 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL356 638 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2292,7 +2292,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110600.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900110600.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6193 600 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6193 600 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2307,7 +2307,7 @@ export const products: Product[] = [
     "price": 151,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900111270.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900111270.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL6194 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL6194 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2322,7 +2322,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900101110.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900101110.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL316 710 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL316 710 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2337,7 +2337,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900101127.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900101127.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL316 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL316 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2352,7 +2352,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900105521.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/883900105521.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL343 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL343 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2367,7 +2367,7 @@ export const products: Product[] = [
     "price": 158,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883900106085.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/883900106085.jpg",
-    "description": "ÓÓculos de autor Karl Lagerfeld KL345 600 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Karl Lagerfeld KL345 600 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Karl Lagerfeld"
   },
   {
@@ -2382,7 +2382,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895791069.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895791069.jpg",
-    "description": "ÓÓculos de autor Lacoste L3664 035 48-11 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3664 035 48-11 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2397,7 +2397,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895791090.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895791090.jpg",
-    "description": "ÓÓculos de autor Lacoste L3664 615 48-11 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3664 615 48-11 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2412,7 +2412,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788113.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788113.jpg",
-    "description": "ÓÓculos de autor Lacoste L3669 001 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3669 001 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2427,7 +2427,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788120.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788120.jpg",
-    "description": "ÓÓculos de autor Lacoste L3669 410 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3669 410 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2442,7 +2442,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788137.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788137.jpg",
-    "description": "ÓÓculos de autor Lacoste L3669 615 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3669 615 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2457,7 +2457,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895787567.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895787567.jpg",
-    "description": "ÓÓculos de autor Lacoste L3666 615 47-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3666 615 47-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2472,7 +2472,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788038.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788038.jpg",
-    "description": "ÓÓculos de autor Lacoste L3667 035 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3667 035 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2487,7 +2487,7 @@ export const products: Product[] = [
     "price": 125,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788045.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895788045.jpg",
-    "description": "ÓÓculos de autor Lacoste L3667 400 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3667 400 46-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2502,7 +2502,7 @@ export const products: Product[] = [
     "price": 206,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895699709.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895699709.jpg",
-    "description": "ÓÓculos de autor Lacoste L2311 750 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2311 750 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2517,7 +2517,7 @@ export const products: Product[] = [
     "price": 198,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776981.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776981.jpg",
-    "description": "ÓÓculos de autor Lacoste L6090S 232 51-22 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6090S 232 51-22 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2532,7 +2532,7 @@ export const products: Product[] = [
     "price": 140,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895755849.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895755849.jpg",
-    "description": "ÓÓculos de autor Lacoste L2876 275 55 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2876 275 55 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2547,7 +2547,7 @@ export const products: Product[] = [
     "price": 174,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693585.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693585.jpg",
-    "description": "ÓÓculos de autor Lacoste L6063S 038 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6063S 038 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2562,7 +2562,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895636353.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895636353.jpg",
-    "description": "ÓÓculos de autor Lacoste L2946 219 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2946 219 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2577,7 +2577,7 @@ export const products: Product[] = [
     "price": 187,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895690744.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895690744.jpg",
-    "description": "ÓÓculos de autor Lacoste L2308 033 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2308 033 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2592,7 +2592,7 @@ export const products: Product[] = [
     "price": 187,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895690751.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895690751.jpg",
-    "description": "ÓÓculos de autor Lacoste L2308 035 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2308 035 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2607,7 +2607,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701624.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701624.jpg",
-    "description": "ÓÓculos de autor Lacoste L3114 424 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3114 424 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2622,7 +2622,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701631.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701631.jpg",
-    "description": "ÓÓculos de autor Lacoste L3114 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3114 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2637,7 +2637,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701723.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701723.jpg",
-    "description": "ÓÓculos de autor Lacoste L3661 317 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3661 317 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2652,7 +2652,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701730.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895701730.jpg",
-    "description": "ÓÓculos de autor Lacoste L3661 424 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3661 424 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2667,7 +2667,7 @@ export const products: Product[] = [
     "price": 152,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693325.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693325.jpg",
-    "description": "ÓÓculos de autor Lacoste L6053S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6053S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2682,7 +2682,7 @@ export const products: Product[] = [
     "price": 174,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693578.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693578.jpg",
-    "description": "ÓÓculos de autor Lacoste L6063S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6063S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2697,7 +2697,7 @@ export const products: Product[] = [
     "price": 187,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895690768.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895690768.jpg",
-    "description": "ÓÓculos de autor Lacoste L2308 410 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2308 410 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2712,7 +2712,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895691208.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895691208.jpg",
-    "description": "ÓÓculos de autor Lacoste L2978 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2978 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2727,7 +2727,7 @@ export const products: Product[] = [
     "price": 140,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895691307.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895691307.jpg",
-    "description": "ÓÓculos de autor Lacoste L2980 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2980 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2742,7 +2742,7 @@ export const products: Product[] = [
     "price": 152,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664899.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664899.jpg",
-    "description": "ÓÓculos de autor Lacoste L6048s 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6048s 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2757,7 +2757,7 @@ export const products: Product[] = [
     "price": 131,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693660.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693660.jpg",
-    "description": "ÓÓculos de autor Lacoste L6052S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6052S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2772,7 +2772,7 @@ export const products: Product[] = [
     "price": 174,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895603621.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895603621.jpg",
-    "description": "ÓÓculos de autor Lacoste L6007S 218 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6007S 218 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2787,7 +2787,7 @@ export const products: Product[] = [
     "price": 170,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639934.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639934.jpg",
-    "description": "ÓÓculos de autor Lacoste L6030S 301 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6030S 301 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2802,7 +2802,7 @@ export const products: Product[] = [
     "price": 142,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639774.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639774.jpg",
-    "description": "ÓÓculos de autor Lacoste L6023S 204 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6023S 204 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2817,7 +2817,7 @@ export const products: Product[] = [
     "price": 206,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895699693.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895699693.jpg",
-    "description": "ÓÓculos de autor Lacoste L2311 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2311 714 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2832,7 +2832,7 @@ export const products: Product[] = [
     "price": 140,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895648387.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895648387.jpg",
-    "description": "ÓÓculos de autor Lacoste L2876 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2876 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2847,7 +2847,7 @@ export const products: Product[] = [
     "price": 142,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639798.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895639798.jpg",
-    "description": "ÓÓculos de autor Lacoste L6023S 264 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L6023S 264 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2862,7 +2862,7 @@ export const products: Product[] = [
     "price": 206,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895636285.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895636285.jpg",
-    "description": "ÓÓculos de autor Lacoste L2297 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2297 275 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2877,7 +2877,7 @@ export const products: Product[] = [
     "price": 181,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895633345.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895633345.jpg",
-    "description": "ÓÓculos de autor Lacoste L2298 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2298 002 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2892,7 +2892,7 @@ export const products: Product[] = [
     "price": 129,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895646543.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895646543.jpg",
-    "description": "ÓÓculos de autor Lacoste L3804B MID BLUE NIGHT . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3804B MID BLUE NIGHT . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2907,7 +2907,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895523028.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895523028.jpg",
-    "description": "ÓÓculos de autor Lacoste L2279 401 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2279 401 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2922,7 +2922,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895588805.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895588805.jpg",
-    "description": "ÓÓculos de autor Lacoste L2925 BLUE 400 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2925 BLUE 400 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2937,7 +2937,7 @@ export const products: Product[] = [
     "price": 191,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895663021.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895663021.jpg",
-    "description": "ÓÓculos de autor Lacoste L266S 301 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L266S 301 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2952,7 +2952,7 @@ export const products: Product[] = [
     "price": 158,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895648646.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895648646.jpg",
-    "description": "ÓÓculos de autor Lacoste L916S 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L916S 210 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2967,7 +2967,7 @@ export const products: Product[] = [
     "price": 129,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895407465.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895407465.jpg",
-    "description": "ÓÓculos de autor Lacoste L3632 N 615 47-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L3632 N 615 47-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2982,7 +2982,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698177.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698177.jpg",
-    "description": "ÓÓculos de autor Lacoste L2986 230 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Lacoste L2986 230 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Lacoste"
   },
   {
@@ -2997,7 +2997,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895596152.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895596152.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2168 722 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2168 722 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3012,7 +3012,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895596169.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895596169.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2168 731 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2168 731 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3027,7 +3027,7 @@ export const products: Product[] = [
     "price": 143,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664455.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664455.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2175 722 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2175 722 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3042,7 +3042,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895689465.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895689465.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2177 712 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2177 712 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3057,7 +3057,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895689472.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895689472.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2177 714 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2177 714 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3072,7 +3072,7 @@ export const products: Product[] = [
     "price": 141,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255308769.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255308769.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ801S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ801S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3087,7 +3087,7 @@ export const products: Product[] = [
     "price": 136,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255785843.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255785843.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ810S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ810S 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3102,7 +3102,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255308653.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8056255308653.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ159S 716 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ159S 716 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3117,7 +3117,7 @@ export const products: Product[] = [
     "price": 146,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8055130515216.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/8055130515216.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ771S 033 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ771S 033 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3132,7 +3132,7 @@ export const products: Product[] = [
     "price": 161,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895616768.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895616768.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2785 200 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2785 200 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3147,7 +3147,7 @@ export const products: Product[] = [
     "price": 138,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895641869.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895641869.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2803 610 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2803 610 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3162,7 +3162,7 @@ export const products: Product[] = [
     "price": 150,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895519267.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895519267.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2159 718 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2159 718 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3177,7 +3177,7 @@ export const products: Product[] = [
     "price": 156,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895641449.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895641449.jpg",
-    "description": "ÓÓculos de autor Liu Jo LJ2172 722 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Liu Jo LJ2172 722 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Liu Jo"
   },
   {
@@ -3192,7 +3192,7 @@ export const products: Product[] = [
     "price": 215,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698276.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698276.jpg",
-    "description": "ÓÓculos de autor Longchamp LO778S 272 54-19/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO778S 272 54-19/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3207,7 +3207,7 @@ export const products: Product[] = [
     "price": 215,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698283.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895698283.jpg",
-    "description": "ÓÓculos de autor Longchamp LO778S 300 54-19/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO778S 300 54-19/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3222,7 +3222,7 @@ export const products: Product[] = [
     "price": 176,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776110.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776110.jpg",
-    "description": "ÓÓculos de autor Longchamp LO808S 900 57-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO808S 900 57-17/140 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3237,7 +3237,7 @@ export const products: Product[] = [
     "price": 191,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775687.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775687.jpg",
-    "description": "ÓÓculos de autor Longchamp LO801S 601 56-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO801S 601 56-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3252,7 +3252,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895668323.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895668323.jpg",
-    "description": "ÓÓculos de autor Longchamp LO750S N 434 49-23 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO750S N 434 49-23 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3267,7 +3267,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895721899.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895721899.jpg",
-    "description": "ÓÓculos de autor LongChamp LO791S 614 51-21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor LongChamp LO791S 614 51-21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3282,7 +3282,7 @@ export const products: Product[] = [
     "price": 214,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895715782.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895715782.jpg",
-    "description": "ÓÓculos de autor Longchamp LO187S 725 58-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO187S 725 58-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3297,7 +3297,7 @@ export const products: Product[] = [
     "price": 154,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895741521.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895741521.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2608 N 690 49-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2608 N 690 49-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3312,7 +3312,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667135.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667135.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2169 N 040 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2169 N 040 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3327,7 +3327,7 @@ export const products: Product[] = [
     "price": 212,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667142.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667142.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2169 714 . 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2169 714 . 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3342,7 +3342,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716048.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716048.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2180 040 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2180 040 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3357,7 +3357,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716055.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716055.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2180 714 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2180 714 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3372,7 +3372,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716062.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716062.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2180 770 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2180 770 52-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3387,7 +3387,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895717786.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895717786.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2183 254 53-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2183 254 53-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3402,7 +3402,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895717816.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895717816.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2183 641 53-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2183 641 53-20 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3417,7 +3417,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775458.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775458.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2184 230 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2184 230 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3432,7 +3432,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775472.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775472.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2184 714 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2184 714 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3447,7 +3447,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895542074.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895542074.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2691 N 690 54-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2691 N 690 54-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3462,7 +3462,7 @@ export const products: Product[] = [
     "price": 200,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644846.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644846.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2739 607 49-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2739 607 49-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3477,7 +3477,7 @@ export const products: Product[] = [
     "price": 200,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644839.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644839.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2739 N 228 49-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2739 N 228 49-16 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3492,7 +3492,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692052.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692052.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2741 607 52-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2741 607 52-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3507,7 +3507,7 @@ export const products: Product[] = [
     "price": 177,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667746.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667746.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2756 N 427 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2756 N 427 52-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3522,7 +3522,7 @@ export const products: Product[] = [
     "price": 175,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775588.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775588.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2793 230 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2793 230 54-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3537,7 +3537,7 @@ export const products: Product[] = [
     "price": 172,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776097.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895776097.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2798 610 49-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2798 610 49-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3552,7 +3552,7 @@ export const products: Product[] = [
     "price": 154,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895779418.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895779418.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2801 601 54-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2801 601 54-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3567,7 +3567,7 @@ export const products: Product[] = [
     "price": 191,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775656.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895775656.jpg",
-    "description": "ÓÓculos de autor Longchamp LO801S 001 56-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO801S 001 56-19 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3582,7 +3582,7 @@ export const products: Product[] = [
     "price": 185,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716161.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895716161.jpg",
-    "description": "ÓÓculos de autor LongChamp LO795S 319 54-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor LongChamp LO795S 319 54-18 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3597,7 +3597,7 @@ export const products: Product[] = [
     "price": 186,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895692212.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895692212.jpg",
-    "description": "ÓÓculos de autor Longchamp LO779S 008 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO779S 008 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3612,7 +3612,7 @@ export const products: Product[] = [
     "price": 180,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692199.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692199.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2770 5317 300 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2770 5317 300 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3627,7 +3627,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667845.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667845.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2752 4917 408 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2752 4917 408 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3642,7 +3642,7 @@ export const products: Product[] = [
     "price": 195,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685290.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685290.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2761 5317 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2761 5317 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3657,7 +3657,7 @@ export const products: Product[] = [
     "price": 195,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685405.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685405.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2761 5317 316 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2761 5317 316 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3672,7 +3672,7 @@ export const products: Product[] = [
     "price": 154,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895754163.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895754163.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2768 5218 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2768 5218 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3687,7 +3687,7 @@ export const products: Product[] = [
     "price": 154,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693608.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895693608.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2768 5218 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2768 5218 601 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3702,7 +3702,7 @@ export const products: Product[] = [
     "price": 196,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685436.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685436.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2166 5119 708 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2166 5119 708 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3717,7 +3717,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667548.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667548.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2753 011 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2753 011 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3732,7 +3732,7 @@ export const products: Product[] = [
     "price": 177,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667753.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667753.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2756 605 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2756 605 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3747,7 +3747,7 @@ export const products: Product[] = [
     "price": 203,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895476584.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895476584.jpg",
-    "description": "ÓÓculos de autor Longchamp LO140SL 719 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO140SL 719 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3762,7 +3762,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692144.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692144.jpg",
-    "description": "ÓÓculos de autor Longchamp LO181S 708 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO181S 708 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3777,7 +3777,7 @@ export const products: Product[] = [
     "price": 212,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667159.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667159.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2169 730 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2169 730 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3792,7 +3792,7 @@ export const products: Product[] = [
     "price": 192,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895696746.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895696746.jpg",
-    "description": "ÓÓculos de autor Longchamp LO776S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO776S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3807,7 +3807,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692038.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692038.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2741 211 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2741 211 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3822,7 +3822,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895687805.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895687805.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2765 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2765 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3837,7 +3837,7 @@ export const products: Product[] = [
     "price": 201,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667838.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667838.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2752 213 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2752 213 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3852,7 +3852,7 @@ export const products: Product[] = [
     "price": 196,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667173.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667173.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2166 045 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2166 045 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3867,7 +3867,7 @@ export const products: Product[] = [
     "price": 212,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895551182.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895551182.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2150 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2150 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3882,7 +3882,7 @@ export const products: Product[] = [
     "price": 174,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895569132.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895569132.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2705 302 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2705 302 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3897,7 +3897,7 @@ export const products: Product[] = [
     "price": 195,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685429.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685429.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2761 609 . 53-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2761 609 . 53-17 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3912,7 +3912,7 @@ export const products: Product[] = [
     "price": 182,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895669009.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895669009.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2733 500 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2733 500 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3927,7 +3927,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895666756.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895666756.jpg",
-    "description": "ÓÓculos de autor Longchamp LO764S 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO764S 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3942,7 +3942,7 @@ export const products: Product[] = [
     "price": 183,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622608.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622608.jpg",
-    "description": "ÓÓculos de autor Longchamp LO171S 728 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO171S 728 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3957,7 +3957,7 @@ export const products: Product[] = [
     "price": 187,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692182.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895692182.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2770 N 211 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2770 N 211 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3972,7 +3972,7 @@ export const products: Product[] = [
     "price": 204,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895448406.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895448406.jpg",
-    "description": "ÓÓculos de autor Longchamp LO2128 512 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Longchamp LO2128 512 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Longchamp"
   },
   {
@@ -3987,7 +3987,7 @@ export const products: Product[] = [
     "price": 128,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895704878.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895704878.jpg",
-    "description": "ÓÓculos de autor Nike 1000C 034 48-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Nike 1000C 034 48-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Nike"
   },
   {
@@ -4002,7 +4002,7 @@ export const products: Product[] = [
     "price": 128,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895732055.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895732055.jpg",
-    "description": "ÓÓculos de autor Nike 1000C 416 48-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Nike 1000C 416 48-15 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Nike"
   },
   {
@@ -4010,14 +4010,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200178",
     "sku": "1201043200178",
     "name": "Persol PO3166S 123932 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Preto mate",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 123932.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 123932.jpg",
-    "description": "ÓÓculos de autor Persol PO3166S 123932 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3166S 123932 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4025,14 +4025,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200179",
     "sku": "1201043200179",
     "name": "Persol PO3166S 124051 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Castanho transl?cido",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 124051.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 124051.jpg",
-    "description": "ÓÓculos de autor Persol PO3166S 124051 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3166S 124051 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4040,14 +4040,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200176",
     "sku": "1201043200176",
     "name": "Persol PO3286S 96/56 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Tartaruga escura",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3286S 96-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3286S 96-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3286S 96/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3286S 96/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4055,14 +4055,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200166",
     "sku": "1201043200166",
     "name": "Persol PO3092SM 95/4E 50 . 50-19/145",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Preto brilhante",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092SM 95-4E.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092SM 95-4E.jpg",
-    "description": "ÓÓculos de autor Persol PO3092SM 95/4E 50 . 50-19/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3092SM 95/4E 50 . 50-19/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4070,14 +4070,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200167",
     "sku": "1201043200167",
     "name": "Persol PO3292S 204/S3 52 . 52-21/145",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Preto",
     "price": 330,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 204-S3.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 204-S3.jpg",
-    "description": "ÓÓculos de autor Persol PO3292S 204/S3 52 . 52-21/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3292S 204/S3 52 . 52-21/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4085,14 +4085,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200169",
     "sku": "1201043200169",
     "name": "Persol PO3381V 24 52-20/145",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Tartaruga castanha",
     "price": 275,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3381V 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3381V 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3381V 24 52-20/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3381V 24 52-20/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4100,14 +4100,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200170",
     "sku": "1201043200170",
     "name": "Persol PO3383S 123653 51-21/145",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Dourado",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3383S 123653.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3383S 123653.jpg",
-    "description": "ÓÓculos de autor Persol PO3383S 123653 51-21/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3383S 123653 51-21/145 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4115,14 +4115,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200067",
     "sku": "1201043200067",
     "name": "Persol PO3210S 95/31 51 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Prateado",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3210S 95-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3210S 95-31.jpg",
-    "description": "ÓÓculos de autor Persol PO3210S 95/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3210S 95/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4130,14 +4130,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800049",
     "sku": "1201048800049",
     "name": "Persol PO3345S 24/31 54",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Cinza e azul",
     "price": 305,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 24-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 24-31.jpg",
-    "description": "ÓÓculos de autor Persol PO3345S 24/31 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3345S 24/31 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4145,14 +4145,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800060",
     "sku": "1201048800060",
     "name": "Persol PO3345S 95/B1 54",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Cristal transparente",
     "price": 305,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 95-B1.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 95-B1.jpg",
-    "description": "ÓÓculos de autor Persol PO3345S 95/B1 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3345S 95/B1 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4160,14 +4160,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800061",
     "sku": "1201048800061",
     "name": "Persol PO3007VM 24 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Tartaruga verde",
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3007VM 24 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007VM 24 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4175,14 +4175,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200159",
     "sku": "1201043200159",
     "name": "Persol PO3379S 204/56 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Preto mate",
     "price": 255,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3379S 204-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3379S 204-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3379S 204/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3379S 204/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4190,14 +4190,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800065",
     "sku": "1201048800065",
     "name": "Persol PO3143V 1160 49-21",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Castanho transl?cido",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1160.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1160.jpg",
-    "description": "ÓÓculos de autor Persol PO3143V 1160 49-21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3143V 1160 49-21 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4205,14 +4205,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200142",
     "sku": "1201043200142",
     "name": "Persol PO3378S 204/56 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Tartaruga escura",
     "price": 255,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 204-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 204-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3378S 204/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3378S 204/56 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4220,14 +4220,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800057",
     "sku": "1201048800057",
     "name": "Persol PO3007V 309 52",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Preto brilhante",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 309.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 309.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 309 52 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 309 52 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4235,14 +4235,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200148",
     "sku": "1201043200148",
     "name": "Persol PO3375S 24/51 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Preto",
     "price": 395,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3375S 24-51.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3375S 24-51.jpg",
-    "description": "ÓÓculos de autor Persol PO3375S 24/51 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3375S 24/51 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4250,14 +4250,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200092",
     "sku": "1201043200092",
     "name": "Persol PO3171S 96/Q8 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Tartaruga castanha",
     "price": 245,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 96-Q8.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 96-Q8.jpg",
-    "description": "ÓÓculos de autor Persol PO3171S 96/Q8 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3171S 96/Q8 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4265,14 +4265,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200100",
     "sku": "1201043200100",
     "name": "Persol PO3152S 904356 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Dourado",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3152S 904356.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3152S 904356.jpg",
-    "description": "ÓÓculos de autor Persol PO3152S 904356 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3152S 904356 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4280,14 +4280,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200101",
     "sku": "1201043200101",
     "name": "Persol PO3166S 24/31 51 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Prateado",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 24-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 24-31.jpg",
-    "description": "ÓÓculos de autor Persol PO3166S 24/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3166S 24/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4295,14 +4295,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200127",
     "sku": "1201043200127",
     "name": "Persol PO3318V 1188 49",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Cinza e azul",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 1188.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 1188.jpg",
-    "description": "ÓÓculos de autor Persol PO3318V 1188 49 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3318V 1188 49 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4310,14 +4310,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200129",
     "sku": "1201043200129",
     "name": "Persol PO3318V 1142 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Cristal transparente",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 1142.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 1142.jpg",
-    "description": "ÓÓculos de autor Persol PO3318V 1142 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3318V 1142 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4325,14 +4325,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200130",
     "sku": "1201043200130",
     "name": "Persol PO3318V 204 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Tartaruga verde",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 204.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 204.jpg",
-    "description": "ÓÓculos de autor Persol PO3318V 204 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3318V 204 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4340,14 +4340,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200133",
     "sku": "1201043200133",
     "name": "Persol PO3353V 1203 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Preto mate",
     "price": 245,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3353V 1203.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3353V 1203.jpg",
-    "description": "ÓÓculos de autor Persol PO3353V 1203 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3353V 1203 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4355,14 +4355,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200134",
     "sku": "1201043200134",
     "name": "Persol PO3353V 204 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Castanho transl?cido",
     "price": 245,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3353V 204.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3353V 204.jpg",
-    "description": "ÓÓculos de autor Persol PO3353V 204 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3353V 204 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4370,14 +4370,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200137",
     "sku": "1201043200137",
     "name": "Persol PO3378S 95/31 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Tartaruga escura",
     "price": 255,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 95-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 95-31.jpg",
-    "description": "ÓÓculos de autor Persol PO3378S 95/31 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3378S 95/31 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4385,14 +4385,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200138",
     "sku": "1201043200138",
     "name": "Persol PO3378S 24/48 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Preto brilhante",
     "price": 310,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 24-48.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3378S 24-48.jpg",
-    "description": "ÓÓculos de autor Persol PO3378S 24/48 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3378S 24/48 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4400,14 +4400,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800055",
     "sku": "1201048800055",
     "name": "Persol PO3318V 24 49",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Preto",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3318V 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3318V 24 49 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3318V 24 49 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4415,14 +4415,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200094",
     "sku": "1201043200094",
     "name": "Persol PO3166S 960/56 51 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Tartaruga castanha",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 960-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3166S 960-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3166S 960/56 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3166S 960/56 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4430,14 +4430,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200095",
     "sku": "1201043200095",
     "name": "Persol PO3171S 204/S3 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Dourado",
     "price": 310,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 204-S3.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 204-S3.jpg",
-    "description": "ÓÓculos de autor Persol PO3171S 204/S3 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3171S 204/S3 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4445,14 +4445,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200096",
     "sku": "1201043200096",
     "name": "Persol PO3292S 309/Q8 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Prateado",
     "price": 275,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 309-Q8.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 309-Q8.jpg",
-    "description": "ÓÓculos de autor Persol PO3292S 309/Q8 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3292S 309/Q8 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4460,14 +4460,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800045",
     "sku": "1201048800045",
     "name": "Persol PO3007V 1142 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Cinza e azul",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1142.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1142.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 1142 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 1142 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4475,14 +4475,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800046",
     "sku": "1201048800046",
     "name": "Persol PO3007V 1192 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Cristal transparente",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1192.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1192.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 1192 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 1192 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4490,14 +4490,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800047",
     "sku": "1201048800047",
     "name": "Persol PO3007V 1192 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Tartaruga verde",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1192.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1192.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 1192 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 1192 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4505,14 +4505,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800050",
     "sku": "1201048800050",
     "name": "Persol PO3092V 1219 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Preto mate",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 1219.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 1219.jpg",
-    "description": "ÓÓculos de autor Persol PO3092V 1219 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3092V 1219 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4520,14 +4520,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800051",
     "sku": "1201048800051",
     "name": "Persol PO3092V 96 48 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Castanho transl?cido",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 96.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 96.jpg",
-    "description": "ÓÓculos de autor Persol PO3092V 96 48 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3092V 96 48 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4535,14 +4535,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800052",
     "sku": "1201048800052",
     "name": "Persol PO3143V 1051 49 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Tartaruga escura",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1051.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1051.jpg",
-    "description": "ÓÓculos de autor Persol PO3143V 1051 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3143V 1051 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4550,14 +4550,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200080",
     "sku": "1201043200080",
     "name": "Persol PO3210S 24/31 51 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Preto brilhante",
     "price": 295,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3210S 24-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3210S 24-31.jpg",
-    "description": "ÓÓculos de autor Persol PO3210S 24/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3210S 24/31 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4565,14 +4565,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800031",
     "sku": "1201048800031",
     "name": "Persol PO3007V 1142 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Preto",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1142.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1142.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 1142 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 1142 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4580,14 +4580,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800033",
     "sku": "1201048800033",
     "name": "Persol PO3007VM 1196 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Tartaruga castanha",
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 1196.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 1196.jpg",
-    "description": "ÓÓculos de autor Persol PO3007VM 1196 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007VM 1196 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4595,14 +4595,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800034",
     "sku": "1201048800034",
     "name": "Persol PO3007VM 24 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Dourado",
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3007VM 24 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007VM 24 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4610,14 +4610,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800035",
     "sku": "1201048800035",
     "name": "Persol PO3007VM 95 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Prateado",
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 95.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007VM 95.jpg",
-    "description": "ÓÓculos de autor Persol PO3007VM 95 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007VM 95 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4625,14 +4625,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200083",
     "sku": "1201043200083",
     "name": "Persol PO3092SM 901531 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Cinza e azul",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092SM 901531.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092SM 901531.jpg",
-    "description": "ÓÓculos de autor Persol PO3092SM 901531 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3092SM 901531 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4640,14 +4640,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800036",
     "sku": "1201048800036",
     "name": "Persol PO3092V 96 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Cristal transparente",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 96.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3092V 96.jpg",
-    "description": "ÓÓculos de autor Persol PO3092V 96 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3092V 96 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4655,14 +4655,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800037",
     "sku": "1201048800037",
     "name": "Persol PO3143V 1141 49 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Tartaruga verde",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1141.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1141.jpg",
-    "description": "ÓÓculos de autor Persol PO3143V 1141 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3143V 1141 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4670,14 +4670,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800038",
     "sku": "1201048800038",
     "name": "Persol PO3143V 1142 49 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Preto mate",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1142.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 1142.jpg",
-    "description": "ÓÓculos de autor Persol PO3143V 1142 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3143V 1142 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4685,14 +4685,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800039",
     "sku": "1201048800039",
     "name": "Persol PO3143V 24 49 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Castanho transl?cido",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3143V 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3143V 24 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3143V 24 49 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4700,14 +4700,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800040",
     "sku": "1201048800040",
     "name": "Persol PO3292V 1208 48 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Tartaruga escura",
     "price": 275,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292V 1208.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292V 1208.jpg",
-    "description": "ÓÓculos de autor Persol PO3292V 1208 48 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3292V 1208 48 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4715,14 +4715,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800044",
     "sku": "1201048800044",
     "name": "Persol PO3337V 24 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Preto brilhante",
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3337V 24.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3337V 24.jpg",
-    "description": "ÓÓculos de autor Persol PO3337V 24 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3337V 24 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4730,14 +4730,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200088",
     "sku": "1201043200088",
     "name": "Persol PO3345S 96/56 . 54",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Quadrada",
     "material": "Metal",
     "color": "Preto",
     "price": 305,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 96-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3345S 96-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3345S 96/56 . 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3345S 96/56 . 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4745,14 +4745,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200090",
     "sku": "1201043200090",
     "name": "Persol PO3292S 1226B1 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Aviador",
     "material": "Acetato",
     "color": "Tartaruga castanha",
     "price": 275,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 1226B1.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 1226B1.jpg",
-    "description": "ÓÓculos de autor Persol PO3292S 1226B1 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3292S 1226B1 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4760,14 +4760,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200098",
     "sku": "1201043200098",
     "name": "Persol PO3171S 1103B1 52 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Cat-eye",
     "material": "Titânio",
     "color": "Dourado",
     "price": 245,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 1103B1.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3171S 1103B1.jpg",
-    "description": "ÓÓculos de autor Persol PO3171S 1103B1 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3171S 1103B1 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4775,14 +4775,14 @@ export const products: Product[] = [
     "slug": "stock-1201048800032",
     "sku": "1201048800032",
     "name": "Persol PO3007V 1208 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Oval",
     "material": "Metal",
     "color": "Prateado",
     "price": 230,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1208.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3007V 1208.jpg",
-    "description": "ÓÓculos de autor Persol PO3007V 1208 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3007V 1208 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4790,14 +4790,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200085",
     "sku": "1201043200085",
     "name": "Persol PO3286S 116931 . 51",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Retangular",
     "material": "Acetato",
     "color": "Cinza e azul",
     "price": 235,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3286S 116931.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3286S 116931.jpg",
-    "description": "ÓÓculos de autor Persol PO3286S 116931 . 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3286S 116931 . 51 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4805,14 +4805,14 @@ export const products: Product[] = [
     "slug": "stock-1201043200087",
     "sku": "1201043200087",
     "name": "Persol PO3292S 96/56 50 .",
-    "category": "ÓÓculos de sol",
+    "category": "Óculos de sol",
     "shape": "Redonda",
     "material": "Titânio",
     "color": "Cristal transparente",
     "price": 275,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 96-56.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0PO3292S 96-56.jpg",
-    "description": "ÓÓculos de autor Persol PO3292S 96/56 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Persol PO3292S 96/56 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Persol"
   },
   {
@@ -4827,7 +4827,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4401D 601-72.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4401D 601-72.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB4401D 601/72 55 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB4401D 601/72 55 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4842,7 +4842,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 902-51.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 902-51.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2140 902/57 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2140 902/57 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4857,7 +4857,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4441D 667787.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4441D 667787.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB4441D 667787 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB4441D 667787 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4872,7 +4872,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4441D 678793.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4441D 678793.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB4441D 678793 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB4441D 678793 53 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4887,7 +4887,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3548 001/BH 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3548 001/BH 51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4902,7 +4902,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3025 001-33.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3025 001-33.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3025 001/58 58 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3025 001/58 58 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4917,7 +4917,7 @@ export const products: Product[] = [
     "price": 169,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 129431.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 129431.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2140 12943350 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2140 12943350 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4932,7 +4932,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 901-32.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2140 901-32.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2140 901/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2140 901/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4947,7 +4947,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2241 13323F.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2241 13323F.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2241 13337151 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2241 13337151 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4962,7 +4962,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3016 901-58.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3016 901-58.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3016 901/5851 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3016 901/5851 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4977,7 +4977,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 001-3M.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 001-3M.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3447 001/BH50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3447 001/BH50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -4992,7 +4992,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 112-58.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 112-58.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3447 112/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3447 112/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5007,7 +5007,7 @@ export const products: Product[] = [
     "price": 169,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 001-3M.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3447 001-3M.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3447 92753350 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3447 92753350 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5022,7 +5022,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3548 001/3F51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3548 001/3F51 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5037,7 +5037,7 @@ export const products: Product[] = [
     "price": 169,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3548 001-3F.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3548 91963151 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3548 91963151 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5052,7 +5052,7 @@ export const products: Product[] = [
     "price": 173,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3749 002-71.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3749 002-71.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3749 002/7155 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3749 002/7155 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5067,7 +5067,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3749 001-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3749 001-31.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3749 92735855 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3749 92735855 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5082,7 +5082,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4105 601-58.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4105 601-58.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB4105 601/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB4105 601/5850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5097,7 +5097,7 @@ export const products: Product[] = [
     "price": 240,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4451 601-B1.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB4451 601-B1.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB4451 63065850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB4451 63065850 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5112,7 +5112,7 @@ export const products: Product[] = [
     "price": 190,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RBR0103S 001-79.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RBR0103S 001-79.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RBR0103S 001/VR53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RBR0103S 001/VR53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5127,7 +5127,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX4379VD 8445.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX4379VD 8445.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RX4379VD 8445 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RX4379VD 8445 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5142,7 +5142,7 @@ export const products: Product[] = [
     "price": 169,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX5425D 2000.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX5425D 2000.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RX5425D 2000 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RX5425D 2000 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5157,7 +5157,7 @@ export const products: Product[] = [
     "price": 137,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX7259D 8437.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX7259D 8437.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RX7259D 8437 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RX7259D 8437 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5172,7 +5172,7 @@ export const products: Product[] = [
     "price": 266,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2176 136885.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2176 136885.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2176 13688551 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2176 13688551 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5187,7 +5187,7 @@ export const products: Product[] = [
     "price": 213,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2195 902-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2195 902-31.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2195 902/5751 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2195 902/5751 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5202,7 +5202,7 @@ export const products: Product[] = [
     "price": 163,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2242 901-31.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2242 901-31.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2242 901/31 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2242 901/31 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5217,7 +5217,7 @@ export const products: Product[] = [
     "price": 163,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2242 902-GI.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2242 902-GI.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2242 902/R5 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2242 902/R5 53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5232,7 +5232,7 @@ export const products: Product[] = [
     "price": 147,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX6533 2500.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX6533 2500.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RX6533 2500 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RX6533 2500 52 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5247,7 +5247,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX7159 2000.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX7159 2000.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RX7159 2000 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RX7159 2000 50 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5262,7 +5262,7 @@ export const products: Product[] = [
     "price": 219,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2241 954-58.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB2241 954-58.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB2241 954/58 51 P . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB2241 954/58 51 P . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5277,7 +5277,7 @@ export const products: Product[] = [
     "price": 179,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3565 001-51.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RB3565 001-51.jpg",
-    "description": "ÓÓculos de autor Ray-Ban RB3565 001/BH53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Ray-Ban RB3565 001/BH53 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5292,7 +5292,7 @@ export const products: Product[] = [
     "price": 169,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX5417 2034.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//luxottica/0RX5417 2034.jpg",
-    "description": "ÓÓculos de autor RayBan RX5417 5082 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor RayBan RX5417 5082 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Ray-Ban"
   },
   {
@@ -5307,7 +5307,7 @@ export const products: Product[] = [
     "price": 372,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895654371.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895654371.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB246S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB246S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5322,7 +5322,7 @@ export const products: Product[] = [
     "price": 341,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688154.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688154.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2676 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2676 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5337,7 +5337,7 @@ export const products: Product[] = [
     "price": 341,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688185.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895688185.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2676 316 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2676 316 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5352,7 +5352,7 @@ export const products: Product[] = [
     "price": 329,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685597.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895685597.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2680 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2680 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5367,7 +5367,7 @@ export const products: Product[] = [
     "price": 401,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895619738.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895619738.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB668S 215 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB668S 215 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5382,7 +5382,7 @@ export const products: Product[] = [
     "price": 426,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895670425.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895670425.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB684S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB684S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5397,7 +5397,7 @@ export const products: Product[] = [
     "price": 328,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895605038.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895605038.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2656 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2656 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5412,7 +5412,7 @@ export const products: Product[] = [
     "price": 401,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895560702.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895560702.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB646S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB646S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5427,7 +5427,7 @@ export const products: Product[] = [
     "price": 328,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895605052.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895605052.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2656 215 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2656 215 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5442,7 +5442,7 @@ export const products: Product[] = [
     "price": 353,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895622196.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//aerialvision/886895622196.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2659 038 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2659 038 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5457,7 +5457,7 @@ export const products: Product[] = [
     "price": 393,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895654364.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895654364.jpg",
-    "description": "ÓÓculos de autor Victoria Beckham VB2135 770 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Victoria Beckham VB2135 770 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Victoria's Secret"
   },
   {
@@ -5472,7 +5472,7 @@ export const products: Product[] = [
     "price": 311,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895625258.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895625258.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23138LPMAG-SET N 203 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23138LPMAG-SET N 203 54 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5487,7 +5487,7 @@ export const products: Product[] = [
     "price": 202,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622103.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622103.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23537 036 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23537 036 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5502,7 +5502,7 @@ export const products: Product[] = [
     "price": 202,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622110.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895622110.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23537 216 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23537 216 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5517,7 +5517,7 @@ export const products: Product[] = [
     "price": 208,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895663854.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895663854.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24153 002 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24153 002 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5532,7 +5532,7 @@ export const products: Product[] = [
     "price": 335,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895683838.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895683838.jpg",
-    "description": "ÓÓculos de autor 1Zeiss ZS25162LPMAG-SET 326 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor 1Zeiss ZS25162LPMAG-SET 326 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5547,7 +5547,7 @@ export const products: Product[] = [
     "price": 277,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667487.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895667487.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24721SLP 239 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24721SLP 239 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5562,7 +5562,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644006.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895644006.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24543S 237 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24543S 237 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5577,7 +5577,7 @@ export const products: Product[] = [
     "price": 211,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895643993.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895643993.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24543S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24543S 001 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5592,7 +5592,7 @@ export const products: Product[] = [
     "price": 194,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664189.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895664189.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24549 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24549 200 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5607,7 +5607,7 @@ export const products: Product[] = [
     "price": 311,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895625241.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895625241.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23138LPMAG-SET 002 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23138LPMAG-SET 002 54 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5622,7 +5622,7 @@ export const products: Product[] = [
     "price": 224,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895599467.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895599467.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23128 202 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23128 202 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5637,7 +5637,7 @@ export const products: Product[] = [
     "price": 224,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895599450.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895599450.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS23128 003 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS23128 003 . com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   },
   {
@@ -5652,7 +5652,7 @@ export const products: Product[] = [
     "price": 198,
     "image": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895643955.jpg",
     "hover": "https://d237xocrarx9cy.cloudfront.net/image/foto//marchon/886895643955.jpg",
-    "description": "ÓÓculos de autor Zeiss ZS24542 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
+    "description": "Óculos de autor Zeiss ZS24542 001 com design contemporâneo e fabrico de excelência. Selecionado com rigor pelo Ateliê Ótico no Funchal, Região Autónoma da Madeira.",
     "brand": "Zeiss"
   }
 ];

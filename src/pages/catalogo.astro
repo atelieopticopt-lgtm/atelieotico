@@ -13,7 +13,10 @@ products.forEach(p => {
   const b = p.brand || 'Ateliê Ótico';
   brandCounts[b] = (brandCounts[b] || 0) + 1;
 
-  if (p.category) categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1;
+  if (p.category) {
+    const cleanCat = p.category.replace('ÓÓ', 'Ó');
+    categoryCounts[cleanCat] = (categoryCounts[cleanCat] || 0) + 1;
+  }
   if (p.shape) shapeCounts[p.shape] = (shapeCounts[p.shape] || 0) + 1;
   if (p.material) materialCounts[p.material] = (materialCounts[p.material] || 0) + 1;
 });
@@ -111,7 +114,7 @@ const sortedMaterials = Object.keys(materialCounts).sort();
       {/* Main Catalog Layout: Sidebar + Grid */}
       <div class="catalog-main-layout">
         
-        {/* Sidebar Filters */}
+        {/* Sidebar Filters — Pure Static (No sticky, No scrollbars, All visible) */}
         <aside id="catalog-sidebar" class="catalog-sidebar">
           
           <div class="sidebar-header-mobile">
@@ -124,7 +127,7 @@ const sortedMaterials = Object.keys(materialCounts).sort();
             <div class="filter-group-header">
               <h4 data-i18n-pt="Marcas de Autor" data-i18n-en="Designer Brands">Marcas de Autor</h4>
             </div>
-            <div class="filter-options-list brand-options-list">
+            <div class="filter-options-list">
               {sortedBrands.map(brand => (
                 <label class="filter-checkbox-label">
                   <input type="checkbox" data-filter="brand" value={brand} />
@@ -469,15 +472,14 @@ const sortedMaterials = Object.keys(materialCounts).sort();
     align-items: start;
   }
 
-  /* Sidebar */
+  /* Pure Static Sidebar — NO STICKY, NO SCROLLBARS, SHOWS ALL */
   .catalog-sidebar {
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.12);
     padding: 24px 20px;
-    position: sticky;
-    top: 96px;
-    max-height: calc(100vh - 120px);
-    overflow-y: auto;
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 
   .sidebar-header-mobile {
@@ -515,13 +517,9 @@ const sortedMaterials = Object.keys(materialCounts).sort();
     display: flex;
     flex-direction: column;
     gap: 9px;
-    max-height: 220px;
-    overflow-y: auto;
-    padding-right: 6px;
-  }
-
-  .brand-options-list {
-    max-height: 260px;
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
   }
 
   .filter-checkbox-label {
@@ -725,13 +723,14 @@ const sortedMaterials = Object.keys(materialCounts).sort();
     }
 
     .catalog-sidebar {
-      position: fixed;
+      position: fixed !important;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 99999;
-      max-height: 100vh;
+      max-height: 100vh !important;
+      overflow-y: auto !important;
       display: none;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     }
