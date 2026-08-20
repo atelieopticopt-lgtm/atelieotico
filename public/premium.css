@@ -1889,7 +1889,7 @@ body {
 }
 
 /* ==========================================================================
-   STAR WISHLIST ICON (ON ALL PRODUCT CARDS)
+   STAR WISHLIST ICON (UNIVERSAL GOLD / AMBER LOGO THEME ON ALL CARDS)
    ========================================================================== */
 .ll-card-fav,
 .favorite {
@@ -1897,36 +1897,55 @@ body {
   top: 10px !important;
   right: 10px !important;
   z-index: 5 !important;
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
   border-radius: 50% !important;
-  width: 32px !important;
-  height: 32px !important;
+  width: 34px !important;
+  height: 34px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   cursor: pointer !important;
-  color: #222222 !important;
+  color: #444444 !important;
   padding: 0 !important;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+  transform: none !important;
 }
 
 .ll-card-fav:hover,
 .favorite:hover {
-  transform: scale(1.18) !important;
   background: #ffffff !important;
-  color: #000000 !important;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+  border-color: #d4af37 !important;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25) !important;
+  transform: none !important;
 }
 
 .ll-card-fav svg,
 .favorite svg {
-  width: 17px !important;
-  height: 17px !important;
-  transition: fill 0.2s ease, transform 0.2s ease;
+  width: 18px !important;
+  height: 18px !important;
+  stroke: #555555 !important;
+  fill: transparent !important;
+  transition: fill 0.2s ease, stroke 0.2s ease !important;
   pointer-events: none;
+}
+
+.ll-card-fav:hover svg,
+.favorite:hover svg {
+  stroke: #d4af37 !important; /* Gold logo color */
+  fill: #fef08a !important; /* Soft gold fill on hover */
+}
+
+.ll-card-fav.is-active,
+.ll-card-fav.active,
+.favorite.is-active,
+.favorite.active,
+button[data-favorite].is-active,
+button[data-favorite].active {
+  background: #ffffff !important;
+  border-color: #d4af37 !important;
 }
 
 .ll-card-fav.is-active svg,
@@ -1935,9 +1954,8 @@ body {
 .favorite.active svg,
 button[data-favorite].is-active svg,
 button[data-favorite].active svg {
-  fill: #000000 !important;
-  stroke: #000000 !important;
-  animation: starBounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  fill: #d4af37 !important; /* Solid Gold brand fill */
+  stroke: #b45309 !important;
 }
 
 @keyframes starBounce {
