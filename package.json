@@ -1,22 +1,21 @@
 {
-  "name": "melin-astro-template",
-  "version": "1.0.0",
-  "private": true,
+  "name": "atelie-otico-storefront",
   "type": "module",
+  "version": "1.0.0",
+  "description": "Ateliê Ótico — Luxury Eyewear & Boutique Ótica de Autor",
   "scripts": {
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "audit": "node scripts/audit-template.mjs",
+    "astro": "astro",
+    "server": "node server.mjs",
     "deploy": "node scripts/deploy-vps.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@supabase/supabase-js": "^2.112.3",
-    "astro": "^5.13.0",
-    "typescript": "^5.9.2"
-  },
-  "devDependencies": {
-    "node-ssh": "^13.2.1"
+    "astro": "^4.16.18",
+    "node-ssh": "^13.2.0",
+    "typescript": "^5.7.3"
   }
 }
