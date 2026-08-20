@@ -1,0 +1,479 @@
+---
+import StoreLayout from '../layouts/StoreLayout.astro';
+---
+
+<StoreLayout 
+  title="Checkout Seguro | Ateliê Ótico — Funchal, Madeira"
+  description="Finalize a sua encomenda com segurança no Ateliê Ótico. Pagamentos encriptados via Stripe, MB WAY e Cartão de Crédito."
+  hideHeader={true}
+  hideTopbar={true}
+>
+  <div class="checkout-luxury-wrapper">
+    
+    {/* Clean Top Branding Bar */}
+    <header class="checkout-top-header">
+      <a href="/" class="checkout-brand-link" title="Voltar à Página Principal">
+        <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" class="checkout-brand-logo" />
+      </a>
+      <div class="checkout-security-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>Checkout Seguro SSL &bull; Encriptação de 256 bits</span>
+      </div>
+    </header>
+
+    {/* Main 2-Column Checkout Layout */}
+    <div class="checkout-main-grid">
+      
+      {/* LEFT COLUMN: Payment & Shipping Form */}
+      <section class="checkout-form-column">
+        
+        <div class="checkout-pay-header">
+          <span class="pay-label" data-i18n-pt="Pagar Ateliê Ótico" data-i18n-en="Pay Ateliê Ótico">Pagar Ateliê Ótico</span>
+          <h2 id="checkout-top-total">€ 0,00</h2>
+          <button type="button" class="btn-toggle-details" id="btn-toggle-details" data-i18n-pt="Exibir detalhes &or;" data-i18n-en="Show details &or;">Exibir detalhes &or;</button>
+        </div>
+
+        {/* Fast Pay Link Button */}
+        <button type="button" class="btn-fast-link-pay" id="btn-fast-link-pay" title="Pagar rapidamente com Link ou Cartão Guardado">
+          <span data-i18n-pt="Pague em segurança com" data-i18n-en="Pay securely with">Pague em segurança com</span>
+          <span class="link-brand-tag">link</span>
+        </button>
+
+        <div class="checkout-divider">
+          <span data-i18n-pt="OU" data-i18n-en="OR">OU</span>
+        </div>
+
+        <form id="stripe-checkout-form" class="checkout-inputs-form">
+          
+          {/* Shipping / Customer Data */}
+          <div class="form-section-block">
+            <h3 class="section-heading" data-i18n-pt="Dados de envio" data-i18n-en="Shipping information">Dados de envio</h3>
+            
+            <div class="input-row">
+              <label for="checkout-email" data-i18n-pt="E-mail *" data-i18n-en="Email *">E-mail *</label>
+              <input 
+                type="email" 
+                id="checkout-email" 
+                required 
+                placeholder="e-mail@exemplo.com"
+                data-i18n-placeholder-pt="e-mail@exemplo.com"
+                data-i18n-placeholder-en="email@example.com"
+              />
+            </div>
+
+            <div class="input-row" style="margin-top: 14px;">
+              <label for="checkout-name" data-i18n-pt="Nome completo *" data-i18n-en="Full name *">Nome completo *</label>
+              <input 
+                type="text" 
+                id="checkout-name" 
+                required 
+                placeholder="Nome e Apelido"
+                data-i18n-placeholder-pt="Nome e Apelido"
+                data-i18n-placeholder-en="Full Name"
+              />
+            </div>
+
+            <div class="input-row" style="margin-top: 14px;">
+              <label for="checkout-country" data-i18n-pt="País / Região" data-i18n-en="Country / Region">País / Região</label>
+              <select id="checkout-country">
+                <option value="Portugal">Portugal (Continente &amp; Madeira / Açores)</option>
+                <option value="Espanha">Espanha</option>
+                <option value="França">França</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="Alemanha">Alemanha</option>
+                <option value="Itália">Itália</option>
+                <option value="Outro">Outro País Europeu</option>
+              </select>
+            </div>
+
+            <div class="input-row" style="margin-top: 14px;">
+              <label for="checkout-address1" data-i18n-pt="Endereço de entrega *" data-i18n-en="Shipping Address *">Endereço de entrega *</label>
+              <input 
+                type="text" 
+                id="checkout-address1" 
+                required 
+                placeholder="Endereço, linha 1 (Rua, Número)"
+                data-i18n-placeholder-pt="Endereço, linha 1 (Rua, Número)"
+                data-i18n-placeholder-en="Address, line 1 (Street, Number)"
+              />
+            </div>
+
+            <div class="input-row" style="margin-top: 10px;">
+              <input 
+                type="text" 
+                id="checkout-address2" 
+                placeholder="Apartamento, andar, bloco (opcional)"
+                data-i18n-placeholder-pt="Apartamento, andar, bloco (opcional)"
+                data-i18n-placeholder-en="Apartment, suite, unit (optional)"
+              />
+            </div>
+
+            <div class="input-grid-2" style="margin-top: 10px;">
+              <div>
+                <input 
+                  type="text" 
+                  id="checkout-postal" 
+                  required 
+                  placeholder="Código Postal (9050-026)"
+                  data-i18n-placeholder-pt="Código Postal (9050-026)"
+                  data-i18n-placeholder-en="Postal Code"
+                />
+              </div>
+              <div>
+                <input 
+                  type="text" 
+                  id="checkout-city" 
+                  required 
+                  placeholder="Cidade (Funchal)"
+                  data-i18n-placeholder-pt="Cidade (Funchal)"
+                  data-i18n-placeholder-en="City"
+                />
+              </div>
+            </div>
+
+            <div class="input-row" style="margin-top: 14px;">
+              <label for="checkout-phone" data-i18n-pt="Telefone de Contacto *" data-i18n-en="Contact Phone *">Telefone de Contacto *</label>
+              <input 
+                type="tel" 
+                id="checkout-phone" 
+                required 
+                placeholder="+351 9xx xxx xxx"
+                data-i18n-placeholder-pt="+351 9xx xxx xxx"
+                data-i18n-placeholder-en="+351 9xx xxx xxx"
+              />
+            </div>
+          </div>
+
+          {/* Payment Method Section (Stripe Elements) */}
+          <div class="form-section-block" style="margin-top: 28px;">
+            <h3 class="section-heading" data-i18n-pt="Método de Pagamento" data-i18n-en="Payment Method">Método de Pagamento</h3>
+            
+            <div class="stripe-card-wrapper">
+              <div class="card-brand-logos">
+                <span class="card-title-text" data-i18n-pt="Cartão de Crédito ou Débito / MB WAY" data-i18n-en="Credit or Debit Card / MB WAY">Cartão de Crédito ou Débito</span>
+                <div class="card-icons-row">
+                  <img src="/payment-methods/Visa.svg" alt="Visa" height="18" />
+                  <img src="/payment-methods/MasterCard.svg" alt="Mastercard" height="18" />
+                  <img src="/payment-methods/MBWay.svg" alt="MB WAY" height="18" />
+                </div>
+              </div>
+              
+              {/* Stripe Card Element Mount Point */}
+              <div id="stripe-card-element" class="stripe-mount-box"></div>
+              <div id="card-errors" class="stripe-error-text" role="alert" style="display: none;"></div>
+            </div>
+          </div>
+
+          <button type="submit" id="btn-submit-payment" class="rect black btn-pay-now">
+            <span id="btn-pay-text">PAGAR € 0,00</span>
+            <div id="btn-pay-spinner" class="payment-spinner" style="display: none;"></div>
+          </button>
+
+          <div class="checkout-footer-assurance">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span>Transação 100% segura processada com encriptação Stripe &bull; Garantia de 2 Anos</span>
+          </div>
+
+        </form>
+
+      </section>
+
+      {/* RIGHT COLUMN: ORDER SUMMARY (RESUMO DA ENCOMENDA) */}
+      <aside class="checkout-summary-column">
+        <div class="summary-card-box">
+          <h3 class="summary-title" data-i18n-pt="RESUMO DA ENCOMENDA" data-i18n-en="ORDER SUMMARY">ORDER SUMMARY</h3>
+
+          {/* Dynamic Items List */}
+          <div id="checkout-items-list" class="checkout-items-list">
+            {/* Populated by JS */}
+          </div>
+
+          <div class="summary-math-block">
+            <div class="summary-row">
+              <span data-i18n-pt="Subtotal dos produtos" data-i18n-en="Product subtotal">Product subtotal</span>
+              <strong id="summary-subtotal">€ 0,00</strong>
+            </div>
+
+            <div class="summary-row">
+              <div>
+                <span data-i18n-pt="Envio para" data-i18n-en="Shipping to">Shipping to</span>
+                <span id="summary-destination-label" style="font-weight: 600; color: #111;">Portugal</span>
+              </div>
+              <span id="summary-shipping" class="free-shipping-tag" data-i18n-pt="Grátis" data-i18n-en="Free">Free</span>
+            </div>
+
+            {/* Discount Code Input */}
+            <div class="discount-code-wrap">
+              <input 
+                type="text" 
+                id="discount-code-input" 
+                placeholder="CÓDIGO DE DESCONTO"
+                data-i18n-placeholder-pt="CÓDIGO DE DESCONTO"
+                data-i18n-placeholder-en="DISCOUNT CODE"
+              />
+              <button type="button" id="btn-apply-discount" data-i18n-pt="Aplicar" data-i18n-en="Apply">Apply</button>
+            </div>
+
+            <div id="discount-row" class="summary-row discount-row" style="display: none;">
+              <span data-i18n-pt="Desconto aplicado" data-i18n-en="Discount applied">Desconto aplicado</span>
+              <strong id="summary-discount" style="color: #b91c1c;">-0,00 €</strong>
+            </div>
+
+            <div class="summary-total-row">
+              <span data-i18n-pt="Total a pagar" data-i18n-en="Total">Total</span>
+              <strong id="summary-total" class="summary-total-price">€ 0,00</strong>
+            </div>
+          </div>
+
+          <div class="summary-assistance-box">
+            <p><strong>Dúvidas com o seu pedido?</strong></p>
+            <p>Contacte o nosso Ateliê: <a href="https://wa.me/351964993767" target="_blank">+351 964 993 767</a></p>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+
+  </div>
+
+  {/* Load Stripe.js */}
+  <script is:inline src="https://js.stripe.com/v3/"></script>
+  
+  {/* Embedded Checkout Controller */}
+  <script is:inline>
+    (() => {
+      const STRIPE_PK = 'pk_test_51U6ePTA4omOSLMnkqJ97sAVhZt1L3YUHNSn0ZehsXQVBDq3k4gTjYRGjDVu4DELheXIR79Wm9XVhTJdtTsWOeNZq00z8rLeAyn';
+      
+      let stripe = null;
+      let elements = null;
+      let cardElement = null;
+
+      if (window.Stripe) {
+        stripe = window.Stripe(STRIPE_PK);
+        elements = stripe.elements();
+        
+        cardElement = elements.create('card', {
+          style: {
+            base: {
+              fontSize: '15px',
+              color: '#111111',
+              fontFamily: '"Plus Jakarta Sans", sans-serif',
+              '::placeholder': {
+                color: '#888888',
+              },
+            },
+            invalid: {
+              color: '#ef4444',
+              iconColor: '#ef4444',
+            }
+          }
+        });
+
+        const mountPoint = document.getElementById('stripe-card-element');
+        if (mountPoint) cardElement.mount('#stripe-card-element');
+
+        cardElement.on('change', (event) => {
+          const displayError = document.getElementById('card-errors');
+          if (event.error) {
+            displayError.textContent = event.error.message;
+            displayError.style.display = 'block';
+          } else {
+            displayError.textContent = '';
+            displayError.style.display = 'none';
+          }
+        });
+      }
+
+      // Load items from localStorage
+      function getCartItems() {
+        try {
+          return JSON.parse(localStorage.getItem('atelie-cart-v1') || '[]');
+        } catch(e) {
+          return [];
+        }
+      }
+
+      let cartItems = getCartItems();
+      let discountRate = 0;
+
+      function renderCheckout() {
+        cartItems = getCartItems();
+        const itemsList = document.getElementById('checkout-items-list');
+        
+        if (!cartItems.length) {
+          if (itemsList) {
+            itemsList.innerHTML = `
+              <div style="padding: 32px 0; text-align: center; color: #666;">
+                <p>O seu carrinho está vazio.</p>
+                <a href="/catalogo" class="rect black" style="display: inline-flex; height: 42px; padding: 0 20px; font-size: 11px; margin-top: 10px;">EXPLORAR CATÁLOGO</a>
+              </div>
+            `;
+          }
+          updateTotals(0);
+          return;
+        }
+
+        if (itemsList) {
+          itemsList.innerHTML = cartItems.map(item => `
+            <div class="checkout-item-card">
+              <div class="item-thumb-wrap">
+                <img src="${item.image}" alt="${item.name}" />
+                <span class="item-qty-badge">${item.qty}</span>
+              </div>
+              <div class="item-info">
+                <h4>${item.name}</h4>
+                <p>${item.shape || item.category || 'Ateliê Ótico'}</p>
+              </div>
+              <div class="item-price">
+                ${(item.price * item.qty).toFixed(2)} €
+              </div>
+            </div>
+          `).join('');
+        }
+
+        const subtotal = cartItems.reduce((acc, i) => acc + (Number(i.price || 0) * Number(i.qty || 1)), 0);
+        updateTotals(subtotal);
+      }
+
+      function updateTotals(subtotal) {
+        const discountAmount = subtotal * discountRate;
+        const finalTotal = Math.max(0, subtotal - discountAmount);
+
+        document.getElementById('checkout-top-total').textContent = `${finalTotal.toFixed(2)} €`;
+        document.getElementById('summary-subtotal').textContent = `${subtotal.toFixed(2)} €`;
+        document.getElementById('summary-total').textContent = `${finalTotal.toFixed(2)} €`;
+        document.getElementById('btn-pay-text').textContent = `PAGAR ${finalTotal.toFixed(2)} €`;
+
+        if (discountAmount > 0) {
+          document.getElementById('discount-row').style.display = 'flex';
+          document.getElementById('summary-discount').textContent = `-${discountAmount.toFixed(2)} €`;
+        } else {
+          document.getElementById('discount-row').style.display = 'none';
+        }
+      }
+
+      // Discount Code Handler
+      document.getElementById('btn-apply-discount')?.addEventListener('click', () => {
+        const code = (document.getElementById('discount-code-input')?.value || '').trim().toUpperCase();
+        if (code === 'ATELIE10' || code === 'MADEIRA10' || code === 'VIP10') {
+          discountRate = 0.10;
+          alert('Cupão de 10% de desconto aplicado com sucesso!');
+        } else if (code === 'ATELIE20' || code === 'PROMO20') {
+          discountRate = 0.20;
+          alert('Cupão de 20% de desconto aplicado com sucesso!');
+        } else if (code) {
+          alert('Código de desconto inválido ou expirado.');
+        }
+        renderCheckout();
+      });
+
+      // Submit Stripe Payment
+      const checkoutForm = document.getElementById('stripe-checkout-form');
+      checkoutForm?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (!cartItems.length) {
+          alert('O carrinho está vazio. Adicione um modelo antes de finalizar.');
+          return;
+        }
+
+        const email = document.getElementById('checkout-email')?.value.trim();
+        const name = document.getElementById('checkout-name')?.value.trim();
+        const phone = document.getElementById('checkout-phone')?.value.trim();
+        const country = document.getElementById('checkout-country')?.value;
+        const addr1 = document.getElementById('checkout-address1')?.value.trim();
+        const addr2 = document.getElementById('checkout-address2')?.value.trim();
+        const postal = document.getElementById('checkout-postal')?.value.trim();
+        const city = document.getElementById('checkout-city')?.value.trim();
+
+        const btnSubmit = document.getElementById('btn-submit-payment');
+        const btnText = document.getElementById('btn-pay-text');
+        const btnSpinner = document.getElementById('btn-pay-spinner');
+        const errorBox = document.getElementById('card-errors');
+
+        btnSubmit.disabled = true;
+        btnText.style.display = 'none';
+        btnSpinner.style.display = 'inline-block';
+        errorBox.style.display = 'none';
+
+        try {
+          // 1. Create Payment Intent on backend
+          const res = await fetch('/api/create-payment-intent', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              items: cartItems,
+              customerEmail: email,
+              customerName: name,
+              shipping: { country, line1: addr1, line2: addr2, postalCode: postal, city }
+            })
+          });
+
+          const data = await res.json();
+          if (data.error) throw new Error(data.error);
+
+          const clientSecret = data.clientSecret;
+
+          // 2. Confirm Payment with Stripe
+          const result = await stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+              card: cardElement,
+              billing_details: {
+                name: name,
+                email: email,
+                phone: phone,
+                address: {
+                  line1: addr1,
+                  line2: addr2,
+                  city: city,
+                  postal_code: postal,
+                  country: country === 'Portugal' ? 'PT' : 'ES'
+                }
+              }
+            }
+          });
+
+          if (result.error) {
+            throw new Error(result.error.message);
+          } else if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
+            // 3. Confirm order & trigger notification emails
+            const orderRes = await fetch('/api/confirm-order', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                paymentIntentId: result.paymentIntent.id,
+                customerName: name,
+                customerEmail: email,
+                customerPhone: phone,
+                items: cartItems,
+                shippingAddress: { country, line1: addr1, line2: addr2, postalCode: postal, city }
+              })
+            });
+
+            // Clear Cart
+            localStorage.removeItem('atelie-cart-v1');
+            
+            // Redirect to Success Page
+            window.location.href = `/checkout/sucesso?order=${result.paymentIntent.id.slice(-8).toUpperCase()}&email=${encodeURIComponent(email)}`;
+          }
+
+        } catch (err) {
+          console.error(err);
+          errorBox.textContent = err.message || 'Ocorreu um erro no processamento do pagamento.';
+          errorBox.style.display = 'block';
+          btnSubmit.disabled = false;
+          btnText.style.display = 'inline-block';
+          btnSpinner.style.display = 'none';
+        }
+      });
+
+      renderCheckout();
+    })();
+  </script>
+</StoreLayout>

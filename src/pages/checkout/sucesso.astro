@@ -1,0 +1,53 @@
+---
+import StoreLayout from '../../layouts/StoreLayout.astro';
+---
+
+<StoreLayout 
+  title="Encomenda Confirmada | Ateliê Ótico — Funchal, Madeira"
+  description="Obrigado pela sua encomenda no Ateliê Ótico. O pagamento foi confirmado e a fatura enviada por e-mail."
+  hideHeader={true}
+  hideTopbar={true}
+>
+  <div class="checkout-luxury-wrapper" style="min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    
+    <article class="content-page" style="text-align: center; max-width: 620px; background: #ffffff; padding: 48px 36px; border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; box-shadow: 0 8px 30px rgba(0,0,0,0.04);">
+      <div style="width: 56px; height: 56px; background: #000000; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+      </div>
+
+      <p class="content-tag" style="margin-bottom: 8px;" data-i18n-pt="PAGAMENTO CONFIRMADO" data-i18n-en="PAYMENT CONFIRMED">PAGAMENTO CONFIRMADO</p>
+      <h1 style="font-size: 28px; margin-bottom: 12px;" data-i18n-pt="Obrigado pela sua compra!" data-i18n-en="Thank you for your order!">Obrigado pela sua compra!</h1>
+      
+      <p style="color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 24px;">
+        A sua encomenda <strong id="success-order-num" style="color: #000;">#AO-884920</strong> foi registada com sucesso. Enviámos a confirmação detalhada e a fatura para o seu e-mail <strong id="success-email-val" style="color: #000;"></strong>.
+      </p>
+
+      <div style="background: #faf9f6; border: 1px solid rgba(0,0,0,0.06); padding: 20px; text-align: left; border-radius: 6px; margin-bottom: 28px;">
+        <h4 style="margin: 0 0 8px; font-size: 12px; text-transform: uppercase; color: #888;">Próximos Passos</h4>
+        <p style="margin: 0; font-size: 13.5px; color: #444; line-height: 1.5;">
+          A nossa equipa no Funchal irá inspecionar cuidadosamente as suas armações e preparar a embalagem premium com certificado de autenticidade para expedição segura.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+        <a href="/catalogo" class="rect black" style="height: 48px; padding: 0 28px;" data-i18n-pt="CONTINUAR A COMPRAR" data-i18n-en="CONTINUE SHOPPING">CONTINUAR A COMPRAR</a>
+        <a href="/" class="rect" style="height: 48px; padding: 0 24px; background: #fff; color: #000; border: 1.5px solid #000;" data-i18n-pt="PÁGINA PRINCIPAL" data-i18n-en="HOME PAGE">PÁGINA PRINCIPAL</a>
+      </div>
+    </article>
+
+  </div>
+
+  <script is:inline>
+    const params = new URLSearchParams(window.location.search);
+    const orderId = params.get('order') || Math.random().toString(36).substring(2, 8).toUpperCase();
+    const email = params.get('email') || '';
+
+    const orderEl = document.getElementById('success-order-num');
+    if (orderEl) orderEl.textContent = `#AO-${orderId}`;
+
+    const emailEl = document.getElementById('success-email-val');
+    if (emailEl && email) emailEl.textContent = `(${email})`;
+  </script>
+</StoreLayout>
