@@ -5,6 +5,11 @@ const cart = read(KEY);
 const money = (n) => `${Number(n || 0).toFixed(0)} €`;
 
 function renderCart() {
+  const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
+  const emptyTextPt = 'O seu carrinho de compras está vazio.';
+  const emptyTextEn = 'Your shopping cart is empty.';
+  const emptyText = isEn ? emptyTextEn : emptyTextPt;
+
   document.querySelectorAll('[data-cart-count]').forEach(e => e.textContent = String(cart.reduce((n, i) => n + i.qty, 0)));
   const box = document.querySelector('[data-cart-items]');
   if (box) {
@@ -19,7 +24,7 @@ function renderCart() {
           <button data-remove="${i.slug}" aria-label="Remover">&times;</button>
         </div>
       `).join('')
-      : '<p>O seu saco está vazio.</p>';
+      : `<div class="empty-cart-message"><p data-i18n-pt="${emptyTextPt}" data-i18n-en="${emptyTextEn}">${emptyText}</p></div>`;
   }
   const total = cart.reduce((n, i) => n + i.price * i.qty, 0);
   document.querySelectorAll('[data-cart-total]').forEach(e => e.textContent = money(total));
