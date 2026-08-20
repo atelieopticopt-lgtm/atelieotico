@@ -379,40 +379,63 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
         <div class="panel-header-row">
           <div>
             <h1>Banners &amp; Estúdio Visual</h1>
-            <p>Faça a gestão visual de cada banner da loja, veja a sua localização exata, dimensões reais e ajuste o enquadramento em tempo real.</p>
+            <p>Faça a gestão visual de cada banner da loja, veja a sua localização exata, medidas recomendadas para campanhas personalizadas e ajuste o enquadramento em tempo real.</p>
           </div>
         </div>
 
-        {/* 1. HERO BANNER */}
+        {/* 1. HERO SLIDER BANNER (MULTI-SLIDE CAROUSEL) */}
         <div class="admin-card-section banner-studio-card">
           <div class="banner-location-badge">
             <span class="badge-dot"></span>
-            <strong>LOCALIZAÇÃO: Topo da Homepage (Primeira dobra / Hero Principal)</strong>
+            <strong>LOCALIZAÇÃO: Topo da Homepage (Hero Slider / Carrossel Principal com Transição &amp; Indicadores)</strong>
           </div>
 
           <div class="banner-dim-info">
-            <span>📐 Proporção Recomendada: <strong>1920 &times; 1080 px (16:9)</strong></span>
+            <span>📐 Medidas Recomendadas: <strong>1920 &times; 820 px (Desktop)</strong> / <strong>750 &times; 1000 px (Mobile)</strong></span>
             <span class="sep">&bull;</span>
-            <span>Dimensões detetadas: <strong id="hero-detected-dims">1920 &times; 1080 px</strong></span>
+            <span>Dimensões da imagem atual: <strong id="hero-detected-dims">1920 &times; 1080 px</strong></span>
           </div>
 
-          {/* Interactive Live Banner Preview */}
-          <div class="banner-live-preview-box hero-preview-box">
+          {/* Slide Navigation Tabs */}
+          <div class="hero-slides-nav-bar" id="hero-slides-tab-bar" style="display: flex; gap: 8px; margin: 18px 0; align-items: center; flex-wrap: wrap;">
+            <button type="button" class="btn-slide-tab active" data-slide-idx="0">Slide 1 (Principal)</button>
+            <button type="button" class="btn-slide-tab" data-slide-idx="1">Slide 2 (SNOB / ZEISS)</button>
+            <button type="button" class="btn-slide-tab" data-slide-idx="2">Slide 3 (Titânio &amp; Madeira)</button>
+            <button type="button" class="btn-add-slide-tab" id="btn-add-hero-slide" title="Adicionar Novo Slide ao Carrossel">
+              + Adicionar Slide
+            </button>
+          </div>
+
+          {/* Interactive Live Banner Preview with Exact Client-Side Mockup */}
+          <div class="banner-live-preview-box hero-preview-box" id="hero-preview-container">
             <img id="hero-live-preview-img" src="/campagna-hero.jpeg" alt="Hero Preview" class="banner-preview-img" style="object-position: center 8%;" />
             <div class="banner-preview-overlay"></div>
+            
             <div class="banner-preview-text-content">
               <span class="preview-tag" id="hero-preview-tag">COLEÇÃO 2026</span>
               <h2 class="preview-title" id="hero-preview-title">Design de Autor &amp; Precisão Ótica</h2>
               <p class="preview-desc" id="hero-preview-desc">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</p>
               <button type="button" class="preview-btn" id="hero-preview-btn">EXPLORAR CATÁLOGO</button>
             </div>
+
+            {/* Bottom Dots Indicator Preview */}
+            <div class="preview-hero-dots-mockup">
+              <span class="dot-mock active"></span>
+              <span class="dot-mock"></span>
+              <span class="dot-mock"></span>
+            </div>
           </div>
 
-          {/* Image Controls: Position Slider & Upload */}
+          {/* Image Controls: Position Slider & Reset */}
           <div class="banner-position-control-box">
-            <div class="pos-slider-header">
-              <label for="hero-pos-slider">Ajustar Enquadramento / Posição Vertical na Foto:</label>
-              <strong id="hero-pos-val">8% (Foco no Rosto/Lentes)</strong>
+            <div class="pos-slider-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <label for="hero-pos-slider">Ajustar Enquadramento / Posição Vertical na Foto:</label>
+                <strong id="hero-pos-val" style="margin-left: 8px;">8% (Foco no Rosto/Lentes)</strong>
+              </div>
+              <button type="button" class="btn-reset-pos" id="btn-reset-hero-pos" title="Repor para a posição padrão">
+                ↺ Repor Posição Original (8%)
+              </button>
             </div>
             <input type="range" id="hero-pos-slider" min="0" max="100" value="8" class="banner-slider-control" />
             <div class="slider-ticks">
@@ -422,9 +445,10 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             </div>
           </div>
 
+          {/* Image Source & Upload */}
           <div class="banner-inputs-grid">
             <div class="admin-form-group">
-              <label>Carregar Nova Imagem do PC</label>
+              <label>Carregar Imagem de Campanha Personalizada</label>
               <button type="button" class="btn-upload-banner" id="btn-upload-hero">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -442,23 +466,48 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             </div>
           </div>
 
+          {/* Visibility Controls for Overlays */}
+          <div class="visibility-toggles-box" style="background: #faf9f6; border: 1px solid rgba(0,0,0,0.08); padding: 14px 18px; border-radius: 6px; margin: 16px 0;">
+            <label style="font-size: 11.5px; font-weight: 700; text-transform: uppercase; color: #555; display: block; margin-bottom: 10px;">
+              Visibilidade dos Elementos sobre a Foto (Desative se a imagem de campanha já tiver texto gráfico):
+            </label>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-hero-tag" checked />
+                <span>Mostrar Tag Superior</span>
+              </label>
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-hero-title" checked />
+                <span>Mostrar Título Principal</span>
+              </label>
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-hero-desc" checked />
+                <span>Mostrar Descrição</span>
+              </label>
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-hero-btn" checked />
+                <span>Mostrar Botão de Ação</span>
+              </label>
+            </div>
+          </div>
+
           <div class="form-grid-2">
-            <div class="admin-form-group">
+            <div class="admin-form-group" id="group-hero-tag">
               <label>Tag Superior</label>
               <input type="text" id="hero-tag" value="COLEÇÃO 2026" class="auto-save-input" />
             </div>
-            <div class="admin-form-group">
+            <div class="admin-form-group" id="group-hero-title">
               <label>Título Principal do Hero</label>
               <input type="text" id="hero-title" value="Design de Autor &amp; Precisão Ótica" class="auto-save-input" />
             </div>
           </div>
 
-          <div class="admin-form-group">
+          <div class="admin-form-group" id="group-hero-desc">
             <label>Subtítulo / Descrição</label>
             <textarea id="hero-desc" rows="2" class="auto-save-input">Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.</textarea>
           </div>
 
-          <div class="form-grid-2">
+          <div class="form-grid-2" id="group-hero-btn">
             <div class="admin-form-group">
               <label>Texto do Botão</label>
               <input type="text" id="hero-btn-text" value="EXPLORAR CATÁLOGO" class="auto-save-input" />
@@ -467,6 +516,18 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
               <label>Link do Botão</label>
               <input type="text" id="hero-btn-link" value="/catalogo" class="auto-save-input" />
             </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; margin-top: 20px;">
+            <button type="button" class="btn-success-admin" id="btn-save-hero-banner" style="flex: 1; height: 46px; justify-content: center;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>GUARDAR ALTERAÇÕES DO SLIDE</span>
+            </button>
+            <button type="button" class="btn-danger-admin" id="btn-delete-hero-slide" style="height: 46px; padding: 0 20px;">
+              <span>Remover Slide</span>
+            </button>
           </div>
         </div>
 
@@ -478,7 +539,7 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
           </div>
 
           <div class="banner-dim-info">
-            <span>📐 Proporção Recomendada: <strong>1920 &times; 900 px (21:9 Widescreen)</strong></span>
+            <span>📐 Medidas Recomendadas: <strong>1920 &times; 750 px (21:9 Widescreen)</strong></span>
             <span class="sep">&bull;</span>
             <span>Dimensões detetadas: <strong id="cinematic-detected-dims">1920 &times; 850 px</strong></span>
           </div>
@@ -493,11 +554,16 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             </div>
           </div>
 
-          {/* Position Slider */}
+          {/* Position Slider & Reset */}
           <div class="banner-position-control-box">
-            <div class="pos-slider-header">
-              <label for="cinematic-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
-              <strong id="cinematic-pos-val">50% (Centro)</strong>
+            <div class="pos-slider-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <label for="cinematic-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
+                <strong id="cinematic-pos-val" style="margin-left: 8px;">50% (Centro)</strong>
+              </div>
+              <button type="button" class="btn-reset-pos" id="btn-reset-cinematic-pos" title="Repor para a posição padrão">
+                ↺ Repor Posição Original (50%)
+              </button>
             </div>
             <input type="range" id="cinematic-pos-slider" min="0" max="100" value="50" class="banner-slider-control" />
             <div class="slider-ticks">
@@ -527,6 +593,19 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             </div>
           </div>
 
+          <div class="visibility-toggles-box" style="background: #faf9f6; border: 1px solid rgba(0,0,0,0.08); padding: 14px 18px; border-radius: 6px; margin: 16px 0;">
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-cinematic-title" checked />
+                <span>Mostrar Título Editorial</span>
+              </label>
+              <label class="checkbox-label-toggle">
+                <input type="checkbox" id="toggle-cinematic-desc" checked />
+                <span>Mostrar Descrição</span>
+              </label>
+            </div>
+          </div>
+
           <div class="admin-form-group">
             <label>Título Editorial</label>
             <input type="text" id="cinematic-title" value="Linhas Arquiteturais e Conforto Absoluto" class="auto-save-input" />
@@ -536,6 +615,13 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             <label>Descrição</label>
             <textarea id="cinematic-desc" rows="2" class="auto-save-input">Cada peça resulta de um desenho rigoroso e de uma seleção criteriosa de acetatos italianos de celulose e titânio ultraleve.</textarea>
           </div>
+
+          <button type="button" class="btn-success-admin" id="btn-save-cinematic-banner" style="width: 100%; height: 46px; justify-content: center; margin-top: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>GUARDAR BANNER SIGNATURE</span>
+          </button>
         </div>
 
         {/* 3. PRE-FOOTER APPOINTMENT BANNER */}
@@ -546,7 +632,7 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
           </div>
 
           <div class="banner-dim-info">
-            <span>📐 Proporção Recomendada: <strong>1400 &times; 700 px (2:1)</strong></span>
+            <span>📐 Medidas Recomendadas: <strong>1400 &times; 700 px (2:1)</strong></span>
             <span class="sep">&bull;</span>
             <span>Dimensões detetadas: <strong id="prefooter-detected-dims">1400 &times; 700 px</strong></span>
           </div>
@@ -561,11 +647,16 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             </div>
           </div>
 
-          {/* Position Slider */}
+          {/* Position Slider & Reset */}
           <div class="banner-position-control-box">
-            <div class="pos-slider-header">
-              <label for="prefooter-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
-              <strong id="prefooter-pos-val">50% (Centro)</strong>
+            <div class="pos-slider-header" style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <label for="prefooter-pos-slider">Ajustar Enquadramento / Posição Vertical:</label>
+                <strong id="prefooter-pos-val" style="margin-left: 8px;">50% (Centro)</strong>
+              </div>
+              <button type="button" class="btn-reset-pos" id="btn-reset-prefooter-pos" title="Repor para a posição padrão">
+                ↺ Repor Posição Original (50%)
+              </button>
             </div>
             <input type="range" id="prefooter-pos-slider" min="0" max="100" value="50" class="banner-slider-control" />
             <div class="slider-ticks">
@@ -604,6 +695,13 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             <label>Descrição</label>
             <textarea id="prefooter-desc" rows="2" class="auto-save-input">Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira.</textarea>
           </div>
+
+          <button type="button" class="btn-success-admin" id="btn-save-prefooter-banner" style="width: 100%; height: 46px; justify-content: center; margin-top: 16px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>GUARDAR BANNER CONSULTA</span>
+          </button>
         </div>
 
       </section>

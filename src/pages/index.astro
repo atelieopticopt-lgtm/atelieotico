@@ -33,6 +33,50 @@ const mosaicoSlugs = [
 const novidades = novidadesSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
 const selecaoPermanente = selecaoSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
 const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(Boolean) as typeof products;
+const defaultHeroSlides = [
+  {
+    id: 'slide-1',
+    tag: 'COLEÇÃO 2026',
+    showTag: true,
+    title: 'Design de Autor & Precisão Ótica',
+    showTitle: true,
+    desc: 'Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.',
+    showDesc: true,
+    image: '/campagna-hero.jpeg',
+    btnText: 'EXPLORAR CATÁLOGO',
+    btnLink: '/catalogo',
+    showBtn: true,
+    position: 'center 8%'
+  },
+  {
+    id: 'slide-2',
+    tag: 'SNOB MILANO & ZEISS',
+    showTag: true,
+    title: 'Clip-On Magnético & Lentes ZEISS',
+    showTitle: true,
+    desc: 'A tecnologia italiana que transforma armações oftálmicas graduadas em óculos de sol de alta precisão.',
+    showDesc: true,
+    image: '/campagna-signature.jpeg',
+    btnText: 'VER COLEÇÃO SNOB',
+    btnLink: '/catalogo?marca=SNOB+Milano',
+    showBtn: true,
+    position: 'center 50%'
+  },
+  {
+    id: 'slide-3',
+    tag: 'TITÂNIO & MADEIRA NOBRE',
+    showTag: true,
+    title: 'Ørgreen & Einstoffen 2026',
+    showTitle: true,
+    desc: 'Minimalismo escandinavo em titânio e artesanato suíço com acabamentos orgânicos.',
+    showDesc: true,
+    image: '/banner-mobile.jpeg',
+    btnText: 'EXPLORAR MARCAS DE AUTOR',
+    btnLink: '/marcas',
+    showBtn: true,
+    position: 'center 30%'
+  }
+];
 ---
 
 <StoreLayout
@@ -41,30 +85,57 @@ const mosaico = mosaicoSlugs.map(s => products.find(p => p.slug === s)).filter(B
 >
 
   {/* =========================================================================
-      1. HERO SECTION
+      1. HERO MULTI-SLIDE CAROUSEL (LUXURY TRANSITIONS & PAGINATION DOTS)
       ========================================================================= */}
-  <section class="ll-melin-hero">
-    <img
-      class="ll-melin-hero-img"
-      src="/campagna-hero.jpeg"
-      alt="Design de Autor & Precisão Ótica — Ateliê Ótico"
-      loading="eager"
-      style="object-position: center 8%;"
-    />
-    <div class="ll-melin-hero-overlay"></div>
+  <section class="ll-melin-hero ll-hero-slider-section" id="hero-slider">
+    <div class="ll-hero-slides-wrapper" id="hero-slides-wrapper">
+      {defaultHeroSlides.map((slide, idx) => (
+        <div class={`ll-hero-slide ${idx === 0 ? 'active' : ''}`} data-hero-slide-id={slide.id}>
+          <img
+            class="ll-melin-hero-img"
+            src={slide.image}
+            alt={slide.title}
+            loading={idx === 0 ? 'eager' : 'lazy'}
+            style={`object-position: ${slide.position};`}
+          />
+          <div class="ll-melin-hero-overlay"></div>
 
-    <div class="ll-melin-hero-content">
-      <span class="ll-melin-hero-tag">COLEÇÃO 2026</span>
-      <h1 class="ll-melin-hero-title">
-        Design de Autor &amp; Precisão Ótica
-      </h1>
-      <p class="ll-melin-hero-desc">
-        Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.
-      </p>
+          <div class="ll-melin-hero-content">
+            {slide.showTag && <span class="ll-melin-hero-tag">{slide.tag}</span>}
+            {slide.showTitle && <h1 class="ll-melin-hero-title">{slide.title}</h1>}
+            {slide.showDesc && <p class="ll-melin-hero-desc">{slide.desc}</p>}
+            {slide.showBtn && (
+              <a href={slide.btnLink} class="ll-melin-btn">
+                {slide.btnText}
+              </a>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
 
-      <a href="/catalogo" class="ll-melin-btn">
-        EXPLORAR CATÁLOGO
-      </a>
+    {/* Navigation Arrows */}
+    <button class="ll-hero-arrow prev" id="hero-prev-btn" aria-label="Slide anterior" type="button">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="ll-hero-arrow next" id="hero-next-btn" aria-label="Próximo slide" type="button">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+
+    {/* Bottom Dots Indicator Bar (Matching Client Reference) */}
+    <div class="ll-hero-dots" id="hero-dots-container">
+      {defaultHeroSlides.map((_, idx) => (
+        <button
+          type="button"
+          class={`ll-hero-dot ${idx === 0 ? 'active' : ''}`}
+          data-slide-index={idx}
+          aria-label={`Ir para o slide ${idx + 1}`}
+        ></button>
+      ))}
     </div>
   </section>
 

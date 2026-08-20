@@ -77,19 +77,185 @@
     tempImg.src = imgSrc;
   }
 
+  // =========================================================================
+  // 2. CMS STATE & DATA LOADING (MULTI-SLIDE HERO + BANNERS STUDIO)
+  // =========================================================================
+  const HERO_SLIDES_KEY = 'atelie_hero_slides';
+  let defaultHeroSlides = [
+    {
+      id: 'slide-1',
+      tag: 'COLEÇÃO 2026',
+      showTag: true,
+      title: 'Design de Autor & Precisão Ótica',
+      showTitle: true,
+      desc: 'Curadoria independente de armações óticas e óculos de sol desenhados para carácter e conforto diário.',
+      showDesc: true,
+      image: '/campagna-hero.jpeg',
+      btnText: 'EXPLORAR CATÁLOGO',
+      btnLink: '/catalogo',
+      showBtn: true,
+      position: 8
+    },
+    {
+      id: 'slide-2',
+      tag: 'SNOB MILANO & ZEISS',
+      showTag: true,
+      title: 'Clip-On Magnético & Lentes ZEISS',
+      showTitle: true,
+      desc: 'A tecnologia italiana que transforma armações oftálmicas graduadas em óculos de sol de alta precisão.',
+      showDesc: true,
+      image: '/campagna-signature.jpeg',
+      btnText: 'VER COLEÇÃO SNOB',
+      btnLink: '/catalogo?marca=SNOB+Milano',
+      showBtn: true,
+      position: 50
+    },
+    {
+      id: 'slide-3',
+      tag: 'TITÂNIO & MADEIRA NOBRE',
+      showTag: true,
+      title: 'Ørgreen & Einstoffen 2026',
+      showTitle: true,
+      desc: 'Minimalismo escandinavo em titânio e artesanato suíço com acabamentos orgânicos.',
+      showDesc: true,
+      image: '/banner-mobile.jpeg',
+      btnText: 'EXPLORAR MARCAS DE AUTOR',
+      btnLink: '/marcas',
+      showBtn: true,
+      position: 30
+    }
+  ];
+
+  let currentHeroSlides = [];
+  try {
+    const savedSlides = localStorage.getItem(HERO_SLIDES_KEY);
+    currentHeroSlides = savedSlides ? JSON.parse(savedSlides) : defaultHeroSlides;
+  } catch {
+    currentHeroSlides = defaultHeroSlides;
+  }
+
+  let activeSlideIdx = 0;
+  let currentEditingPhotos = [];
+  let quickAddPhotos = [];
+
+  function updateImageDimensions(imgSrc, outputElId) {
+    if (!imgSrc || !outputElId) return;
+    const outputEl = document.getElementById(outputElId);
+    if (!outputEl) return;
+
+    const tempImg = new Image();
+    tempImg.onload = () => {
+      outputEl.textContent = `${tempImg.naturalWidth} × ${tempImg.naturalHeight} px`;
+    };
+    tempImg.onerror = () => {
+      outputEl.textContent = 'Dimensões indisponíveis';
+    };
+    tempImg.src = imgSrc;
+  }
+
+  function renderHeroSlideTabs() {
+    const tabContainer = document.getElementById('hero-slides-tab-bar');
+    if (!tabContainer) return;
+
+    tabContainer.innerHTML = '';
+    currentHeroSlides.forEach((slide, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `btn-slide-tab ${idx === activeSlideIdx ? 'active' : ''}`;
+      btn.textContent = `Slide ${idx + 1} (${slide.tag || 'Slide'})`;
+      btn.addEventListener('click', () => {
+        activeSlideIdx = idx;
+        loadCurrentHeroSlideIntoForm();
+        renderHeroSlideTabs();
+      });
+      tabContainer.appendChild(btn);
+    });
+
+    const addBtn = document.createElement('button');
+    addBtn.type = 'button';
+    addBtn.className = 'btn-add-slide-tab';
+    addBtn.textContent = '+ Adicionar Slide';
+    addBtn.addEventListener('click', () => {
+      const newSlide = {
+        id: `slide-${Date.now()}`,
+        tag: 'NOVA CAMPANHA',
+        showTag: true,
+        title: 'Nova Campanha de Autor',
+        showTitle: true,
+        desc: 'Descrição da nova coleção e óculos exclusivos.',
+        showDesc: true,
+        image: '/campagna-hero.jpeg',
+        btnText: 'VER NOVIDADES',
+        btnLink: '/catalogo',
+        showBtn: true,
+        position: 20
+      };
+      currentHeroSlides.push(newSlide);
+      activeSlideIdx = currentHeroSlides.length - 1;
+      saveHeroSlides();
+      renderHeroSlideTabs();
+      loadCurrentHeroSlideIntoForm();
+      showAdminToast('✓ Novo slide adicionado com sucesso ao Hero.');
+    });
+    tabContainer.appendChild(addBtn);
+  }
+
+  function loadCurrentHeroSlideIntoForm() {
+    const slide = currentHeroSlides[activeSlideIdx] || currentHeroSlides[0];
+    if (!slide) return;
+
+    if (document.getElementById('hero-tag')) document.getElementById('hero-tag').value = slide.tag || '';
+    if (document.getElementById('hero-title')) document.getElementById('hero-title').value = slide.title || '';
+    if (document.getElementById('hero-desc')) document.getElementById('hero-desc').value = slide.desc || '';
+    if (document.getElementById('hero-img')) document.getElementById('hero-img').value = slide.image || '';
+    if (document.getElementById('hero-btn-text')) document.getElementById('hero-btn-text').value = slide.btnText || '';
+    if (document.getElementById('hero-btn-link')) document.getElementById('hero-btn-link').value = slide.btnLink || '';
+    if (document.getElementById('hero-pos-slider')) document.getElementById('hero-pos-slider').value = slide.position !== undefined ? slide.position : 8;
+
+    if (document.getElementById('toggle-hero-tag')) document.getElementById('toggle-hero-tag').checked = slide.showTag !== false;
+    if (document.getElementById('toggle-hero-title')) document.getElementById('toggle-hero-title').checked = slide.showTitle !== false;
+    if (document.getElementById('toggle-hero-desc')) document.getElementById('toggle-hero-desc').checked = slide.showDesc !== false;
+    if (document.getElementById('toggle-hero-btn')) document.getElementById('toggle-hero-btn').checked = slide.showBtn !== false;
+
+    syncBannerStudio();
+  }
+
   function syncBannerStudio() {
+    const slide = currentHeroSlides[activeSlideIdx] || {};
+
     // 1. Hero Banner Sync
-    const heroTag = document.getElementById('hero-tag')?.value || 'COLEÇÃO 2026';
-    const heroTitle = document.getElementById('hero-title')?.value || 'Design de Autor & Precisão Ótica';
+    const heroTag = document.getElementById('hero-tag')?.value || '';
+    const heroTitle = document.getElementById('hero-title')?.value || '';
     const heroDesc = document.getElementById('hero-desc')?.value || '';
-    const heroBtn = document.getElementById('hero-btn-text')?.value || 'EXPLORAR CATÁLOGO';
+    const heroBtn = document.getElementById('hero-btn-text')?.value || '';
     const heroImg = document.getElementById('hero-img')?.value || '/campagna-hero.jpeg';
     const heroPos = document.getElementById('hero-pos-slider')?.value || 8;
 
-    if (document.getElementById('hero-preview-tag')) document.getElementById('hero-preview-tag').textContent = heroTag;
-    if (document.getElementById('hero-preview-title')) document.getElementById('hero-preview-title').textContent = heroTitle;
-    if (document.getElementById('hero-preview-desc')) document.getElementById('hero-preview-desc').textContent = heroDesc;
-    if (document.getElementById('hero-preview-btn')) document.getElementById('hero-preview-btn').textContent = heroBtn;
+    const showTag = document.getElementById('toggle-hero-tag')?.checked !== false;
+    const showTitle = document.getElementById('toggle-hero-title')?.checked !== false;
+    const showDesc = document.getElementById('toggle-hero-desc')?.checked !== false;
+    const showBtn = document.getElementById('toggle-hero-btn')?.checked !== false;
+
+    const tagEl = document.getElementById('hero-preview-tag');
+    if (tagEl) {
+      tagEl.textContent = heroTag;
+      tagEl.style.display = showTag ? 'block' : 'none';
+    }
+    const titleEl = document.getElementById('hero-preview-title');
+    if (titleEl) {
+      titleEl.textContent = heroTitle;
+      titleEl.style.display = showTitle ? 'block' : 'none';
+    }
+    const descEl = document.getElementById('hero-preview-desc');
+    if (descEl) {
+      descEl.textContent = heroDesc;
+      descEl.style.display = showDesc ? 'block' : 'none';
+    }
+    const btnEl = document.getElementById('hero-preview-btn');
+    if (btnEl) {
+      btnEl.textContent = heroBtn;
+      btnEl.style.display = showBtn ? 'inline-block' : 'none';
+    }
     
     const heroPreviewImg = document.getElementById('hero-live-preview-img');
     if (heroPreviewImg) {
@@ -100,14 +266,31 @@
     if (heroPosVal) heroPosVal.textContent = `${heroPos}% ${heroPos < 25 ? '(Foco no Rosto/Lentes)' : (heroPos > 70 ? '(Foco Inferior)' : '(Foco Central)')}`;
     updateImageDimensions(heroImg, 'hero-detected-dims');
 
+    // Update Dots in Preview
+    const previewDots = document.querySelector('.preview-hero-dots-mockup');
+    if (previewDots) {
+      previewDots.innerHTML = currentHeroSlides.map((_, i) => `<span class="dot-mock ${i === activeSlideIdx ? 'active' : ''}"></span>`).join('');
+    }
+
     // 2. Cinematic Banner Sync
     const cinTitle = document.getElementById('cinematic-title')?.value || '';
     const cinDesc = document.getElementById('cinematic-desc')?.value || '';
     const cinImg = document.getElementById('cinematic-img')?.value || '/campagna-signature.jpeg';
     const cinPos = document.getElementById('cinematic-pos-slider')?.value || 50;
 
-    if (document.getElementById('cinematic-preview-title')) document.getElementById('cinematic-preview-title').textContent = cinTitle;
-    if (document.getElementById('cinematic-preview-desc')) document.getElementById('cinematic-preview-desc').textContent = cinDesc;
+    const showCinTitle = document.getElementById('toggle-cinematic-title')?.checked !== false;
+    const showCinDesc = document.getElementById('toggle-cinematic-desc')?.checked !== false;
+
+    const cinTitleEl = document.getElementById('cinematic-preview-title');
+    if (cinTitleEl) {
+      cinTitleEl.textContent = cinTitle;
+      cinTitleEl.style.display = showCinTitle ? 'block' : 'none';
+    }
+    const cinDescEl = document.getElementById('cinematic-preview-desc');
+    if (cinDescEl) {
+      cinDescEl.textContent = cinDesc;
+      cinDescEl.style.display = showCinDesc ? 'block' : 'none';
+    }
     const cinPreviewImg = document.getElementById('cinematic-live-preview-img');
     if (cinPreviewImg) {
       cinPreviewImg.src = cinImg;
@@ -135,29 +318,46 @@
     updateImageDimensions(preImg, 'prefooter-detected-dims');
   }
 
+  function saveHeroSlides() {
+    if (currentHeroSlides[activeSlideIdx]) {
+      currentHeroSlides[activeSlideIdx] = {
+        ...currentHeroSlides[activeSlideIdx],
+        tag: document.getElementById('hero-tag')?.value || '',
+        showTag: document.getElementById('toggle-hero-tag')?.checked !== false,
+        title: document.getElementById('hero-title')?.value || '',
+        showTitle: document.getElementById('toggle-hero-title')?.checked !== false,
+        desc: document.getElementById('hero-desc')?.value || '',
+        showDesc: document.getElementById('toggle-hero-desc')?.checked !== false,
+        image: document.getElementById('hero-img')?.value || '',
+        btnText: document.getElementById('hero-btn-text')?.value || '',
+        btnLink: document.getElementById('hero-btn-link')?.value || '',
+        showBtn: document.getElementById('toggle-hero-btn')?.checked !== false,
+        position: Number(document.getElementById('hero-pos-slider')?.value || 8)
+      };
+    }
+    localStorage.setItem(HERO_SLIDES_KEY, JSON.stringify(currentHeroSlides));
+    autoSaveAll();
+  }
+
   function loadSavedCMS() {
     try {
       const raw = localStorage.getItem(CMS_KEY);
+      renderHeroSlideTabs();
+      loadCurrentHeroSlideIntoForm();
+
       if (!raw) {
         syncBannerStudio();
         return;
       }
       const cms = JSON.parse(raw);
 
-      if (cms.hero) {
-        if (cms.hero.tag && document.getElementById('hero-tag')) document.getElementById('hero-tag').value = cms.hero.tag;
-        if (cms.hero.title && document.getElementById('hero-title')) document.getElementById('hero-title').value = cms.hero.title;
-        if (cms.hero.desc && document.getElementById('hero-desc')) document.getElementById('hero-desc').value = cms.hero.desc;
-        if (cms.hero.image && document.getElementById('hero-img')) document.getElementById('hero-img').value = cms.hero.image;
-        if (cms.hero.btnText && document.getElementById('hero-btn-text')) document.getElementById('hero-btn-text').value = cms.hero.btnText;
-        if (cms.hero.btnLink && document.getElementById('hero-btn-link')) document.getElementById('hero-btn-link').value = cms.hero.btnLink;
-        if (cms.hero.position && document.getElementById('hero-pos-slider')) document.getElementById('hero-pos-slider').value = cms.hero.position;
-      }
       if (cms.cinematic) {
         if (cms.cinematic.title && document.getElementById('cinematic-title')) document.getElementById('cinematic-title').value = cms.cinematic.title;
         if (cms.cinematic.desc && document.getElementById('cinematic-desc')) document.getElementById('cinematic-desc').value = cms.cinematic.desc;
         if (cms.cinematic.image && document.getElementById('cinematic-img')) document.getElementById('cinematic-img').value = cms.cinematic.image;
         if (cms.cinematic.position && document.getElementById('cinematic-pos-slider')) document.getElementById('cinematic-pos-slider').value = cms.cinematic.position;
+        if (document.getElementById('toggle-cinematic-title')) document.getElementById('toggle-cinematic-title').checked = cms.cinematic.showTitle !== false;
+        if (document.getElementById('toggle-cinematic-desc')) document.getElementById('toggle-cinematic-desc').checked = cms.cinematic.showDesc !== false;
       }
       if (cms.prefooter) {
         if (cms.prefooter.title && document.getElementById('prefooter-title')) document.getElementById('prefooter-title').value = cms.prefooter.title;
@@ -207,18 +407,12 @@
       const cmsData = {
         ...existing,
         timestamp: new Date().toISOString(),
-        hero: {
-          tag: document.getElementById('hero-tag')?.value || '',
-          title: document.getElementById('hero-title')?.value || '',
-          desc: document.getElementById('hero-desc')?.value || '',
-          image: document.getElementById('hero-img')?.value || '',
-          btnText: document.getElementById('hero-btn-text')?.value || '',
-          btnLink: document.getElementById('hero-btn-link')?.value || '',
-          position: document.getElementById('hero-pos-slider')?.value || 8
-        },
+        hero: currentHeroSlides[0] || {},
         cinematic: {
           title: document.getElementById('cinematic-title')?.value || '',
+          showTitle: document.getElementById('toggle-cinematic-title')?.checked !== false,
           desc: document.getElementById('cinematic-desc')?.value || '',
+          showDesc: document.getElementById('toggle-cinematic-desc')?.checked !== false,
           image: document.getElementById('cinematic-img')?.value || '',
           position: document.getElementById('cinematic-pos-slider')?.value || 50
         },
@@ -246,8 +440,78 @@
   }
 
   // =========================================================================
-  // 3. BANNER FILE UPLOAD BUTTONS
+  // 3. RESET POSITION BUTTONS & SAVE ACTIONS
   // =========================================================================
+  document.getElementById('btn-reset-hero-pos')?.addEventListener('click', () => {
+    const slider = document.getElementById('hero-pos-slider');
+    if (slider) {
+      slider.value = 8;
+      saveHeroSlides();
+      syncBannerStudio();
+      showAdminToast('↺ Posição vertical do Hero reposta para 8% (Padrão).');
+    }
+  });
+
+  document.getElementById('btn-reset-cinematic-pos')?.addEventListener('click', () => {
+    const slider = document.getElementById('cinematic-pos-slider');
+    if (slider) {
+      slider.value = 50;
+      autoSaveAll();
+      syncBannerStudio();
+      showAdminToast('↺ Posição vertical do Banner Signature reposta para 50% (Centro).');
+    }
+  });
+
+  document.getElementById('btn-reset-prefooter-pos')?.addEventListener('click', () => {
+    const slider = document.getElementById('prefooter-pos-slider');
+    if (slider) {
+      slider.value = 50;
+      autoSaveAll();
+      syncBannerStudio();
+      showAdminToast('↺ Posição vertical do Banner Consulta reposta para 50% (Centro).');
+    }
+  });
+
+  // Dedicated Save Buttons
+  document.getElementById('btn-save-hero-banner')?.addEventListener('click', () => {
+    saveHeroSlides();
+    showAdminToast('✓ Slide e configurações do Hero guardadas com sucesso!');
+  });
+
+  document.getElementById('btn-delete-hero-slide')?.addEventListener('click', () => {
+    if (currentHeroSlides.length <= 1) {
+      alert('O carrossel necessita de pelo menos 1 slide principal.');
+      return;
+    }
+    if (confirm(`Tem a certeza que deseja remover o Slide ${activeSlideIdx + 1}?`)) {
+      currentHeroSlides.splice(activeSlideIdx, 1);
+      activeSlideIdx = Math.max(0, activeSlideIdx - 1);
+      saveHeroSlides();
+      renderHeroSlideTabs();
+      loadCurrentHeroSlideIntoForm();
+      showAdminToast('🗑️ Slide removido do Hero com sucesso.');
+    }
+  });
+
+  document.getElementById('btn-save-cinematic-banner')?.addEventListener('click', () => {
+    autoSaveAll();
+    showAdminToast('✓ Banner Editorial Signature guardado com sucesso!');
+  });
+
+  document.getElementById('btn-save-prefooter-banner')?.addEventListener('click', () => {
+    autoSaveAll();
+    showAdminToast('✓ Banner de Agendamento guardado com sucesso!');
+  });
+
+  // Visibility Checkbox Event Listeners
+  ['toggle-hero-tag', 'toggle-hero-title', 'toggle-hero-desc', 'toggle-hero-btn', 'toggle-cinematic-title', 'toggle-cinematic-desc'].forEach(id => {
+    document.getElementById(id)?.addEventListener('change', () => {
+      saveHeroSlides();
+      autoSaveAll();
+    });
+  });
+
+  // Banner File Upload Buttons
   function bindBannerUploader(btnId, fileInputId, targetUrlInputId) {
     const btn = document.getElementById(btnId);
     const fileInput = document.getElementById(fileInputId);
@@ -261,7 +525,9 @@
         reader.onload = (evt) => {
           if (evt.target?.result && urlInput) {
             urlInput.value = evt.target.result;
+            saveHeroSlides();
             autoSaveAll();
+            showAdminToast('✓ Imagem carregada e enquadrada com sucesso.');
           }
         };
         reader.readAsDataURL(file);
@@ -274,9 +540,26 @@
   bindBannerUploader('btn-upload-prefooter', 'prefooter-file-input', 'prefooter-img');
 
   // Sliders and Banner inputs live listener
-  document.getElementById('hero-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('hero-pos-slider')?.addEventListener('input', () => {
+    saveHeroSlides();
+    syncBannerStudio();
+  });
+  document.getElementById('hero-tag')?.addEventListener('input', saveHeroSlides);
+  document.getElementById('hero-title')?.addEventListener('input', saveHeroSlides);
+  document.getElementById('hero-desc')?.addEventListener('input', saveHeroSlides);
+  document.getElementById('hero-btn-text')?.addEventListener('input', saveHeroSlides);
+  document.getElementById('hero-btn-link')?.addEventListener('input', saveHeroSlides);
+  document.getElementById('hero-img')?.addEventListener('input', saveHeroSlides);
+
   document.getElementById('cinematic-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('cinematic-title')?.addEventListener('input', autoSaveAll);
+  document.getElementById('cinematic-desc')?.addEventListener('input', autoSaveAll);
+  document.getElementById('cinematic-img')?.addEventListener('input', autoSaveAll);
+
   document.getElementById('prefooter-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-title')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-desc')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-img')?.addEventListener('input', autoSaveAll);
 
   // =========================================================================
   // 4. LIVE FILTERING OF PRODUCT CARDS
