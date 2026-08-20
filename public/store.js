@@ -78,7 +78,7 @@ document.querySelector('.mobile-menu')?.addEventListener('click', (e) => {
 document.querySelectorAll('[data-favorite]').forEach(b => b.classList.toggle('active', read(FAV).includes(b.dataset.favorite)));
 renderCart();
 
-// Dynamic Pointer-Tracking Zoom
+// Dynamic Pointer-Tracking Zoom for Product Detail Page
 function initZoom() {
   document.querySelectorAll('[data-product-zoom]').forEach((box) => {
     const img = box.querySelector('img');
@@ -101,6 +101,38 @@ function initZoom() {
   });
 }
 
+// Dynamic Pointer-Tracking Zoom for ALL Product Cards across the entire store
+window.initCardHoverZoom = function() {
+  document.querySelectorAll('.ll-card-image-box, .store-card__image').forEach((box) => {
+    if (box.dataset.zoomReady) return;
+    box.dataset.zoomReady = 'true';
+
+    const onMove = (e) => {
+      const rect = box.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      const x = Math.max(0, Math.min(100, ((clientX - rect.left) / rect.width) * 100));
+      const y = Math.max(0, Math.min(100, ((clientY - rect.top) / rect.height) * 100));
+      
+      const imgs = box.querySelectorAll('img');
+      imgs.forEach(img => {
+        img.style.transformOrigin = `${x}% ${y}%`;
+      });
+    };
+
+    const onLeave = () => {
+      const imgs = box.querySelectorAll('img');
+      imgs.forEach(img => {
+        img.style.transformOrigin = 'center center';
+      });
+    };
+
+    box.addEventListener('mousemove', onMove);
+    box.addEventListener('touchmove', onMove, { passive: true });
+    box.addEventListener('mouseleave', onLeave);
+  });
+};
+
 // Navbar Scroll Effect
 function initNavbarScroll() {
   const header = document.querySelector('.site-header');
@@ -119,9 +151,11 @@ function initNavbarScroll() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initZoom();
+    window.initCardHoverZoom();
     initNavbarScroll();
   });
 } else {
   initZoom();
+  window.initCardHoverZoom();
   initNavbarScroll();
 }

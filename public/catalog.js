@@ -252,4 +252,5 @@
 
   // Initial Run
   applyFilters();
+  if (window.initCardHoverZoom) window.initCardHoverZoom();
 })();
