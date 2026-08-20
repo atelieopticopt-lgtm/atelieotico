@@ -1,12 +1,12 @@
 /* ==========================================================================
-   ATELIÊ ÓTICO — ADMIN DASHBOARD STYLESHEET (CLEAN & COMPLETE)
+   ATELIÊ ÓTICO — ADMIN CMS (NO TOPBAR, LOGO IN SIDEBAR, 270PX FIXED SIDEBAR)
    ========================================================================== */
 
 :root {
   --admin-bg: #f8f7f2;
   --admin-sidebar-bg: #111111;
   --admin-sidebar-hover: #1e1e1e;
-  --admin-sidebar-active: #282828;
+  --admin-sidebar-active: #2a2a2a;
   --admin-card-bg: #ffffff;
   --admin-border: rgba(0, 0, 0, 0.08);
   --admin-text-main: #111111;
@@ -29,118 +29,62 @@ body.admin-body {
   color: var(--admin-text-main);
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================================================
-   1. TOPBAR
+   1. MAIN LAYOUT & SIDEBAR
    ========================================================================== */
-.admin-topbar {
-  height: 64px;
-  background: #ffffff;
-  border-bottom: 1px solid var(--admin-border);
+.admin-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  min-height: 100vh;
+}
+
+.admin-nav-sidebar {
+  background: var(--admin-sidebar-bg);
+  color: #ffffff;
+  padding: 28px 18px 24px;
+  border-right: 1px solid #222222;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.admin-sidebar-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 28px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding-bottom: 24px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.admin-brand {
+.admin-brand-link {
   display: flex;
   align-items: center;
-  gap: 12px;
+  text-decoration: none;
 }
 
 .admin-logo-img {
-  height: 32px;
+  height: 30px;
   width: auto;
-  display: block;
+  filter: brightness(0) invert(1);
 }
 
 .admin-badge {
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  background: #000000;
+  background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
   padding: 4px 8px;
   border-radius: 4px;
-}
-
-.admin-topbar-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.btn-preview-site {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 36px;
-  padding: 0 14px;
-  background: #ffffff;
-  border: 1px solid var(--admin-border);
-  color: #111111;
-  font-size: 12px;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.15s ease;
-}
-
-.btn-preview-site:hover {
-  background: #f0eee6;
-  border-color: #ccc;
-}
-
-.btn-preview-site.secondary {
-  color: #666666;
-}
-
-.btn-save-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  height: 36px;
-  padding: 0 16px;
-  background: var(--admin-accent);
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: opacity 0.15s ease;
-}
-
-.btn-save-all:hover {
-  opacity: 0.85;
-}
-
-/* ==========================================================================
-   2. MAIN LAYOUT & SIDEBAR
-   ========================================================================== */
-.admin-layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  min-height: calc(100vh - 64px);
-  flex: 1;
-}
-
-.admin-nav-sidebar {
-  background: var(--admin-sidebar-bg);
-  color: #ffffff;
-  padding: 24px 16px;
-  border-right: 1px solid #222222;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 }
 
 .nav-section-title {
@@ -148,9 +92,9 @@ body.admin-body {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #777777;
-  padding: 8px 12px;
-  margin-bottom: 4px;
+  color: #666666;
+  padding: 6px 12px;
+  margin-bottom: 2px;
 }
 
 .nav-item {
@@ -196,37 +140,68 @@ body.admin-body {
   border-radius: 10px;
 }
 
-.sidebar-help-box {
+.sidebar-bottom-actions {
   margin-top: auto;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 16px;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.sidebar-help-box h4 {
-  font-size: 12px;
-  font-weight: 700;
+.sidebar-btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
-  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.15s ease;
 }
 
-.sidebar-help-box p {
-  font-size: 11.5px;
-  line-height: 1.5;
-  color: #888888;
+.sidebar-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-btn-save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.sidebar-btn-save:hover {
+  opacity: 0.9;
 }
 
 /* ==========================================================================
-   3. ADMIN CONTENT AREA & TABS
+   2. CONTENT AREA & TABS
    ========================================================================== */
 .admin-main {
-  padding: 32px 40px 60px;
+  padding: 36px 44px 70px;
   min-width: 0;
   background: var(--admin-bg);
 }
 
 .panel-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 28px;
 }
 
@@ -252,7 +227,7 @@ body.admin-body {
 }
 
 /* ==========================================================================
-   4. PRODUCTS TAB & FILTER BAR
+   3. PRODUCTS FILTER BAR & TABLE
    ========================================================================== */
 .admin-filter-bar {
   display: flex;
@@ -300,7 +275,7 @@ body.admin-body {
   align-items: center;
   gap: 6px;
   height: 40px;
-  padding: 0 16px;
+  padding: 0 18px;
   background: var(--admin-success);
   color: #ffffff;
   font-size: 12.5px;
@@ -309,21 +284,19 @@ body.admin-body {
   border-radius: 6px;
   cursor: pointer;
   transition: opacity 0.15s ease;
+  white-space: nowrap;
 }
 
 .btn-success-admin:hover {
   opacity: 0.9;
 }
 
-/* ==========================================================================
-   5. PRODUCTS TABLE CARD
-   ========================================================================== */
 .admin-table-card {
   background: #ffffff;
   border: 1px solid var(--admin-border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 
 .admin-table {
@@ -333,13 +306,13 @@ body.admin-body {
 }
 
 .admin-table th {
-  background: #fdfdfc;
+  background: #fcfbf8;
   padding: 14px 18px;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #777777;
+  color: #666666;
   border-bottom: 1px solid var(--admin-border);
 }
 
@@ -352,10 +325,10 @@ body.admin-body {
 }
 
 .admin-table tr:hover td {
-  background: #faf9f6;
+  background: #faf9f5;
 }
 
-.thumb-preview-img {
+.table-thumb {
   width: 48px;
   height: 48px;
   object-fit: contain;
@@ -366,7 +339,7 @@ body.admin-body {
 }
 
 .price-inline-input {
-  width: 72px;
+  width: 76px;
   height: 32px;
   padding: 0 8px;
   border: 1px solid var(--admin-border);
@@ -375,6 +348,7 @@ body.admin-body {
   font-size: 13px;
   font-weight: 700;
   text-align: right;
+  background: #ffffff;
 }
 
 .price-inline-input:focus {
@@ -382,60 +356,91 @@ body.admin-body {
   outline: none;
 }
 
-.table-actions-cell {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-}
-
-.btn-action-edit {
+.table-action-btn {
   background: none;
   border: none;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+  margin-left: 4px;
+}
+
+.table-action-btn.edit {
   color: #111111;
-  font-weight: 700;
-  font-size: 12px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background 0.15s ease;
 }
 
-.btn-action-edit:hover {
-  background: #eee;
+.table-action-btn.edit:hover {
+  background: #eeeeee;
 }
 
-.btn-action-delete {
-  background: none;
-  border: none;
+.table-action-btn.delete {
   color: var(--admin-danger);
-  font-weight: 700;
-  font-size: 12px;
-  cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: background 0.15s ease;
 }
 
-.btn-action-delete:hover {
+.table-action-btn.delete:hover {
   background: #fee2e2;
 }
 
+.admin-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #fcfbf8;
+  border-top: 1px solid var(--admin-border);
+  font-size: 12.5px;
+  color: #666666;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-page {
+  background: #ffffff;
+  border: 1px solid var(--admin-border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-page:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.page-current-badge {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 0 4px;
+  color: #111111;
+}
+
 /* ==========================================================================
-   6. BANNERS & TEXT EDITORS
-   ========================================================================== */
+   4. BANNERS & TEXT EDITORS
+   ========================================================================= */
 .admin-card-section {
   background: #ffffff;
   border: 1px solid var(--admin-border);
   border-radius: 8px;
   padding: 28px;
   margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .admin-card-section h3 {
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   color: #111111;
 }
 
@@ -448,7 +453,7 @@ body.admin-body {
 .form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 18px;
 }
 
 .admin-form-group {
@@ -459,7 +464,7 @@ body.admin-body {
 }
 
 .admin-form-group label {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -474,23 +479,24 @@ body.admin-body {
   border: 1px solid var(--admin-border);
   border-radius: 6px;
   font-family: inherit;
-  font-size: 13.5px;
+  font-size: 13px;
   outline: none;
   background: #ffffff;
 }
 
 .admin-form-group textarea {
-  min-height: 80px;
+  min-height: 70px;
   resize: vertical;
 }
 
 .admin-form-group input:focus,
-.admin-form-group textarea:focus {
+.admin-form-group textarea:focus,
+.admin-form-group select:focus {
   border-color: #000000;
 }
 
 /* ==========================================================================
-   7. MODAL DIALOGS
+   5. MODAL DIALOGS
    ========================================================================== */
 .admin-modal-overlay {
   position: fixed;
@@ -547,28 +553,25 @@ body.admin-body {
   background: #faf9f6;
 }
 
-/* Toast Notifications */
-.admin-toast {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  background: #111111;
-  color: #ffffff;
-  padding: 12px 20px;
+.btn-action-edit {
+  background: #eeeeee;
+  border: none;
+  padding: 8px 16px;
   border-radius: 6px;
-  font-size: 13px;
   font-weight: 600;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  z-index: 999999;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  animation: toastFade 0.25s ease;
+  font-size: 13px;
+  cursor: pointer;
 }
 
-@keyframes toastFade {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.btn-save-all {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
 }
 
 @media (max-width: 960px) {
@@ -578,8 +581,6 @@ body.admin-body {
 
   .admin-nav-sidebar {
     position: static;
-    flex-direction: row;
-    flex-wrap: wrap;
     height: auto;
   }
 }
