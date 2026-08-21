@@ -59,14 +59,32 @@ document.addEventListener('click', (e) => {
     const old = cart.find(i => i.slug === item.slug);
     old ? old.qty++ : cart.push({ ...item, qty: 1 });
     renderCart();
-    openCart();
+
+    // Subtle button confirmation without opening drawer
+    if (!add.dataset.origText) {
+      add.dataset.origText = add.textContent.trim();
+    }
+    const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
+    add.textContent = isEn ? '✓ ADDED TO BAG' : '✓ ADICIONADO AO SACO';
+    add.style.background = '#22c55e';
+    add.style.borderColor = '#22c55e';
+    add.style.color = '#ffffff';
+
+    setTimeout(() => {
+      add.textContent = add.dataset.origText || (isEn ? 'ADD TO BAG' : 'ADICIONAR AO SACO');
+      add.style.background = '';
+      add.style.borderColor = '';
+      add.style.color = '';
+    }, 1400);
   }
+
   const remove = e.target.closest('[data-remove]');
   if (remove) {
     const i = cart.findIndex(x => x.slug === remove.dataset.remove);
     if (i >= 0) cart.splice(i, 1);
     renderCart();
   }
+
   const fav = e.target.closest('[data-favorite]');
   if (fav) {
     const list = read(FAV), slug = fav.dataset.favorite, i = list.indexOf(slug);
@@ -74,6 +92,11 @@ document.addEventListener('click', (e) => {
     write(FAV, list);
     fav.classList.toggle('is-active', i < 0);
     fav.classList.toggle('active', i < 0);
+  }
+
+  const closeBtn = e.target.closest('[data-close-cart]');
+  if (closeBtn) {
+    closeCart();
   }
 });
 
@@ -95,7 +118,14 @@ function closeCart() {
 }
 
 document.querySelectorAll('.cart-trigger').forEach(b => b.addEventListener('click', openCart));
-document.querySelectorAll('.cart-close, .drawer-overlay').forEach(b => b.addEventListener('click', closeCart));
+document.querySelectorAll('.cart-close, .drawer-overlay, [data-close-cart]').forEach(b => b.addEventListener('click', closeCart));
+
+// Close with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && drawer?.classList.contains('open')) {
+    closeCart();
+  }
+});
 
 renderCart();
 initFavs();

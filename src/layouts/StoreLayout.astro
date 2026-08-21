@@ -269,7 +269,8 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
       <span data-i18n-pt="TOTAL ESTIMADO" data-i18n-en="ESTIMATED TOTAL">TOTAL ESTIMADO</span>
       <strong data-cart-total>0 €</strong>
     </div>
-    <a class="rect black" href="/checkout" data-i18n-pt="FINALIZAR COMPRA" data-i18n-en="CHECKOUT">FINALIZAR COMPRA</a>
+    <a class="rect black btn-cart-checkout" href="/checkout" data-i18n-pt="FINALIZAR COMPRA" data-i18n-en="CHECKOUT">FINALIZAR COMPRA</a>
+    <button type="button" class="btn-continue-shopping" data-close-cart data-i18n-pt="Continuar a Comprar" data-i18n-en="Continue Shopping">Continuar a Comprar</button>
   </div>
 </aside>
 <div class="drawer-overlay"></div>

@@ -1864,6 +1864,28 @@ body {
   text-decoration: none !important;
 }
 
+.cart-drawer .btn-continue-shopping {
+  background: transparent !important;
+  border: none !important;
+  color: #666666 !important;
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  text-decoration: underline !important;
+  text-underline-offset: 4px !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  padding: 8px 4px 4px !important;
+  margin-top: -6px !important;
+  transition: color 0.2s ease !important;
+}
+
+.cart-drawer .btn-continue-shopping:hover {
+  color: #000000 !important;
+}
+
 /* ==========================================================================
    SIGNATURE BRAND BUTTON SYSTEM (BLACK TO WHITE HOVER INVERSION & CRISP BORDERS)
    ========================================================================== */
