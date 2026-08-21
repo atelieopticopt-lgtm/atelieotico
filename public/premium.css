@@ -97,14 +97,32 @@ body {
   transition: color 0.2s ease;
   display: flex;
   align-items: center;
+  gap: 5px;
   height: 100%;
   padding: 0 4px;
   position: relative;
 }
 
+.nav-chevron {
+  width: 9px;
+  height: 9px;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  opacity: 0.65;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+  margin-left: 2px;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
 .site-header nav > a:hover,
 .nav-drop > a:hover {
   color: #555555;
+}
+
+.nav-drop:hover .nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
 }
 
 .nav-drop {
