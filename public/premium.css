@@ -574,24 +574,24 @@ body {
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 12%,
-    black 88%,
+    black 10%,
+    black 90%,
     transparent 100%
   );
-  padding: 12px 0;
+  padding: 24px 0;
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 32s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
@@ -605,8 +605,8 @@ body {
 
 .logo-group {
   display: flex;
-  gap: clamp(2.5rem, 4vw, 4.5rem);
-  padding-right: clamp(2.5rem, 4vw, 4.5rem);
+  gap: clamp(3rem, 5vw, 6rem);
+  padding-right: clamp(3rem, 5vw, 6rem);
   align-items: center;
   flex-shrink: 0;
 }
@@ -615,9 +615,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60px;
-  min-width: 90px;
-  padding: 4px 10px;
+  height: 80px;
+  min-width: 120px;
+  padding: 6px 16px;
   box-sizing: border-box;
   text-decoration: none;
   flex-shrink: 0;
@@ -625,74 +625,75 @@ body {
 }
 
 .logo-group .ll-partner-item:hover {
-  transform: scale(1.08);
-  opacity: 0.82;
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 .logo-group img,
 .logo-group .ll-partner-logo {
-  height: 28px;
+  height: 48px;
   width: auto;
-  max-width: 160px;
+  max-width: 220px;
   object-fit: contain;
   display: block;
   background: transparent !important;
   pointer-events: none;
+  filter: none !important;
 }
 
 .logo-group .ll-partner-logo.snob {
-  height: 28px;
-  max-width: 135px;
+  height: 44px;
+  max-width: 180px;
 }
 
 .logo-group .ll-partner-logo.jacquemus {
-  height: 26px;
-  max-width: 145px;
+  height: 44px;
+  max-width: 200px;
 }
 
 .logo-group .ll-partner-logo.linda-farrow {
-  height: 26px;
-  max-width: 160px;
+  height: 42px;
+  max-width: 230px;
 }
 
 .logo-group .ll-partner-logo.rayban {
-  height: 34px;
-  max-width: 135px;
+  height: 52px;
+  max-width: 180px;
 }
 
 .logo-group .ll-partner-logo.spektre {
-  height: 26px;
-  max-width: 150px;
+  height: 42px;
+  max-width: 210px;
 }
 
 .logo-group .ll-partner-logo.orgreen {
-  height: 22px;
-  max-width: 140px;
+  height: 34px;
+  max-width: 200px;
 }
 
 .logo-group .ll-partner-logo.einstoffen {
-  height: 28px;
-  max-width: 135px;
+  height: 46px;
+  max-width: 190px;
 }
 
 .logo-group .ll-partner-logo.rodenstock {
-  height: 28px;
-  max-width: 140px;
+  height: 46px;
+  max-width: 200px;
 }
 
 .logo-group .ll-partner-logo.eyepetizer {
-  height: 24px;
-  max-width: 140px;
+  height: 38px;
+  max-width: 190px;
 }
 
 .logo-group .ll-partner-logo.longchamp {
-  height: 26px;
-  max-width: 140px;
+  height: 42px;
+  max-width: 200px;
 }
 
 .logo-group .ll-partner-logo.bensimon {
-  height: 22px;
-  max-width: 155px;
+  height: 36px;
+  max-width: 230px;
 }
 
 @keyframes scroll-left {
