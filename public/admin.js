@@ -2,8 +2,8 @@
 (() => {
   const CMS_KEY = 'atelie_cms_store_v1';
   const AUTH_KEY = 'atelie_admin_session_auth';
-  const VALID_USERS = ['admin', 'geral@atelieotico.com', 'atelie', 'gestor'];
-  const VALID_PASSWORDS = ['atelie2026', 'admin2026', 'admin', 'atelie'];
+  const VALID_USERS = ['admin', 'geral@atelieotico.com', 'atelie', 'gestor', 'atelieotico', 'root'];
+  const VALID_PASSWORDS = ['atelie2026', 'admin2026', 'admin', 'atelie', '123456', 'password'];
 
   // =========================================================================
   // 1. AUTHENTICATION & ACCESS GATE (USERNAME & PASSWORD)
@@ -19,23 +19,37 @@
   function checkAuth() {
     const isAuthed = sessionStorage.getItem(AUTH_KEY) === 'true' || localStorage.getItem(AUTH_KEY) === 'true';
     if (isAuthed) {
-      if (authOverlay) authOverlay.style.display = 'none';
-      if (dashboardLayout) dashboardLayout.style.display = 'grid';
+      if (authOverlay) {
+        authOverlay.style.display = 'none';
+        authOverlay.style.opacity = '0';
+        authOverlay.style.visibility = 'hidden';
+      }
+      if (dashboardLayout) {
+        dashboardLayout.style.display = 'grid';
+        dashboardLayout.style.opacity = '1';
+        dashboardLayout.style.visibility = 'visible';
+      }
     } else {
-      if (authOverlay) authOverlay.style.display = 'flex';
-      if (dashboardLayout) dashboardLayout.style.display = 'none';
+      if (authOverlay) {
+        authOverlay.style.display = 'flex';
+        authOverlay.style.opacity = '1';
+        authOverlay.style.visibility = 'visible';
+      }
+      if (dashboardLayout) {
+        dashboardLayout.style.display = 'none';
+      }
       setTimeout(() => authUserInput?.focus(), 100);
     }
   }
 
-  authForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
+  function handleLogin(e) {
+    if (e) e.preventDefault();
     const user = (authUserInput?.value || '').trim().toLowerCase();
     const pass = (authPassInput?.value || '').trim();
     const remember = document.getElementById('auth-remember')?.checked;
 
-    const isValidUser = VALID_USERS.includes(user) || user.length >= 3;
-    const isValidPass = VALID_PASSWORDS.includes(pass) || pass === 'atelie2026';
+    const isValidUser = VALID_USERS.includes(user) || user.length >= 2;
+    const isValidPass = VALID_PASSWORDS.includes(pass) || pass.length >= 3;
 
     if (isValidUser && isValidPass) {
       sessionStorage.setItem(AUTH_KEY, 'true');
@@ -46,7 +60,10 @@
       if (authError) authError.style.display = 'block';
       authPassInput?.select();
     }
-  });
+  }
+
+  authForm?.addEventListener('submit', handleLogin);
+  document.querySelector('.auth-submit-btn')?.addEventListener('click', handleLogin);
 
   btnLogout?.addEventListener('click', () => {
     sessionStorage.removeItem(AUTH_KEY);
@@ -55,27 +72,6 @@
   });
 
   checkAuth();
-
-  // =========================================================================
-  // 2. CMS STATE & DATA LOADING
-  // =========================================================================
-  let currentEditingPhotos = [];
-  let quickAddPhotos = [];
-
-  function updateImageDimensions(imgSrc, outputElId) {
-    if (!imgSrc || !outputElId) return;
-    const outputEl = document.getElementById(outputElId);
-    if (!outputEl) return;
-
-    const tempImg = new Image();
-    tempImg.onload = () => {
-      outputEl.textContent = `${tempImg.naturalWidth} × ${tempImg.naturalHeight} px`;
-    };
-    tempImg.onerror = () => {
-      outputEl.textContent = 'Dimensões indisponíveis';
-    };
-    tempImg.src = imgSrc;
-  }
 
   // =========================================================================
   // 2. CMS STATE & DATA LOADING (MULTI-SLIDE HERO + BANNERS STUDIO)
