@@ -165,14 +165,14 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
           </button>
         </div>
 
-        {/* Filter Toolbar */}
+        {/* Filter Toolbar with PVP, Stock and Universal Search */}
         <div class="admin-filter-bar">
           <div class="search-input-wrap">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-svg">
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="admin-product-search" placeholder="Pesquisar por nome, SKU, marca..." style="padding-left: 36px;" />
+            <input type="text" id="admin-product-search" placeholder="Pesquisar por nome, SKU, marca ou PVP (ex: 220€)..." style="padding-left: 36px;" />
           </div>
 
           <div class="select-wrap">
@@ -186,6 +186,38 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             <select id="admin-category-filter">
               <option value="">Todas as Categorias</option>
               {categories.map(c => <option value={c}>{c}</option>)}
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="admin-price-filter">
+              <option value="">Todos os Preços (PVP)</option>
+              <option value="0-150">Até 150 €</option>
+              <option value="150-250">150 € – 250 €</option>
+              <option value="250-350">250 € – 350 €</option>
+              <option value="350-500">350 € – 500 €</option>
+              <option value="500+">Mais de 500 €</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="admin-stock-filter">
+              <option value="">Todo o Stock</option>
+              <option value="in_stock">🟢 Em Stock (&gt; 0 un.)</option>
+              <option value="low_stock">🟡 Últimas Unidades (1-2 un.)</option>
+              <option value="out_of_stock">🔴 Esgotado (0 un.)</option>
+              <option value="disabled">⚪ Indisponível / Pausado</option>
+            </select>
+          </div>
+
+          <div class="select-wrap">
+            <select id="admin-sort-select">
+              <option value="default">Ordenar: Padrão</option>
+              <option value="price_asc">PVP: Menor &rarr; Maior</option>
+              <option value="price_desc">PVP: Maior &rarr; Menor</option>
+              <option value="stock_desc">Stock: Maior &rarr; Menor</option>
+              <option value="stock_asc">Stock: Menor &rarr; Maior</option>
+              <option value="name_asc">Nome: A &rarr; Z</option>
             </select>
           </div>
 
@@ -204,28 +236,61 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
               data-brand={(p.brand || '').toLowerCase()}
               data-category={(p.category || '').toLowerCase()}
               data-sku={(p.sku || p.slug).toLowerCase()}
+              data-price={p.price}
+              data-stock="10"
+              data-available="true"
             >
               <div class="admin-card-thumb-wrap">
                 <img src={p.image} alt={p.name} class="admin-card-thumb" loading="lazy" />
                 <span class="admin-card-brand-tag">{p.brand || 'Ateliê Ótico'}</span>
+                <span class="admin-stock-status-pill is-in-stock" data-stock-badge-id={p.id}>Em Stock (10 un.)</span>
               </div>
               <div class="admin-card-body">
                 <h3 class="admin-card-title">{p.name}</h3>
                 <div class="admin-card-sku">SKU: {p.sku || p.slug}</div>
                 <div class="admin-card-meta">{p.category} &bull; {p.shape}</div>
 
-                <div class="admin-card-price-box">
-                  <label>Preço:</label>
-                  <div class="price-input-wrapper">
-                    <input
-                      type="number"
-                      class="admin-inline-price-input"
-                      value={p.price}
-                      data-id={p.id}
-                      min="0"
-                    />
-                    <span>€</span>
+                {/* PVP Price & Stock Grid */}
+                <div class="admin-card-inventory-controls">
+                  <div class="admin-card-field-group">
+                    <label>PVP (€):</label>
+                    <div class="price-input-wrapper">
+                      <input
+                        type="number"
+                        class="admin-inline-price-input"
+                        value={p.price}
+                        data-id={p.id}
+                        min="0"
+                        step="1"
+                      />
+                      <span>€</span>
+                    </div>
                   </div>
+
+                  <div class="admin-card-field-group">
+                    <label>Qtd. Stock:</label>
+                    <div class="stock-stepper">
+                      <button type="button" class="btn-stock-dec" data-id={p.id} title="Diminuir Stock">-</button>
+                      <input
+                        type="number"
+                        class="admin-inline-stock-input"
+                        value="10"
+                        data-id={p.id}
+                        min="0"
+                        step="1"
+                      />
+                      <button type="button" class="btn-stock-inc" data-id={p.id} title="Aumentar Stock">+</button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Instant Availability Toggle Switch */}
+                <div class="admin-card-avail-row">
+                  <label class="admin-avail-switch">
+                    <input type="checkbox" class="admin-inline-avail-toggle" checked data-id={p.id} />
+                    <span class="avail-slider"></span>
+                    <span class="avail-status-label" data-avail-label-id={p.id}>Disponível</span>
+                  </label>
                 </div>
 
                 <div class="admin-card-actions">
@@ -319,8 +384,22 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
                 <input type="text" id="quick-add-sku" required placeholder="Ex: SNV126C015Z" />
               </div>
               <div class="admin-form-group">
-                <label>Preço de Venda (€) *</label>
+                <label>Preço de Venda / PVP (€) *</label>
                 <input type="number" id="quick-add-price" required min="0" placeholder="240" />
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="admin-form-group">
+                <label>Quantidade em Stock *</label>
+                <input type="number" id="quick-add-stock" required min="0" value="10" placeholder="10" />
+              </div>
+              <div class="admin-form-group">
+                <label>Disponibilidade na Loja</label>
+                <select id="quick-add-available-select">
+                  <option value="true">🟢 Disponível para Venda</option>
+                  <option value="false">⚪ Indisponível / Esgotado</option>
+                </select>
               </div>
             </div>
 
@@ -925,8 +1004,22 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
             <input type="text" id="modal-sku" required placeholder="Ex: SNV126C013Z" />
           </div>
           <div class="admin-form-group">
-            <label>Preço (€) *</label>
+            <label>Preço de Venda / PVP (€) *</label>
             <input type="number" id="modal-price" required min="0" placeholder="240" />
+          </div>
+        </div>
+
+        <div class="form-grid-2">
+          <div class="admin-form-group">
+            <label>Quantidade em Stock (unidades) *</label>
+            <input type="number" id="modal-stock" required min="0" placeholder="10" />
+          </div>
+          <div class="admin-form-group">
+            <label>Estado de Disponibilidade na Loja *</label>
+            <select id="modal-available">
+              <option value="true">🟢 Disponível para Venda</option>
+              <option value="false">⚪ Indisponível / Pausado</option>
+            </select>
           </div>
         </div>
 

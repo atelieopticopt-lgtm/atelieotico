@@ -99,21 +99,46 @@
       }
     }
 
-    // 5. Product Price & Custom Product Overrides
-    if (cms.products && Array.isArray(cms.products)) {
-      cms.products.forEach(p => {
-        // Find existing cards and update price/name if changed
-        const card = document.querySelector(`.store-card[data-name*="${p.name.toLowerCase()}"]`) ||
-                     document.querySelector(`a[href*="${p.slug}"]`)?.closest('.store-card');
-        if (card) {
-          if (p.price) {
-            const priceEl = card.querySelector('.ll-card-price');
-            if (priceEl) priceEl.textContent = `${p.price} €`;
-            card.dataset.price = String(p.price);
+    // 5. Product Price, Stock & Availability Overrides
+    if (cms.priceOverrides && typeof cms.priceOverrides === 'object') {
+      Object.entries(cms.priceOverrides).forEach(([id, price]) => {
+        const cards = document.querySelectorAll(`.store-card[data-id="${id}"], .store-card[data-name*="${id.toLowerCase()}"], a[href*="${id}"]`);
+        cards.forEach(c => {
+          const card = c.closest('.store-card') || c;
+          const priceEl = card.querySelector('.ll-card-price, .product-price');
+          if (priceEl) priceEl.textContent = `${price} €`;
+        });
+      });
+    }
+
+    if (cms.stockOverrides || cms.availOverrides) {
+      const stocks = cms.stockOverrides || {};
+      const avails = cms.availOverrides || {};
+
+      document.querySelectorAll('.store-card, .product-detail-container, .product-hero').forEach(el => {
+        const id = el.dataset.id || el.getAttribute('data-product-id') || el.dataset.sku;
+        if (!id) return;
+
+        const isAvail = avails[id] !== undefined ? avails[id] : true;
+        const stockQty = stocks[id] !== undefined ? Number(stocks[id]) : 10;
+
+        if (!isAvail || stockQty <= 0) {
+          el.classList.add('is-out-of-stock');
+          
+          if (el.classList.contains('store-card') && !el.querySelector('.badge-stock-out')) {
+            const badge = document.createElement('span');
+            badge.className = 'badge-stock-out';
+            badge.style.cssText = 'position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.85); color: #fff; font-size: 10px; font-weight: 800; padding: 4px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: 1px; z-index: 5;';
+            badge.textContent = !isAvail ? 'INDISPONÍVEL' : 'ESGOTADO';
+            (el.querySelector('.ll-card-img-wrap, .image-wrap, a') || el).appendChild(badge);
           }
-          if (p.image) {
-            const imgMain = card.querySelector('.ll-card-img-main');
-            if (imgMain) imgMain.src = p.image;
+
+          const buyBtn = el.querySelector('#btn-add-to-cart, .btn-add-to-bag, .btn-buy-now');
+          if (buyBtn) {
+            buyBtn.disabled = true;
+            buyBtn.style.opacity = '0.5';
+            buyBtn.style.cursor = 'not-allowed';
+            buyBtn.textContent = !isAvail ? 'PRODUTO INDISPONÍVEL' : 'TEMPORARIAMENTE ESGOTADO';
           }
         }
       });

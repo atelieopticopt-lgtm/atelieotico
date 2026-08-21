@@ -406,8 +406,32 @@
         Object.entries(cms.priceOverrides).forEach(([id, price]) => {
           const input = document.querySelector(`.admin-inline-price-input[data-id="${id}"]`);
           if (input) input.value = price;
+          const card = document.querySelector(`.admin-product-card[data-id="${id}"]`);
+          if (card) card.dataset.price = String(price);
         });
       }
+
+      if (cms.stockOverrides && typeof cms.stockOverrides === 'object') {
+        Object.entries(cms.stockOverrides).forEach(([id, stock]) => {
+          const input = document.querySelector(`.admin-inline-stock-input[data-id="${id}"]`);
+          if (input) input.value = stock;
+          const card = document.querySelector(`.admin-product-card[data-id="${id}"]`);
+          if (card) card.dataset.stock = String(stock);
+        });
+      }
+
+      if (cms.availOverrides && typeof cms.availOverrides === 'object') {
+        Object.entries(cms.availOverrides).forEach(([id, avail]) => {
+          const toggle = document.querySelector(`.admin-inline-avail-toggle[data-id="${id}"]`);
+          if (toggle) toggle.checked = avail;
+          const card = document.querySelector(`.admin-product-card[data-id="${id}"]`);
+          if (card) card.dataset.available = String(avail);
+        });
+      }
+
+      document.querySelectorAll('.admin-product-card').forEach(card => {
+        updateCardStockBadge(card);
+      });
 
       if (cms.customBrands && Array.isArray(cms.customBrands)) {
         cms.customBrands.forEach(b => appendBrandOption(b));
@@ -425,11 +449,29 @@
       const existing = existingRaw ? JSON.parse(existingRaw) : {};
 
       const priceOverrides = existing.priceOverrides || {};
+      const stockOverrides = existing.stockOverrides || {};
+      const availOverrides = existing.availOverrides || {};
+
       document.querySelectorAll('.admin-inline-price-input').forEach(input => {
         const id = input.dataset.id;
         const val = Number(input.value);
         if (id && !isNaN(val)) {
           priceOverrides[id] = val;
+        }
+      });
+
+      document.querySelectorAll('.admin-inline-stock-input').forEach(input => {
+        const id = input.dataset.id;
+        const val = Number(input.value);
+        if (id && !isNaN(val)) {
+          stockOverrides[id] = val;
+        }
+      });
+
+      document.querySelectorAll('.admin-inline-avail-toggle').forEach(input => {
+        const id = input.dataset.id;
+        if (id) {
+          availOverrides[id] = input.checked;
         }
       });
 
@@ -929,25 +971,108 @@
   // =========================================================================
   // 5. LIVE FILTERING OF PRODUCT CARDS
   // =========================================================================
+  function updateCardStockBadge(card) {
+    if (!card) return;
+    const id = card.dataset.id;
+    const priceInput = card.querySelector('.admin-inline-price-input');
+    const stockInput = card.querySelector('.admin-inline-stock-input');
+    const availToggle = card.querySelector('.admin-inline-avail-toggle');
+    const badgeEl = card.querySelector(`[data-stock-badge-id="${id}"]`);
+    const labelEl = card.querySelector(`[data-avail-label-id="${id}"]`);
+
+    const price = priceInput ? Number(priceInput.value) : Number(card.dataset.price || 0);
+    const stock = stockInput ? Math.max(0, Number(stockInput.value)) : Number(card.dataset.stock || 0);
+    const isAvail = availToggle ? availToggle.checked : (card.dataset.available !== 'false');
+
+    card.dataset.price = String(price);
+    card.dataset.stock = String(stock);
+    card.dataset.available = String(isAvail);
+
+    if (badgeEl) {
+      badgeEl.className = 'admin-stock-status-pill';
+      if (!isAvail) {
+        badgeEl.classList.add('is-disabled');
+        badgeEl.textContent = 'Indisponível';
+      } else if (stock <= 0) {
+        badgeEl.classList.add('is-out-of-stock');
+        badgeEl.textContent = 'Esgotado (0)';
+      } else if (stock <= 2) {
+        badgeEl.classList.add('is-low-stock');
+        badgeEl.textContent = `Últimas (${stock} un.)`;
+      } else {
+        badgeEl.classList.add('is-in-stock');
+        badgeEl.textContent = `Em Stock (${stock} un.)`;
+      }
+    }
+
+    if (labelEl) {
+      labelEl.textContent = isAvail ? (stock > 0 ? 'Disponível' : 'Esgotado') : 'Indisponível';
+      labelEl.style.color = isAvail ? (stock > 0 ? '#10b981' : '#ef4444') : '#64748b';
+    }
+
+    if (!isAvail) {
+      card.classList.add('is-disabled');
+    } else {
+      card.classList.remove('is-disabled');
+    }
+  }
+
   function filterCards() {
-    const query = (document.getElementById('admin-product-search')?.value || '').trim().toLowerCase();
+    const rawQuery = (document.getElementById('admin-product-search')?.value || '').trim().toLowerCase();
     const brand = (document.getElementById('admin-brand-filter')?.value || '').trim().toLowerCase();
     const category = (document.getElementById('admin-category-filter')?.value || '').trim().toLowerCase();
+    const priceFilter = (document.getElementById('admin-price-filter')?.value || '').trim();
+    const stockFilter = (document.getElementById('admin-stock-filter')?.value || '').trim();
+    const sortBy = (document.getElementById('admin-sort-select')?.value || 'default').trim();
 
-    const cards = document.querySelectorAll('.admin-product-card');
+    const grid = document.getElementById('admin-products-grid');
+    const cards = Array.from(document.querySelectorAll('.admin-product-card'));
     let visibleCount = 0;
+
+    // Check if searching by price/PVP
+    const cleanNum = rawQuery.replace(/€|eur|pvp|preco|preço|:/g, '').trim();
+    const isPriceSearch = cleanNum !== '' && !isNaN(Number(cleanNum));
+    const targetPrice = isPriceSearch ? Number(cleanNum) : null;
 
     cards.forEach(card => {
       const cName = card.dataset.name || '';
       const cBrand = card.dataset.brand || '';
       const cCat = card.dataset.category || '';
       const cSku = card.dataset.sku || '';
+      const cPrice = Number(card.dataset.price || card.querySelector('.admin-inline-price-input')?.value || 0);
+      const cStock = Number(card.dataset.stock || card.querySelector('.admin-inline-stock-input')?.value || 0);
+      const cAvail = card.dataset.available !== 'false' && (card.querySelector('.admin-inline-avail-toggle')?.checked !== false);
 
-      const matchQuery = !query || cName.includes(query) || cBrand.includes(query) || cSku.includes(query);
+      let matchQuery = true;
+      if (rawQuery) {
+        if (isPriceSearch) {
+          matchQuery = cPrice === targetPrice || String(cPrice).includes(cleanNum) || cName.includes(rawQuery) || cSku.includes(rawQuery) || cBrand.includes(rawQuery);
+        } else {
+          matchQuery = cName.includes(rawQuery) || cBrand.includes(rawQuery) || cSku.includes(rawQuery) || cCat.includes(rawQuery);
+        }
+      }
+
       const matchBrand = !brand || cBrand === brand || cName.includes(brand);
       const matchCat = !category || cCat === category;
 
-      if (matchQuery && matchBrand && matchCat) {
+      let matchPrice = true;
+      if (priceFilter) {
+        if (priceFilter === '0-150') matchPrice = cPrice <= 150;
+        else if (priceFilter === '150-250') matchPrice = cPrice >= 150 && cPrice <= 250;
+        else if (priceFilter === '250-350') matchPrice = cPrice >= 250 && cPrice <= 350;
+        else if (priceFilter === '350-500') matchPrice = cPrice >= 350 && cPrice <= 500;
+        else if (priceFilter === '500+') matchPrice = cPrice > 500;
+      }
+
+      let matchStock = true;
+      if (stockFilter) {
+        if (stockFilter === 'in_stock') matchStock = cAvail && cStock > 0;
+        else if (stockFilter === 'low_stock') matchStock = cAvail && cStock >= 1 && cStock <= 2;
+        else if (stockFilter === 'out_of_stock') matchStock = cAvail && cStock === 0;
+        else if (stockFilter === 'disabled') matchStock = !cAvail;
+      }
+
+      if (matchQuery && matchBrand && matchCat && matchPrice && matchStock) {
         card.classList.remove('is-hidden');
         card.style.display = 'flex';
         visibleCount++;
@@ -956,6 +1081,26 @@
         card.style.display = 'none';
       }
     });
+
+    if (grid && sortBy !== 'default') {
+      const sortedCards = [...cards].sort((a, b) => {
+        const pA = Number(a.dataset.price || 0);
+        const pB = Number(b.dataset.price || 0);
+        const sA = Number(a.dataset.stock || 0);
+        const sB = Number(b.dataset.stock || 0);
+        const nA = a.dataset.name || '';
+        const nB = b.dataset.name || '';
+
+        if (sortBy === 'price_asc') return pA - pB;
+        if (sortBy === 'price_desc') return pB - pA;
+        if (sortBy === 'stock_desc') return sB - sA;
+        if (sortBy === 'stock_asc') return sA - sB;
+        if (sortBy === 'name_asc') return nA.localeCompare(nB);
+        return 0;
+      });
+
+      sortedCards.forEach(c => grid.appendChild(c));
+    }
 
     const countEl = document.getElementById('admin-visible-count');
     if (countEl) countEl.textContent = String(visibleCount);
@@ -1104,7 +1249,9 @@
       const title = cardEl.querySelector('.admin-card-title')?.textContent || '';
       const sku = (cardEl.querySelector('.admin-card-sku')?.textContent || '').replace('SKU:', '').trim();
       const brand = cardEl.querySelector('.admin-card-brand-tag')?.textContent || '';
-      const price = cardEl.querySelector('.admin-inline-price-input')?.value || '0';
+      const price = cardEl.querySelector('.admin-inline-price-input')?.value || cardEl.dataset.price || '0';
+      const stock = cardEl.querySelector('.admin-inline-stock-input')?.value || cardEl.dataset.stock || '10';
+      const isAvail = cardEl.dataset.available !== 'false';
       const mainImg = cardEl.querySelector('.admin-card-thumb')?.getAttribute('src') || '';
 
       modalTitle.textContent = `Editar Modelo: ${title}`;
@@ -1113,6 +1260,8 @@
       document.getElementById('modal-brand').value = brand;
       document.getElementById('modal-sku').value = sku;
       document.getElementById('modal-price').value = price;
+      if (document.getElementById('modal-stock')) document.getElementById('modal-stock').value = stock;
+      if (document.getElementById('modal-available')) document.getElementById('modal-available').value = String(isAvail);
 
       currentEditingPhotos = [mainImg].filter(Boolean);
       renderModalPhotos();
@@ -1141,6 +1290,8 @@
     const brand = document.getElementById('modal-brand')?.value.trim();
     const sku = document.getElementById('modal-sku')?.value.trim();
     const price = Number(document.getElementById('modal-price')?.value);
+    const stock = Number(document.getElementById('modal-stock')?.value || 10);
+    const isAvail = document.getElementById('modal-available')?.value !== 'false';
 
     if (idVal) {
       const card = document.querySelector(`.admin-product-card[data-id="${idVal}"]`);
@@ -1148,14 +1299,22 @@
         card.dataset.name = name.toLowerCase();
         card.dataset.brand = brand.toLowerCase();
         card.dataset.sku = sku.toLowerCase();
+        card.dataset.price = String(price);
+        card.dataset.stock = String(stock);
+        card.dataset.available = String(isAvail);
+
         if (card.querySelector('.admin-card-title')) card.querySelector('.admin-card-title').textContent = name;
         if (card.querySelector('.admin-card-sku')) card.querySelector('.admin-card-sku').textContent = `SKU: ${sku}`;
         if (card.querySelector('.admin-card-brand-tag')) card.querySelector('.admin-card-brand-tag').textContent = brand;
         if (card.querySelector('.admin-inline-price-input')) card.querySelector('.admin-inline-price-input').value = price;
+        if (card.querySelector('.admin-inline-stock-input')) card.querySelector('.admin-inline-stock-input').value = stock;
+        if (card.querySelector('.admin-inline-avail-toggle')) card.querySelector('.admin-inline-avail-toggle').checked = isAvail;
 
         if (currentEditingPhotos.length > 0 && card.querySelector('.admin-card-thumb')) {
           card.querySelector('.admin-card-thumb').src = currentEditingPhotos[0];
         }
+
+        updateCardStockBadge(card);
       }
     }
 
@@ -1265,6 +1424,8 @@
     const name = document.getElementById('quick-add-name')?.value.trim();
     const sku = document.getElementById('quick-add-sku')?.value.trim();
     const price = Number(document.getElementById('quick-add-price')?.value);
+    const stock = Number(document.getElementById('quick-add-stock')?.value || 10);
+    const isAvail = document.getElementById('quick-add-available-select')?.value !== 'false';
     const category = document.getElementById('quick-add-category')?.value;
     const shape = document.getElementById('quick-add-shape')?.value;
 
@@ -1280,23 +1441,46 @@
       article.dataset.brand = brand.toLowerCase();
       article.dataset.category = category.toLowerCase();
       article.dataset.sku = sku.toLowerCase();
+      article.dataset.price = String(price);
+      article.dataset.stock = String(stock);
+      article.dataset.available = String(isAvail);
 
       article.innerHTML = `
         <div class="admin-card-thumb-wrap">
           <img src="${mainPhoto}" alt="${name}" class="admin-card-thumb" loading="lazy" />
           <span class="admin-card-brand-tag">${brand}</span>
+          <span class="admin-stock-status-pill is-in-stock" data-stock-badge-id="${newId}">Em Stock (${stock} un.)</span>
         </div>
         <div class="admin-card-body">
           <h3 class="admin-card-title">${name}</h3>
           <div class="admin-card-sku">SKU: ${sku}</div>
           <div class="admin-card-meta">${category} &bull; ${shape}</div>
 
-          <div class="admin-card-price-box">
-            <label>Preço:</label>
-            <div class="price-input-wrapper">
-              <input type="number" class="admin-inline-price-input" value="${price}" data-id="${newId}" min="0" />
-              <span>€</span>
+          <div class="admin-card-inventory-controls">
+            <div class="admin-card-field-group">
+              <label>PVP (€):</label>
+              <div class="price-input-wrapper">
+                <input type="number" class="admin-inline-price-input" value="${price}" data-id="${newId}" min="0" step="1" />
+                <span>€</span>
+              </div>
             </div>
+
+            <div class="admin-card-field-group">
+              <label>Qtd. Stock:</label>
+              <div class="stock-stepper">
+                <button type="button" class="btn-stock-dec" data-id="${newId}" title="Diminuir Stock">-</button>
+                <input type="number" class="admin-inline-stock-input" value="${stock}" data-id="${newId}" min="0" step="1" />
+                <button type="button" class="btn-stock-inc" data-id="${newId}" title="Aumentar Stock">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-card-avail-row">
+            <label class="admin-avail-switch">
+              <input type="checkbox" class="admin-inline-avail-toggle" ${isAvail ? 'checked' : ''} data-id="${newId}" />
+              <span class="avail-slider"></span>
+              <span class="avail-status-label" data-avail-label-id="${newId}">${isAvail ? 'Disponível' : 'Indisponível'}</span>
+            </label>
           </div>
 
           <div class="admin-card-actions">
@@ -1326,8 +1510,36 @@
           filterCards();
         }
       });
-      article.querySelector('.admin-inline-price-input')?.addEventListener('input', autoSaveAll);
+      article.querySelector('.admin-inline-price-input')?.addEventListener('input', () => {
+        updateCardStockBadge(article);
+        autoSaveAll();
+      });
+      article.querySelector('.admin-inline-stock-input')?.addEventListener('input', () => {
+        updateCardStockBadge(article);
+        autoSaveAll();
+      });
+      article.querySelector('.btn-stock-dec')?.addEventListener('click', () => {
+        const inp = article.querySelector('.admin-inline-stock-input');
+        if (inp) {
+          inp.value = Math.max(0, Number(inp.value || 0) - 1);
+          updateCardStockBadge(article);
+          autoSaveAll();
+        }
+      });
+      article.querySelector('.btn-stock-inc')?.addEventListener('click', () => {
+        const inp = article.querySelector('.admin-inline-stock-input');
+        if (inp) {
+          inp.value = Number(inp.value || 0) + 1;
+          updateCardStockBadge(article);
+          autoSaveAll();
+        }
+      });
+      article.querySelector('.admin-inline-avail-toggle')?.addEventListener('change', () => {
+        updateCardStockBadge(article);
+        autoSaveAll();
+      });
 
+      updateCardStockBadge(article);
       grid.prepend(article);
     }
 
@@ -1348,6 +1560,9 @@
   document.getElementById('admin-product-search')?.addEventListener('input', filterCards);
   document.getElementById('admin-brand-filter')?.addEventListener('change', filterCards);
   document.getElementById('admin-category-filter')?.addEventListener('change', filterCards);
+  document.getElementById('admin-price-filter')?.addEventListener('change', filterCards);
+  document.getElementById('admin-stock-filter')?.addEventListener('change', filterCards);
+  document.getElementById('admin-sort-select')?.addEventListener('change', filterCards);
 
   document.querySelectorAll('.auto-save-input').forEach(input => {
     input.addEventListener('input', autoSaveAll);
@@ -1355,8 +1570,51 @@
   });
 
   document.querySelectorAll('.admin-inline-price-input').forEach(input => {
-    input.addEventListener('input', autoSaveAll);
-    input.addEventListener('change', autoSaveAll);
+    input.addEventListener('input', () => {
+      const card = input.closest('.admin-product-card');
+      updateCardStockBadge(card);
+      autoSaveAll();
+    });
+  });
+
+  document.querySelectorAll('.admin-inline-stock-input').forEach(input => {
+    input.addEventListener('input', () => {
+      const card = input.closest('.admin-product-card');
+      updateCardStockBadge(card);
+      autoSaveAll();
+    });
+  });
+
+  document.querySelectorAll('.btn-stock-dec').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.admin-product-card');
+      const input = card?.querySelector('.admin-inline-stock-input');
+      if (input) {
+        input.value = Math.max(0, Number(input.value || 0) - 1);
+        updateCardStockBadge(card);
+        autoSaveAll();
+      }
+    });
+  });
+
+  document.querySelectorAll('.btn-stock-inc').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.admin-product-card');
+      const input = card?.querySelector('.admin-inline-stock-input');
+      if (input) {
+        input.value = Number(input.value || 0) + 1;
+        updateCardStockBadge(card);
+        autoSaveAll();
+      }
+    });
+  });
+
+  document.querySelectorAll('.admin-inline-avail-toggle').forEach(toggle => {
+    toggle.addEventListener('change', () => {
+      const card = toggle.closest('.admin-product-card');
+      updateCardStockBadge(card);
+      autoSaveAll();
+    });
   });
 
   document.querySelectorAll('.btn-card-edit').forEach(btn => {
