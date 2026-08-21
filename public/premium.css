@@ -631,9 +631,9 @@ body {
 
 .logo-group img,
 .logo-group .ll-partner-logo {
-  height: 36px;
+  height: 28px;
   width: auto;
-  max-width: 155px;
+  max-width: 160px;
   object-fit: contain;
   display: block;
   background: transparent !important;
@@ -641,39 +641,58 @@ body {
 }
 
 .logo-group .ll-partner-logo.snob {
-  height: 46px;
-  width: auto;
+  height: 28px;
+  max-width: 135px;
+}
+
+.logo-group .ll-partner-logo.jacquemus {
+  height: 26px;
   max-width: 145px;
-  mix-blend-mode: multiply;
-  transform: scale(1.55);
+}
+
+.logo-group .ll-partner-logo.linda-farrow {
+  height: 26px;
+  max-width: 160px;
+}
+
+.logo-group .ll-partner-logo.rayban {
+  height: 34px;
+  max-width: 135px;
+}
+
+.logo-group .ll-partner-logo.spektre {
+  height: 26px;
+  max-width: 150px;
+}
+
+.logo-group .ll-partner-logo.orgreen {
+  height: 22px;
+  max-width: 140px;
 }
 
 .logo-group .ll-partner-logo.einstoffen {
-  height: 44px;
-  width: auto;
+  height: 28px;
   max-width: 135px;
-  mix-blend-mode: multiply;
-  transform: scale(1.25);
 }
 
 .logo-group .ll-partner-logo.rodenstock {
-  height: 46px;
-  width: auto;
-  max-width: 145px;
-  mix-blend-mode: multiply;
-  transform: scale(1.15);
+  height: 28px;
+  max-width: 140px;
 }
 
-.logo-group .orgreen-wordmark,
-.logo-group .ll-partner-logo.orgreen {
-  display: block !important;
-  opacity: 1 !important;
-  width: 135px !important;
-  max-width: 135px !important;
-  height: 24px !important;
-  object-fit: contain !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
+.logo-group .ll-partner-logo.eyepetizer {
+  height: 24px;
+  max-width: 140px;
+}
+
+.logo-group .ll-partner-logo.longchamp {
+  height: 26px;
+  max-width: 140px;
+}
+
+.logo-group .ll-partner-logo.bensimon {
+  height: 22px;
+  max-width: 155px;
 }
 
 @keyframes scroll-left {
