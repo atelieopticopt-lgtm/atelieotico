@@ -1,4 +1,4 @@
-// server.mjs — Stripe Payment & SMTP Email Microservice for Ateliê Ótico
+// server.mjs — Dynamic Product Database, Stripe Payments & Email Microservice for Ateliê Ótico
 import http from 'http';
 import https from 'https';
 import fs from 'fs';
@@ -29,6 +29,40 @@ const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY
 const STRIPE_PUBLISHABLE_KEY = process.env.PUBLIC_STRIPE_PUBLISHABLE_KEY || env.PUBLIC_STRIPE_PUBLISHABLE_KEY || 'pk_test_51U6ePTA4omOSLMnkqJ97sAVhZt1L3YUHNSn0ZehsXQVBDq3k4gTjYRGjDVu4DELheXIR79Wm9XVhTJdtTsWOeNZq00z8rLeAyn';
 const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET || '';
 const PORT = process.env.PORT || env.PORT || 4242;
+
+// ==========================================
+// DYNAMIC PRODUCT DATABASE (JSON & IN-MEMORY)
+// ==========================================
+const dataDir = path.resolve(process.cwd(), 'data');
+if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+
+const dbPath = path.join(dataDir, 'products-db.json');
+let productsDb = [];
+
+function loadProductsDb() {
+  if (fs.existsSync(dbPath)) {
+    try {
+      productsDb = JSON.parse(fs.readFileSync(dbPath, 'utf8'));
+      console.log(`[DB] Loaded ${productsDb.length} products from ${dbPath}`);
+    } catch (e) {
+      console.error('[DB Error] Could not read products DB:', e.message);
+      productsDb = [];
+    }
+  } else {
+    console.warn('[DB Warning] products-db.json not found, initializing empty DB');
+    productsDb = [];
+  }
+}
+
+function saveProductsDb() {
+  try {
+    fs.writeFileSync(dbPath, JSON.stringify(productsDb, null, 2), 'utf8');
+  } catch (e) {
+    console.error('[DB Save Error]', e.message);
+  }
+}
+
+loadProductsDb();
 
 // Simple Stripe API Client via HTTPS
 async function stripeRequest(endpoint, data = {}, method = 'POST') {
@@ -190,7 +224,7 @@ function generateCustomerInvoiceHtml(order) {
 const server = http.createServer(async (req, res) => {
   // CORS Headers
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
   if (req.method === 'OPTIONS') {
@@ -210,14 +244,113 @@ const server = http.createServer(async (req, res) => {
         try { json = JSON.parse(body); } catch(e) {}
       }
 
-      // 1. GET /api/config — Return Publishable Key
+      // ==========================================
+      // 1. DYNAMIC PRODUCTS REST API
+      // ==========================================
+      
+      // GET /api/products — Get all products from DB
+      if (url.pathname === '/api/products' && req.method === 'GET') {
+        const brand = url.searchParams.get('brand');
+        const category = url.searchParams.get('category');
+        let results = [...productsDb];
+        if (brand) results = results.filter(p => (p.brand || '').toLowerCase() === brand.toLowerCase());
+        if (category) results = results.filter(p => (p.category || '').toLowerCase() === category.toLowerCase());
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, count: results.length, products: results }));
+        return;
+      }
+
+      // GET /api/products/get — Get single product by slug or id
+      if (url.pathname === '/api/products/get' && req.method === 'GET') {
+        const slug = url.searchParams.get('slug');
+        const id = url.searchParams.get('id');
+        const prod = productsDb.find(p => p.slug === slug || String(p.id) === String(id));
+        if (!prod) {
+          res.writeHead(404, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Produto não encontrado.' }));
+          return;
+        }
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, product: prod }));
+        return;
+      }
+
+      // POST /api/products/update — Update product fields dynamically in DB
+      if (url.pathname === '/api/products/update' && req.method === 'POST') {
+        const { id, slug, updates = {} } = json;
+        const index = productsDb.findIndex(p => p.slug === slug || (id && String(p.id) === String(id)));
+        
+        if (index === -1) {
+          res.writeHead(404, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Produto não encontrado na base de dados.' }));
+          return;
+        }
+
+        // Apply dynamic updates (price, pvp, name, description, image, hover, stockQuantity, isAvailable, etc.)
+        productsDb[index] = {
+          ...productsDb[index],
+          ...updates,
+          price: updates.price !== undefined ? Number(updates.price) : productsDb[index].price,
+          pvp: updates.pvp !== undefined ? Number(updates.pvp) : (updates.price !== undefined ? Number(updates.price) : productsDb[index].pvp),
+          stockQuantity: updates.stockQuantity !== undefined ? Number(updates.stockQuantity) : productsDb[index].stockQuantity,
+          isAvailable: updates.isAvailable !== undefined ? Boolean(updates.isAvailable) : productsDb[index].isAvailable,
+          updatedAt: new Date().toISOString()
+        };
+
+        saveProductsDb();
+        console.log(`[DB] Updated product ${productsDb[index].name} (${productsDb[index].slug}) — New Price: ${productsDb[index].price}€ — Stock: ${productsDb[index].stockQuantity}`);
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, product: productsDb[index] }));
+        return;
+      }
+
+      // POST /api/products/create — Add new product to DB
+      if (url.pathname === '/api/products/create' && req.method === 'POST') {
+        const product = json;
+        if (!product.name || !product.slug) {
+          res.writeHead(400, { 'Content-Type': 'application/json' });
+          res.end(JSON.stringify({ error: 'Nome e slug são obrigatórios.' }));
+          return;
+        }
+
+        const newProd = {
+          id: product.id || Date.now(),
+          slug: product.slug,
+          sku: product.sku || product.slug.toUpperCase(),
+          brand: product.brand || 'Ateliê Ótico',
+          name: product.name,
+          category: product.category || 'Armações óticas',
+          shape: product.shape || 'Retangular',
+          material: product.material || 'Acetato',
+          color: product.color || 'Preto',
+          price: Number(product.price || 180),
+          pvp: Number(product.pvp || product.price || 180),
+          image: product.image || '/1-1.jpeg',
+          hover: product.hover || product.image || '/1-1.jpeg',
+          description: product.description || `${product.name} com design exclusivo de autor.`,
+          stockQuantity: product.stockQuantity !== undefined ? Number(product.stockQuantity) : 5,
+          isAvailable: product.isAvailable !== undefined ? Boolean(product.isAvailable) : true,
+          updatedAt: new Date().toISOString()
+        };
+
+        productsDb.push(newProd);
+        saveProductsDb();
+
+        res.writeHead(201, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, product: newProd }));
+        return;
+      }
+
+      // 2. GET /api/config — Return Publishable Key
       if (url.pathname === '/api/config' && req.method === 'GET') {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ publishableKey: STRIPE_PUBLISHABLE_KEY }));
         return;
       }
 
-      // 2. POST /api/create-payment-intent — Create Intent in Stripe
+      // 3. POST /api/create-payment-intent — Create Intent in Stripe WITH DYNAMIC DB PRICE VERIFICATION
       if (url.pathname === '/api/create-payment-intent' && req.method === 'POST') {
         const { items = [], customerEmail = '', customerName = '', shipping = {} } = json;
 
@@ -227,8 +360,25 @@ const server = http.createServer(async (req, res) => {
           return;
         }
 
-        // Calculate exact mathematical total in cents
-        const subtotal = items.reduce((sum, item) => sum + (Number(item.price || 0) * Number(item.qty || 1)), 0);
+        // Calculate exact mathematical total by verifying with live Database prices
+        let verifiedItems = [];
+        let subtotal = 0;
+
+        for (const item of items) {
+          const dbProd = productsDb.find(p => p.slug === item.slug || String(p.id) === String(item.id));
+          const unitPrice = dbProd ? Number(dbProd.price) : Number(item.price || 0);
+          const qty = Number(item.qty || 1);
+          
+          subtotal += unitPrice * qty;
+          verifiedItems.push({
+            slug: item.slug,
+            name: dbProd ? dbProd.name : item.name,
+            price: unitPrice,
+            qty: qty,
+            image: dbProd ? dbProd.image : item.image
+          });
+        }
+
         const amountCents = Math.round(subtotal * 100);
 
         if (amountCents <= 0) {
@@ -242,12 +392,12 @@ const server = http.createServer(async (req, res) => {
           currency: 'eur',
           automatic_payment_methods: { enabled: 'true' },
           receipt_email: customerEmail || undefined,
-          description: `Encomenda Ateliê Ótico — ${items.length} modelo(s)`,
+          description: `Encomenda Ateliê Ótico — ${verifiedItems.length} modelo(s)`,
           metadata: {
             customer_name: customerName,
             customer_email: customerEmail,
-            items_count: items.length,
-            models: items.map(i => `${i.name} (x${i.qty})`).join(', ')
+            items_count: verifiedItems.length,
+            models: verifiedItems.map(i => `${i.name} (x${i.qty})`).join(', ')
           }
         });
 
@@ -262,9 +412,21 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      // 3. POST /api/confirm-order — Log & Send Notification Emails
+      // 4. POST /api/confirm-order — Log & Send Notification Emails & Update DB Stock
       if (url.pathname === '/api/confirm-order' && req.method === 'POST') {
         const { orderId, paymentIntentId, customerName, customerEmail, customerPhone, items = [], shippingAddress = {} } = json;
+
+        // Decrement stock in DB for purchased products
+        items.forEach(item => {
+          const dbProd = productsDb.find(p => p.slug === item.slug || String(p.id) === String(item.id));
+          if (dbProd && dbProd.stockQuantity !== undefined) {
+            dbProd.stockQuantity = Math.max(0, dbProd.stockQuantity - Number(item.qty || 1));
+            if (dbProd.stockQuantity === 0) {
+              dbProd.isAvailable = false;
+            }
+          }
+        });
+        saveProductsDb();
 
         const subtotal = items.reduce((sum, item) => sum + (Number(item.price || 0) * Number(item.qty || 1)), 0);
         const orderData = {
@@ -285,9 +447,7 @@ const server = http.createServer(async (req, res) => {
         const invoiceHtml = generateCustomerInvoiceHtml(orderData);
 
         // Store confirmed order locally in JSON archive
-        const ordersDir = path.resolve(process.cwd(), 'data');
-        if (!fs.existsSync(ordersDir)) fs.mkdirSync(ordersDir, { recursive: true });
-        const ordersLogPath = path.join(ordersDir, 'orders.json');
+        const ordersLogPath = path.join(dataDir, 'orders.json');
         let existingOrders = [];
         if (fs.existsSync(ordersLogPath)) {
           try { existingOrders = JSON.parse(fs.readFileSync(ordersLogPath, 'utf8')); } catch(e) {}
@@ -306,7 +466,7 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      // 4. POST /api/webhook — Stripe Webhook Handler with Cryptographic Signature Verification
+      // 5. POST /api/webhook — Stripe Webhook Handler with Cryptographic Signature Verification
       if (url.pathname === '/api/webhook' && req.method === 'POST') {
         const sig = req.headers['stripe-signature'];
         const webhookSecret = STRIPE_WEBHOOK_SECRET || process.env.STRIPE_WEBHOOK_SECRET;
@@ -314,7 +474,6 @@ const server = http.createServer(async (req, res) => {
         let event = null;
         if (webhookSecret && sig) {
           try {
-            // Verify HMAC-SHA256 signature
             const parts = sig.split(',').reduce((acc, part) => {
               const [k, v] = part.trim().split('=');
               if (k && v) acc[k] = v;
@@ -358,7 +517,7 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      // 5. POST /api/analytics/cookies — Record Cookie Consent Events
+      // 6. POST /api/analytics/cookies — Record Cookie Consent Events
       if (url.pathname === '/api/analytics/cookies' && req.method === 'POST') {
         const statsFile = path.resolve(process.cwd(), 'cookie-stats.json');
         let stats = {
@@ -421,7 +580,7 @@ const server = http.createServer(async (req, res) => {
         return;
       }
 
-      // 6. GET /api/analytics/cookies — Fetch Global Cookie Consent Stats for Admin
+      // 7. GET /api/analytics/cookies — Fetch Global Cookie Consent Stats for Admin
       if (url.pathname === '/api/analytics/cookies' && req.method === 'GET') {
         const statsFile = path.resolve(process.cwd(), 'cookie-stats.json');
         let stats = {
@@ -461,5 +620,6 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`⚡ Ateliê Ótico Stripe Backend Service running on port ${PORT}`);
+  console.log(`📦 Dynamic Product Database: ${productsDb.length} products loaded.`);
   console.log(`🔑 Stripe Publishable Key: ${STRIPE_PUBLISHABLE_KEY.substring(0, 18)}...`);
 });

@@ -1,60 +1,44 @@
-import fs from "fs";
-import path from "path";
-import { execSync } from "child_process";
+// deploy-vps.mjs — Automated VPS Production Deployment with Dynamic Product DB & Stripe
 import { NodeSSH } from "node-ssh";
+import path from "path";
+import fs from "fs";
+import { execSync } from "child_process";
 
 const ssh = new NodeSSH();
 
 async function run() {
-  const envPath = path.resolve(process.cwd(), ".env.deploy");
-  if (!fs.existsSync(envPath)) {
+  const envDeployPath = path.resolve(process.cwd(), ".env.deploy");
+  if (!fs.existsSync(envDeployPath)) {
     console.error("❌ Error: No se encontró el archivo .env.deploy");
     process.exit(1);
   }
 
-  const envContent = fs.readFileSync(envPath, "utf-8");
+  const envContent = fs.readFileSync(envDeployPath, "utf-8");
   
   // Extract values
   const vpsPassMatch = envContent.match(/VPS_PASSWORD=(.+)/);
   const password = vpsPassMatch ? vpsPassMatch[1].trim() : "";
 
-  const supaUrlMatch = envContent.match(/PUBLIC_SUPABASE_URL=(.+)/);
-  const supabaseUrl = supaUrlMatch ? supaUrlMatch[1].trim() : "";
-
-  const supaKeyMatch = envContent.match(/PUBLIC_SUPABASE_ANON_KEY=(.+)/);
-  const supabaseKey = supaKeyMatch ? supaKeyMatch[1].trim() : "";
-
-  if (!password || password === "tu_contraseña_aqui") {
-    console.error("❌ Error: Por favor abre .env.deploy y coloca tu contraseña de VPS.");
+  if (!password) {
+    console.error("❌ Error: VPS_PASSWORD no encontrado en .env.deploy");
     process.exit(1);
   }
-
-  // Read existing .env or create if missing
-  const localEnvFile = path.resolve(process.cwd(), ".env");
-  let localEnv = "";
-  if (fs.existsSync(localEnvFile)) {
-    localEnv = fs.readFileSync(localEnvFile, "utf-8");
-  } else {
-    localEnv = `# ATELIÊ ÓTICO ENVIRONMENT\nPUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_51U6ePTA4omOSLMnkqJ97sAVhZt1L3YUHNSn0ZehsXQVBDq3k4gTjYRGjDVu4DELheXIR79Wm9XVhTJdtTsWOeNZq00z8rLeAyn\nPORT=4242\nADMIN_EMAIL=geral@atelieotico.com\n`;
-    if (supabaseUrl && supabaseUrl !== "pega_tu_supabase_url_aqui" && supabaseUrl.startsWith("http")) {
-      localEnv += `PUBLIC_SUPABASE_URL=${supabaseUrl}\n`;
-    }
-    if (supabaseKey && supabaseKey !== "pega_tu_supabase_anon_key_aqui") {
-      localEnv += `PUBLIC_SUPABASE_ANON_KEY=${supabaseKey}\n`;
-    }
-    fs.writeFileSync(localEnvFile, localEnv, "utf-8");
-  }
-
-  console.log("🚀 Compilando sitio con catálogo completo de 370 productos, Stripe Checkout y Admin...");
-  execSync("npm run build", { stdio: "inherit" });
 
   const host = "77.42.124.150";
   const username = "root";
   const remoteDir = "/var/www/atelieotico.com";
   const localDist = path.resolve(process.cwd(), "dist");
 
+  console.log("🚀 Compilando sitio con catálogo completo de 370 productos, Stripe Checkout y Admin...");
+  try {
+    execSync("npm run build", { stdio: "inherit" });
+  } catch (e) {
+    console.error("❌ Falló la compilación de Astro:", e.message);
+    process.exit(1);
+  }
+
   if (!fs.existsSync(localDist)) {
-    console.error("❌ Error: La carpeta dist/ no existe.");
+    console.error(`❌ El directorio de distribución ${localDist} no existe.`);
     process.exit(1);
   }
 
@@ -69,17 +53,19 @@ async function run() {
       username,
       password,
       tryKeyboard: true,
+      readyTimeout: 30000,
+      keepaliveInterval: 5000
     });
     console.log("✅ Conexión SSH exitosa.");
 
     console.log(`📁 Verificando directorio remoto ${remoteDir}...`);
-    await ssh.execCommand(`mkdir -p ${remoteDir} ${remoteDir}/server ${remoteDir}/data`);
+    await ssh.execCommand(`mkdir -p ${remoteDir} ${remoteDir}/server ${remoteDir}/server/data ${remoteDir}/data`);
 
     console.log(`📤 Subiendo paquete web a ${remoteDir}...`);
     await ssh.putFile(tarFile, "/tmp/dist.tar.gz");
-    await ssh.execCommand(`tar -xzf /tmp/dist.tar.gz -C ${remoteDir} && rm /tmp/dist.tar.gz`);
+    await ssh.execCommand(`tar -xzf /tmp/dist.tar.gz -C ${remoteDir} && rm -f /tmp/dist.tar.gz`);
 
-    console.log("📤 Subiendo servidor Stripe Backend y configuración .env...");
+    console.log("📤 Subiendo servidor Stripe Backend, Base de Datos de Productos y configuración .env...");
     const serverFile = path.resolve(process.cwd(), "server.mjs");
     if (fs.existsSync(serverFile)) {
       await ssh.putFile(serverFile, `${remoteDir}/server/server.mjs`);
@@ -87,6 +73,12 @@ async function run() {
     const envLocalFile = path.resolve(process.cwd(), ".env");
     if (fs.existsSync(envLocalFile)) {
       await ssh.putFile(envLocalFile, `${remoteDir}/server/.env`);
+    }
+
+    const dbLocalFile = path.resolve(process.cwd(), "data/products-db.json");
+    if (fs.existsSync(dbLocalFile)) {
+      console.log("💾 Subiendo base de datos de productos (products-db.json)...");
+      await ssh.putFile(dbLocalFile, `${remoteDir}/server/data/products-db.json`);
     }
 
     console.log("⚡ Configurando servicio Node.js Stripe en el VPS...");
@@ -128,7 +120,7 @@ server {
     root /var/www/atelieotico.com;
     index index.html;
 
-    # API Proxy for Stripe Payment Service
+    # API Proxy for Stripe Payment Service & Dynamic Products DB
     location /api/ {
         proxy_pass http://127.0.0.1:4242;
         proxy_http_version 1.1;
@@ -163,10 +155,11 @@ server {
     console.log("🔧 Ajustando permisos en el servidor...");
     await ssh.execCommand(`chmod -R 755 ${remoteDir}`);
 
-    console.log("\n🎉 ¡DESPLIEGUE COMPLETO DE STRIPE CHECKOUT Y APIS EN EL VPS!");
+    console.log("\n🎉 ¡DESPLIEGUE COMPLETO DE STRIPE CHECKOUT, BASE DE DATOS Y APIS EN EL VPS!");
     console.log(`🌐 Tienda: https://atelieotico.com`);
     console.log(`💳 Checkout: https://atelieotico.com/checkout`);
     console.log(`⚡ API Status: https://atelieotico.com/api/config`);
+    console.log(`📦 Products API: https://atelieotico.com/api/products`);
     console.log(`🔐 Admin: https://atelieotico.com/admin`);
 
   } catch (err) {
@@ -174,6 +167,9 @@ server {
     process.exit(1);
   } finally {
     ssh.dispose();
+    if (fs.existsSync(tarFile)) {
+      try { fs.unlinkSync(tarFile); } catch(e) {}
+    }
   }
 }
 

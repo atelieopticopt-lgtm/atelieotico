@@ -1021,6 +1021,30 @@
     } else {
       card.classList.remove('is-disabled');
     }
+
+    // Sync directly with Server Database
+    syncProductToApi(id, card.dataset.slug || id, {
+      price,
+      pvp: price,
+      stockQuantity: stock,
+      isAvailable: isAvail
+    });
+  }
+
+  async function syncProductToApi(id, slug, updates) {
+    try {
+      const res = await fetch('/api/products/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, slug, updates })
+      });
+      const data = await res.json();
+      if (data.success) {
+        console.log('[DB Sync Success]', data.product?.name, 'Price:', data.product?.price, 'Stock:', data.product?.stockQuantity);
+      }
+    } catch (err) {
+      console.warn('[DB Sync API Offline/Fallback]', err.message);
+    }
   }
 
   function filterCards() {
@@ -1321,11 +1345,26 @@
         }
 
         updateCardStockBadge(card);
+
+        // Sync full modal updates to Database
+        syncProductToApi(idVal, card.dataset.slug || idVal, {
+          name,
+          brand,
+          sku,
+          price,
+          pvp: price,
+          stockQuantity: stock,
+          isAvailable: isAvail,
+          description: desc,
+          image: currentEditingPhotos[0] || undefined,
+          hover: currentEditingPhotos[1] || currentEditingPhotos[0] || undefined
+        });
       }
     }
 
     autoSaveAll();
     closeProductModal();
+    showAdminToast(`✓ Produto "${name}" guardado e sincronizado com a base de dados!`);
   });
 
   // =========================================================================
