@@ -1,5 +1,6 @@
 ---
 import StoreLayout from '../layouts/StoreLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 ---
 
 <StoreLayout 
@@ -7,20 +8,24 @@ import StoreLayout from '../layouts/StoreLayout.astro';
   description="Finalize a sua encomenda com segurança no Ateliê Ótico. Pagamentos encriptados via Stripe, MB WAY e Cartão de Crédito."
   hideHeader={true}
   hideTopbar={true}
+  hideFooter={true}
 >
   <div class="checkout-luxury-wrapper">
     
-    {/* Clean Top Branding Bar */}
+    {/* Clean Top Branding Bar with Language Switcher */}
     <header class="checkout-top-header">
       <a href="/" class="checkout-brand-link" title="Voltar à Página Principal">
         <img src="/SVG-Logo-Atelie.svg" alt="Ateliê Ótico" class="checkout-brand-logo" />
       </a>
-      <div class="checkout-security-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-        </svg>
-        <span>Checkout Seguro SSL &bull; Encriptação de 256 bits</span>
+      <div class="checkout-header-right">
+        <LanguageSwitcher />
+        <div class="checkout-security-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span data-i18n-pt="Checkout Seguro SSL • Encriptação de 256 bits" data-i18n-en="SSL Secure Checkout • 256-bit Encryption">Checkout Seguro SSL &bull; Encriptação de 256 bits</span>
+        </div>
       </div>
     </header>
 
@@ -151,6 +156,28 @@ import StoreLayout from '../layouts/StoreLayout.astro';
           <div class="form-section-block" style="margin-top: 28px;">
             <h3 class="section-heading" data-i18n-pt="Método de Pagamento" data-i18n-en="Payment Method">Método de Pagamento</h3>
             
+            {/* Stripe Test Mode Assistant Card */}
+            <div class="stripe-test-helper-card">
+              <div class="test-helper-badge">
+                <span class="badge-dot"></span>
+                <strong data-i18n-pt="MODO DE TESTE STRIPE ATIVO" data-i18n-en="STRIPE TEST MODE ACTIVE">MODO DE TESTE STRIPE ATIVO</strong>
+              </div>
+              <p class="test-helper-desc" data-i18n-pt="Para simular pagamentos com sucesso, utilize o cartão de teste oficial Stripe:" data-i18n-en="To simulate successful checkout, use the official Stripe test card:">
+                Para simular pagamentos com sucesso, utilize o cartão de teste oficial Stripe:
+              </p>
+              <div class="test-card-details">
+                <code>4242 4242 4242 4242</code> &bull; Exp: <code>12/34</code> &bull; CVC: <code>123</code>
+              </div>
+              <div class="test-actions-row">
+                <button type="button" id="btn-copy-visa" class="btn-test-card">
+                  📋 Copiar Cartão Visa Teste (4242...)
+                </button>
+                <button type="button" id="btn-copy-mastercard" class="btn-test-card">
+                  📋 Copiar Mastercard Teste (5555...)
+                </button>
+              </div>
+            </div>
+
             <div class="stripe-card-wrapper">
               <div class="card-brand-logos">
                 <span class="card-title-text" data-i18n-pt="Cartão de Crédito ou Débito / MB WAY" data-i18n-en="Credit or Debit Card / MB WAY">Cartão de Crédito ou Débito</span>
@@ -168,7 +195,7 @@ import StoreLayout from '../layouts/StoreLayout.astro';
           </div>
 
           <button type="submit" id="btn-submit-payment" class="rect black btn-pay-now">
-            <span id="btn-pay-text">PAGAR € 0,00</span>
+            <span id="btn-pay-text" data-i18n-pt="PAGAR € 0,00" data-i18n-en="PAY € 0.00">PAGAR € 0,00</span>
             <div id="btn-pay-spinner" class="payment-spinner" style="display: none;"></div>
           </button>
 
@@ -176,7 +203,7 @@ import StoreLayout from '../layouts/StoreLayout.astro';
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-            <span>Transação 100% segura processada com encriptação Stripe &bull; Garantia de 2 Anos</span>
+            <span data-i18n-pt="Transação 100% segura processada com encriptação Stripe • Garantia de 2 Anos" data-i18n-en="100% Secure transaction processed with Stripe encryption • 2-Year Warranty">Transação 100% segura processada com encriptação Stripe &bull; Garantia de 2 Anos</span>
           </div>
 
         </form>
@@ -186,7 +213,7 @@ import StoreLayout from '../layouts/StoreLayout.astro';
       {/* RIGHT COLUMN: ORDER SUMMARY (RESUMO DA ENCOMENDA) */}
       <aside class="checkout-summary-column">
         <div class="summary-card-box">
-          <h3 class="summary-title" data-i18n-pt="RESUMO DA ENCOMENDA" data-i18n-en="ORDER SUMMARY">ORDER SUMMARY</h3>
+          <h3 class="summary-title" data-i18n-pt="RESUMO DA ENCOMENDA" data-i18n-en="ORDER SUMMARY">RESUMO DA ENCOMENDA</h3>
 
           {/* Dynamic Items List */}
           <div id="checkout-items-list" class="checkout-items-list">
@@ -195,16 +222,16 @@ import StoreLayout from '../layouts/StoreLayout.astro';
 
           <div class="summary-math-block">
             <div class="summary-row">
-              <span data-i18n-pt="Subtotal dos produtos" data-i18n-en="Product subtotal">Product subtotal</span>
+              <span data-i18n-pt="Subtotal dos produtos" data-i18n-en="Product subtotal">Subtotal dos produtos</span>
               <strong id="summary-subtotal">€ 0,00</strong>
             </div>
 
             <div class="summary-row">
               <div>
-                <span data-i18n-pt="Envio para" data-i18n-en="Shipping to">Shipping to</span>
+                <span data-i18n-pt="Envio para" data-i18n-en="Shipping to">Envio para</span>
                 <span id="summary-destination-label" style="font-weight: 600; color: #111;">Portugal</span>
               </div>
-              <span id="summary-shipping" class="free-shipping-tag" data-i18n-pt="Grátis" data-i18n-en="Free">Free</span>
+              <span id="summary-shipping" class="free-shipping-tag" data-i18n-pt="Grátis" data-i18n-en="Free">Grátis</span>
             </div>
 
             {/* Discount Code Input */}
@@ -216,7 +243,7 @@ import StoreLayout from '../layouts/StoreLayout.astro';
                 data-i18n-placeholder-pt="CÓDIGO DE DESCONTO"
                 data-i18n-placeholder-en="DISCOUNT CODE"
               />
-              <button type="button" id="btn-apply-discount" data-i18n-pt="Aplicar" data-i18n-en="Apply">Apply</button>
+              <button type="button" id="btn-apply-discount" data-i18n-pt="Aplicar" data-i18n-en="Apply">Aplicar</button>
             </div>
 
             <div id="discount-row" class="summary-row discount-row" style="display: none;">
@@ -225,14 +252,14 @@ import StoreLayout from '../layouts/StoreLayout.astro';
             </div>
 
             <div class="summary-total-row">
-              <span data-i18n-pt="Total a pagar" data-i18n-en="Total">Total</span>
+              <span data-i18n-pt="Total a pagar" data-i18n-en="Total">Total a pagar</span>
               <strong id="summary-total" class="summary-total-price">€ 0,00</strong>
             </div>
           </div>
 
           <div class="summary-assistance-box">
-            <p><strong>Dúvidas com o seu pedido?</strong></p>
-            <p>Contacte o nosso Ateliê: <a href="https://wa.me/351964993767" target="_blank">+351 964 993 767</a></p>
+            <p><strong data-i18n-pt="Dúvidas com o seu pedido?" data-i18n-en="Questions about your order?">Dúvidas com o seu pedido?</strong></p>
+            <p><span data-i18n-pt="Contacte o nosso Ateliê:" data-i18n-en="Contact our boutique:">Contacte o nosso Ateliê:</span> <a href="https://wa.me/351964993767" target="_blank">+351 964 993 767</a></p>
           </div>
 
         </div>
@@ -253,12 +280,18 @@ import StoreLayout from '../layouts/StoreLayout.astro';
       let stripe = null;
       let elements = null;
       let cardElement = null;
+      const currentLang = localStorage.getItem('atelie_lang') || 'pt';
 
       if (window.Stripe) {
-        stripe = window.Stripe(STRIPE_PK);
-        elements = stripe.elements();
+        stripe = window.Stripe(STRIPE_PK, {
+          locale: currentLang === 'en' ? 'en' : 'pt'
+        });
+        elements = stripe.elements({
+          locale: currentLang === 'en' ? 'en' : 'pt'
+        });
         
         cardElement = elements.create('card', {
+          hidePostalCode: true,
           style: {
             base: {
               fontSize: '15px',
@@ -290,6 +323,17 @@ import StoreLayout from '../layouts/StoreLayout.astro';
         });
       }
 
+      // Copy Test Card handlers
+      document.getElementById('btn-copy-visa')?.addEventListener('click', () => {
+        navigator.clipboard?.writeText('4242 4242 4242 4242');
+        alert('✓ Número de cartão Visa copiado para a área de transferência: 4242 4242 4242 4242\nValidade: 12/34\nCVC: 123\n\nCole no campo do cartão abaixo!');
+      });
+
+      document.getElementById('btn-copy-mastercard')?.addEventListener('click', () => {
+        navigator.clipboard?.writeText('5555 5555 5555 4444');
+        alert('✓ Número de cartão Mastercard copiado: 5555 5555 5555 4444\nValidade: 12/34\nCVC: 123\n\nCole no campo do cartão abaixo!');
+      });
+
       // Load items from localStorage
       function getCartItems() {
         try {
@@ -305,13 +349,14 @@ import StoreLayout from '../layouts/StoreLayout.astro';
       function renderCheckout() {
         cartItems = getCartItems();
         const itemsList = document.getElementById('checkout-items-list');
+        const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
         
         if (!cartItems.length) {
           if (itemsList) {
             itemsList.innerHTML = `
               <div style="padding: 32px 0; text-align: center; color: #666;">
-                <p>O seu carrinho está vazio.</p>
-                <a href="/catalogo" class="rect black" style="display: inline-flex; height: 42px; padding: 0 20px; font-size: 11px; margin-top: 10px;">EXPLORAR CATÁLOGO</a>
+                <p>${isEn ? 'Your cart is empty.' : 'O seu carrinho está vazio.'}</p>
+                <a href="/catalogo" class="rect black" style="display: inline-flex; height: 42px; padding: 0 20px; font-size: 11px; margin-top: 10px;">${isEn ? 'EXPLORE CATALOG' : 'EXPLORAR CATÁLOGO'}</a>
               </div>
             `;
           }
@@ -344,11 +389,19 @@ import StoreLayout from '../layouts/StoreLayout.astro';
       function updateTotals(subtotal) {
         const discountAmount = subtotal * discountRate;
         const finalTotal = Math.max(0, subtotal - discountAmount);
+        const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
 
-        document.getElementById('checkout-top-total').textContent = `${finalTotal.toFixed(2)} €`;
-        document.getElementById('summary-subtotal').textContent = `${subtotal.toFixed(2)} €`;
-        document.getElementById('summary-total').textContent = `${finalTotal.toFixed(2)} €`;
-        document.getElementById('btn-pay-text').textContent = `PAGAR ${finalTotal.toFixed(2)} €`;
+        const topTotal = document.getElementById('checkout-top-total');
+        if (topTotal) topTotal.textContent = `${finalTotal.toFixed(2)} €`;
+        
+        const subtotalEl = document.getElementById('summary-subtotal');
+        if (subtotalEl) subtotalEl.textContent = `${subtotal.toFixed(2)} €`;
+        
+        const totalEl = document.getElementById('summary-total');
+        if (totalEl) totalEl.textContent = `${finalTotal.toFixed(2)} €`;
+        
+        const payBtn = document.getElementById('btn-pay-text');
+        if (payBtn) payBtn.textContent = `${isEn ? 'PAY' : 'PAGAR'} ${finalTotal.toFixed(2)} €`;
 
         if (discountAmount > 0) {
           document.getElementById('discount-row').style.display = 'flex';
@@ -363,10 +416,10 @@ import StoreLayout from '../layouts/StoreLayout.astro';
         const code = (document.getElementById('discount-code-input')?.value || '').trim().toUpperCase();
         if (code === 'ATELIE10' || code === 'MADEIRA10' || code === 'VIP10') {
           discountRate = 0.10;
-          alert('Cupão de 10% de desconto aplicado com sucesso!');
+          alert('✓ Cupão de 10% de desconto aplicado com sucesso!');
         } else if (code === 'ATELIE20' || code === 'PROMO20') {
           discountRate = 0.20;
-          alert('Cupão de 20% de desconto aplicado com sucesso!');
+          alert('✓ Cupão de 20% de desconto aplicado com sucesso!');
         } else if (code) {
           alert('Código de desconto inválido ou expirado.');
         }
@@ -443,7 +496,7 @@ import StoreLayout from '../layouts/StoreLayout.astro';
             throw new Error(result.error.message);
           } else if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
             // 3. Confirm order & trigger notification emails
-            const orderRes = await fetch('/api/confirm-order', {
+            await fetch('/api/confirm-order', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({

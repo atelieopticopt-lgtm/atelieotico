@@ -8,7 +8,8 @@ const {
   title = 'Ateliê Ótico — Design de Autor & Precisão Ótica na Madeira',
   description = 'Curadoria independente de armações óticas e óculos de sol no Funchal, Madeira.',
   hideHeader = false,
-  hideTopbar = false
+  hideTopbar = false,
+  hideFooter = false
 } = Astro.props;
 const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 ---
@@ -290,114 +291,113 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 </aside>
 <div class="drawer-overlay"></div>
 
-{/* =========================================================================
-    MONOLITHIC LUXURY EDITORIAL FOOTER
-    ========================================================================= */}
-<footer class="ll-monolith-footer">
-  <div class="ll-container">
-    
-    {/* Brand Central Identity */}
-    <div class="ll-footer-top-brand">
-      <img
-        class="ll-footer-brand-logo"
-        src="/SVG-Logo-Atelie.svg"
-        alt="Ateliê Ótico — Funchal, Madeira"
-      />
-      <p class="ll-footer-tagline">
-        Ótica independente na Madeira — Curadoria de autor e precisão ótica
-      </p>
-    </div>
+{!hideFooter && (
+  <footer class="ll-monolith-footer">
+    <div class="ll-container">
+      
+      {/* Brand Central Identity */}
+      <div class="ll-footer-top-brand">
+        <img
+          class="ll-footer-brand-logo"
+          src="/SVG-Logo-Atelie.svg"
+          alt="Ateliê Ótico — Funchal, Madeira"
+        />
+        <p class="ll-footer-tagline">
+          Ótica independente na Madeira — Curadoria de autor e precisão ótica
+        </p>
+      </div>
 
-    {/* Primary Navigation Row */}
-    <nav class="ll-footer-nav-bar" aria-label="Navegação do Rodapé">
-      <a href="/catalogo" class="ll-footer-link">Coleções</a>
-      <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es+%C3%B3ticas" class="ll-footer-link">Armações Óticas</a>
-      <a href="/catalogo?categoria=%C3%93culos+de+sol" class="ll-footer-link">Óculos de Sol</a>
-      <a href="/marcas" class="ll-footer-link">Manufaturas</a>
-      <a href="/sobre" class="ll-footer-link">O Ateliê</a>
-      <a href="/contactos" class="ll-footer-link">Contactos</a>
-    </nav>
+      {/* Primary Navigation Row */}
+      <nav class="ll-footer-nav-bar" aria-label="Navegação do Rodapé">
+        <a href="/catalogo" class="ll-footer-link">Coleções</a>
+        <a href="/catalogo?categoria=Arma%C3%A7%C3%B5es+%C3%B3ticas" class="ll-footer-link">Armações Óticas</a>
+        <a href="/catalogo?categoria=%C3%93culos+de+sol" class="ll-footer-link">Óculos de Sol</a>
+        <a href="/marcas" class="ll-footer-link">Manufaturas</a>
+        <a href="/sobre" class="ll-footer-link">O Ateliê</a>
+        <a href="/contactos" class="ll-footer-link">Contactos</a>
+      </nav>
 
-    {/* Google My Business, Address & Schedule Information */}
-    <div class="ll-footer-gmb-section">
-      <div class="ll-footer-gmb-grid">
-        
-        {/* Physical Address */}
-        <div class="ll-footer-gmb-col">
-          <h4>ESPAÇO &amp; LOCALIZAÇÃO</h4>
-          <p><strong>Ateliê Ótico</strong></p>
-          <p>Rua da Conceição, Praça do Carmo 29B<br/>9050-026 Funchal, Madeira</p>
-          <a
-            href="https://maps.google.com/?q=Rua+da+Concei%C3%A7%C3%A3o+Pra%C3%A7a+do+Carmo+29B+Funchal"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Abrir no Google Maps &rarr;
-          </a>
-        </div>
+      {/* Google My Business, Address & Schedule Information */}
+      <div class="ll-footer-gmb-section">
+        <div class="ll-footer-gmb-grid">
+          
+          {/* Physical Address */}
+          <div class="ll-footer-gmb-col">
+            <h4>ESPAÇO &amp; LOCALIZAÇÃO</h4>
+            <p><strong>Ateliê Ótico</strong></p>
+            <p>Rua da Conceição, Praça do Carmo 29B<br/>9050-026 Funchal, Madeira</p>
+            <a
+              href="https://maps.google.com/?q=Rua+da+Concei%C3%A7%C3%A3o+Pra%C3%A7a+do+Carmo+29B+Funchal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir no Google Maps &rarr;
+            </a>
+          </div>
 
-        {/* Direct Contact */}
-        <div class="ll-footer-gmb-col">
-          <h4>CONTACTO DIRETO</h4>
-          <p>Atendimento e marcações personalizadas:</p>
-          <p style="font-size: 15px; font-weight: 700; color: #0a0a0a;">964 993 767</p>
-          <a href="https://wa.me/351964993767" target="_blank" rel="noopener noreferrer">
-            Conversar no WhatsApp &rarr;
-          </a>
-        </div>
+          {/* Direct Contact */}
+          <div class="ll-footer-gmb-col">
+            <h4>CONTACTO DIRETO</h4>
+            <p>Atendimento e marcações personalizadas:</p>
+            <p style="font-size: 15px; font-weight: 700; color: #0a0a0a;">964 993 767</p>
+            <a href="https://wa.me/351964993767" target="_blank" rel="noopener noreferrer">
+              Conversar no WhatsApp &rarr;
+            </a>
+          </div>
 
-        {/* Operating Hours */}
-        <div class="ll-footer-gmb-col">
-          <h4>HORÁRIO DE FUNCIONAMENTO</h4>
-          <div class="ll-hours-list">
-            <div class="ll-hours-row">
-              <span>Segunda a Sexta</span>
-              <strong>09:00 – 19:00</strong>
-            </div>
-            <div class="ll-hours-row">
-              <span>Sábado</span>
-              <strong>09:00 – 13:00</strong>
-            </div>
-            <div class="ll-hours-row">
-              <span>Domingo</span>
-              <strong>Encerrado</strong>
+          {/* Operating Hours */}
+          <div class="ll-footer-gmb-col">
+            <h4>HORÁRIO DE FUNCIONAMENTO</h4>
+            <div class="ll-hours-list">
+              <div class="ll-hours-row">
+                <span>Segunda a Sexta</span>
+                <strong>09:00 – 19:00</strong>
+              </div>
+              <div class="ll-hours-row">
+                <span>Sábado</span>
+                <strong>09:00 – 13:00</strong>
+              </div>
+              <div class="ll-hours-row">
+                <span>Domingo</span>
+                <strong>Encerrado</strong>
+              </div>
             </div>
           </div>
+
+        </div>
+      </div>
+
+      {/* Centered Legal Links, Payment Methods and Copyright Row */}
+      <div class="ll-footer-centered-legal">
+        <div class="ll-payment-logos" aria-label="Métodos de pagamento seguros">
+          <div class="payment-badge" title="MB WAY"><img src="/payment-methods/MBWay.svg" alt="MB WAY" /></div>
+          <div class="payment-badge" title="Visa"><img src="/payment-methods/Visa.svg" alt="Visa" /></div>
+          <div class="payment-badge" title="Mastercard"><img src="/payment-methods/MasterCard.svg" alt="Mastercard" /></div>
+          <div class="payment-badge" title="PayPal"><img src="/payment-methods/PayPal.svg" alt="PayPal" /></div>
+          <div class="payment-badge" title="Revolut"><img src="/payment-methods/Revolut.svg" alt="Revolut" /></div>
+          <div class="payment-badge" title="Klarna"><img src="/payment-methods/klarna.svg" alt="Klarna" /></div>
         </div>
 
+        <nav class="ll-legal-links-row" aria-label="Informações legais">
+          <a href="/carreiras" data-i18n-pt="Carreiras" data-i18n-en="Careers">Carreiras</a>
+          <span class="legal-dot">•</span>
+          <a href="/condicoes-gerais-venda" data-i18n-pt="Condições Gerais de Venda" data-i18n-en="General Conditions of Sale">Condições Gerais de Venda</a>
+          <span class="legal-dot">•</span>
+          <a href="/termos">Termos e Condições</a>
+          <span class="legal-dot">•</span>
+          <a href="/privacidade">Privacidade</a>
+          <span class="legal-dot">•</span>
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
+        </nav>
+        
+        <p class="ll-copyright-centered">
+          &copy; 2026 Ateliê Ótico — Todos os direitos reservados &bull; Madeira
+        </p>
       </div>
+
     </div>
-
-    {/* Centered Legal Links, Payment Methods and Copyright Row */}
-    <div class="ll-footer-centered-legal">
-      <div class="ll-payment-logos" aria-label="Métodos de pagamento seguros">
-        <div class="payment-badge" title="MB WAY"><img src="/payment-methods/MBWay.svg" alt="MB WAY" /></div>
-        <div class="payment-badge" title="Visa"><img src="/payment-methods/Visa.svg" alt="Visa" /></div>
-        <div class="payment-badge" title="Mastercard"><img src="/payment-methods/MasterCard.svg" alt="Mastercard" /></div>
-        <div class="payment-badge" title="PayPal"><img src="/payment-methods/PayPal.svg" alt="PayPal" /></div>
-        <div class="payment-badge" title="Revolut"><img src="/payment-methods/Revolut.svg" alt="Revolut" /></div>
-        <div class="payment-badge" title="Klarna"><img src="/payment-methods/klarna.svg" alt="Klarna" /></div>
-      </div>
-
-      <nav class="ll-legal-links-row" aria-label="Informações legais">
-        <a href="/carreiras" data-i18n-pt="Carreiras" data-i18n-en="Careers">Carreiras</a>
-        <span class="legal-dot">•</span>
-        <a href="/condicoes-gerais-venda" data-i18n-pt="Condições Gerais de Venda" data-i18n-en="General Conditions of Sale">Condições Gerais de Venda</a>
-        <span class="legal-dot">•</span>
-        <a href="/termos">Termos e Condições</a>
-        <span class="legal-dot">•</span>
-        <a href="/privacidade">Privacidade</a>
-        <span class="legal-dot">•</span>
-        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
-      </nav>
-      
-      <p class="ll-copyright-centered">
-        &copy; 2026 Ateliê Ótico — Todos os direitos reservados &bull; Madeira
-      </p>
-    </div>
-
-  </div>
-</footer>
+  </footer>
+)}
 
 <ChatButton />
 

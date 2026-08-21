@@ -2466,6 +2466,12 @@ body.drawer-open #whatsapp-btn {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.checkout-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .checkout-brand-logo {
   height: 38px;
   width: auto;
@@ -2478,6 +2484,84 @@ body.drawer-open #whatsapp-btn {
   font-size: 12px;
   font-weight: 600;
   color: #555555;
+}
+
+/* Stripe Test Mode Card Helper */
+.stripe-test-helper-card {
+  background: #f8fafc;
+  border: 1.5px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.test-helper-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.test-helper-badge .badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+}
+
+.test-helper-desc {
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.test-card-details {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: monospace;
+  color: #0f172a;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.test-card-details code {
+  font-weight: 700;
+  color: #0284c7;
+}
+
+.test-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-test-card {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-test-card:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
 }
 
 .checkout-main-grid {
