@@ -344,7 +344,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
       }
 
       let cartItems = getCartItems();
-      let discountRate = 0;
+      let appliedDiscount = null;
 
       function renderCheckout() {
         cartItems = getCartItems();
@@ -387,7 +387,15 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
       }
 
       function updateTotals(subtotal) {
-        const discountAmount = subtotal * discountRate;
+        let discountAmount = 0;
+        if (appliedDiscount) {
+          if (appliedDiscount.type === 'percent') {
+            discountAmount = subtotal * (Number(appliedDiscount.value || 0) / 100);
+          } else {
+            discountAmount = Math.min(subtotal, Number(appliedDiscount.value || 0));
+          }
+        }
+
         const finalTotal = Math.max(0, subtotal - discountAmount);
         const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
 
@@ -411,18 +419,63 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
         }
       }
 
-      // Discount Code Handler
+      // Discount Code Handler (Percentage % or Fixed Amount €)
       document.getElementById('btn-apply-discount')?.addEventListener('click', () => {
         const code = (document.getElementById('discount-code-input')?.value || '').trim().toUpperCase();
-        if (code === 'ATELIE10' || code === 'MADEIRA10' || code === 'VIP10') {
-          discountRate = 0.10;
-          alert('✓ Cupão de 10% de desconto aplicado com sucesso!');
-        } else if (code === 'ATELIE20' || code === 'PROMO20') {
-          discountRate = 0.20;
-          alert('✓ Cupão de 20% de desconto aplicado com sucesso!');
-        } else if (code) {
-          alert('Código de desconto inválido ou expirado.');
+        if (!code) return;
+
+        const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
+        
+        // Load discounts from localStorage
+        let allDiscounts = [];
+        try {
+          allDiscounts = JSON.parse(localStorage.getItem('atelie_discounts_v1') || '[]');
+        } catch(e) {
+          allDiscounts = [];
         }
+
+        // Fallback default coupons if not initialized yet
+        if (!allDiscounts.length) {
+          allDiscounts = [
+            { code: 'ATELIE10', type: 'percent', value: 10, minOrder: 0, status: 'active' },
+            { code: 'MADEIRA10', type: 'percent', value: 10, minOrder: 50, status: 'active' },
+            { code: 'PROMO20', type: 'percent', value: 20, minOrder: 150, status: 'active' },
+            { code: 'BEMVINDO15', type: 'percent', value: 15, minOrder: 0, status: 'active' },
+            { code: 'VIP50', type: 'fixed', value: 50, minOrder: 250, status: 'active' }
+          ];
+        }
+
+        const match = allDiscounts.find(d => d.code === code);
+        const subtotal = cartItems.reduce((acc, i) => acc + (Number(i.price || 0) * Number(i.qty || 1)), 0);
+
+        if (!match) {
+          alert(isEn ? 'Invalid coupon code.' : 'Código de desconto inválido ou não reconhecido.');
+          return;
+        }
+
+        if (match.status !== 'active') {
+          alert(isEn ? 'This coupon is currently inactive or paused.' : 'Este cupão encontra-se atualmente inativo ou pausado.');
+          return;
+        }
+
+        if (match.expiryDate && new Date(match.expiryDate) < new Date()) {
+          alert(isEn ? 'This coupon has expired.' : 'Este código de desconto expirou.');
+          return;
+        }
+
+        if (match.minOrder && subtotal < Number(match.minOrder)) {
+          alert(isEn 
+            ? `Minimum order value for this coupon is ${Number(match.minOrder).toFixed(2)} €.` 
+            : `O valor mínimo de compra para este cupão é de ${Number(match.minOrder).toFixed(2)} €.`);
+          return;
+        }
+
+        appliedDiscount = match;
+        const discText = match.type === 'percent' ? `${match.value}%` : `${match.value} €`;
+        alert(isEn 
+          ? `✓ Coupon ${match.code} (${discText} discount) applied successfully!` 
+          : `✓ Cupão ${match.code} (${discText} de desconto) aplicado com sucesso!`);
+        
         renderCheckout();
       });
 

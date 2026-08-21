@@ -296,21 +296,47 @@
     if (cinPosVal) cinPosVal.textContent = `${cinPos}% ${cinPos === '50' ? '(Centro)' : ''}`;
     updateImageDimensions(cinImg, 'cinematic-detected-dims');
 
-    // 3. Prefooter Banner Sync
-    const preTitle = document.getElementById('prefooter-title')?.value || '';
-    const preDesc = document.getElementById('prefooter-desc')?.value || '';
+    // 3. Prefooter Banner Sync (Exact Floating White Card Mockup from Client-Side)
+    const preTag = document.getElementById('prefooter-tag')?.value || 'ATENDIMENTO EXCLUSIVO';
+    const preTitle = document.getElementById('prefooter-title')?.value || 'Marque a sua Consulta';
+    const preDesc = document.getElementById('prefooter-desc')?.value || 'Sessões individuais de aconselhamento ótico e estético no nosso espaço na Madeira. Experimente toda a coleção com acompanhamento técnico dedicado.';
+    const preLinkText = document.getElementById('prefooter-link-text')?.value || 'Agendar Sessão Individual →';
     const preImg = document.getElementById('prefooter-img')?.value || '/campagna-prefooter.jpeg';
-    const prePos = document.getElementById('prefooter-pos-slider')?.value || 50;
+    const prePos = document.getElementById('prefooter-pos-slider')?.value || 30;
 
-    if (document.getElementById('prefooter-preview-title')) document.getElementById('prefooter-preview-title').textContent = preTitle;
-    if (document.getElementById('prefooter-preview-desc')) document.getElementById('prefooter-preview-desc').textContent = preDesc;
+    const showPreTag = document.getElementById('toggle-prefooter-tag')?.checked !== false;
+    const showPreTitle = document.getElementById('toggle-prefooter-title')?.checked !== false;
+    const showPreDesc = document.getElementById('toggle-prefooter-desc')?.checked !== false;
+    const showPreLink = document.getElementById('toggle-prefooter-link')?.checked !== false;
+
+    const preTagEl = document.getElementById('prefooter-preview-tag');
+    if (preTagEl) {
+      preTagEl.textContent = preTag;
+      preTagEl.style.display = showPreTag ? 'block' : 'none';
+    }
+    const preTitleEl = document.getElementById('prefooter-preview-title');
+    if (preTitleEl) {
+      preTitleEl.textContent = preTitle;
+      preTitleEl.style.display = showPreTitle ? 'block' : 'none';
+    }
+    const preDescEl = document.getElementById('prefooter-preview-desc');
+    if (preDescEl) {
+      preDescEl.textContent = preDesc;
+      preDescEl.style.display = showPreDesc ? 'block' : 'none';
+    }
+    const preLinkEl = document.getElementById('prefooter-preview-link');
+    if (preLinkEl) {
+      preLinkEl.innerHTML = `${preLinkText.replace(/→|&rarr;/g, '').trim()} &rarr;`;
+      preLinkEl.style.display = showPreLink ? 'inline-flex' : 'none';
+    }
+
     const prePreviewImg = document.getElementById('prefooter-live-preview-img');
     if (prePreviewImg) {
       prePreviewImg.src = preImg;
-      prePreviewImg.style.objectPosition = `center ${prePos}%`;
+      prePreviewImg.style.objectPosition = `70% ${prePos}%`;
     }
     const prePosVal = document.getElementById('prefooter-pos-val');
-    if (prePosVal) prePosVal.textContent = `${prePos}% ${prePos === '50' ? '(Centro)' : ''}`;
+    if (prePosVal) prePosVal.textContent = `${prePos}% (Foco no Rosto/Olhos)`;
     updateImageDimensions(preImg, 'prefooter-detected-dims');
   }
 
@@ -356,10 +382,17 @@
         if (document.getElementById('toggle-cinematic-desc')) document.getElementById('toggle-cinematic-desc').checked = cms.cinematic.showDesc !== false;
       }
       if (cms.prefooter) {
+        if (cms.prefooter.tag && document.getElementById('prefooter-tag')) document.getElementById('prefooter-tag').value = cms.prefooter.tag;
         if (cms.prefooter.title && document.getElementById('prefooter-title')) document.getElementById('prefooter-title').value = cms.prefooter.title;
         if (cms.prefooter.desc && document.getElementById('prefooter-desc')) document.getElementById('prefooter-desc').value = cms.prefooter.desc;
+        if (cms.prefooter.linkText && document.getElementById('prefooter-link-text')) document.getElementById('prefooter-link-text').value = cms.prefooter.linkText;
+        if (cms.prefooter.linkUrl && document.getElementById('prefooter-link-url')) document.getElementById('prefooter-link-url').value = cms.prefooter.linkUrl;
         if (cms.prefooter.image && document.getElementById('prefooter-img')) document.getElementById('prefooter-img').value = cms.prefooter.image;
         if (cms.prefooter.position && document.getElementById('prefooter-pos-slider')) document.getElementById('prefooter-pos-slider').value = cms.prefooter.position;
+        if (document.getElementById('toggle-prefooter-tag')) document.getElementById('toggle-prefooter-tag').checked = cms.prefooter.showTag !== false;
+        if (document.getElementById('toggle-prefooter-title')) document.getElementById('toggle-prefooter-title').checked = cms.prefooter.showTitle !== false;
+        if (document.getElementById('toggle-prefooter-desc')) document.getElementById('toggle-prefooter-desc').checked = cms.prefooter.showDesc !== false;
+        if (document.getElementById('toggle-prefooter-link')) document.getElementById('toggle-prefooter-link').checked = cms.prefooter.showLink !== false;
       }
       if (cms.content) {
         if (cms.content.phone && document.getElementById('content-phone')) document.getElementById('content-phone').value = cms.content.phone;
@@ -413,10 +446,17 @@
           position: document.getElementById('cinematic-pos-slider')?.value || 50
         },
         prefooter: {
+          tag: document.getElementById('prefooter-tag')?.value || '',
+          showTag: document.getElementById('toggle-prefooter-tag')?.checked !== false,
           title: document.getElementById('prefooter-title')?.value || '',
+          showTitle: document.getElementById('toggle-prefooter-title')?.checked !== false,
           desc: document.getElementById('prefooter-desc')?.value || '',
+          showDesc: document.getElementById('toggle-prefooter-desc')?.checked !== false,
+          linkText: document.getElementById('prefooter-link-text')?.value || '',
+          linkUrl: document.getElementById('prefooter-link-url')?.value || '',
+          showLink: document.getElementById('toggle-prefooter-link')?.checked !== false,
           image: document.getElementById('prefooter-img')?.value || '',
-          position: document.getElementById('prefooter-pos-slider')?.value || 50
+          position: document.getElementById('prefooter-pos-slider')?.value || 30
         },
         content: {
           phone: document.getElementById('content-phone')?.value || '',
@@ -461,10 +501,10 @@
   document.getElementById('btn-reset-prefooter-pos')?.addEventListener('click', () => {
     const slider = document.getElementById('prefooter-pos-slider');
     if (slider) {
-      slider.value = 50;
+      slider.value = 30;
       autoSaveAll();
       syncBannerStudio();
-      showAdminToast('↺ Posição vertical do Banner Consulta reposta para 50% (Centro).');
+      showAdminToast('↺ Posição vertical do Banner Consulta reposta para 30% (Foco no Rosto/Olhos).');
     }
   });
 
@@ -500,7 +540,9 @@
   });
 
   // Visibility Checkbox Event Listeners
-  ['toggle-hero-tag', 'toggle-hero-title', 'toggle-hero-desc', 'toggle-hero-btn', 'toggle-cinematic-title', 'toggle-cinematic-desc'].forEach(id => {
+  ['toggle-hero-tag', 'toggle-hero-title', 'toggle-hero-desc', 'toggle-hero-btn', 
+   'toggle-cinematic-title', 'toggle-cinematic-desc',
+   'toggle-prefooter-tag', 'toggle-prefooter-title', 'toggle-prefooter-desc', 'toggle-prefooter-link'].forEach(id => {
     document.getElementById(id)?.addEventListener('change', () => {
       saveHeroSlides();
       autoSaveAll();
@@ -553,12 +595,339 @@
   document.getElementById('cinematic-img')?.addEventListener('input', autoSaveAll);
 
   document.getElementById('prefooter-pos-slider')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-tag')?.addEventListener('input', autoSaveAll);
   document.getElementById('prefooter-title')?.addEventListener('input', autoSaveAll);
   document.getElementById('prefooter-desc')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-link-text')?.addEventListener('input', autoSaveAll);
+  document.getElementById('prefooter-link-url')?.addEventListener('input', autoSaveAll);
   document.getElementById('prefooter-img')?.addEventListener('input', autoSaveAll);
 
   // =========================================================================
-  // 4. LIVE FILTERING OF PRODUCT CARDS
+  // 4. DISCOUNT CODES & PROMOTIONS MANAGER
+  // =========================================================================
+  const DISCOUNTS_KEY = 'atelie_discounts_v1';
+  const defaultDiscounts = [
+    {
+      id: 'disc-1',
+      code: 'ATELIE10',
+      type: 'percent',
+      value: 10,
+      minOrder: 0,
+      startDate: '2026-01-01',
+      expiryDate: '2026-12-31',
+      unlimited: true,
+      maxUses: 0,
+      usesCount: 24,
+      status: 'active'
+    },
+    {
+      id: 'disc-2',
+      code: 'MADEIRA10',
+      type: 'percent',
+      value: 10,
+      minOrder: 50,
+      startDate: '2026-01-01',
+      expiryDate: '2026-12-31',
+      unlimited: true,
+      maxUses: 0,
+      usesCount: 18,
+      status: 'active'
+    },
+    {
+      id: 'disc-3',
+      code: 'PROMO20',
+      type: 'percent',
+      value: 20,
+      minOrder: 150,
+      startDate: '2026-01-01',
+      expiryDate: '2026-10-31',
+      unlimited: false,
+      maxUses: 50,
+      usesCount: 14,
+      status: 'active'
+    },
+    {
+      id: 'disc-4',
+      code: 'BEMVINDO15',
+      type: 'percent',
+      value: 15,
+      minOrder: 0,
+      startDate: '2026-01-01',
+      expiryDate: '2026-12-31',
+      unlimited: true,
+      maxUses: 0,
+      usesCount: 31,
+      status: 'active'
+    },
+    {
+      id: 'disc-5',
+      code: 'VIP50',
+      type: 'fixed',
+      value: 50,
+      minOrder: 250,
+      startDate: '2026-01-01',
+      expiryDate: '2026-12-31',
+      unlimited: false,
+      maxUses: 25,
+      usesCount: 7,
+      status: 'active'
+    }
+  ];
+
+  function getDiscounts() {
+    try {
+      const stored = localStorage.getItem(DISCOUNTS_KEY);
+      if (!stored) {
+        localStorage.setItem(DISCOUNTS_KEY, JSON.stringify(defaultDiscounts));
+        return defaultDiscounts;
+      }
+      return JSON.parse(stored);
+    } catch(e) {
+      return defaultDiscounts;
+    }
+  }
+
+  function saveDiscounts(discounts) {
+    localStorage.setItem(DISCOUNTS_KEY, JSON.stringify(discounts));
+    renderDiscountsTable();
+    updateDiscountMetrics();
+  }
+
+  function renderDiscountsTable() {
+    const discounts = getDiscounts();
+    const tbody = document.getElementById('discounts-table-body');
+    if (!tbody) return;
+
+    if (!discounts.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="7" style="text-align: center; padding: 32px; color: #888;">
+            Nenhum código de desconto criado. Clique em "Criar Novo Cupão" para começar.
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    tbody.innerHTML = discounts.map(d => {
+      const isPercent = d.type === 'percent';
+      const valDisplay = isPercent ? `${d.value}%` : `${Number(d.value).toFixed(2)} €`;
+      const minDisplay = Number(d.minOrder) > 0 ? `${Number(d.minOrder).toFixed(2)} €` : 'Sem mínimo';
+      const expDisplay = d.expiryDate ? d.expiryDate : 'Sem expiração';
+      const usesDisplay = d.unlimited ? `${d.usesCount || 0} (Ilimitado)` : `${d.usesCount || 0} / ${d.maxUses || 0}`;
+      
+      const isExpired = d.expiryDate && new Date(d.expiryDate) < new Date();
+      let statusBadge = '';
+      if (d.status !== 'active') {
+        statusBadge = '<span class="discount-status-pill status-paused">⏸️ Pausado</span>';
+      } else if (isExpired) {
+        statusBadge = '<span class="discount-status-pill status-expired">❌ Expirado</span>';
+      } else {
+        statusBadge = '<span class="discount-status-pill status-active">● Ativo</span>';
+      }
+
+      return `
+        <tr>
+          <td>
+            <span class="discount-code-badge">${d.code}</span>
+          </td>
+          <td>
+            <span class="discount-type-pill ${isPercent ? 'type-percent' : 'type-fixed'}">
+              ${isPercent ? 'Percentagem' : 'Valor Fixo'}: <strong>${valDisplay}</strong>
+            </span>
+          </td>
+          <td>${minDisplay}</td>
+          <td>${expDisplay}</td>
+          <td>${usesDisplay}</td>
+          <td>${statusBadge}</td>
+          <td style="text-align: right;">
+            <div style="display: inline-flex; gap: 6px;">
+              <button type="button" class="btn-table-action" data-action="toggle-status" data-id="${d.id}" title="${d.status === 'active' ? 'Pausar cupão' : 'Ativar cupão'}">
+                ${d.status === 'active' ? '⏸️ Pausar' : '▶️ Ativar'}
+              </button>
+              <button type="button" class="btn-table-action" data-action="edit-discount" data-id="${d.id}" title="Editar cupão">
+                ✏️ Editar
+              </button>
+              <button type="button" class="btn-table-action delete" data-action="delete-discount" data-id="${d.id}" title="Eliminar cupão">
+                🗑️
+              </button>
+            </div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    // Bind action listeners
+    tbody.querySelectorAll('button[data-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.getAttribute('data-action');
+        const id = btn.getAttribute('data-id');
+        const list = getDiscounts();
+        const disc = list.find(x => x.id === id);
+
+        if (action === 'toggle-status' && disc) {
+          disc.status = disc.status === 'active' ? 'paused' : 'active';
+          saveDiscounts(list);
+          showAdminToast(`Cupão ${disc.code} ${disc.status === 'active' ? 'ativado' : 'pausado'} com sucesso.`);
+        } else if (action === 'delete-discount' && disc) {
+          if (confirm(`Tem a certeza que deseja eliminar o cupão ${disc.code}?`)) {
+            const updated = list.filter(x => x.id !== id);
+            saveDiscounts(updated);
+            showAdminToast(`🗑️ Cupão ${disc.code} removido com sucesso.`);
+          }
+        } else if (action === 'edit-discount' && disc) {
+          openDiscountModal(disc);
+        }
+      });
+    });
+  }
+
+  function updateDiscountMetrics() {
+    const discounts = getDiscounts();
+    const active = discounts.filter(d => d.status === 'active' && (!d.expiryDate || new Date(d.expiryDate) >= new Date())).length;
+    const totalUses = discounts.reduce((acc, d) => acc + Number(d.usesCount || 0), 0);
+
+    const mTotal = document.getElementById('metric-total-discounts');
+    if (mTotal) mTotal.textContent = String(discounts.length);
+
+    const mActive = document.getElementById('metric-active-discounts');
+    if (mActive) mActive.textContent = String(active);
+
+    const mUses = document.getElementById('metric-total-uses');
+    if (mUses) mUses.textContent = `${totalUses} utilizações`;
+
+    const navBadge = document.getElementById('nav-discounts-count');
+    if (navBadge) navBadge.textContent = String(active);
+  }
+
+  function openDiscountModal(discount = null) {
+    const modal = document.getElementById('modal-discount');
+    const title = document.getElementById('modal-discount-title');
+    const idInput = document.getElementById('discount-modal-id');
+    const codeInput = document.getElementById('discount-code-input');
+    const typeSelect = document.getElementById('discount-type-select');
+    const valInput = document.getElementById('discount-val-input');
+    const valLabel = document.getElementById('discount-val-label');
+    const minInput = document.getElementById('discount-min-order');
+    const maxUsesInput = document.getElementById('discount-max-uses');
+    const startInput = document.getElementById('discount-start-date');
+    const expiryInput = document.getElementById('discount-expiry-date');
+    const activeCheckbox = document.getElementById('discount-active-checkbox');
+
+    if (discount) {
+      if (title) title.textContent = `Editar Código de Desconto: ${discount.code}`;
+      if (idInput) idInput.value = discount.id;
+      if (codeInput) codeInput.value = discount.code;
+      if (typeSelect) typeSelect.value = discount.type || 'percent';
+      if (valInput) valInput.value = discount.value || 10;
+      if (valLabel) valLabel.textContent = discount.type === 'percent' ? 'Valor do Desconto (%) *' : 'Valor do Desconto (€) *';
+      if (minInput) minInput.value = discount.minOrder || 0;
+      if (maxUsesInput) maxUsesInput.value = discount.maxUses || '';
+      if (startInput) startInput.value = discount.startDate || '';
+      if (expiryInput) expiryInput.value = discount.expiryDate || '';
+      if (activeCheckbox) activeCheckbox.checked = discount.status === 'active';
+    } else {
+      if (title) title.textContent = 'Criar Novo Código de Desconto';
+      if (idInput) idInput.value = '';
+      if (codeInput) codeInput.value = '';
+      if (typeSelect) typeSelect.value = 'percent';
+      if (valInput) valInput.value = '10';
+      if (valLabel) valLabel.textContent = 'Valor do Desconto (%) *';
+      if (minInput) minInput.value = '0';
+      if (maxUsesInput) maxUsesInput.value = '';
+      if (startInput) startInput.value = new Date().toISOString().split('T')[0];
+      if (expiryInput) expiryInput.value = '';
+      if (activeCheckbox) activeCheckbox.checked = true;
+    }
+
+    if (modal) {
+      modal.style.display = 'flex';
+      setTimeout(() => codeInput?.focus(), 100);
+    }
+  }
+
+  function closeDiscountModal() {
+    const modal = document.getElementById('modal-discount');
+    if (modal) modal.style.display = 'none';
+  }
+
+  document.getElementById('btn-create-discount')?.addEventListener('click', () => openDiscountModal(null));
+  document.getElementById('btn-close-discount-modal')?.addEventListener('click', closeDiscountModal);
+  document.getElementById('btn-cancel-discount-modal')?.addEventListener('click', closeDiscountModal);
+
+  document.getElementById('discount-type-select')?.addEventListener('change', (e) => {
+    const isPercent = e.target.value === 'percent';
+    const label = document.getElementById('discount-val-label');
+    if (label) label.textContent = isPercent ? 'Valor do Desconto (%) *' : 'Valor do Desconto (€) *';
+  });
+
+  document.getElementById('form-discount-modal')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const id = document.getElementById('discount-modal-id')?.value;
+    const code = (document.getElementById('discount-code-input')?.value || '').trim().toUpperCase();
+    const type = document.getElementById('discount-type-select')?.value || 'percent';
+    const value = Number(document.getElementById('discount-val-input')?.value || 0);
+    const minOrder = Number(document.getElementById('discount-min-order')?.value || 0);
+    const maxUses = document.getElementById('discount-max-uses')?.value ? Number(document.getElementById('discount-max-uses')?.value) : 0;
+    const startDate = document.getElementById('discount-start-date')?.value || '';
+    const expiryDate = document.getElementById('discount-expiry-date')?.value || '';
+    const isActive = document.getElementById('discount-active-checkbox')?.checked;
+
+    if (!code) {
+      alert('Por favor introduza um código para o cupão.');
+      return;
+    }
+    if (value <= 0) {
+      alert('O valor do desconto deve ser superior a zero.');
+      return;
+    }
+
+    const list = getDiscounts();
+
+    if (id) {
+      // Edit existing
+      const existing = list.find(x => x.id === id);
+      if (existing) {
+        existing.code = code;
+        existing.type = type;
+        existing.value = value;
+        existing.minOrder = minOrder;
+        existing.unlimited = maxUses <= 0;
+        existing.maxUses = maxUses;
+        existing.startDate = startDate;
+        existing.expiryDate = expiryDate;
+        existing.status = isActive ? 'active' : 'paused';
+      }
+      showAdminToast(`✓ Cupão ${code} atualizado com sucesso!`);
+    } else {
+      // Check duplicate code
+      if (list.some(x => x.code === code)) {
+        alert(`O código "${code}" já existe. Escolha outro código.`);
+        return;
+      }
+      const newDiscount = {
+        id: `disc-${Date.now()}`,
+        code,
+        type,
+        value,
+        minOrder,
+        unlimited: maxUses <= 0,
+        maxUses,
+        startDate,
+        expiryDate,
+        usesCount: 0,
+        status: isActive ? 'active' : 'paused'
+      };
+      list.push(newDiscount);
+      showAdminToast(`✓ Cupão ${code} criado com sucesso!`);
+    }
+
+    saveDiscounts(list);
+    closeDiscountModal();
+  });
+
+  // =========================================================================
+  // 5. LIVE FILTERING OF PRODUCT CARDS
   // =========================================================================
   function filterCards() {
     const query = (document.getElementById('admin-product-search')?.value || '').trim().toLowerCase();
@@ -593,7 +962,7 @@
   }
 
   // =========================================================================
-  // 5. TAB NAVIGATION
+  // 6. TAB NAVIGATION
   // =========================================================================
   const tabs = document.querySelectorAll('.nav-item[data-tab]');
   const panels = document.querySelectorAll('.tab-panel');
@@ -607,6 +976,10 @@
       tab.classList.add('active');
       document.getElementById(`tab-${target}`)?.classList.add('active');
       if (target === 'banners') syncBannerStudio();
+      if (target === 'discounts') {
+        renderDiscountsTable();
+        updateDiscountMetrics();
+      }
     });
   });
 
@@ -1030,4 +1403,6 @@
 
   loadSavedCMS();
   filterCards();
+  renderDiscountsTable();
+  updateDiscountMetrics();
 })();

@@ -54,20 +54,49 @@
       const cinTitle = document.querySelector('.ll-floating-title');
       const cinDesc = document.querySelector('.ll-floating-desc');
 
-      if (cinImg && cms.cinematic.image) cinImg.src = cms.cinematic.image;
-      if (cinTitle && cms.cinematic.title) cinTitle.textContent = cms.cinematic.title;
-      if (cinDesc && cms.cinematic.desc) cinDesc.textContent = cms.cinematic.desc;
+      if (cinImg) {
+        if (cms.cinematic.image) cinImg.src = cms.cinematic.image;
+        if (cms.cinematic.position !== undefined) cinImg.style.objectPosition = `center ${cms.cinematic.position}%`;
+      }
+      if (cinTitle) {
+        if (cms.cinematic.title) cinTitle.textContent = cms.cinematic.title;
+        cinTitle.style.display = cms.cinematic.showTitle !== false ? 'block' : 'none';
+      }
+      if (cinDesc) {
+        if (cms.cinematic.desc) cinDesc.textContent = cms.cinematic.desc;
+        cinDesc.style.display = cms.cinematic.showDesc !== false ? 'block' : 'none';
+      }
     }
 
-    // 4. Pre-footer Appointment Banner Overrides
+    // 4. Pre-footer Appointment Banner Overrides (Exact Floating Card Elements)
     if (cms.prefooter) {
       const pfImg = document.querySelector('.ll-prefooter-img');
+      const pfTag = document.querySelector('.ll-prefooter-tag');
       const pfTitle = document.querySelector('.ll-prefooter-title');
       const pfDesc = document.querySelector('.ll-prefooter-desc');
+      const pfLink = document.querySelector('.ll-prefooter-link');
 
-      if (pfImg && cms.prefooter.image) pfImg.src = cms.prefooter.image;
-      if (pfTitle && cms.prefooter.title) pfTitle.textContent = cms.prefooter.title;
-      if (pfDesc && cms.prefooter.desc) pfDesc.textContent = cms.prefooter.desc;
+      if (pfImg) {
+        if (cms.prefooter.image) pfImg.src = cms.prefooter.image;
+        if (cms.prefooter.position !== undefined) pfImg.style.objectPosition = `70% ${cms.prefooter.position}%`;
+      }
+      if (pfTag) {
+        if (cms.prefooter.tag) pfTag.textContent = cms.prefooter.tag;
+        pfTag.style.display = cms.prefooter.showTag !== false ? 'block' : 'none';
+      }
+      if (pfTitle) {
+        if (cms.prefooter.title) pfTitle.textContent = cms.prefooter.title;
+        pfTitle.style.display = cms.prefooter.showTitle !== false ? 'block' : 'none';
+      }
+      if (pfDesc) {
+        if (cms.prefooter.desc) pfDesc.textContent = cms.prefooter.desc;
+        pfDesc.style.display = cms.prefooter.showDesc !== false ? 'block' : 'none';
+      }
+      if (pfLink) {
+        if (cms.prefooter.linkText) pfLink.innerHTML = `${cms.prefooter.linkText.replace(/→|&rarr;/g, '').trim()} &rarr;`;
+        if (cms.prefooter.linkUrl) pfLink.href = cms.prefooter.linkUrl;
+        pfLink.style.display = cms.prefooter.showLink !== false ? 'inline-flex' : 'none';
+      }
     }
 
     // 5. Product Price & Custom Product Overrides

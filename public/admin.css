@@ -1022,7 +1022,63 @@ body.admin-body {
 }
 
 .prefooter-preview-box {
-  height: 220px;
+  height: 320px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(24px, 5vw, 48px);
+}
+
+.ll-prefooter-floating-card-admin {
+  position: relative;
+  z-index: 5;
+  background: #ffffff;
+  padding: 24px 28px;
+  max-width: 420px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+.ll-prefooter-floating-card-admin .ll-prefooter-tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #666666;
+  display: block;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.ll-prefooter-floating-card-admin .ll-prefooter-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  color: #000000;
+}
+
+.ll-prefooter-floating-card-admin .ll-prefooter-desc {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #444444;
+  margin: 0 0 14px;
+}
+
+.ll-prefooter-floating-card-admin .ll-prefooter-link {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1px;
 }
 
 .banner-preview-img {
@@ -1304,5 +1360,93 @@ body.admin-body {
 .dot-mock.active {
   background: #ffffff;
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================================================
+   9. DISCOUNT CODES & PROMOTIONS STYLING
+   ========================================================================== */
+.discount-code-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.05em;
+}
+
+.discount-type-pill {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.type-percent {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.type-fixed {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.discount-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-paused {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.status-expired {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.btn-table-action {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.btn-table-action:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.btn-table-action.delete:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
 }
 
