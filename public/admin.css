@@ -1622,4 +1622,265 @@ body.admin-body {
   filter: grayscale(0.6);
 }
 
+/* =========================================================================
+   PANEL HEADER ROW & PRIMARY ACTION BUTTONS
+   ========================================================================= */
+.panel-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.panel-header-row h1 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.02em;
+}
+
+.panel-header-row p {
+  font-size: 13.5px;
+  color: #666660;
+  margin: 0;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+.btn-primary-admin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111111;
+  color: #ffffff;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid #111111;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.btn-primary-admin:hover {
+  background: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-admin svg {
+  stroke-width: 2.5;
+}
+
+/* =========================================================================
+   DISCOUNT METRICS SUMMARY CARDS
+   ========================================================================= */
+.discount-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.discount-metrics-grid .metric-card {
+  background: #ffffff;
+  border: 1px solid #e8e6df;
+  border-radius: 12px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.discount-metrics-grid .metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.discount-metrics-grid .metric-label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #787770;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.discount-metrics-grid .metric-value {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+/* =========================================================================
+   ADMIN DATA TABLES & RESPONSIVE CONTAINER
+   ========================================================================= */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e8e6df;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  min-width: 860px;
+}
+
+.admin-table thead th {
+  background: #f8f7f2;
+  color: #4a4944;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e8e6df;
+  white-space: nowrap;
+}
+
+.admin-table thead th:first-child {
+  border-top-left-radius: 11px;
+}
+
+.admin-table thead th:last-child {
+  border-top-right-radius: 11px;
+}
+
+.admin-table tbody td {
+  padding: 18px 20px;
+  border-bottom: 1px solid #f0eee6;
+  font-size: 13.5px;
+  color: #1e1e1c;
+  vertical-align: middle;
+  transition: background 0.15s ease;
+}
+
+.admin-table tbody tr:hover td {
+  background: #faf9f5;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table Elements */
+.discount-code-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  font-size: 13px;
+  font-weight: 800;
+  color: #111111;
+  background: #f2f0e8;
+  border: 1px solid #dcd7c8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.discount-type-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.discount-type-pill.type-percent {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.discount-type-pill.type-fixed {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.discount-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.discount-status-pill.status-active {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.discount-status-pill.status-paused {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.discount-status-pill.status-expired {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.btn-table-action {
+  background: #ffffff;
+  border: 1px solid #dcd7c8;
+  padding: 7px 13px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #222220;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.btn-table-action:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.btn-table-action.delete {
+  padding: 7px 10px;
+  color: #666660;
+}
+
+.btn-table-action.delete:hover {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #dc2626;
+  box-shadow: 0 3px 8px rgba(220, 38, 38, 0.25);
+}
+
 

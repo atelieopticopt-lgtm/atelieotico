@@ -775,15 +775,21 @@
           </td>
           <td>
             <span class="discount-type-pill ${isPercent ? 'type-percent' : 'type-fixed'}">
-              ${isPercent ? 'Percentagem' : 'Valor Fixo'}: <strong>${valDisplay}</strong>
+              ${isPercent ? 'Percentagem' : 'Valor Fixo'}:&nbsp;<strong>${valDisplay}</strong>
             </span>
           </td>
-          <td>${minDisplay}</td>
-          <td>${expDisplay}</td>
-          <td>${usesDisplay}</td>
+          <td>
+            <span style="font-weight: 600; color: #333330;">${minDisplay}</span>
+          </td>
+          <td>
+            <span style="font-family: 'JetBrains Mono', Consolas, monospace; font-size: 12px; color: #666660;">${expDisplay}</span>
+          </td>
+          <td>
+            <strong style="color: #111111;">${d.unlimited ? `${d.usesCount || 0} <span style="font-weight: normal; color: #777;">(Ilimitado)</span>` : `${d.usesCount || 0} / ${d.maxUses || 0}`}</strong>
+          </td>
           <td>${statusBadge}</td>
           <td style="text-align: right;">
-            <div style="display: inline-flex; gap: 6px;">
+            <div style="display: inline-flex; gap: 6px; justify-content: flex-end;">
               <button type="button" class="btn-table-action" data-action="toggle-status" data-id="${d.id}" title="${d.status === 'active' ? 'Pausar cupão' : 'Ativar cupão'}">
                 ${d.status === 'active' ? '⏸️ Pausar' : '▶️ Ativar'}
               </button>
