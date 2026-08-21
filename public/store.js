@@ -5,6 +5,37 @@ const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 const cart = read(KEY);
 const money = (n) => `${Number(n || 0).toFixed(0)} €`;
 
+function getDrawerElements() {
+  return {
+    drawer: document.querySelector('.cart-drawer'),
+    overlay: document.querySelector('.drawer-overlay')
+  };
+}
+
+function openCart() {
+  const { drawer, overlay } = getDrawerElements();
+  if (drawer) {
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+  if (overlay) {
+    overlay.classList.add('open');
+  }
+  document.body.classList.add('cart-open');
+}
+
+function closeCart() {
+  const { drawer, overlay } = getDrawerElements();
+  if (drawer) {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  if (overlay) {
+    overlay.classList.remove('open');
+  }
+  document.body.classList.remove('cart-open');
+}
+
 function renderCart() {
   const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
   const emptyTextPt = 'O seu carrinho de compras está vazio.';
@@ -55,27 +86,35 @@ function initFavs() {
 document.addEventListener('click', (e) => {
   const add = e.target.closest('[data-add-cart]');
   if (add) {
-    const item = JSON.parse(add.dataset.addCart);
-    const old = cart.find(i => i.slug === item.slug);
-    old ? old.qty++ : cart.push({ ...item, qty: 1 });
-    renderCart();
+    try {
+      const item = typeof add.dataset.addCart === 'string' ? JSON.parse(add.dataset.addCart) : add.dataset.addCart;
+      if (item && item.slug) {
+        const old = cart.find(i => i.slug === item.slug);
+        old ? old.qty++ : cart.push({ ...item, qty: 1 });
+        renderCart();
 
-    // Subtle button confirmation without opening drawer
-    if (!add.dataset.origText) {
-      add.dataset.origText = add.textContent.trim();
+        // ALWAYS open the cart drawer menu immediately when adding to cart
+        openCart();
+
+        if (!add.dataset.origText) {
+          add.dataset.origText = add.textContent.trim();
+        }
+        const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
+        add.textContent = isEn ? '✓ ADDED TO BAG' : '✓ ADICIONADO AO SACO';
+        add.style.background = '#22c55e';
+        add.style.borderColor = '#22c55e';
+        add.style.color = '#ffffff';
+
+        setTimeout(() => {
+          add.textContent = add.dataset.origText || (isEn ? 'ADD TO BAG' : 'ADICIONAR AO SACO');
+          add.style.background = '';
+          add.style.borderColor = '';
+          add.style.color = '';
+        }, 1400);
+      }
+    } catch(err) {
+      console.error('[Cart Add Error]', err);
     }
-    const isEn = document.documentElement.lang === 'en' || localStorage.getItem('atelie_lang') === 'en';
-    add.textContent = isEn ? '✓ ADDED TO BAG' : '✓ ADICIONADO AO SACO';
-    add.style.background = '#22c55e';
-    add.style.borderColor = '#22c55e';
-    add.style.color = '#ffffff';
-
-    setTimeout(() => {
-      add.textContent = add.dataset.origText || (isEn ? 'ADD TO BAG' : 'ADICIONAR AO SACO');
-      add.style.background = '';
-      add.style.borderColor = '';
-      add.style.color = '';
-    }, 1400);
   }
 
   const remove = e.target.closest('[data-remove]');
@@ -94,38 +133,35 @@ document.addEventListener('click', (e) => {
     fav.classList.toggle('active', i < 0);
   }
 
-  const closeBtn = e.target.closest('[data-close-cart]');
+  const closeBtn = e.target.closest('[data-close-cart], .cart-close, .drawer-overlay');
   if (closeBtn) {
     closeCart();
   }
+
+  const trigger = e.target.closest('.cart-trigger, [data-open-cart]');
+  if (trigger) {
+    openCart();
+  }
 });
-
-const drawer = document.querySelector('.cart-drawer');
-const overlay = document.querySelector('.drawer-overlay');
-
-function openCart() {
-  drawer?.classList.add('open');
-  overlay?.classList.add('open');
-  drawer?.setAttribute('aria-hidden', 'false');
-  document.body.classList.add('cart-open');
-}
-
-function closeCart() {
-  drawer?.classList.remove('open');
-  overlay?.classList.remove('open');
-  drawer?.setAttribute('aria-hidden', 'true');
-  document.body.classList.remove('cart-open');
-}
-
-document.querySelectorAll('.cart-trigger').forEach(b => b.addEventListener('click', openCart));
-document.querySelectorAll('.cart-close, .drawer-overlay, [data-close-cart]').forEach(b => b.addEventListener('click', closeCart));
 
 // Close with Escape key
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && drawer?.classList.contains('open')) {
+  if (e.key === 'Escape') {
     closeCart();
   }
 });
+
+// Global API
+window.openCart = openCart;
+window.closeCart = closeCart;
+window.renderCart = renderCart;
+window.addToCart = function(item) {
+  if (!item || !item.slug) return;
+  const old = cart.find(i => i.slug === item.slug);
+  old ? old.qty++ : cart.push({ ...item, qty: 1 });
+  renderCart();
+  openCart();
+};
 
 renderCart();
 initFavs();
