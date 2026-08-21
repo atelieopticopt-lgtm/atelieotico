@@ -642,58 +642,58 @@ body {
 }
 
 .logo-group .ll-partner-logo.snob {
-  height: 44px;
-  max-width: 180px;
-}
-
-.logo-group .ll-partner-logo.jacquemus {
-  height: 44px;
-  max-width: 200px;
-}
-
-.logo-group .ll-partner-logo.linda-farrow {
-  height: 70px;
-  max-width: 220px;
-}
-
-.logo-group .ll-partner-logo.rayban {
-  height: 52px;
-  max-width: 180px;
-}
-
-.logo-group .ll-partner-logo.spektre {
-  height: 42px;
+  height: 50px;
   max-width: 210px;
 }
 
+.logo-group .ll-partner-logo.jacquemus {
+  height: 48px;
+  max-width: 240px;
+}
+
+.logo-group .ll-partner-logo.linda-farrow {
+  height: 36px;
+  max-width: 320px;
+}
+
+.logo-group .ll-partner-logo.rayban {
+  height: 62px;
+  max-width: 220px;
+}
+
+.logo-group .ll-partner-logo.spektre {
+  height: 46px;
+  max-width: 230px;
+}
+
 .logo-group .ll-partner-logo.orgreen {
-  height: 34px;
-  max-width: 200px;
+  height: 38px;
+  max-width: 240px;
 }
 
 .logo-group .ll-partner-logo.einstoffen {
-  height: 46px;
-  max-width: 190px;
+  height: 50px;
+  max-width: 220px;
 }
 
 .logo-group .ll-partner-logo.rodenstock {
-  height: 46px;
-  max-width: 200px;
+  height: 50px;
+  max-width: 220px;
 }
 
 .logo-group .ll-partner-logo.eyepetizer {
-  height: 38px;
-  max-width: 190px;
+  height: 44px;
+  max-width: 220px;
 }
 
 .logo-group .ll-partner-logo.longchamp {
-  height: 42px;
-  max-width: 200px;
+  height: 48px;
+  max-width: 220px;
 }
 
 .logo-group .ll-partner-logo.bensimon {
-  height: 36px;
-  max-width: 230px;
+  height: 42px;
+  max-width: 240px;
 }
 
 @keyframes scroll-left {
