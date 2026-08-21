@@ -143,6 +143,9 @@ const defaultHeroSlides = [
   {/* =========================================================================
       2. BRANDS BAR DIRECTLY UNDER HERO (FULL 7 AUTHOR BRANDS + HEADER TAG)
       ========================================================================= */}
+  {/* =========================================================================
+      2. BRANDS BAR DIRECTLY UNDER HERO (INFINITE MARQUEE WITH FADE MASK)
+      ========================================================================= */}
   <section class="ll-brands-strip-section">
     <div class="ll-container">
       
@@ -152,43 +155,84 @@ const defaultHeroSlides = [
         </h2>
       </div>
 
-      <div class="ll-partners-grid">
-        <a href="/catalogo?marca=SNOB+Milano" class="ll-partner-item" title="SNOB Milano">
-          <img class="ll-partner-logo snob" src="/partners/snob.jpeg" alt="SNOB Milano" />
-        </a>
-        <a href="/catalogo?marca=Jacquemus" class="ll-partner-item" title="Jacquemus">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/Jacquemus.svg" alt="Jacquemus" />
-        </a>
-        <a href="/catalogo?marca=Linda+Farrow" class="ll-partner-item" title="Linda Farrow">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/Linda_Farrow.svg" alt="Linda Farrow" />
-        </a>
-        <a href="/catalogo?marca=Ray-Ban" class="ll-partner-item" title="Ray-Ban">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/Ray-Ban.svg" alt="Ray-Ban" />
-        </a>
-        <a href="/catalogo?marca=Spektre" class="ll-partner-item" title="Spektre">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/Spektre.svg" alt="Spektre" />
-        </a>
-        <a href="/catalogo?marca=%C3%98rgreen+Optics" class="ll-partner-item" title="Ørgreen Optics">
-          <img class="ll-partner-logo orgreen" src="/partners/orgreen.svg" alt="Ørgreen Optics" />
-        </a>
-        <a href="/catalogo?marca=Einstoffen" class="ll-partner-item" title="Einstoffen">
-          <img class="ll-partner-logo einstoffen" src="/partners/einstoffen.png" alt="Einstoffen" />
-        </a>
-        <a href="/catalogo?marca=Rodenstock" class="ll-partner-item" title="Rodenstock">
-          <img class="ll-partner-logo rodenstock" src="/partners/rodenstock.png" alt="Rodenstock" />
-        </a>
-        <a href="/catalogo?marca=Eyepetizer" class="ll-partner-item" title="Eyepetizer">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/eyepetizer.png" alt="Eyepetizer" />
-        </a>
-        <a href="/catalogo?marca=Longchamp" class="ll-partner-item" title="Longchamp">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/longchamp.svg" alt="Longchamp" />
-        </a>
-        <a href="/catalogo?marca=Maison+Bensimon" class="ll-partner-item" title="Maison Bensimon">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" />
-        </a>
-        <a href="/catalogo?marca=Persol" class="ll-partner-item" title="Persol">
-          <img class="ll-partner-logo partner-folder-logo" src="/partners/persol.svg" alt="Persol" />
-        </a>
+      <div class="marquee-container">
+        <div class="marquee-track">
+          
+          {/* Logo Group 1 */}
+          <div class="logo-group">
+            <a href="/catalogo?marca=SNOB+Milano" class="ll-partner-item" title="SNOB Milano">
+              <img class="ll-partner-logo snob" src="/partners/snob.jpeg" alt="SNOB Milano" />
+            </a>
+            <a href="/catalogo?marca=Jacquemus" class="ll-partner-item" title="Jacquemus">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Jacquemus.svg" alt="Jacquemus" />
+            </a>
+            <a href="/catalogo?marca=Linda+Farrow" class="ll-partner-item" title="Linda Farrow">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Linda_Farrow.svg" alt="Linda Farrow" />
+            </a>
+            <a href="/catalogo?marca=Ray-Ban" class="ll-partner-item" title="Ray-Ban">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Ray-Ban.svg" alt="Ray-Ban" />
+            </a>
+            <a href="/catalogo?marca=Spektre" class="ll-partner-item" title="Spektre">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Spektre.svg" alt="Spektre" />
+            </a>
+            <a href="/catalogo?marca=%C3%98rgreen+Optics" class="ll-partner-item" title="Ørgreen Optics">
+              <img class="ll-partner-logo orgreen" src="/partners/orgreen.svg" alt="Ørgreen Optics" />
+            </a>
+            <a href="/catalogo?marca=Einstoffen" class="ll-partner-item" title="Einstoffen">
+              <img class="ll-partner-logo einstoffen" src="/partners/einstoffen.png" alt="Einstoffen" />
+            </a>
+            <a href="/catalogo?marca=Rodenstock" class="ll-partner-item" title="Rodenstock">
+              <img class="ll-partner-logo rodenstock" src="/partners/rodenstock.png" alt="Rodenstock" />
+            </a>
+            <a href="/catalogo?marca=Eyepetizer" class="ll-partner-item" title="Eyepetizer">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/eyepetizer.png" alt="Eyepetizer" />
+            </a>
+            <a href="/catalogo?marca=Longchamp" class="ll-partner-item" title="Longchamp">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/longchamp.svg" alt="Longchamp" />
+            </a>
+            <a href="/catalogo?marca=Maison+Bensimon" class="ll-partner-item" title="Maison Bensimon">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" />
+            </a>
+          </div>
+
+          {/* Logo Group 2 (Identical Duplicate for Infinite Seamless Loop) */}
+          <div class="logo-group" aria-hidden="true">
+            <a href="/catalogo?marca=SNOB+Milano" class="ll-partner-item" title="SNOB Milano" tabindex="-1">
+              <img class="ll-partner-logo snob" src="/partners/snob.jpeg" alt="SNOB Milano" />
+            </a>
+            <a href="/catalogo?marca=Jacquemus" class="ll-partner-item" title="Jacquemus" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Jacquemus.svg" alt="Jacquemus" />
+            </a>
+            <a href="/catalogo?marca=Linda+Farrow" class="ll-partner-item" title="Linda Farrow" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Linda_Farrow.svg" alt="Linda Farrow" />
+            </a>
+            <a href="/catalogo?marca=Ray-Ban" class="ll-partner-item" title="Ray-Ban" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Ray-Ban.svg" alt="Ray-Ban" />
+            </a>
+            <a href="/catalogo?marca=Spektre" class="ll-partner-item" title="Spektre" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/Spektre.svg" alt="Spektre" />
+            </a>
+            <a href="/catalogo?marca=%C3%98rgreen+Optics" class="ll-partner-item" title="Ørgreen Optics" tabindex="-1">
+              <img class="ll-partner-logo orgreen" src="/partners/orgreen.svg" alt="Ørgreen Optics" />
+            </a>
+            <a href="/catalogo?marca=Einstoffen" class="ll-partner-item" title="Einstoffen" tabindex="-1">
+              <img class="ll-partner-logo einstoffen" src="/partners/einstoffen.png" alt="Einstoffen" />
+            </a>
+            <a href="/catalogo?marca=Rodenstock" class="ll-partner-item" title="Rodenstock" tabindex="-1">
+              <img class="ll-partner-logo rodenstock" src="/partners/rodenstock.png" alt="Rodenstock" />
+            </a>
+            <a href="/catalogo?marca=Eyepetizer" class="ll-partner-item" title="Eyepetizer" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/eyepetizer.png" alt="Eyepetizer" />
+            </a>
+            <a href="/catalogo?marca=Longchamp" class="ll-partner-item" title="Longchamp" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/longchamp.svg" alt="Longchamp" />
+            </a>
+            <a href="/catalogo?marca=Maison+Bensimon" class="ll-partner-item" title="Maison Bensimon" tabindex="-1">
+              <img class="ll-partner-logo partner-folder-logo" src="/partners/maison-bensimon.jpeg" alt="Maison Bensimon" />
+            </a>
+          </div>
+
+        </div>
       </div>
 
     </div>

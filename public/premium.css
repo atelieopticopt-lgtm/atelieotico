@@ -537,12 +537,13 @@ body {
 }
 
 /* ==========================================================================
-   2. BRANDS BAR UNDER HERO
+   2. BRANDS BAR UNDER HERO (INFINITE LUXURY MARQUEE)
    ========================================================================== */
 .ll-brands-strip-section {
   background: #ffffff;
   border-bottom: 1px solid var(--ll-border);
-  padding: clamp(56px, 5vw, 76px) 0 clamp(40px, 4vw, 56px);
+  padding: clamp(48px, 4.5vw, 68px) 0 clamp(40px, 3.5vw, 54px);
+  overflow: hidden;
 }
 
 .ll-brands-strip-header {
@@ -551,7 +552,7 @@ body {
   justify-content: center;
   width: 100%;
   text-align: center;
-  margin: 0 auto clamp(36px, 4vw, 54px);
+  margin: 0 auto clamp(28px, 3vw, 42px);
 }
 
 .ll-brands-title {
@@ -564,67 +565,85 @@ body {
   text-transform: none;
 }
 
-.ll-partners-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: clamp(20px, 3vw, 42px);
-  align-items: center;
-  justify-items: center;
-  padding: 16px 0 8px;
+/* Marquee Container with Linear Gradient Fade Mask */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  padding: 10px 0;
 }
 
-.ll-partner-item {
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 32s linear infinite;
+  will-change: transform;
+}
+
+/* Pause scroll on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-group {
+  display: flex;
+  gap: clamp(2.5rem, 4.5vw, 5rem);
+  padding-right: clamp(2.5rem, 4.5vw, 5rem);
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-group .ll-partner-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: 64px;
-  padding: 8px 14px;
+  min-width: 100px;
+  padding: 6px 12px;
   box-sizing: border-box;
   text-decoration: none;
+  flex-shrink: 0;
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.ll-partner-item:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
+.logo-group .ll-partner-item:hover {
+  transform: scale(1.08);
+  opacity: 0.82;
 }
 
-.ll-partner-logo {
-  object-fit: contain;
-  background: transparent !important;
-  transition: transform 0.25s ease;
-}
-
-.ll-partner-logo.partner-folder-logo {
-  display: block;
+.logo-group img,
+.logo-group .ll-partner-logo {
+  height: 38px;
   width: auto;
-  height: 40px;
-  max-width: 135px;
+  max-width: 160px;
   object-fit: contain;
+  display: block;
+  background: transparent !important;
 }
 
-.orgreen-wordmark,
-.ll-partner-logo.orgreen {
-  display: block !important;
-  opacity: 1 !important;
-  width: 130px !important;
-  max-width: 130px !important;
-  height: 30px !important;
-  object-fit: contain !important;
-  filter: none !important;
-  mix-blend-mode: normal !important;
-}
-
-.ll-partner-logo.snob {
+.logo-group .ll-partner-logo.snob {
   height: 48px;
   width: auto;
-  max-width: 140px;
+  max-width: 150px;
   mix-blend-mode: multiply;
-  transform: scale(1.65);
+  transform: scale(1.6);
 }
 
-.ll-partner-logo.einstoffen {
+.logo-group .ll-partner-logo.einstoffen {
   height: 46px;
   width: auto;
   max-width: 140px;
@@ -632,7 +651,7 @@ body {
   transform: scale(1.3);
 }
 
-.ll-partner-logo.rodenstock {
+.logo-group .ll-partner-logo.rodenstock {
   height: 48px;
   width: auto;
   max-width: 150px;
@@ -640,24 +659,24 @@ body {
   transform: scale(1.15);
 }
 
-@media (max-width: 1200px) {
-  .ll-partners-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-  }
+.logo-group .orgreen-wordmark,
+.logo-group .ll-partner-logo.orgreen {
+  display: block !important;
+  opacity: 1 !important;
+  width: 130px !important;
+  max-width: 130px !important;
+  height: 28px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
 }
 
-@media (max-width: 768px) {
-  .ll-partners-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
   }
-}
-
-@media (max-width: 480px) {
-  .ll-partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  100% {
+    transform: translateX(-50%);
   }
 }
 
