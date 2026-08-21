@@ -3,93 +3,93 @@ import StoreLayout from '../layouts/StoreLayout.astro';
 
 const brands = [
   {
-    name: 'SNOB Milano',
-    logo: '/partners/snob-milano.svg',
-    style: 'height: 42px; width: auto; max-width: 220px; object-position: left center;',
-    text: 'Design italiano irreverente e soluções óticas versáteis com clip-on magnético patenteado.',
-    textEn: 'Irreverent Italian design and versatile optical solutions with a patented magnetic clip-on.'
-  },
-  {
     name: 'Jacquemus',
     logo: '/partners/Jacquemus.svg',
-    style: 'height: 40px; width: auto; max-width: 200px; object-position: left center;',
+    style: 'height: 52px; width: auto; max-width: 230px;',
     text: 'Estética minimalista provençal e formas contemporâneas de alta-costura francesa.',
     textEn: 'Provençal minimalist aesthetics and contemporary French haute-couture silhouettes.'
   },
   {
     name: 'Linda Farrow',
-    logo: '/partners/Linda_Farrow.png',
-    style: 'height: 38px; width: auto; max-width: 220px; object-position: left center;',
+    logo: '/partners/Linda_Farrow.svg',
+    style: 'height: 48px; width: auto; max-width: 250px;',
     text: 'Pioneira no luxo ótico vintage desde 1970, com acabamentos em ouro e acetatos nobres.',
     textEn: 'Pioneer in luxury vintage eyewear since 1970, featuring gold accents and noble acetates.'
   },
   {
     name: 'Ray-Ban',
     logo: '/partners/Ray-Ban.svg',
-    style: 'height: 44px; width: auto; max-width: 180px; object-position: left center;',
+    style: 'height: 60px; width: auto; max-width: 210px;',
     text: 'O ícone atemporal da cultura ótica mundial com proteção solar e armações lendárias.',
     textEn: 'The timeless icon of global eyewear culture with legendary protection and style.'
   },
   {
+    name: 'SNOB Milano',
+    logo: '/partners/snob-milano.svg',
+    style: 'height: 50px; width: auto; max-width: 210px;',
+    text: 'Design italiano irreverente e soluções óticas versáteis com clip-on magnético patenteado.',
+    textEn: 'Irreverent Italian design and versatile optical solutions with a patented magnetic clip-on.'
+  },
+  {
     name: 'Spektre',
     logo: '/partners/Spektre.svg',
-    style: 'height: 36px; width: auto; max-width: 200px; object-position: left center;',
+    style: 'height: 48px; width: auto; max-width: 230px;',
     text: 'Óculos vanguardistas desenhados em Milão com atitude streetwear sofisticada.',
     textEn: 'Avant-garde sunglasses designed in Milan with sophisticated streetwear attitude.'
   },
   {
     name: 'Ørgreen Optics',
     logo: '/partners/orgreen.svg',
-    style: 'height: 32px; width: auto; max-width: 200px; object-position: left center;',
+    style: 'height: 40px; width: auto; max-width: 230px;',
     text: 'Cor, precisão e construção escandinava em titânio japonês de grau cirúrgico.',
     textEn: 'Colour, precision and Scandinavian construction in surgical-grade Japanese titanium.'
   },
   {
     name: 'Einstoffen',
-    logo: '/partners/einstoffen.png',
-    style: 'height: 68px; width: auto; max-width: 190px; mix-blend-mode: multiply; transform: scale(1.6); transform-origin: left center; object-position: left center;',
+    logo: '/partners/einstoffen.svg',
+    style: 'height: 52px; width: auto; max-width: 220px;',
     text: 'Armações independentes inspiradas por matérias-primas nobres e orgânicas da Suíça.',
     textEn: 'Independent eyewear inspired by noble, organic materials from Switzerland.'
   },
   {
     name: 'Rodenstock',
-    logo: '/partners/rodenstock.png',
-    style: 'height: 70px; width: auto; max-width: 200px; mix-blend-mode: multiply; transform: scale(1.35); transform-origin: left center; object-position: left center;',
+    logo: '/partners/rodenstock.svg',
+    style: 'height: 52px; width: auto; max-width: 220px;',
     text: 'Tecnologia biométrica de lentes alemãs e visão de máxima acuidade ótica.',
     textEn: 'German biometric lens technology for maximum visual acuity.'
   },
   {
     name: 'Eyepetizer',
     logo: '/partners/eyepetizer.png',
-    style: 'height: 64px; width: auto; max-width: 220px; object-position: left center; filter: grayscale(1);',
+    style: 'height: 44px; width: auto; max-width: 220px;',
     text: 'Óculos italianos expressivos, leves e cheios de cor para uma identidade visual distinta.',
     textEn: 'Expressive, lightweight and colourful Italian eyewear for a distinctive visual identity.'
   },
   {
     name: 'Longchamp',
     logo: '/partners/longchamp.svg',
-    style: 'height: 58px; width: auto; max-width: 220px; object-position: left center; filter: grayscale(1);',
+    style: 'height: 48px; width: auto; max-width: 230px;',
     text: 'Elegância parisiense contemporânea aplicada a armações femininas de linhas refinadas.',
     textEn: 'Contemporary Parisian elegance expressed through refined women’s eyewear.'
   },
   {
     name: 'Maison Bensimon',
-    logo: '/partners/maison-bensimon.jpeg',
-    style: 'height: 68px; width: auto; max-width: 220px; object-position: left center; filter: grayscale(1);',
+    logo: '/partners/maison-bensimon.svg',
+    style: 'height: 40px; width: auto; max-width: 250px;',
     text: 'Criatividade francesa, cor e conforto numa coleção descontraída e contemporânea.',
     textEn: 'French creativity, colour and comfort in a relaxed contemporary collection.'
   },
   {
     name: 'Calvin Klein',
     logo: '/partners/calvin-klein.svg',
-    style: 'height: 36px; width: auto; max-width: 200px; object-position: left center;',
+    style: 'height: 46px; width: auto; max-width: 220px;',
     text: 'Linhas modernas, minimalismo urbano e conforto ergonómico para uso diário.',
     textEn: 'Modern lines, urban minimalism and ergonomic comfort for everyday wear.'
   },
   {
     name: 'Karl Lagerfeld',
     logo: '/partners/karl-lagerfeld.svg',
-    style: 'height: 36px; width: auto; max-width: 210px; object-position: left center;',
+    style: 'height: 46px; width: auto; max-width: 230px;',
     text: 'Audácia parisiense com linhas geométricas e contrastes arquitetónicos marcantes.',
     textEn: 'Parisian boldness featuring architectural lines and striking contrasts.'
   }
@@ -104,12 +104,12 @@ const brands = [
 
   <div class="brand-list" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 80px;">
     {brands.map((b) => (
-      <article style="display: grid; grid-template-columns: 260px 1fr auto; align-items: center; gap: 48px; padding: 40px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; align-items: center; justify-content: flex-start; width: 260px; min-height: 80px;">
+      <article style="display: flex; align-items: center; justify-content: space-between; gap: 48px; padding: 48px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
+        <div style="display: flex; align-items: center; justify-content: flex-start; width: 280px; min-height: 90px;">
           <img
             src={b.logo}
             alt={b.name}
-            style={`object-fit: contain; background: transparent !important; ${b.style}`}
+            style={`object-fit: contain; object-position: left center; background: transparent !important; display: block; ${b.style}`}
           />
         </div>
         <a href={`/catalogo?marca=${encodeURIComponent(b.name)}`} data-i18n-pt="VER MODELOS →" data-i18n-en="VIEW STYLES →" style="font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #000; text-decoration: none; border-bottom: 1px solid #000; padding-bottom: 2px;">VER MODELOS →</a>
