@@ -696,6 +696,11 @@ body {
   max-width: 240px;
 }
 
+.logo-group .ll-partner-logo.calvin-klein {
+  height: 48px;
+  max-width: 220px;
+}
+
 @keyframes scroll-left {
   0% {
     transform: translate3d(0, 0, 0);
