@@ -692,13 +692,13 @@ body {
 }
 
 .logo-group .ll-partner-logo.bensimon {
-  height: 42px;
-  max-width: 240px;
+  height: 32px;
+  max-width: 250px;
 }
 
 .logo-group .ll-partner-logo.calvin-klein {
-  height: 52px;
-  max-width: 250px;
+  height: 48px;
+  max-width: 220px;
 }
 
 @keyframes scroll-left {
