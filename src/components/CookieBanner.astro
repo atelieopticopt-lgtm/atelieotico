@@ -1,0 +1,135 @@
+---
+// CookieBanner.astro — Luxury GDPR/RGPD Cookie Consent Banner & Preferences Modal
+---
+
+<div id="atelie-cookie-banner" class="cookie-banner-wrap is-hidden" aria-hidden="true" role="dialog" aria-labelledby="cookie-title">
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-content">
+      <div class="cookie-icon-title">
+        <span class="cookie-icon">🍪</span>
+        <h3 id="cookie-title" data-i18n-pt="Preferências de Privacidade &amp; Cookies" data-i18n-en="Privacy &amp; Cookie Preferences">
+          Preferências de Privacidade &amp; Cookies
+        </h3>
+      </div>
+      <p class="cookie-banner-text" data-i18n-pt="Valorizamos a sua privacidade. Utilizamos cookies para melhorar a navegação, analisar o tráfego do ateliê e personalizar a sua experiência ótica de acordo com o RGPD." data-i18n-en="We value your privacy. We use cookies to enhance navigation, analyze atelier traffic, and personalize your eyewear experience in accordance with GDPR.">
+        Valorizamos a sua privacidade. Utilizamos cookies para melhorar a navegação, analisar o tráfego do ateliê e personalizar a sua experiência ótica de acordo com o RGPD.
+      </p>
+      <div class="cookie-links-row">
+        <a href="/cookies" class="cookie-policy-link" data-i18n-pt="Ler Política de Cookies &rarr;" data-i18n-en="Read Cookie Policy &rarr;">Ler Política de Cookies &rarr;</a>
+        <span class="cookie-link-sep">&bull;</span>
+        <a href="/privacidade" class="cookie-policy-link" data-i18n-pt="Política de Privacidade" data-i18n-en="Privacy Policy">Política de Privacidade</a>
+      </div>
+    </div>
+
+    <div class="cookie-banner-actions">
+      <button type="button" id="btn-cookie-accept-all" class="btn-cookie btn-cookie-primary" data-i18n-pt="Aceitar Todas" data-i18n-en="Accept All">
+        Aceitar Todas
+      </button>
+      <button type="button" id="btn-cookie-reject-all" class="btn-cookie btn-cookie-secondary" data-i18n-pt="Rejeitar Não Essenciais" data-i18n-en="Reject Non-Essential">
+        Rejeitar Não Essenciais
+      </button>
+      <button type="button" id="btn-cookie-customize" class="btn-cookie btn-cookie-text" data-i18n-pt="Personalizar" data-i18n-en="Customize">
+        Personalizar
+      </button>
+    </div>
+  </div>
+</div>
+
+{/* Granular Cookie Preferences Modal */}
+<div id="atelie-cookie-modal" class="cookie-modal-backdrop is-hidden" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-pref-title">
+  <div class="cookie-modal-box">
+    <div class="cookie-modal-header">
+      <div>
+        <span class="cookie-modal-tag" data-i18n-pt="GESTÃO DE CONSENTIMENTO" data-i18n-en="CONSENT MANAGEMENT">GESTÃO DE CONSENTIMENTO</span>
+        <h2 id="modal-pref-title" data-i18n-pt="Personalizar Definições de Cookies" data-i18n-en="Customize Cookie Settings">
+          Personalizar Definições de Cookies
+        </h2>
+      </div>
+      <button type="button" id="btn-close-cookie-modal" class="cookie-modal-close" aria-label="Fechar">&times;</button>
+    </div>
+
+    <div class="cookie-modal-body">
+      <p class="cookie-modal-intro" data-i18n-pt="Pode escolher que categorias de cookies autoriza. As cookies necessárias são estritamente obrigatórias para o funcionamento do site e do carrinho de compras." data-i18n-en="You can choose which cookie categories to allow. Necessary cookies are strictly required for the website and shopping cart to function.">
+        Pode escolher que categorias de cookies autoriza. As cookies necessárias são estritamente obrigatórias para o funcionamento do site e do carrinho de compras.
+      </p>
+
+      <div class="cookie-categories-list">
+        
+        {/* 1. Necessary */}
+        <div class="cookie-category-card">
+          <div class="cookie-card-header">
+            <div>
+              <strong data-i18n-pt="Cookies Estritamente Necessárias" data-i18n-en="Strictly Necessary Cookies">Cookies Estritamente Necessárias</strong>
+              <span class="cookie-badge-always" data-i18n-pt="Sempre Ativo" data-i18n-en="Always Active">Sempre Ativo</span>
+            </div>
+            <label class="cookie-switch is-locked">
+              <input type="checkbox" checked disabled />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+          <p data-i18n-pt="Essenciais para a segurança, autenticação de sessão, navegação protegida e persistência do carrinho e checkout." data-i18n-en="Essential for security, session authentication, secure browsing, and cart/checkout persistence.">
+            Essenciais para a segurança, autenticação de sessão, navegação protegida e persistência do carrinho e checkout.
+          </p>
+        </div>
+
+        {/* 2. Analytics */}
+        <div class="cookie-category-card">
+          <div class="cookie-card-header">
+            <div>
+              <strong data-i18n-pt="Cookies de Desempenho &amp; Estatísticas" data-i18n-en="Performance &amp; Analytics Cookies">Cookies de Desempenho &amp; Estatísticas</strong>
+            </div>
+            <label class="cookie-switch">
+              <input type="checkbox" id="pref-cookie-analytics" checked />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+          <p data-i18n-pt="Permitem-nos quantificar visitas e origens de tráfego de forma anónima para medir e otimizar o desempenho da loja." data-i18n-en="Allow us to count visits and traffic sources anonymously to measure and optimize our store performance.">
+            Permitem-nos quantificar visitas e origens de tráfego de forma anónima para medir e otimizar o desempenho da loja.
+          </p>
+        </div>
+
+        {/* 3. Marketing */}
+        <div class="cookie-category-card">
+          <div class="cookie-card-header">
+            <div>
+              <strong data-i18n-pt="Cookies de Marketing &amp; Publicidade" data-i18n-en="Marketing &amp; Advertising Cookies">Cookies de Marketing &amp; Publicidade</strong>
+            </div>
+            <label class="cookie-switch">
+              <input type="checkbox" id="pref-cookie-marketing" checked />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+          <p data-i18n-pt="Utilizadas para apresentar novidades relevantes de marcas e campanhas personalizadas de acordo com os seus interesses." data-i18n-en="Used to show relevant brand releases and personalized campaigns tailored to your interests.">
+            Utilizadas para apresentar novidades relevantes de marcas e campanhas personalizadas de acordo com os seus interesses.
+          </p>
+        </div>
+
+        {/* 4. Functional / Personalization */}
+        <div class="cookie-category-card">
+          <div class="cookie-card-header">
+            <div>
+              <strong data-i18n-pt="Cookies de Funcionalidade &amp; Preferências" data-i18n-en="Functionality &amp; Preferences Cookies">Cookies de Funcionalidade &amp; Preferências</strong>
+            </div>
+            <label class="cookie-switch">
+              <input type="checkbox" id="pref-cookie-functional" checked />
+              <span class="cookie-slider"></span>
+            </label>
+          </div>
+          <p data-i18n-pt="Permitem guardar o idioma preferido (Português/Inglês), preferências de filtros e histórico de navegação no catálogo." data-i18n-en="Allow saving your preferred language (Portuguese/English), filter preferences, and catalog browsing history.">
+            Permitem guardar o idioma preferido (Português/Inglês), preferências de filtros e histórico de navegação no catálogo.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cookie-modal-footer">
+      <button type="button" id="btn-save-cookie-prefs" class="btn-cookie btn-cookie-primary" data-i18n-pt="Guardar Preferências" data-i18n-en="Save Preferences">
+        Guardar Preferências
+      </button>
+      <button type="button" id="btn-modal-accept-all" class="btn-cookie btn-cookie-secondary" data-i18n-pt="Aceitar Todas" data-i18n-en="Accept All">
+        Aceitar Todas
+      </button>
+    </div>
+  </div>
+</div>

@@ -138,9 +138,18 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 
-    # Static Web Pages
+    # Static Web Pages with Automatic Cache-Busting
     location / {
         try_files $uri $uri/ $uri/index.html /index.html =404;
+        add_header Cache-Control "no-cache, no-store, must-revalidate";
+        add_header Pragma "no-cache";
+        add_header Expires "0";
+    }
+
+    # Static Assets
+    location ~* \\.(css|js|svg|png|jpg|jpeg|gif|ico|woff|woff2)$ {
+        expires 1h;
+        add_header Cache-Control "public, no-cache, must-revalidate";
     }
 
     # Gzip Compression

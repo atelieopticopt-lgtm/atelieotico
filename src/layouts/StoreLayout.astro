@@ -3,6 +3,7 @@ import AuthGate from '../components/AuthGate.astro';
 import Icon from '../components/Icon.astro';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import ChatButton from '../components/ChatButton.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 
 const {
   title = 'Ateliê Ótico — Design de Autor & Precisão Ótica na Madeira',
@@ -387,6 +388,8 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
           <span class="legal-dot">•</span>
           <a href="/privacidade">Privacidade</a>
           <span class="legal-dot">•</span>
+          <button type="button" id="btn-open-cookie-settings" class="ll-footer-cookie-btn" data-i18n-pt="Definições de Cookies" data-i18n-en="Cookie Settings">Definições de Cookies</button>
+          <span class="legal-dot">•</span>
           <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a>
         </nav>
         
@@ -400,8 +403,10 @@ const isCustomerAccountPage = Astro.url.pathname.startsWith('/conta');
 )}
 
 <ChatButton />
+<CookieBanner />
 
-<script is:inline src="/store.js"></script>
-<script is:inline src="/atelie-cms.js"></script>
+<script is:inline src="/store.js?v=20260821-v2"></script>
+<script is:inline src="/atelie-cms.js?v=20260821-v2"></script>
+<script is:inline src="/cookie-consent.js?v=20260821-v2"></script>
 </body>
 </html>

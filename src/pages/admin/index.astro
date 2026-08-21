@@ -934,6 +934,53 @@ const categories = [...new Set(products.map(p => p.category).filter(Boolean))].s
           </div>
         </div>
 
+        {/* Cookie Consent Analytics & RGPD Tracker */}
+        <div class="admin-card-section" style="margin-top: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="font-size: 16px; font-weight: 800; color: #111;">🍪 RGPD &amp; Auditoria de Consentimento de Cookies</h3>
+              <p class="section-sub" style="margin: 0; color: #666;">Métricas em tempo real de cliques, taxa de aceitação e opt-in de marketing/analítica.</p>
+            </div>
+            <button type="button" id="btn-refresh-cookie-stats" class="btn-table-action" style="padding: 8px 14px; font-weight: 700;">
+              🔄 Atualizar Métricas
+            </button>
+          </div>
+
+          <div class="discount-metrics-grid" style="margin-bottom: 16px;">
+            <div class="metric-card">
+              <span class="metric-label">Total de Visualizações</span>
+              <strong class="metric-value" id="cookie-stat-impressions" style="color: #111;">--</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Taxa de Aceitação Global</span>
+              <strong class="metric-value" id="cookie-stat-rate" style="color: #16a34a;">--%</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Aceitaram Todas</span>
+              <strong class="metric-value" id="cookie-stat-accept" style="color: #0284c7;">--</strong>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Rejeitaram</span>
+              <strong class="metric-value" id="cookie-stat-reject" style="color: #dc2626;">--</strong>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; background: #faf9f6; padding: 16px; border-radius: 8px; border: 1px solid #e8e6df;">
+            <div>
+              <span style="font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase;">Opt-in Analítica / Stats:</span>
+              <div style="font-size: 18px; font-weight: 800; color: #111;" id="cookie-stat-analytics">--</div>
+            </div>
+            <div>
+              <span style="font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase;">Opt-in Marketing &amp; Campanhas:</span>
+              <div style="font-size: 18px; font-weight: 800; color: #111;" id="cookie-stat-marketing">--</div>
+            </div>
+            <div>
+              <span style="font-size: 11px; font-weight: 700; color: #777; text-transform: uppercase;">Opt-in Funcionalidade &amp; Idioma:</span>
+              <div style="font-size: 18px; font-weight: 800; color: #111;" id="cookie-stat-functional">--</div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       {/* TAB 5: BACKUP & SYNC */}
